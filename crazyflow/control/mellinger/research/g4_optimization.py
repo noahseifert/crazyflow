@@ -1189,10 +1189,11 @@ def verify_backend_neutral_parent_inverse(repository_root: Path) -> dict[str, An
 
 
 def materialize_train_population(
-    backend: str = "cpu",
+    backend: str = "cpu", *, repository_root: Path = EXPECTED_REPOSITORY_ROOT
 ) -> tuple[tuple[G4ParentSpec, g3.ReferenceCandidate], ...]:
     """Load the exact 288 public Train Parent-v1 Hostbyte records."""
-    items = _cached_backend_parent_items(str(EXPECTED_REPOSITORY_ROOT), backend)[:288]
+    root = repository_root.resolve(strict=True)
+    items = _cached_backend_parent_items(str(root), backend)[:288]
     if any(not isinstance(spec, G4ParentSpec) for spec, _candidate in items):
         raise G4ContractError("backend-neutral Train parent type changed")
     return items  # type: ignore[return-value]
@@ -1240,7 +1241,7 @@ def feasible_day26_identities() -> tuple[str, ...]:
 
 def parent_population_evidence(repository_root: Path) -> dict[str, Any]:
     """Pin attempts, keys, arrays, splits, and the fixed validation/near-limit sets."""
-    population = materialize_train_population()
+    population = materialize_train_population(repository_root=repository_root)
     validation = fixed_day26_items(repository_root, VALIDATION_IDENTITIES)
     near_limit = fixed_day26_items(repository_root, NEAR_LIMIT_IDENTITIES)
     train_parent_digests = [candidate.parent_digest for _, candidate in population]
@@ -1777,10 +1778,12 @@ def run_m3() -> dict[str, Any]:
 
 
 def _batch_items(
-    batch_index: int, *, backend: str = "cpu"
+    batch_index: int, *, backend: str = "cpu", repository_root: Path = EXPECTED_REPOSITORY_ROOT
 ) -> tuple[tuple[G4ParentSpec, g3.ReferenceCandidate], ...]:
     items = tuple(
-        item for item in materialize_train_population(backend) if item[0].batch_index == batch_index
+        item
+        for item in materialize_train_population(backend, repository_root=repository_root)
+        if item[0].batch_index == batch_index
     )
     if len(items) != EFFECTIVE_BATCH_SIZE:
         raise G4ContractError(f"batch {batch_index} parent count changed")
@@ -1788,12 +1791,16 @@ def _batch_items(
 
 
 def one_effective_batch(
-    state: OptimizationState, names: Sequence[str], *, backend: str = "cpu"
+    state: OptimizationState,
+    names: Sequence[str],
+    *,
+    backend: str = "cpu",
+    repository_root: Path = EXPECTED_REPOSITORY_ROOT,
 ) -> tuple[OptimizationState, dict[str, Any]]:
     """Aggregate all eight microbatches, then perform exactly one optimizer update."""
     names_tuple = tuple(names)
     batch_index = state.adam.count % 9
-    items = _batch_items(batch_index, backend=backend)
+    items = _batch_items(batch_index, backend=backend, repository_root=repository_root)
     evaluations = []
     for index in range(MICROBATCH_COUNT):
         first = index * MICROBATCH_SIZE
@@ -5033,7 +5040,9 @@ def run_backend_parity(**kwargs: Any) -> dict[str, Any]:
     backend = kwargs["backend"]
     items = fixed_day26_items(repository_root, VALIDATION_IDENTITIES[:4], backend=backend)
     evaluation = evaluate_items(
-        np.zeros(2, dtype=np.float32), _batch_items(0, backend=backend), backend=backend
+        np.zeros(2, dtype=np.float32),
+        _batch_items(0, backend=backend, repository_root=repository_root),
+        backend=backend,
     )
     parity = default_parity(
         repository_root, VALIDATION_IDENTITIES[:4], include_backend_evidence=True, backend=backend
@@ -5151,7 +5160,10 @@ def run_backend_throughput(**kwargs: Any) -> dict[str, Any]:
     """Execute exactly one blocked effective-32 update for throughput evidence."""
     state = initial_optimization_state(2)
     started = time.perf_counter()
-    updated, record = one_effective_batch(state, PARAMETER_NAMES, backend=kwargs["backend"])
+    repository_root = Path(kwargs.get("repository_root", EXPECTED_REPOSITORY_ROOT))
+    updated, record = one_effective_batch(
+        state, PARAMETER_NAMES, backend=kwargs["backend"], repository_root=repository_root
+    )
     jax.block_until_ready(updated.theta)
     elapsed = time.perf_counter() - started
     device_memory = observe_backend_device_memory(kwargs["backend"])

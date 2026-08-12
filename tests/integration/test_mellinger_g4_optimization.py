@@ -1306,7 +1306,9 @@ def test_public_backend_parity_propagates_gpu_to_parents_and_simulation(
         lambda _root, _ids, *, backend: observed.append(("parents", backend)) or (),
     )
     monkeypatch.setattr(
-        g4, "_batch_items", lambda _index, *, backend: observed.append(("batch", backend)) or ()
+        g4,
+        "_batch_items",
+        lambda _index, *, backend, repository_root: observed.append(("batch", backend)) or (),
     )
     monkeypatch.setattr(
         g4,
@@ -1383,7 +1385,9 @@ def test_public_backend_throughput_propagates_gpu_to_one_effective_batch(
     monkeypatch.setattr(
         g4,
         "one_effective_batch",
-        lambda _state, _names, *, backend: observed.append(backend) or (updated, record),
+        lambda _state, _names, *, backend, repository_root: (
+            observed.append(backend) or (updated, record)
+        ),
     )
     monkeypatch.setattr(g4.jax, "block_until_ready", lambda value: value)
     monkeypatch.setattr(
@@ -1407,3 +1411,121 @@ def test_public_backend_throughput_propagates_gpu_to_one_effective_batch(
 
     assert observed == ["gpu"]
     assert result["backend"] == "gpu"
+
+
+def test_public_backend_parent_payload_uses_supplied_relocated_repository_root(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    relocated_root = tmp_path / "relocated-public-root"
+    relative_paths = (
+        g4.BACKEND_NEUTRAL_PARENT_RELATIVE_PATH,
+        g4.BACKEND_INPUT_MANIFEST_RELATIVE_PATH,
+        f"{g4.DAY26_DIRECTORY}/train_manifest.json",
+        f"{g4.DAY26_DIRECTORY}/validation_manifest.json",
+    )
+    for relative_path in relative_paths:
+        source = REPOSITORY_ROOT / relative_path
+        destination = relocated_root / relative_path
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
+
+    expected_root = relocated_root.resolve(strict=True)
+    original_cached_items = g4._cached_backend_parent_items
+    observed_payload_roots: list[Path] = []
+
+    def relocated_items(
+        repository_root: str, backend: str
+    ) -> tuple[tuple[g4.G4ParentSpec | object, object], ...]:
+        actual_root = Path(repository_root).resolve(strict=True)
+        observed_payload_roots.append(actual_root)
+        if actual_root != expected_root:
+            raise g4.G4ContractError("backend parent payload did not use supplied root")
+        return original_cached_items(str(actual_root), backend)
+
+    def fake_evaluate(
+        _theta: object,
+        items: tuple[tuple[object, object], ...],
+        _names: object = g4.PARAMETER_NAMES,
+        *,
+        backend: str,
+    ) -> dict[str, object]:
+        parent_ids = [item[0].episode_id for item in items]
+        return {
+            "parent_count": len(items),
+            "parent_ids": parent_ids,
+            "loss": np.float32(1.0),
+            "gradient": np.asarray([0.1, -0.2], dtype=np.float32),
+            "aux": {
+                f"loss_{name}": np.zeros(len(items), dtype=np.float32)
+                for name in g4.LOSS_TERM_NAMES
+            },
+        }
+
+    observed_parity_roots: list[Path] = []
+
+    def fake_default_parity(
+        repository_root: Path,
+        identities: tuple[str, ...],
+        *,
+        include_backend_evidence: bool,
+        backend: str,
+    ) -> dict[str, object]:
+        observed_parity_roots.append(repository_root.resolve(strict=True))
+        assert include_backend_evidence is True
+        assert backend == "cpu"
+        return {
+            "parent_ids": list(identities),
+            "loss": 1.0,
+            "_backend_evidence": {
+                "canonical_final": {"state": np.zeros(1, dtype=np.float32)},
+                "left_loss": np.float32(1.0),
+                "left_aux": {
+                    **{
+                        f"loss_{name}": np.zeros(4, dtype=np.float32) for name in g4.LOSS_TERM_NAMES
+                    },
+                    **{
+                        f"metric_{name}": np.zeros(4, dtype=np.float32)
+                        for name in (
+                            "position_rmse_m",
+                            "velocity_rmse_m_s",
+                            "max_position_error_m",
+                            "control_effort",
+                            "control_smoothness",
+                            "motor_saturation_fraction",
+                            "zero_thrust_gate_fraction",
+                            "floor_clip_fraction",
+                            "nonfinite_state_fraction",
+                        )
+                    },
+                },
+            },
+        }
+
+    monkeypatch.setattr(g4, "_cached_backend_parent_items", relocated_items)
+    monkeypatch.setattr(g4, "evaluate_items", fake_evaluate)
+    monkeypatch.setattr(g4, "default_parity", fake_default_parity)
+    monkeypatch.setattr(g4.jax, "block_until_ready", lambda value: value)
+    monkeypatch.setattr(
+        g4,
+        "observe_backend_device_memory",
+        lambda backend: (
+            {"bytes_in_use": None, "peak_bytes_in_use": None, "bytes_limit": None}
+            if backend == "cpu"
+            else pytest.fail("backend changed")
+        ),
+    )
+    common = {
+        "backend": "cpu",
+        "repository_root": expected_root,
+        "provenance": {"input_manifest_sha256": "a" * 64, "runtime_contract_sha256": "b" * 64},
+        "runtime": {"profile": "local_cpu"},
+        "resource": {"before": {}, "after": {}},
+    }
+
+    parity = g4.run_backend_parity(**common)
+    throughput = g4.run_backend_throughput(**common, phase="steady", sample_index=1)
+
+    assert parity["status"] == "PASS_BACKEND_PARITY_SAMPLE"
+    assert throughput["status"] == "PASS_BACKEND_THROUGHPUT_SAMPLE"
+    assert observed_payload_roots == [expected_root, expected_root, expected_root]
+    assert observed_parity_roots == [expected_root]
