@@ -1,0 +1,137 @@
+{
+  "config_fingerprint": "cfe43a45087f62114d5e8a49512adad87aab507a7df86a4bf795ac9d6cc48250",
+  "configured_max_attempts": 16,
+  "construction_only_contract": {
+    "jax_jit_called": false,
+    "simulation_built": false,
+    "test_manifest_opened": false,
+    "test_split_built_or_evaluated": false,
+    "training_run": false,
+    "validation_run": false
+  },
+  "diagnostic_max_attempts": 128,
+  "git_branch": "research/differentiable-mellinger",
+  "git_head": "3286b5dc03ed110fe7166f5f12e5f4f31ecf8e68",
+  "higher_attempt_limit_estimate_only": true,
+  "horizons": [
+    {
+      "accepted_diversity": {
+        "acceleration_vector_max_m_s2": null,
+        "acceleration_vector_rms_m_s2": null,
+        "jerk_vector_max_m_s3": null,
+        "jerk_vector_rms_m_s3": null,
+        "position_displacement_vector_max_m": null,
+        "position_displacement_vector_rms_m": null,
+        "position_span_x_m": null,
+        "position_span_y_m": null,
+        "position_span_z_m": null,
+        "spectral_centroid_x_hz": null,
+        "spectral_centroid_y_hz": null,
+        "spectral_centroid_z_hz": null,
+        "speed_vector_max_m_s": null,
+        "speed_vector_rms_m_s": null
+      },
+      "attempted_candidate_count": 2048,
+      "attempts_to_success": null,
+      "construction_wall_seconds": 7.274099805,
+      "duration_seconds": 1.0,
+      "failure_count": 16,
+      "horizon_control_intervals": 100,
+      "maximum_constraint_violations": {
+        "acceleration_m_s2": {
+          "acceptance_margin": -58.60832214355469,
+          "attempt_index": 79,
+          "diagnostic_episode_index": 11,
+          "limit": 5.0,
+          "name": "acceleration_m_s2",
+          "observed": 63.60832214355469,
+          "observed_minus_limit": 58.60832214355469,
+          "passed": false,
+          "relation": "<=",
+          "sample_index": 46,
+          "time_seconds": 0.4599999785423279,
+          "violation_magnitude": 58.60832214355469
+        },
+        "jerk_m_s3": {
+          "acceptance_margin": -1354.8690185546875,
+          "attempt_index": 67,
+          "diagnostic_episode_index": 2,
+          "limit": 35.0,
+          "name": "jerk_m_s3",
+          "observed": 1389.8690185546875,
+          "observed_minus_limit": 1354.8690185546875,
+          "passed": false,
+          "relation": "<=",
+          "sample_index": 47,
+          "time_seconds": 0.4699999988079071,
+          "violation_magnitude": 1354.8690185546875
+        },
+        "specific_force_m_s2": {
+          "acceptance_margin": -1.412308876003485,
+          "attempt_index": 32,
+          "diagnostic_episode_index": 2,
+          "limit": 2.0,
+          "name": "specific_force_m_s2",
+          "observed": 0.587691123996515,
+          "observed_minus_limit": -1.412308876003485,
+          "passed": false,
+          "relation": ">=",
+          "sample_index": 56,
+          "time_seconds": 0.5600000023841858,
+          "violation_magnitude": 1.412308876003485
+        },
+        "speed_m_s": {
+          "acceptance_margin": -2.115039587020874,
+          "attempt_index": 79,
+          "diagnostic_episode_index": 11,
+          "limit": 1.5,
+          "name": "speed_m_s",
+          "observed": 3.615039587020874,
+          "observed_minus_limit": 2.115039587020874,
+          "passed": false,
+          "relation": "<=",
+          "sample_index": 53,
+          "time_seconds": 0.5299999713897705,
+          "violation_magnitude": 2.115039587020874
+        },
+        "tilt_rad": {
+          "acceptance_margin": -2.388666130171787,
+          "attempt_index": 105,
+          "diagnostic_episode_index": 5,
+          "limit": 0.7,
+          "name": "tilt_rad",
+          "observed": 3.088666130171787,
+          "observed_minus_limit": 2.388666130171787,
+          "passed": false,
+          "relation": "<=",
+          "sample_index": 55,
+          "time_seconds": 0.550000011920929,
+          "violation_magnitude": 2.388666130171787
+        }
+      },
+      "rejection_reason_counts": {
+        "acceleration_m_s2": 2048,
+        "jerk_m_s3": 2048,
+        "specific_force_m_s2": 57,
+        "speed_m_s": 1201,
+        "tilt_rad": 2048
+      },
+      "seed_count": 16,
+      "success_count": 0,
+      "success_rate_within_attempt_limit": 0.0
+    }
+  ],
+  "raw_file_sha256": "0acd815754db85cdaccd0ec5e6eeef3a015532a0d394ea008d12dacdbfc0cf3e",
+  "schema_version": "crazyflow.trajectory_construction_diagnostics_summary.v1",
+  "scientific_payload_sha256": "fb28f39c4fdb701f8fbcf1392b7161554b0ce98c4e1c8f4b89d90c2c265b3931",
+  "seed_suite_id": "train-trajectory-root-20260731-episodes-0-15-world-0",
+  "seed_suite_sha256": "de51233c5b4ce9df3bde2397f86fcab4bcf6d8edb0c6e1cd3542462f9c0fc13e",
+  "source_dirty": true,
+  "source_fingerprint": "ae9d4b9a8cc49524a9d1dd94df5a531ff7576b3ee05a0e3f8b75492830e55631",
+  "source_status_short": [
+    " M crazyflow/control/mellinger/research/__init__.py",
+    " M crazyflow/control/mellinger/research/trajectories.py",
+    " M examples/jax/mellinger_scaling_benchmark.py"
+  ],
+  "total_construction_wall_seconds": 7.274099805
+}

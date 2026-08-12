@@ -1,0 +1,91 @@
+{
+  "checked_in_defaults_changed": false,
+  "configuration": {
+    "control_frequency_hz": 100,
+    "drones_per_world": 1,
+    "finite_difference_epsilon_raw": 0.01,
+    "horizon_control_intervals": 20,
+    "learning_rate": 0.01,
+    "optimization_steps": 3,
+    "profile_repeats": 3,
+    "robustness_horizons": [
+      20
+    ],
+    "seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "worlds": 2
+  },
+  "gain_bounds": {
+    "kd_xy": [
+      0.05,
+      0.8
+    ],
+    "kd_z": [
+      0.1,
+      1.2
+    ],
+    "kp_xy": [
+      0.1,
+      1.2
+    ],
+    "kp_z": [
+      0.3,
+      2.5
+    ]
+  },
+  "initial_losses": {
+    "combined": 0.001707437913864851,
+    "train": 0.0022911166306585073,
+    "validation": 0.0011237593134865165
+  },
+  "physical_gains": {
+    "kd_xy": 0.20363245904445648,
+    "kd_z": 0.5076660513877869,
+    "kp_xy": 0.4065737724304199,
+    "kp_z": 1.266202688217163
+  },
+  "provenance": {
+    "base_head": "32cb8ffae8ec3b522c589dffc8cc6d9b97d8f1ed",
+    "branch": "research/differentiable-mellinger",
+    "head": "32cb8ffae8ec3b522c589dffc8cc6d9b97d8f1ed",
+    "historical_day2_execution": {
+      "head": "9eac04ea28997e76b9bc8c6e97ca53ef93398d55",
+      "preserved_unchanged": true,
+      "source_dirty": true,
+      "source_state_sha256": "a1d7f1dce6ed3b1aa9cbb7cc53abb4a3bcada379129dfbde1787c1a5d1564229"
+    },
+    "preflight_worktree": "clean",
+    "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+    "source_dirty": true,
+    "source_state_scope": [
+      "crazyflow",
+      "examples",
+      "tests",
+      "pyproject.toml",
+      "pixi.lock"
+    ],
+    "source_state_sha256": "8559648a3c52ca262f8eb5b4160540cc8e138c42c85d748f13daefe996d268f7",
+    "source_status_short": [
+      " M crazyflow/control/mellinger/__init__.py",
+      "?? crazyflow/control/mellinger/optimization.py",
+      "?? examples/jax/mellinger_gain_optimization.py",
+      "?? tests/unit/test_mellinger_gain_optimization.py"
+    ]
+  },
+  "raw_gains": {
+    "kd_xy": -1.3562939167022705,
+    "kd_z": -0.5296200513839722,
+    "kp_xy": -0.9509021639823914,
+    "kp_z": -0.24447855353355408
+  },
+  "research_artifact_only": true,
+  "schema_version": "crazyflow.mellinger_optimized_gains.v1",
+  "selected_losses": {
+    "combined": 0.0017025111010298133,
+    "train": 0.002285428112372756,
+    "validation": 0.0011195940896868706
+  },
+  "selected_step": 3,
+  "selection_rule": "minimum train loss; earliest exact tie",
+  "validation_used_for_training_or_selection": false
+}

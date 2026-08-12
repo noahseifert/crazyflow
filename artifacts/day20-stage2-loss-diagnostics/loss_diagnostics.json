@@ -1,0 +1,516 @@
+{
+  "all_validations_passed": true,
+  "cases": [
+    {
+      "case_index": 0,
+      "loss_terms": {
+        "altitude": {
+          "normalization": "identity",
+          "normalization_divisor": 1.0,
+          "normalized_value": 4.1701211928035775e-11,
+          "raw_quantity": "mean_squared_softplus_altitude_margin_argument",
+          "raw_unit": "1",
+          "raw_value": 4.1701211928035775e-11,
+          "weight": 0.05000000074505806,
+          "weighted_contribution": 2.0850606397698757e-12,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": 1.8432731304476098e-16,
+            "kd_z": -1.4665267562613202e-14,
+            "kp_xy": 1.8661678519854648e-18,
+            "kp_z": -9.169034245238867e-16
+          }
+        },
+        "effort": {
+          "normalization": "identity",
+          "normalization_divisor": 1.0,
+          "normalized_value": 0.002105529885739088,
+          "raw_quantity": "mean_squared_hover_normalized_commanded_rpm_deviation",
+          "raw_unit": "1",
+          "raw_value": 0.002105529885739088,
+          "weight": 0.0010000000474974513,
+          "weighted_contribution": 2.1055298020655755e-06,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": 2.6812503506334906e-07,
+            "kd_z": -1.354250542817681e-07,
+            "kp_xy": 9.116661203734111e-09,
+            "kp_z": 2.1609261935395807e-08
+          }
+        },
+        "position": {
+          "normalization": "divide_by_position_scale_squared",
+          "normalization_divisor": 0.0625,
+          "normalized_value": 0.0006717538926750422,
+          "raw_quantity": "mean_squared_position_error",
+          "raw_unit": "m^2",
+          "raw_value": 4.1984618292190135e-05,
+          "weight": 1.0,
+          "weighted_contribution": 0.0006717538926750422,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": -1.4301329429144971e-05,
+            "kd_z": -2.674859933904372e-05,
+            "kp_xy": -6.316401481853973e-07,
+            "kp_z": -1.78648815563065e-06
+          }
+        },
+        "smoothness": {
+          "normalization": "identity",
+          "normalization_divisor": 1.0,
+          "normalized_value": 6.092051989980973e-05,
+          "raw_quantity": "mean_squared_hover_normalized_commanded_rpm_delta",
+          "raw_unit": "1",
+          "raw_value": 6.092051989980973e-05,
+          "weight": 0.0010000000474974513,
+          "weighted_contribution": 6.092052018402683e-08,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": 1.3872393012093198e-08,
+            "kd_z": 6.773395622161615e-09,
+            "kp_xy": 5.5593935011089e-10,
+            "kp_z": 2.8944651120355047e-09
+          }
+        },
+        "terminal": {
+          "normalization": "divide_by_position_scale_squared",
+          "normalization_divisor": 0.0625,
+          "normalized_value": 0.003913654014468193,
+          "raw_quantity": "terminal_mean_squared_position_error",
+          "raw_unit": "m^2",
+          "raw_value": 0.00024460337590426207,
+          "weight": 0.10000000149011612,
+          "weighted_contribution": 0.0003913654072675854,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": -1.180137405754067e-05,
+            "kd_z": -1.6924193914746866e-05,
+            "kp_xy": -5.67906226933701e-07,
+            "kp_z": -1.2819665471397457e-06
+          }
+        },
+        "velocity": {
+          "normalization": "divide_by_velocity_scale_squared",
+          "normalization_divisor": 1.0,
+          "normalized_value": 0.012258308939635754,
+          "raw_quantity": "mean_squared_velocity_error",
+          "raw_unit": "(m/s)^2",
+          "raw_value": 0.012258308939635754,
+          "weight": 0.10000000149011612,
+          "weighted_contribution": 0.001225830870680511,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": -5.382259041653015e-05,
+            "kd_z": -5.4746196838095784e-05,
+            "kp_xy": -2.7729997782444116e-06,
+            "kp_z": -4.567700671032071e-06
+          }
+        }
+      },
+      "loss_total": 0.0022911166306585073,
+      "split": "train",
+      "technical_metrics": {
+        "control_effort": 0.002105529885739088,
+        "control_smoothness": 6.092051989980973e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.0850606397698757e-12,
+        "loss_effort": 2.1055298020655755e-06,
+        "loss_position": 0.0006717538926750422,
+        "loss_smoothness": 6.092052018402683e-08,
+        "loss_terminal": 0.0003913654072675854,
+        "loss_total": 0.0022911166306585073,
+        "loss_velocity": 0.001225830870680511,
+        "max_position_error_m": 0.01563980057835579,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.0064795538783073425,
+        "velocity_rmse_m_s": 0.11071724444627762,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "trajectory_type": "figure8",
+      "weighted_contribution_sum": 0.0022911166230304486,
+      "weighted_contribution_sum_minus_total": -7.628058774911128e-12
+    },
+    {
+      "case_index": 1,
+      "loss_terms": {
+        "altitude": {
+          "normalization": "identity",
+          "normalization_divisor": 1.0,
+          "normalized_value": 4.169247933005771e-11,
+          "raw_quantity": "mean_squared_softplus_altitude_margin_argument",
+          "raw_unit": "1",
+          "raw_value": 4.169247933005771e-11,
+          "weight": 0.05000000074505806,
+          "weighted_contribution": 2.0846239231347985e-12,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": 4.023895197763823e-17,
+            "kd_z": -1.482496376635674e-14,
+            "kp_xy": 1.1676420522228363e-18,
+            "kp_z": -9.240692173785397e-16
+          }
+        },
+        "effort": {
+          "normalization": "identity",
+          "normalization_divisor": 1.0,
+          "normalized_value": 0.0015601989580318332,
+          "raw_quantity": "mean_squared_hover_normalized_commanded_rpm_deviation",
+          "raw_unit": "1",
+          "raw_value": 0.0015601989580318332,
+          "weight": 0.0010000000474974513,
+          "weighted_contribution": 1.5601989389324444e-06,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": 5.2181434284648276e-08,
+            "kd_z": -2.2008818234553473e-07,
+            "kp_xy": -2.2634862872905614e-09,
+            "kp_z": 1.0232211744565234e-09
+          }
+        },
+        "position": {
+          "normalization": "divide_by_position_scale_squared",
+          "normalization_divisor": 0.0625,
+          "normalized_value": 0.0003500662569422275,
+          "raw_quantity": "mean_squared_position_error",
+          "raw_unit": "m^2",
+          "raw_value": 2.1879141058889218e-05,
+          "weight": 1.0,
+          "weighted_contribution": 0.0003500662569422275,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": -5.183812390896492e-06,
+            "kd_z": -2.757038237177767e-05,
+            "kp_xy": -2.2536292476615927e-07,
+            "kp_z": -1.8031186073130812e-06
+          }
+        },
+        "smoothness": {
+          "normalization": "identity",
+          "normalization_divisor": 1.0,
+          "normalized_value": 3.042392745555844e-05,
+          "raw_quantity": "mean_squared_hover_normalized_commanded_rpm_delta",
+          "raw_unit": "1",
+          "raw_value": 3.042392745555844e-05,
+          "weight": 0.0010000000474974513,
+          "weighted_contribution": 3.0423930041934e-08,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": 3.894217392996779e-09,
+            "kd_z": 7.403052837418045e-09,
+            "kp_xy": 7.391337542017595e-11,
+            "kp_z": 2.332018134154623e-09
+          }
+        },
+        "terminal": {
+          "normalization": "divide_by_position_scale_squared",
+          "normalization_divisor": 0.0625,
+          "normalized_value": 0.001940733753144741,
+          "raw_quantity": "terminal_mean_squared_position_error",
+          "raw_unit": "m^2",
+          "raw_value": 0.00012129585957154632,
+          "weight": 0.10000000149011612,
+          "weighted_contribution": 0.00019407337822485715,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": -4.266435553290648e-06,
+            "kd_z": -1.7448746802983806e-05,
+            "kp_xy": -2.021827754106198e-07,
+            "kp_z": -1.2849607173848199e-06
+          }
+        },
+        "velocity": {
+          "normalization": "divide_by_velocity_scale_squared",
+          "normalization_divisor": 1.0,
+          "normalized_value": 0.005780283361673355,
+          "raw_quantity": "mean_squared_velocity_error",
+          "raw_unit": "(m/s)^2",
+          "raw_value": 0.005780283361673355,
+          "weight": 0.10000000149011612,
+          "weighted_contribution": 0.0005780283827334642,
+          "weighted_contribution_gradient_by_bound_variable": {
+            "kd_xy": -1.9413708287174813e-05,
+            "kd_z": -5.66376511415001e-05,
+            "kp_xy": -9.860949603535119e-07,
+            "kp_z": -4.542691385722719e-06
+          }
+        }
+      },
+      "loss_total": 0.0011237586149945855,
+      "split": "validation",
+      "technical_metrics": {
+        "control_effort": 0.0015601989580318332,
+        "control_smoothness": 3.042392745555844e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.0846239231347985e-12,
+        "loss_effort": 1.5601989389324444e-06,
+        "loss_position": 0.0003500662569422275,
+        "loss_smoothness": 3.0423930041934e-08,
+        "loss_terminal": 0.00019407337822485715,
+        "loss_total": 0.0011237586149945855,
+        "loss_velocity": 0.0005780283827334642,
+        "max_position_error_m": 0.011013439856469631,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.004677514545619488,
+        "velocity_rmse_m_s": 0.07602817565202713,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "trajectory_type": "circle",
+      "weighted_contribution_sum": 0.0011237586428541472,
+      "weighted_contribution_sum_minus_total": 2.7859561662832433e-11
+    }
+  ],
+  "claim_boundary": {
+    "classification": "infrastructure_smoke",
+    "evaluated_gain_state": "crazyflow_default",
+    "optimizer_updates": 0,
+    "supports_controller_superiority_claim": false,
+    "supports_convergence_claim": false,
+    "supports_generalization_claim": false,
+    "supports_hardware_claim": false
+  },
+  "experiment": {
+    "case_order": [
+      {
+        "split": "train",
+        "trajectory_type": "figure8"
+      },
+      {
+        "split": "validation",
+        "trajectory_type": "circle"
+      }
+    ],
+    "control_frequency_hz": 100,
+    "duration_seconds": 0.2,
+    "horizon_control_intervals": 20,
+    "platform": "cf2x_L250",
+    "seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "steps_per_command": 5
+  },
+  "gains": {
+    "bound_variable_names": [
+      "kp_xy",
+      "kp_z",
+      "kd_xy",
+      "kd_z"
+    ],
+    "bound_variables": {
+      "kd_xy": -1.3862943649291992,
+      "kd_z": -0.5596157312393188,
+      "kp_xy": -0.9808291792869568,
+      "kp_z": -0.2744370102882385
+    },
+    "gradient_variable_space": "unconstrained_inputs_to_sigmoid_bounded_stage1_gains",
+    "gradient_variable_unit": "1",
+    "physical_default_gains": {
+      "kd_xy_n_s_per_m": 0.20000000298023224,
+      "kd_z_n_s_per_m": 0.5,
+      "kp_xy_n_per_m": 0.4000000059604645,
+      "kp_z_n_per_m": 1.25
+    }
+  },
+  "loss_contract": {
+    "altitude_margin_m": 0.15,
+    "altitude_softness_m": 0.05,
+    "position_scale_m": 0.25,
+    "term_order": [
+      "position",
+      "velocity",
+      "effort",
+      "smoothness",
+      "terminal",
+      "altitude"
+    ],
+    "terms": {
+      "altitude": {
+        "normalization": "identity",
+        "normalization_divisor": 1.0,
+        "raw_quantity": "mean_squared_softplus_altitude_margin_argument",
+        "raw_unit": "1",
+        "weight": 0.05000000074505806
+      },
+      "effort": {
+        "normalization": "identity",
+        "normalization_divisor": 1.0,
+        "raw_quantity": "mean_squared_hover_normalized_commanded_rpm_deviation",
+        "raw_unit": "1",
+        "weight": 0.0010000000474974513
+      },
+      "position": {
+        "normalization": "divide_by_position_scale_squared",
+        "normalization_divisor": 0.0625,
+        "raw_quantity": "mean_squared_position_error",
+        "raw_unit": "m^2",
+        "weight": 1.0
+      },
+      "smoothness": {
+        "normalization": "identity",
+        "normalization_divisor": 1.0,
+        "raw_quantity": "mean_squared_hover_normalized_commanded_rpm_delta",
+        "raw_unit": "1",
+        "weight": 0.0010000000474974513
+      },
+      "terminal": {
+        "normalization": "divide_by_position_scale_squared",
+        "normalization_divisor": 0.0625,
+        "raw_quantity": "terminal_mean_squared_position_error",
+        "raw_unit": "m^2",
+        "weight": 0.10000000149011612
+      },
+      "velocity": {
+        "normalization": "divide_by_velocity_scale_squared",
+        "normalization_divisor": 1.0,
+        "raw_quantity": "mean_squared_velocity_error",
+        "raw_unit": "(m/s)^2",
+        "weight": 0.10000000149011612
+      }
+    },
+    "velocity_scale_m_per_s": 1.0,
+    "weighted_contribution_unit": "1"
+  },
+  "plot_data": {
+    "loss_contributions": {
+      "series": [
+        {
+          "split": "train",
+          "values": [
+            0.0006717538926750422,
+            0.001225830870680511,
+            2.1055298020655755e-06,
+            6.092052018402683e-08,
+            0.0003913654072675854,
+            2.0850606397698757e-12
+          ]
+        },
+        {
+          "split": "validation",
+          "values": [
+            0.0003500662569422275,
+            0.0005780283827334642,
+            1.5601989389324444e-06,
+            3.0423930041934e-08,
+            0.00019407337822485715,
+            2.0846239231347985e-12
+          ]
+        }
+      ],
+      "term_names": [
+        "position",
+        "velocity",
+        "effort",
+        "smoothness",
+        "terminal",
+        "altitude"
+      ]
+    },
+    "loss_term_gain_gradients": {
+      "gain_variable_names": [
+        "kp_xy",
+        "kp_z",
+        "kd_xy",
+        "kd_z"
+      ],
+      "panels": [
+        {
+          "split": "train",
+          "values_term_by_gain": [
+            [
+              -6.316401481853973e-07,
+              -1.78648815563065e-06,
+              -1.4301329429144971e-05,
+              -2.674859933904372e-05
+            ],
+            [
+              -2.7729997782444116e-06,
+              -4.567700671032071e-06,
+              -5.382259041653015e-05,
+              -5.4746196838095784e-05
+            ],
+            [
+              9.116661203734111e-09,
+              2.1609261935395807e-08,
+              2.6812503506334906e-07,
+              -1.354250542817681e-07
+            ],
+            [
+              5.5593935011089e-10,
+              2.8944651120355047e-09,
+              1.3872393012093198e-08,
+              6.773395622161615e-09
+            ],
+            [
+              -5.67906226933701e-07,
+              -1.2819665471397457e-06,
+              -1.180137405754067e-05,
+              -1.6924193914746866e-05
+            ],
+            [
+              1.8661678519854648e-18,
+              -9.169034245238867e-16,
+              1.8432731304476098e-16,
+              -1.4665267562613202e-14
+            ]
+          ]
+        },
+        {
+          "split": "validation",
+          "values_term_by_gain": [
+            [
+              -2.2536292476615927e-07,
+              -1.8031186073130812e-06,
+              -5.183812390896492e-06,
+              -2.757038237177767e-05
+            ],
+            [
+              -9.860949603535119e-07,
+              -4.542691385722719e-06,
+              -1.9413708287174813e-05,
+              -5.66376511415001e-05
+            ],
+            [
+              -2.2634862872905614e-09,
+              1.0232211744565234e-09,
+              5.2181434284648276e-08,
+              -2.2008818234553473e-07
+            ],
+            [
+              7.391337542017595e-11,
+              2.332018134154623e-09,
+              3.894217392996779e-09,
+              7.403052837418045e-09
+            ],
+            [
+              -2.021827754106198e-07,
+              -1.2849607173848199e-06,
+              -4.266435553290648e-06,
+              -1.7448746802983806e-05
+            ],
+            [
+              1.1676420522228363e-18,
+              -9.240692173785397e-16,
+              4.023895197763823e-17,
+              -1.482496376635674e-14
+            ]
+          ]
+        }
+      ],
+      "term_names": [
+        "position",
+        "velocity",
+        "effort",
+        "smoothness",
+        "terminal",
+        "altitude"
+      ],
+      "variable_space": "unconstrained_inputs_to_sigmoid_bounded_stage1_gains"
+    }
+  },
+  "provenance": {
+    "diagnostic_api": "crazyflow.control.mellinger.loss_diagnostics.tracking_loss_diagnostics_per_case",
+    "generator": "examples/jax/mellinger_loss_diagnostics.py",
+    "source_base_commit": "bfce9fcf04f97a609f569a6c9d95ea4f328a1cee",
+    "work_order": "WO-GR-S2-001"
+  },
+  "schema_version": "crazyflow.mellinger_loss_diagnostics.v1",
+  "validations": {
+    "exactly_four_bound_gain_variables": true,
+    "exactly_six_terms": true,
+    "finite_losses_terms_metrics_gradients": true,
+    "plot_data_complete": true,
+    "technical_smoke_gates_clear": true,
+    "unchanged_h20_reference_total_losses": true,
+    "weighted_contributions_reconstruct_total": true,
+    "zero_optimizer_updates": true
+  }
+}

@@ -1,0 +1,3231 @@
+{
+  "config_fingerprint": "6d0465b5776fe1f09b0f5b1ab8777d02b9b3bd01386d8f00cc6209fb97d2efaa",
+  "episode_index": 34,
+  "frozen_test_manifest_reference": "configs/research/mellinger/test_manifest.v1.json",
+  "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 0.010203863494098186,
+      "validation_loss": 0.010010135360062122
+    },
+    {
+      "step": 2,
+      "train_loss": 0.010006280615925789,
+      "validation_loss": 0.01000117789953947
+    },
+    {
+      "step": 3,
+      "train_loss": 0.010877233929932117,
+      "validation_loss": 0.009992155246436596
+    },
+    {
+      "step": 4,
+      "train_loss": 0.01020018756389618,
+      "validation_loss": 0.009983129799365997
+    },
+    {
+      "step": 5,
+      "train_loss": 0.009956127032637596,
+      "validation_loss": 0.009974271059036255
+    },
+    {
+      "step": 6,
+      "train_loss": 0.009492915123701096,
+      "validation_loss": 0.009965156204998493
+    },
+    {
+      "step": 7,
+      "train_loss": 0.009389908984303474,
+      "validation_loss": 0.009956267662346363
+    },
+    {
+      "step": 8,
+      "train_loss": 0.00958264246582985,
+      "validation_loss": 0.009947442449629307
+    },
+    {
+      "step": 9,
+      "train_loss": 0.009841259568929672,
+      "validation_loss": 0.009938514791429043
+    },
+    {
+      "step": 10,
+      "train_loss": 0.009462323039770126,
+      "validation_loss": 0.009929649531841278
+    },
+    {
+      "step": 11,
+      "train_loss": 0.009442918002605438,
+      "validation_loss": 0.009920851327478886
+    },
+    {
+      "step": 12,
+      "train_loss": 0.010096737183630466,
+      "validation_loss": 0.009912018664181232
+    },
+    {
+      "step": 13,
+      "train_loss": 0.010017914697527885,
+      "validation_loss": 0.009903098456561565
+    },
+    {
+      "step": 14,
+      "train_loss": 0.009871773421764374,
+      "validation_loss": 0.009894253686070442
+    },
+    {
+      "step": 15,
+      "train_loss": 0.010144585743546486,
+      "validation_loss": 0.009885384701192379
+    },
+    {
+      "step": 16,
+      "train_loss": 0.009684279561042786,
+      "validation_loss": 0.009876610711216927
+    },
+    {
+      "step": 17,
+      "train_loss": 0.010442216880619526,
+      "validation_loss": 0.00986765418201685
+    },
+    {
+      "step": 18,
+      "train_loss": 0.010237442329525948,
+      "validation_loss": 0.009858766570687294
+    },
+    {
+      "step": 19,
+      "train_loss": 0.009648993611335754,
+      "validation_loss": 0.009849843569099903
+    },
+    {
+      "step": 20,
+      "train_loss": 0.010197299532592297,
+      "validation_loss": 0.0098410090431571
+    },
+    {
+      "step": 21,
+      "train_loss": 0.009935809299349785,
+      "validation_loss": 0.009832165203988552
+    },
+    {
+      "step": 22,
+      "train_loss": 0.00980588048696518,
+      "validation_loss": 0.009823388420045376
+    },
+    {
+      "step": 23,
+      "train_loss": 0.009778138250112534,
+      "validation_loss": 0.009814543649554253
+    },
+    {
+      "step": 24,
+      "train_loss": 0.00955119077116251,
+      "validation_loss": 0.009805849753320217
+    },
+    {
+      "step": 25,
+      "train_loss": 0.009430891834199429,
+      "validation_loss": 0.00979701429605484
+    },
+    {
+      "step": 26,
+      "train_loss": 0.009668064303696156,
+      "validation_loss": 0.009788372553884983
+    },
+    {
+      "step": 27,
+      "train_loss": 0.009887930005788803,
+      "validation_loss": 0.0097796730697155
+    },
+    {
+      "step": 28,
+      "train_loss": 0.009920448064804077,
+      "validation_loss": 0.009770972654223442
+    },
+    {
+      "step": 29,
+      "train_loss": 0.009640175849199295,
+      "validation_loss": 0.009762227535247803
+    },
+    {
+      "step": 30,
+      "train_loss": 0.01001033466309309,
+      "validation_loss": 0.00975353829562664
+    },
+    {
+      "step": 31,
+      "train_loss": 0.009044700302183628,
+      "validation_loss": 0.009744754061102867
+    },
+    {
+      "step": 32,
+      "train_loss": 0.009521348401904106,
+      "validation_loss": 0.009736201725900173
+    },
+    {
+      "step": 33,
+      "train_loss": 0.009767876006662846,
+      "validation_loss": 0.009727601893246174
+    },
+    {
+      "step": 34,
+      "train_loss": 0.009648720733821392,
+      "validation_loss": 0.009719016961753368
+    }
+  ],
+  "metrics_records": [
+    {
+      "episode_ids": [
+        "train-000000-world-000",
+        "train-000000-world-001",
+        "train-000000-world-002",
+        "train-000000-world-003"
+      ],
+      "gradient_l2_norm": 0.006251446437090635,
+      "loss": 0.010203863494098186,
+      "metrics": {
+        "control_effort": 0.0005875753122381866,
+        "control_smoothness": 5.156614406587323e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.8074374342510495e-12,
+        "loss_effort": 5.875754141015932e-07,
+        "loss_position": 0.008341583423316479,
+        "loss_smoothness": 5.156615134893627e-09,
+        "loss_terminal": 0.0016003522323444486,
+        "loss_total": 0.010203863494098186,
+        "loss_velocity": 0.00026133586652576923,
+        "max_position_error_m": 0.03146926313638687,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030509138479828835,
+        "position_rmse_m": 0.02281656302511692,
+        "terminal_position_error_m": 0.03146926313638687,
+        "terminal_velocity_error_m_s": 0.0742143988609314,
+        "velocity_rmse_m_s": 0.05093427747488022,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 1,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.010010135360062122,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005683752242475748,
+        "control_smoothness": 5.148239779373398e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.640991150411944e-12,
+        "loss_effort": 5.683752419827215e-07,
+        "loss_position": 0.008296073414385319,
+        "loss_smoothness": 5.148240500574275e-09,
+        "loss_terminal": 0.0014974618097767234,
+        "loss_total": 0.010010135360062122,
+        "loss_velocity": 0.0002160266158170998,
+        "max_position_error_m": 0.03051268495619297,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02986404486000538,
+        "position_rmse_m": 0.022763775661587715,
+        "terminal_position_error_m": 0.03051268495619297,
+        "terminal_velocity_error_m_s": 0.032756201922893524,
+        "velocity_rmse_m_s": 0.04641858488321304,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 1,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000001-world-000",
+        "train-000001-world-001",
+        "train-000001-world-002",
+        "train-000001-world-003"
+      ],
+      "gradient_l2_norm": 0.006109291687607765,
+      "loss": 0.010006280615925789,
+      "metrics": {
+        "control_effort": 0.0005726229283027351,
+        "control_smoothness": 5.04812578583369e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.69372631040077e-12,
+        "loss_effort": 5.726229233005142e-07,
+        "loss_position": 0.008168225176632404,
+        "loss_smoothness": 5.048126361373306e-09,
+        "loss_terminal": 0.001563760102726519,
+        "loss_total": 0.010006280615925789,
+        "loss_velocity": 0.00027371730539016426,
+        "max_position_error_m": 0.03122369572520256,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.03006349503993988,
+        "position_rmse_m": 0.02257809042930603,
+        "terminal_position_error_m": 0.03122369572520256,
+        "terminal_velocity_error_m_s": 0.07255928963422775,
+        "velocity_rmse_m_s": 0.05225043371319771,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 2,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.01000117789953947,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005683103809133172,
+        "control_smoothness": 5.150373908691108e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.638991881605881e-12,
+        "loss_effort": 5.683104404852202e-07,
+        "loss_position": 0.008288447745144367,
+        "loss_smoothness": 5.150374349227604e-09,
+        "loss_terminal": 0.0014963200083002448,
+        "loss_total": 0.01000117789953947,
+        "loss_velocity": 0.000215836800634861,
+        "max_position_error_m": 0.03050101548433304,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02985309809446335,
+        "position_rmse_m": 0.02275330387055874,
+        "terminal_position_error_m": 0.03050101548433304,
+        "terminal_velocity_error_m_s": 0.03274215757846832,
+        "velocity_rmse_m_s": 0.04639813303947449,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 2,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000002-world-000",
+        "train-000002-world-001",
+        "train-000002-world-002",
+        "train-000002-world-003"
+      ],
+      "gradient_l2_norm": 0.006496202200651169,
+      "loss": 0.010877233929932117,
+      "metrics": {
+        "control_effort": 0.0006103360210545361,
+        "control_smoothness": 5.502718522620853e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.97900852491906e-12,
+        "loss_effort": 6.103360874476493e-07,
+        "loss_position": 0.008784466423094273,
+        "loss_smoothness": 5.5027191692147426e-09,
+        "loss_terminal": 0.0018139432650059462,
+        "loss_total": 0.010877233929932117,
+        "loss_velocity": 0.00027820910327136517,
+        "max_position_error_m": 0.03359284996986389,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.03231510519981384,
+        "position_rmse_m": 0.023429088294506073,
+        "terminal_position_error_m": 0.03359284996986389,
+        "terminal_velocity_error_m_s": 0.06079315394163132,
+        "velocity_rmse_m_s": 0.05265064537525177,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 3,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009992155246436596,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005682525224983692,
+        "control_smoothness": 5.152554422238609e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.6369809034163545e-12,
+        "loss_effort": 5.682525738848199e-07,
+        "loss_position": 0.008280779235064983,
+        "loss_smoothness": 5.152554827247968e-09,
+        "loss_terminal": 0.0014951539924368262,
+        "loss_total": 0.009992155246436596,
+        "loss_velocity": 0.00021564903727266937,
+        "max_position_error_m": 0.030489102005958557,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02984202653169632,
+        "position_rmse_m": 0.022742770612239838,
+        "terminal_position_error_m": 0.030489102005958557,
+        "terminal_velocity_error_m_s": 0.032729003578424454,
+        "velocity_rmse_m_s": 0.04637788236141205,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 3,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000003-world-000",
+        "train-000003-world-001",
+        "train-000003-world-002",
+        "train-000003-world-003"
+      ],
+      "gradient_l2_norm": 0.006236920598894358,
+      "loss": 0.01020018756389618,
+      "metrics": {
+        "control_effort": 0.0006035009864717722,
+        "control_smoothness": 5.065110144641949e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.648661663941844e-12,
+        "loss_effort": 6.035010642335692e-07,
+        "loss_position": 0.008295220322906971,
+        "loss_smoothness": 5.065110553204022e-09,
+        "loss_terminal": 0.001662774127908051,
+        "loss_total": 0.01020018756389618,
+        "loss_velocity": 0.00024158411542885005,
+        "max_position_error_m": 0.0322076641023159,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.0313904769718647,
+        "position_rmse_m": 0.022763635963201523,
+        "terminal_position_error_m": 0.0322076641023159,
+        "terminal_velocity_error_m_s": 0.05666530877351761,
+        "velocity_rmse_m_s": 0.049142491072416306,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 4,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009983129799365997,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005681890179403126,
+        "control_smoothness": 5.15469946549274e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.634969925226828e-12,
+        "loss_effort": 5.681890797859523e-07,
+        "loss_position": 0.008273106999695301,
+        "loss_smoothness": 5.154700222220754e-09,
+        "loss_terminal": 0.001493989024311304,
+        "loss_total": 0.009983129799365997,
+        "loss_velocity": 0.00021546018251683563,
+        "max_position_error_m": 0.03047717735171318,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029830893501639366,
+        "position_rmse_m": 0.02273222804069519,
+        "terminal_position_error_m": 0.03047717735171318,
+        "terminal_velocity_error_m_s": 0.032715726643800735,
+        "velocity_rmse_m_s": 0.04635750129818916,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 4,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000004-world-000",
+        "train-000004-world-001",
+        "train-000004-world-002",
+        "train-000004-world-003"
+      ],
+      "gradient_l2_norm": 0.006093957927078009,
+      "loss": 0.009956127032637596,
+      "metrics": {
+        "control_effort": 0.0006057131686247885,
+        "control_smoothness": 5.5386203712259885e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.7546372221318745e-12,
+        "loss_effort": 6.057132395653753e-07,
+        "loss_position": 0.008162249810993671,
+        "loss_smoothness": 5.538620673206651e-09,
+        "loss_terminal": 0.0015465255128219724,
+        "loss_total": 0.009956127032637596,
+        "loss_velocity": 0.00024673997540958226,
+        "max_position_error_m": 0.031134432181715965,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030223820358514786,
+        "position_rmse_m": 0.022576745599508286,
+        "terminal_position_error_m": 0.031073546037077904,
+        "terminal_velocity_error_m_s": 0.07066398113965988,
+        "velocity_rmse_m_s": 0.049608781933784485,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 5,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009974271059036255,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005681355833075941,
+        "control_smoothness": 5.156913175596856e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.633001014081595e-12,
+        "loss_effort": 5.681356469722232e-07,
+        "loss_position": 0.008265586569905281,
+        "loss_smoothness": 5.1569135628426466e-09,
+        "loss_terminal": 0.0014928380260244012,
+        "loss_total": 0.009974271059036255,
+        "loss_velocity": 0.0002152723609469831,
+        "max_position_error_m": 0.030465401709079742,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029819896444678307,
+        "position_rmse_m": 0.02272188477218151,
+        "terminal_position_error_m": 0.030465401709079742,
+        "terminal_velocity_error_m_s": 0.032702915370464325,
+        "velocity_rmse_m_s": 0.04633723944425583,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 5,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000005-world-000",
+        "train-000005-world-001",
+        "train-000005-world-002",
+        "train-000005-world-003"
+      ],
+      "gradient_l2_norm": 0.005903555080294609,
+      "loss": 0.009492915123701096,
+      "metrics": {
+        "control_effort": 0.0005458751111291349,
+        "control_smoothness": 4.618093043973204e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.32842563874436e-12,
+        "loss_effort": 5.458751957121422e-07,
+        "loss_position": 0.00784657895565033,
+        "loss_smoothness": 4.618093463193418e-09,
+        "loss_terminal": 0.0014265753561630845,
+        "loss_total": 0.009492915123701096,
+        "loss_velocity": 0.00021921000734437257,
+        "max_position_error_m": 0.02982330694794655,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029181035235524178,
+        "position_rmse_m": 0.022130925208330154,
+        "terminal_position_error_m": 0.02982330694794655,
+        "terminal_velocity_error_m_s": 0.028953280299901962,
+        "velocity_rmse_m_s": 0.046742405742406845,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 6,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009965156204998493,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005680729518644512,
+        "control_smoothness": 5.159042302693706e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.63096791816775e-12,
+        "loss_effort": 5.680730055246386e-07,
+        "loss_position": 0.00825782772153616,
+        "loss_smoothness": 5.159042526514668e-09,
+        "loss_terminal": 0.0014916682848706841,
+        "loss_total": 0.009965156204998493,
+        "loss_velocity": 0.00021508710051421076,
+        "max_position_error_m": 0.030453426763415337,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.0298086516559124,
+        "position_rmse_m": 0.02271120995283127,
+        "terminal_position_error_m": 0.030453426763415337,
+        "terminal_velocity_error_m_s": 0.03269049525260925,
+        "velocity_rmse_m_s": 0.04631723463535309,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 6,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000006-world-000",
+        "train-000006-world-001",
+        "train-000006-world-002",
+        "train-000006-world-003"
+      ],
+      "gradient_l2_norm": 0.0059702517464756966,
+      "loss": 0.009389908984303474,
+      "metrics": {
+        "control_effort": 0.0005621634772978723,
+        "control_smoothness": 4.872224963037297e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.423570884592998e-12,
+        "loss_effort": 5.62163563699869e-07,
+        "loss_position": 0.0077928202226758,
+        "loss_smoothness": 4.8722252898869556e-09,
+        "loss_terminal": 0.0013877283781766891,
+        "loss_total": 0.009389908984303474,
+        "loss_velocity": 0.00020879346993751824,
+        "max_position_error_m": 0.029421620070934296,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02861652709543705,
+        "position_rmse_m": 0.022062979638576508,
+        "terminal_position_error_m": 0.029421620070934296,
+        "terminal_velocity_error_m_s": 0.033456772565841675,
+        "velocity_rmse_m_s": 0.045672010630369186,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 7,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009956267662346363,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.000568010495044291,
+        "control_smoothness": 5.161164608580293e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.628985562915577e-12,
+        "loss_effort": 5.680105346073105e-07,
+        "loss_position": 0.00825025886297226,
+        "loss_smoothness": 5.161164828848541e-09,
+        "loss_terminal": 0.0014905334683135152,
+        "loss_total": 0.009956267662346363,
+        "loss_velocity": 0.00021490163635462523,
+        "max_position_error_m": 0.030441807582974434,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029797811061143875,
+        "position_rmse_m": 0.02270079217851162,
+        "terminal_position_error_m": 0.030441807582974434,
+        "terminal_velocity_error_m_s": 0.032677747309207916,
+        "velocity_rmse_m_s": 0.04629720002412796,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 7,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000007-world-000",
+        "train-000007-world-001",
+        "train-000007-world-002",
+        "train-000007-world-003"
+      ],
+      "gradient_l2_norm": 0.005911265034228563,
+      "loss": 0.00958264246582985,
+      "metrics": {
+        "control_effort": 0.0006232360028661788,
+        "control_smoothness": 5.3218846005620435e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.979876754018786e-12,
+        "loss_effort": 6.232360192370834e-07,
+        "loss_position": 0.007850419729948044,
+        "loss_smoothness": 5.321885154785377e-09,
+        "loss_terminal": 0.0015081210294738412,
+        "loss_total": 0.00958264246582985,
+        "loss_velocity": 0.0002234729181509465,
+        "max_position_error_m": 0.030674248933792114,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029647286981344223,
+        "position_rmse_m": 0.022147824987769127,
+        "terminal_position_error_m": 0.030674248933792114,
+        "terminal_velocity_error_m_s": 0.043617475777864456,
+        "velocity_rmse_m_s": 0.0472300723195076,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 8,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009947442449629307,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005679513560608029,
+        "control_smoothness": 5.163351943338057e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.627019253855558e-12,
+        "loss_effort": 5.679514174516953e-07,
+        "loss_position": 0.008242771960794926,
+        "loss_smoothness": 5.163352412296263e-09,
+        "loss_terminal": 0.0014893829356878996,
+        "loss_total": 0.009947442449629307,
+        "loss_velocity": 0.00021471496438607574,
+        "max_position_error_m": 0.030430033802986145,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029786940664052963,
+        "position_rmse_m": 0.022690488025546074,
+        "terminal_position_error_m": 0.030430033802986145,
+        "terminal_velocity_error_m_s": 0.032665129750967026,
+        "velocity_rmse_m_s": 0.04627702385187149,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 8,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000008-world-000",
+        "train-000008-world-001",
+        "train-000008-world-002",
+        "train-000008-world-003"
+      ],
+      "gradient_l2_norm": 0.005926040001213551,
+      "loss": 0.009841259568929672,
+      "metrics": {
+        "control_effort": 0.0006087326910346746,
+        "control_smoothness": 5.091335424367571e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.792167964534633e-12,
+        "loss_effort": 6.087327619752614e-07,
+        "loss_position": 0.007966896519064903,
+        "loss_smoothness": 5.0913357974025075e-09,
+        "loss_terminal": 0.001639253576286137,
+        "loss_total": 0.009841259568929672,
+        "loss_velocity": 0.0002344951790291816,
+        "max_position_error_m": 0.0318717435002327,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030699994415044785,
+        "position_rmse_m": 0.02229446731507778,
+        "terminal_position_error_m": 0.0318717435002327,
+        "terminal_velocity_error_m_s": 0.03673945367336273,
+        "velocity_rmse_m_s": 0.048249080777168274,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 9,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009938514791429043,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005678961169905961,
+        "control_smoothness": 5.1655370043590665e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.625032561794695e-12,
+        "loss_effort": 5.678961656485626e-07,
+        "loss_position": 0.008235177956521511,
+        "loss_smoothness": 5.165537775297935e-09,
+        "loss_terminal": 0.0014882327523082495,
+        "loss_total": 0.009938514791429043,
+        "loss_velocity": 0.00021453085355460644,
+        "max_position_error_m": 0.030418239533901215,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029775865375995636,
+        "position_rmse_m": 0.022680025547742844,
+        "terminal_position_error_m": 0.030418239533901215,
+        "terminal_velocity_error_m_s": 0.03265250474214554,
+        "velocity_rmse_m_s": 0.04625711590051651,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 9,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000009-world-000",
+        "train-000009-world-001",
+        "train-000009-world-002",
+        "train-000009-world-003"
+      ],
+      "gradient_l2_norm": 0.005789640359580517,
+      "loss": 0.009462323039770126,
+      "metrics": {
+        "control_effort": 0.0005484946304932237,
+        "control_smoothness": 4.999166321795201e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.258916136423707e-12,
+        "loss_effort": 5.484946541400859e-07,
+        "loss_position": 0.007723722606897354,
+        "loss_smoothness": 4.9991668582549664e-09,
+        "loss_terminal": 0.0014924770221114159,
+        "loss_total": 0.009462323039770126,
+        "loss_velocity": 0.00024556968128308654,
+        "max_position_error_m": 0.03049875795841217,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02943538874387741,
+        "position_rmse_m": 0.021968940272927284,
+        "terminal_position_error_m": 0.03049875795841217,
+        "terminal_velocity_error_m_s": 0.04586813598871231,
+        "velocity_rmse_m_s": 0.04914739727973938,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 10,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009929649531841278,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005678312154486775,
+        "control_smoothness": 5.167666586203268e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.623056278074689e-12,
+        "loss_effort": 5.678313073076424e-07,
+        "loss_position": 0.008227646350860596,
+        "loss_smoothness": 5.167666738969956e-09,
+        "loss_terminal": 0.0014870855957269669,
+        "loss_total": 0.009929649531841278,
+        "loss_velocity": 0.00021434485097415745,
+        "max_position_error_m": 0.030406489968299866,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029764922335743904,
+        "position_rmse_m": 0.02266964688897133,
+        "terminal_position_error_m": 0.030406489968299866,
+        "terminal_velocity_error_m_s": 0.03263980150222778,
+        "velocity_rmse_m_s": 0.046236999332904816,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 10,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000010-world-000",
+        "train-000010-world-001",
+        "train-000010-world-002",
+        "train-000010-world-003"
+      ],
+      "gradient_l2_norm": 0.005949169397354126,
+      "loss": 0.009442918002605438,
+      "metrics": {
+        "control_effort": 0.0005980156711302698,
+        "control_smoothness": 5.072558906249469e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.422182238450478e-12,
+        "loss_effort": 5.980156743135012e-07,
+        "loss_position": 0.007858769968152046,
+        "loss_smoothness": 5.072559261520837e-09,
+        "loss_terminal": 0.001369068748317659,
+        "loss_total": 0.009442918002605438,
+        "loss_velocity": 0.00021447661856655031,
+        "max_position_error_m": 0.029237110167741776,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.028582686558365822,
+        "position_rmse_m": 0.022158658131957054,
+        "terminal_position_error_m": 0.029237110167741776,
+        "terminal_velocity_error_m_s": 0.03888480365276337,
+        "velocity_rmse_m_s": 0.04624836891889572,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 11,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009920851327478886,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.000567773065995425,
+        "control_smoothness": 5.16982754561468e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.621098642632049e-12,
+        "loss_effort": 5.67773099646729e-07,
+        "loss_position": 0.00822017714381218,
+        "loss_smoothness": 5.169827677065086e-09,
+        "loss_terminal": 0.0014859421644359827,
+        "loss_total": 0.009920851327478886,
+        "loss_velocity": 0.00021415964874904603,
+        "max_position_error_m": 0.030394773930311203,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029754094779491425,
+        "position_rmse_m": 0.02265935204923153,
+        "terminal_position_error_m": 0.030394773930311203,
+        "terminal_velocity_error_m_s": 0.03262729197740555,
+        "velocity_rmse_m_s": 0.04621695354580879,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 11,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000011-world-000",
+        "train-000011-world-001",
+        "train-000011-world-002",
+        "train-000011-world-003"
+      ],
+      "gradient_l2_norm": 0.006271886173635721,
+      "loss": 0.010096737183630466,
+      "metrics": {
+        "control_effort": 0.000551356642972678,
+        "control_smoothness": 5.004139438824495e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.936896811497116e-12,
+        "loss_effort": 5.513567202797276e-07,
+        "loss_position": 0.008310745470225811,
+        "loss_smoothness": 5.0041393251376576e-09,
+        "loss_terminal": 0.0015501078451052308,
+        "loss_total": 0.010096737183630466,
+        "loss_velocity": 0.00023532715567853302,
+        "max_position_error_m": 0.03111192211508751,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030228080227971077,
+        "position_rmse_m": 0.022784186527132988,
+        "terminal_position_error_m": 0.03111192211508751,
+        "terminal_velocity_error_m_s": 0.03748580440878868,
+        "velocity_rmse_m_s": 0.04849312826991081,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 12,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009912018664181232,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005677110748365521,
+        "control_smoothness": 5.171975772100268e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.619132767252898e-12,
+        "loss_effort": 5.677111403201707e-07,
+        "loss_position": 0.008212664164602757,
+        "loss_smoothness": 5.171976180662341e-09,
+        "loss_terminal": 0.0014848069986328483,
+        "loss_total": 0.009912018664181232,
+        "loss_velocity": 0.00021397443197201937,
+        "max_position_error_m": 0.030383123084902763,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029743172228336334,
+        "position_rmse_m": 0.02264898642897606,
+        "terminal_position_error_m": 0.030383123084902763,
+        "terminal_velocity_error_m_s": 0.03261467069387436,
+        "velocity_rmse_m_s": 0.04619690403342247,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 12,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000012-world-000",
+        "train-000012-world-001",
+        "train-000012-world-002",
+        "train-000012-world-003"
+      ],
+      "gradient_l2_norm": 0.0061532012186944485,
+      "loss": 0.010017914697527885,
+      "metrics": {
+        "control_effort": 0.0005555790266953409,
+        "control_smoothness": 4.971293037669966e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.471500860553368e-12,
+        "loss_effort": 5.555790494327084e-07,
+        "loss_position": 0.008237211033701897,
+        "loss_smoothness": 4.971293598998727e-09,
+        "loss_terminal": 0.0015572765842080116,
+        "loss_total": 0.010017914697527885,
+        "loss_velocity": 0.00022286655439529568,
+        "max_position_error_m": 0.03121216781437397,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030670590698719025,
+        "position_rmse_m": 0.022682219743728638,
+        "terminal_position_error_m": 0.031163858249783516,
+        "terminal_velocity_error_m_s": 0.0380040779709816,
+        "velocity_rmse_m_s": 0.047147128731012344,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 13,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009903098456561565,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005676535656675696,
+        "control_smoothness": 5.174138095753733e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.617145207830298e-12,
+        "loss_effort": 5.676536147802835e-07,
+        "loss_position": 0.008205081336200237,
+        "loss_smoothness": 5.174138451025101e-09,
+        "loss_terminal": 0.0014836536720395088,
+        "loss_total": 0.009903098456561565,
+        "loss_velocity": 0.00021379072859417647,
+        "max_position_error_m": 0.0303712897002697,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029732132330536842,
+        "position_rmse_m": 0.02263852208852768,
+        "terminal_position_error_m": 0.0303712897002697,
+        "terminal_velocity_error_m_s": 0.03260203078389168,
+        "velocity_rmse_m_s": 0.04617700353264809,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 13,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000013-world-000",
+        "train-000013-world-001",
+        "train-000013-world-002",
+        "train-000013-world-003"
+      ],
+      "gradient_l2_norm": 0.006113956216722727,
+      "loss": 0.009871773421764374,
+      "metrics": {
+        "control_effort": 0.0005515762022696435,
+        "control_smoothness": 5.0529993131931406e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.425427038712293e-12,
+        "loss_effort": 5.515761927199492e-07,
+        "loss_position": 0.008128726854920387,
+        "loss_smoothness": 5.052999352272991e-09,
+        "loss_terminal": 0.0014986955793574452,
+        "loss_total": 0.009871773421764374,
+        "loss_velocity": 0.00024379506066907197,
+        "max_position_error_m": 0.030567558482289314,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029628364369273186,
+        "position_rmse_m": 0.02251758798956871,
+        "terminal_position_error_m": 0.030567558482289314,
+        "terminal_velocity_error_m_s": 0.0454239621758461,
+        "velocity_rmse_m_s": 0.049324847757816315,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 14,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009894253686070442,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005675939610227942,
+        "control_smoothness": 5.176326340006199e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.615184536621575e-12,
+        "loss_effort": 5.675939860338985e-07,
+        "loss_position": 0.008197584189474583,
+        "loss_smoothness": 5.176326478562032e-09,
+        "loss_terminal": 0.0014824937097728252,
+        "loss_total": 0.009894253686070442,
+        "loss_velocity": 0.00021360385289881378,
+        "max_position_error_m": 0.03035937435925007,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02972104772925377,
+        "position_rmse_m": 0.022628165781497955,
+        "terminal_position_error_m": 0.03035937435925007,
+        "terminal_velocity_error_m_s": 0.03258923813700676,
+        "velocity_rmse_m_s": 0.046156760305166245,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 14,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000014-world-000",
+        "train-000014-world-001",
+        "train-000014-world-002",
+        "train-000014-world-003"
+      ],
+      "gradient_l2_norm": 0.006274192128330469,
+      "loss": 0.010144585743546486,
+      "metrics": {
+        "control_effort": 0.0005915159126743674,
+        "control_smoothness": 4.948102287016809e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.34783719444054e-12,
+        "loss_effort": 5.91515970427281e-07,
+        "loss_position": 0.008280307054519653,
+        "loss_smoothness": 4.948102816371147e-09,
+        "loss_terminal": 0.001615150598809123,
+        "loss_total": 0.010144585743546486,
+        "loss_velocity": 0.0002485316072124988,
+        "max_position_error_m": 0.03173811733722687,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030764171853661537,
+        "position_rmse_m": 0.02273925021290779,
+        "terminal_position_error_m": 0.03173811733722687,
+        "terminal_velocity_error_m_s": 0.057492632418870926,
+        "velocity_rmse_m_s": 0.049363113939762115,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 15,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009885384701192379,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005675352294929326,
+        "control_smoothness": 5.178516403248068e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.613209987625044e-12,
+        "loss_effort": 5.675353236256342e-07,
+        "loss_position": 0.008190039545297623,
+        "loss_smoothness": 5.178516726545013e-09,
+        "loss_terminal": 0.0014813522575423121,
+        "loss_total": 0.009885384701192379,
+        "loss_velocity": 0.00021341972751542926,
+        "max_position_error_m": 0.030347663909196854,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029710110276937485,
+        "position_rmse_m": 0.022617749869823456,
+        "terminal_position_error_m": 0.03034764528274536,
+        "terminal_velocity_error_m_s": 0.032576680183410645,
+        "velocity_rmse_m_s": 0.04613679647445679,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 15,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000015-world-000",
+        "train-000015-world-001",
+        "train-000015-world-002",
+        "train-000015-world-003"
+      ],
+      "gradient_l2_norm": 0.006217860151082277,
+      "loss": 0.009684279561042786,
+      "metrics": {
+        "control_effort": 0.0006140900077298284,
+        "control_smoothness": 4.736377832159633e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.183585335798545e-12,
+        "loss_effort": 6.140900268292171e-07,
+        "loss_position": 0.00810791365802288,
+        "loss_smoothness": 4.7363779565046116e-09,
+        "loss_terminal": 0.0013632136397063732,
+        "loss_total": 0.009684279561042786,
+        "loss_velocity": 0.0002125345345120877,
+        "max_position_error_m": 0.029188070446252823,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.028983326628804207,
+        "position_rmse_m": 0.02250409871339798,
+        "terminal_position_error_m": 0.029100514948368073,
+        "terminal_velocity_error_m_s": 0.044336237013339996,
+        "velocity_rmse_m_s": 0.04607660323381424,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 16,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009876610711216927,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005674720159731805,
+        "control_smoothness": 5.18067736265948e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.611257990033701e-12,
+        "loss_effort": 5.674720569004421e-07,
+        "loss_position": 0.00818259920924902,
+        "loss_smoothness": 5.180677664640143e-09,
+        "loss_terminal": 0.0014802059158682823,
+        "loss_total": 0.009876610711216927,
+        "loss_velocity": 0.00021323356486391276,
+        "max_position_error_m": 0.030335938557982445,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029699210077524185,
+        "position_rmse_m": 0.02260746620595455,
+        "terminal_position_error_m": 0.03033588081598282,
+        "terminal_velocity_error_m_s": 0.03256408870220184,
+        "velocity_rmse_m_s": 0.046116605401039124,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 16,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000016-world-000",
+        "train-000016-world-001",
+        "train-000016-world-002",
+        "train-000016-world-003"
+      ],
+      "gradient_l2_norm": 0.006452855188399553,
+      "loss": 0.010442216880619526,
+      "metrics": {
+        "control_effort": 0.0005563909653574228,
+        "control_smoothness": 5.0732301133393776e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.686660781683116e-12,
+        "loss_effort": 5.563910576711351e-07,
+        "loss_position": 0.008593404665589333,
+        "loss_smoothness": 5.07323072440613e-09,
+        "loss_terminal": 0.001596231828443706,
+        "loss_total": 0.010442216880619526,
+        "loss_velocity": 0.000252018915489316,
+        "max_position_error_m": 0.031582124531269073,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030863242223858833,
+        "position_rmse_m": 0.023161962628364563,
+        "terminal_position_error_m": 0.031558722257614136,
+        "terminal_velocity_error_m_s": 0.051807720214128494,
+        "velocity_rmse_m_s": 0.05008568987250328,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 17,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.00986765418201685,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005674161366187036,
+        "control_smoothness": 5.182907443668228e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.609267394845018e-12,
+        "loss_effort": 5.674161798197019e-07,
+        "loss_position": 0.008174994960427284,
+        "loss_smoothness": 5.18290832474122e-09,
+        "loss_terminal": 0.0014790380373597145,
+        "loss_total": 0.00986765418201685,
+        "loss_velocity": 0.00021304852270986885,
+        "max_position_error_m": 0.030323952436447144,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029688015580177307,
+        "position_rmse_m": 0.02259695529937744,
+        "terminal_position_error_m": 0.030323870480060577,
+        "terminal_velocity_error_m_s": 0.032551683485507965,
+        "velocity_rmse_m_s": 0.04609651863574982,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 17,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000017-world-000",
+        "train-000017-world-001",
+        "train-000017-world-002",
+        "train-000017-world-003"
+      ],
+      "gradient_l2_norm": 0.0063467309810221195,
+      "loss": 0.010237442329525948,
+      "metrics": {
+        "control_effort": 0.0005759978666901588,
+        "control_smoothness": 5.039424195274478e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.412060126968154e-12,
+        "loss_effort": 5.759979444519558e-07,
+        "loss_position": 0.008395565673708916,
+        "loss_smoothness": 5.039424877395504e-09,
+        "loss_terminal": 0.001601092517375946,
+        "loss_total": 0.010237442329525948,
+        "loss_velocity": 0.00024020331329666078,
+        "max_position_error_m": 0.031579963862895966,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030830269679427147,
+        "position_rmse_m": 0.022898299619555473,
+        "terminal_position_error_m": 0.031579963862895966,
+        "terminal_velocity_error_m_s": 0.044611766934394836,
+        "velocity_rmse_m_s": 0.048943959176540375,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 18,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009858766570687294,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005673509440384805,
+        "control_smoothness": 5.185042027733289e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.6072850395928455e-12,
+        "loss_effort": 5.673509804182686e-07,
+        "loss_position": 0.008167434483766556,
+        "loss_smoothness": 5.1850421733945495e-09,
+        "loss_terminal": 0.0014778970507904887,
+        "loss_total": 0.009858766570687294,
+        "loss_velocity": 0.00021286295668687671,
+        "max_position_error_m": 0.030312269926071167,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02967715822160244,
+        "position_rmse_m": 0.02258649840950966,
+        "terminal_position_error_m": 0.030312148854136467,
+        "terminal_velocity_error_m_s": 0.032539159059524536,
+        "velocity_rmse_m_s": 0.04607638344168663,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 18,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000018-world-000",
+        "train-000018-world-001",
+        "train-000018-world-002",
+        "train-000018-world-003"
+      ],
+      "gradient_l2_norm": 0.006045638583600521,
+      "loss": 0.009648993611335754,
+      "metrics": {
+        "control_effort": 0.0005301759811118245,
+        "control_smoothness": 4.721471668744925e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.1627040356373435e-12,
+        "loss_effort": 5.301760097609076e-07,
+        "loss_position": 0.008010915480554104,
+        "loss_smoothness": 4.721472102175994e-09,
+        "loss_terminal": 0.0013974076136946678,
+        "loss_total": 0.009648993611335754,
+        "loss_velocity": 0.00024013585061766207,
+        "max_position_error_m": 0.02949509769678116,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02890319563448429,
+        "position_rmse_m": 0.02236419916152954,
+        "terminal_position_error_m": 0.029480846598744392,
+        "terminal_velocity_error_m_s": 0.05520794168114662,
+        "velocity_rmse_m_s": 0.04870106279850006,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 19,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009849843569099903,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005672920378856361,
+        "control_smoothness": 5.187250735616544e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.605300949617197e-12,
+        "loss_effort": 5.672920337929099e-07,
+        "loss_position": 0.00815985631197691,
+        "loss_smoothness": 5.187251517213554e-09,
+        "loss_terminal": 0.0014767373213544488,
+        "loss_total": 0.009849843569099903,
+        "loss_velocity": 0.00021267708507366478,
+        "max_position_error_m": 0.030300362035632133,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029665956273674965,
+        "position_rmse_m": 0.02257600985467434,
+        "terminal_position_error_m": 0.030300218611955643,
+        "terminal_velocity_error_m_s": 0.03252657502889633,
+        "velocity_rmse_m_s": 0.046056196093559265,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 19,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000019-world-000",
+        "train-000019-world-001",
+        "train-000019-world-002",
+        "train-000019-world-003"
+      ],
+      "gradient_l2_norm": 0.006292679347097874,
+      "loss": 0.010197299532592297,
+      "metrics": {
+        "control_effort": 0.0006221850053407252,
+        "control_smoothness": 5.2948566917621065e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.760532679864982e-12,
+        "loss_effort": 6.221850981091848e-07,
+        "loss_position": 0.008421224541962147,
+        "loss_smoothness": 5.294856997295483e-09,
+        "loss_terminal": 0.001557694748044014,
+        "loss_total": 0.010197299532592297,
+        "loss_velocity": 0.00021775238565169275,
+        "max_position_error_m": 0.03115694224834442,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.0306625384837389,
+        "position_rmse_m": 0.022930007427930832,
+        "terminal_position_error_m": 0.03115694224834442,
+        "terminal_velocity_error_m_s": 0.029614418745040894,
+        "velocity_rmse_m_s": 0.0466417632997036,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 20,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.0098410090431571,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005672296392731369,
+        "control_smoothness": 5.189429884921992e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.60334201313195e-12,
+        "loss_effort": 5.672296765624196e-07,
+        "loss_position": 0.008152367547154427,
+        "loss_smoothness": 5.189430662966288e-09,
+        "loss_terminal": 0.0014755785232409835,
+        "loss_total": 0.0098410090431571,
+        "loss_velocity": 0.00021249100973363966,
+        "max_position_error_m": 0.0302884578704834,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029654918238520622,
+        "position_rmse_m": 0.02256564050912857,
+        "terminal_position_error_m": 0.030288290232419968,
+        "terminal_velocity_error_m_s": 0.0325138121843338,
+        "velocity_rmse_m_s": 0.04603598266839981,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 20,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000020-world-000",
+        "train-000020-world-001",
+        "train-000020-world-002",
+        "train-000020-world-003"
+      ],
+      "gradient_l2_norm": 0.006080912426114082,
+      "loss": 0.009935809299349785,
+      "metrics": {
+        "control_effort": 0.00057643634499982,
+        "control_smoothness": 5.325463916960871e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.793915698436679e-12,
+        "loss_effort": 5.764363777416293e-07,
+        "loss_position": 0.008119521662592888,
+        "loss_smoothness": 5.325464513816769e-09,
+        "loss_terminal": 0.0015972880646586418,
+        "loss_total": 0.009935809299349785,
+        "loss_velocity": 0.0002184171898989007,
+        "max_position_error_m": 0.03153221309185028,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030737655237317085,
+        "position_rmse_m": 0.022512907162308693,
+        "terminal_position_error_m": 0.03153221309185028,
+        "terminal_velocity_error_m_s": 0.03401033207774162,
+        "velocity_rmse_m_s": 0.04666490852832794,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 21,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009832165203988552,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.000567171664442867,
+        "control_smoothness": 5.19165496370988e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.6013731019867166e-12,
+        "loss_effort": 5.671717531186005e-07,
+        "loss_position": 0.008144852705299854,
+        "loss_smoothness": 5.191655549907637e-09,
+        "loss_terminal": 0.0014744338113814592,
+        "loss_total": 0.009832165203988552,
+        "loss_velocity": 0.00021230720449239016,
+        "max_position_error_m": 0.03027673251926899,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029643917456269264,
+        "position_rmse_m": 0.022555233910679817,
+        "terminal_position_error_m": 0.03027651458978653,
+        "terminal_velocity_error_m_s": 0.032501623034477234,
+        "velocity_rmse_m_s": 0.04601600021123886,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 21,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000021-world-000",
+        "train-000021-world-001",
+        "train-000021-world-002",
+        "train-000021-world-003"
+      ],
+      "gradient_l2_norm": 0.0058761779218912125,
+      "loss": 0.00980588048696518,
+      "metrics": {
+        "control_effort": 0.0006292298785410821,
+        "control_smoothness": 5.612357654172229e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.8827647654292594e-12,
+        "loss_effort": 6.292299303822801e-07,
+        "loss_position": 0.007936598733067513,
+        "loss_smoothness": 5.6123576896993654e-09,
+        "loss_terminal": 0.0016210052417591214,
+        "loss_total": 0.00980588048696518,
+        "loss_velocity": 0.0002476410008966923,
+        "max_position_error_m": 0.03180260583758354,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030415773391723633,
+        "position_rmse_m": 0.02226022258400917,
+        "terminal_position_error_m": 0.03180260583758354,
+        "terminal_velocity_error_m_s": 0.052526574581861496,
+        "velocity_rmse_m_s": 0.04970187693834305,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 22,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009823388420045376,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005671103717759252,
+        "control_smoothness": 5.1938222895842046e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.599421538076243e-12,
+        "loss_effort": 5.671104190696497e-07,
+        "loss_position": 0.008137396536767483,
+        "loss_smoothness": 5.193822705251705e-09,
+        "loss_terminal": 0.0014732963172718883,
+        "loss_total": 0.009823388420045376,
+        "loss_velocity": 0.000212123166420497,
+        "max_position_error_m": 0.030265051871538162,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02963300049304962,
+        "position_rmse_m": 0.022544899955391884,
+        "terminal_position_error_m": 0.030264807865023613,
+        "terminal_velocity_error_m_s": 0.032488852739334106,
+        "velocity_rmse_m_s": 0.045995987951755524,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 22,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000022-world-000",
+        "train-000022-world-001",
+        "train-000022-world-002",
+        "train-000022-world-003"
+      ],
+      "gradient_l2_norm": 0.006010026670992374,
+      "loss": 0.009778138250112534,
+      "metrics": {
+        "control_effort": 0.0005336210015229881,
+        "control_smoothness": 5.044829777034465e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.680859432698581e-12,
+        "loss_effort": 5.336210051609669e-07,
+        "loss_position": 0.00803147442638874,
+        "loss_smoothness": 5.044830331257799e-09,
+        "loss_terminal": 0.0015008820919319987,
+        "loss_total": 0.009778138250112534,
+        "loss_velocity": 0.00024524377658963203,
+        "max_position_error_m": 0.030537359416484833,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02968154288828373,
+        "position_rmse_m": 0.02238653413951397,
+        "terminal_position_error_m": 0.030537359416484833,
+        "terminal_velocity_error_m_s": 0.07202011346817017,
+        "velocity_rmse_m_s": 0.04949815943837166,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 23,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009814543649554253,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005670494865626097,
+        "control_smoothness": 5.196011898078723e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.597459999505782e-12,
+        "loss_effort": 5.670495966114686e-07,
+        "loss_position": 0.008129904977977276,
+        "loss_smoothness": 5.196012509145476e-09,
+        "loss_terminal": 0.0014721275074407458,
+        "loss_total": 0.009814543649554253,
+        "loss_velocity": 0.00021193901193328202,
+        "max_position_error_m": 0.030253048986196518,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029621880501508713,
+        "position_rmse_m": 0.02253451570868492,
+        "terminal_position_error_m": 0.030252765864133835,
+        "terminal_velocity_error_m_s": 0.03247643634676933,
+        "velocity_rmse_m_s": 0.045975953340530396,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 23,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000023-world-000",
+        "train-000023-world-001",
+        "train-000023-world-002",
+        "train-000023-world-003"
+      ],
+      "gradient_l2_norm": 0.005810592323541641,
+      "loss": 0.00955119077116251,
+      "metrics": {
+        "control_effort": 0.0005638806615024805,
+        "control_smoothness": 5.395889274950605e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.549674439274787e-12,
+        "loss_effort": 5.638806896968163e-07,
+        "loss_position": 0.0078056082129478455,
+        "loss_smoothness": 5.395889957071631e-09,
+        "loss_terminal": 0.0015018535777926445,
+        "loss_total": 0.00955119077116251,
+        "loss_velocity": 0.0002431601023999974,
+        "max_position_error_m": 0.03057505562901497,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02943161316215992,
+        "position_rmse_m": 0.022075289860367775,
+        "terminal_position_error_m": 0.03057505562901497,
+        "terminal_velocity_error_m_s": 0.061285749077796936,
+        "velocity_rmse_m_s": 0.04912235587835312,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 24,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009805849753320217,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005669908714480698,
+        "control_smoothness": 5.1981805881951004e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.595530987000496e-12,
+        "loss_effort": 5.669909342032042e-07,
+        "loss_position": 0.00812253262847662,
+        "loss_smoothness": 5.1981809967571735e-09,
+        "loss_terminal": 0.001470987917855382,
+        "loss_total": 0.009805849753320217,
+        "loss_velocity": 0.00021175685105845332,
+        "max_position_error_m": 0.030241340398788452,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029611052945256233,
+        "position_rmse_m": 0.022524287924170494,
+        "terminal_position_error_m": 0.030241020023822784,
+        "terminal_velocity_error_m_s": 0.032463978976011276,
+        "velocity_rmse_m_s": 0.04595613107085228,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 24,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000024-world-000",
+        "train-000024-world-001",
+        "train-000024-world-002",
+        "train-000024-world-003"
+      ],
+      "gradient_l2_norm": 0.0058845109306275845,
+      "loss": 0.009430891834199429,
+      "metrics": {
+        "control_effort": 0.0005721132038161159,
+        "control_smoothness": 4.920628271065652e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.3342087731323975e-12,
+        "loss_effort": 5.721132652070082e-07,
+        "loss_position": 0.007799651939421892,
+        "loss_smoothness": 4.9206279051361435e-09,
+        "loss_terminal": 0.0014171090442687273,
+        "loss_total": 0.009430891834199429,
+        "loss_velocity": 0.00021355357603169978,
+        "max_position_error_m": 0.029718222096562386,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02903241105377674,
+        "position_rmse_m": 0.0220709890127182,
+        "terminal_position_error_m": 0.029718222096562386,
+        "terminal_velocity_error_m_s": 0.03407599404454231,
+        "velocity_rmse_m_s": 0.04620806872844696,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 25,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.00979701429605484,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005669306265190244,
+        "control_smoothness": 5.2003433665959165e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.593563810578738e-12,
+        "loss_effort": 5.669306801792118e-07,
+        "loss_position": 0.008115020580589771,
+        "loss_smoothness": 5.200343711209143e-09,
+        "loss_terminal": 0.0014698449522256851,
+        "loss_total": 0.00979701429605484,
+        "loss_velocity": 0.00021157661103643477,
+        "max_position_error_m": 0.030229585245251656,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029600031673908234,
+        "position_rmse_m": 0.022513866424560547,
+        "terminal_position_error_m": 0.030229240655899048,
+        "terminal_velocity_error_m_s": 0.03245163708925247,
+        "velocity_rmse_m_s": 0.045936502516269684,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 25,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000025-world-000",
+        "train-000025-world-001",
+        "train-000025-world-002",
+        "train-000025-world-003"
+      ],
+      "gradient_l2_norm": 0.006104209925979376,
+      "loss": 0.009668064303696156,
+      "metrics": {
+        "control_effort": 0.0005545124877244234,
+        "control_smoothness": 4.7156077016552445e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.146189468146044e-12,
+        "loss_effort": 5.545124963646231e-07,
+        "loss_position": 0.008012371137738228,
+        "loss_smoothness": 4.715608348249134e-09,
+        "loss_terminal": 0.001418730360455811,
+        "loss_total": 0.009668064303696156,
+        "loss_velocity": 0.00023640354629606009,
+        "max_position_error_m": 0.02969060279428959,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02902744710445404,
+        "position_rmse_m": 0.02235763520002365,
+        "terminal_position_error_m": 0.02969060279428959,
+        "terminal_velocity_error_m_s": 0.05264660343527794,
+        "velocity_rmse_m_s": 0.04855640232563019,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 26,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009788372553884983,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005668740486726165,
+        "control_smoothness": 5.202555712457979e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.591640869605618e-12,
+        "loss_effort": 5.668740641340264e-07,
+        "loss_position": 0.008107681758701801,
+        "loss_smoothness": 5.202556607741826e-09,
+        "loss_terminal": 0.001468724338337779,
+        "loss_total": 0.009788372553884983,
+        "loss_velocity": 0.0002113939553964883,
+        "max_position_error_m": 0.030218053609132767,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02958916500210762,
+        "position_rmse_m": 0.022503679618239403,
+        "terminal_position_error_m": 0.030217686668038368,
+        "terminal_velocity_error_m_s": 0.03243894502520561,
+        "velocity_rmse_m_s": 0.0459166057407856,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 26,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000026-world-000",
+        "train-000026-world-001",
+        "train-000026-world-002",
+        "train-000026-world-003"
+      ],
+      "gradient_l2_norm": 0.006139529403299093,
+      "loss": 0.009887930005788803,
+      "metrics": {
+        "control_effort": 0.0005630989326164126,
+        "control_smoothness": 5.331389729690272e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.623093140948553e-12,
+        "loss_effort": 5.630989221572236e-07,
+        "loss_position": 0.008159439079463482,
+        "loss_smoothness": 5.331389996143798e-09,
+        "loss_terminal": 0.0015042690793052316,
+        "loss_total": 0.009887930005788803,
+        "loss_velocity": 0.00022365289623849094,
+        "max_position_error_m": 0.030719440430402756,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030057214200496674,
+        "position_rmse_m": 0.022571930661797523,
+        "terminal_position_error_m": 0.030654773116111755,
+        "terminal_velocity_error_m_s": 0.048890121281147,
+        "velocity_rmse_m_s": 0.047239355742931366,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 27,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.0097796730697155,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005668153753504157,
+        "control_smoothness": 5.204722128837602e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.5897118571003315e-12,
+        "loss_effort": 5.668154017257621e-07,
+        "loss_position": 0.008100312203168869,
+        "loss_smoothness": 5.204722874907475e-09,
+        "loss_terminal": 0.0014675771817564964,
+        "loss_total": 0.0097796730697155,
+        "loss_velocity": 0.00021121156169101596,
+        "max_position_error_m": 0.03020625188946724,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029578274115920067,
+        "position_rmse_m": 0.02249344252049923,
+        "terminal_position_error_m": 0.030205845832824707,
+        "terminal_velocity_error_m_s": 0.03242664411664009,
+        "velocity_rmse_m_s": 0.045896727591753006,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 27,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000027-world-000",
+        "train-000027-world-001",
+        "train-000027-world-002",
+        "train-000027-world-003"
+      ],
+      "gradient_l2_norm": 0.006077571306377649,
+      "loss": 0.009920448064804077,
+      "metrics": {
+        "control_effort": 0.0006204355740919709,
+        "control_smoothness": 5.146016519574914e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.462388791814931e-12,
+        "loss_effort": 6.204356850503245e-07,
+        "loss_position": 0.008096922188997269,
+        "loss_smoothness": 5.1460173899897654e-09,
+        "loss_terminal": 0.001584731275215745,
+        "loss_total": 0.009920448064804077,
+        "loss_velocity": 0.0002381682425038889,
+        "max_position_error_m": 0.03139200806617737,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030311347916722298,
+        "position_rmse_m": 0.022486137226223946,
+        "terminal_position_error_m": 0.03139200806617737,
+        "terminal_velocity_error_m_s": 0.04312078282237053,
+        "velocity_rmse_m_s": 0.04870383441448212,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 28,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009770972654223442,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005667561781592667,
+        "control_smoothness": 5.206897640164243e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.587773737296796e-12,
+        "loss_effort": 5.667561708833091e-07,
+        "loss_position": 0.008092925883829594,
+        "loss_smoothness": 5.20689846794653e-09,
+        "loss_terminal": 0.0014664450427517295,
+        "loss_total": 0.009770972654223442,
+        "loss_velocity": 0.0002110305504174903,
+        "max_position_error_m": 0.03019462153315544,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029567331075668335,
+        "position_rmse_m": 0.022483177483081818,
+        "terminal_position_error_m": 0.030194174498319626,
+        "terminal_velocity_error_m_s": 0.0324145071208477,
+        "velocity_rmse_m_s": 0.04587699472904205,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 28,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000028-world-000",
+        "train-000028-world-001",
+        "train-000028-world-002",
+        "train-000028-world-003"
+      ],
+      "gradient_l2_norm": 0.0060976408421993256,
+      "loss": 0.009640175849199295,
+      "metrics": {
+        "control_effort": 0.0005304716760292649,
+        "control_smoothness": 5.037139089836273e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.5944268355080364e-12,
+        "loss_effort": 5.304717092258215e-07,
+        "loss_position": 0.008004382252693176,
+        "loss_smoothness": 5.037139594321616e-09,
+        "loss_terminal": 0.0014334657462313771,
+        "loss_total": 0.009640175849199295,
+        "loss_velocity": 0.00020179248531349003,
+        "max_position_error_m": 0.02988569065928459,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029407307505607605,
+        "position_rmse_m": 0.02235833741724491,
+        "terminal_position_error_m": 0.029882650822401047,
+        "terminal_velocity_error_m_s": 0.027090497314929962,
+        "velocity_rmse_m_s": 0.04488706216216087,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 29,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009762227535247803,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005666911602020264,
+        "control_smoothness": 5.209034043218708e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.5858208723437155e-12,
+        "loss_effort": 5.666911988555512e-07,
+        "loss_position": 0.008085483685135841,
+        "loss_smoothness": 5.209034537045909e-09,
+        "loss_terminal": 0.0014653216348960996,
+        "loss_total": 0.009762227535247803,
+        "loss_velocity": 0.00021085009211674333,
+        "max_position_error_m": 0.030183061957359314,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029556650668382645,
+        "position_rmse_m": 0.022472836077213287,
+        "terminal_position_error_m": 0.03018259070813656,
+        "terminal_velocity_error_m_s": 0.03240225836634636,
+        "velocity_rmse_m_s": 0.04585731402039528,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 29,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000029-world-000",
+        "train-000029-world-001",
+        "train-000029-world-002",
+        "train-000029-world-003"
+      ],
+      "gradient_l2_norm": 0.006294767372310162,
+      "loss": 0.01001033466309309,
+      "metrics": {
+        "control_effort": 0.0005421385867521167,
+        "control_smoothness": 4.823742074222537e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.224160084220774e-12,
+        "loss_effort": 5.421386504167458e-07,
+        "loss_position": 0.00832384917885065,
+        "loss_smoothness": 4.823742294490785e-09,
+        "loss_terminal": 0.0014522415585815907,
+        "loss_total": 0.01001033466309309,
+        "loss_velocity": 0.00023369761765934527,
+        "max_position_error_m": 0.03016437403857708,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029737452045083046,
+        "position_rmse_m": 0.022800147533416748,
+        "terminal_position_error_m": 0.030055366456508636,
+        "terminal_velocity_error_m_s": 0.05106380581855774,
+        "velocity_rmse_m_s": 0.048190683126449585,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 30,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.00975353829562664,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005666338838636875,
+        "control_smoothness": 5.2112459343334194e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.583896630327988e-12,
+        "loss_effort": 5.666339575327584e-07,
+        "loss_position": 0.008078127168118954,
+        "loss_smoothness": 5.211246545400172e-09,
+        "loss_terminal": 0.0014641705201938748,
+        "loss_total": 0.00975353829562664,
+        "loss_velocity": 0.00021066816407255828,
+        "max_position_error_m": 0.03017120063304901,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029545564204454422,
+        "position_rmse_m": 0.02246260456740856,
+        "terminal_position_error_m": 0.030170690268278122,
+        "terminal_velocity_error_m_s": 0.032390475273132324,
+        "velocity_rmse_m_s": 0.045837461948394775,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 30,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000030-world-000",
+        "train-000030-world-001",
+        "train-000030-world-002",
+        "train-000030-world-003"
+      ],
+      "gradient_l2_norm": 0.005750714801251888,
+      "loss": 0.009044700302183628,
+      "metrics": {
+        "control_effort": 0.0005414514453150332,
+        "control_smoothness": 4.667342182074208e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.171779241501916e-12,
+        "loss_effort": 5.414514703261375e-07,
+        "loss_position": 0.0075638387352228165,
+        "loss_smoothness": 4.66734251247658e-09,
+        "loss_terminal": 0.0012781909899786115,
+        "loss_total": 0.009044700302183628,
+        "loss_velocity": 0.00020212469098623842,
+        "max_position_error_m": 0.028336267918348312,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.0278448686003685,
+        "position_rmse_m": 0.021731466054916382,
+        "terminal_position_error_m": 0.02821188047528267,
+        "terminal_velocity_error_m_s": 0.037207312881946564,
+        "velocity_rmse_m_s": 0.044876545667648315,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 31,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009744754061102867,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005665660719387233,
+        "control_smoothness": 5.213356871536234e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.581945500098383e-12,
+        "loss_effort": 5.665661433340574e-07,
+        "loss_position": 0.008070677518844604,
+        "loss_smoothness": 5.21335685732538e-09,
+        "loss_terminal": 0.0014630180085077882,
+        "loss_total": 0.009744754061102867,
+        "loss_velocity": 0.0002104869781760499,
+        "max_position_error_m": 0.030159318819642067,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029534531757235527,
+        "position_rmse_m": 0.022452235221862793,
+        "terminal_position_error_m": 0.030158784240484238,
+        "terminal_velocity_error_m_s": 0.0323781743645668,
+        "velocity_rmse_m_s": 0.04581768810749054,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 31,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000031-world-000",
+        "train-000031-world-001",
+        "train-000031-world-002",
+        "train-000031-world-003"
+      ],
+      "gradient_l2_norm": 0.006041735876351595,
+      "loss": 0.009521348401904106,
+      "metrics": {
+        "control_effort": 0.0005257873563095927,
+        "control_smoothness": 4.73547333967872e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.2111531275979e-12,
+        "loss_effort": 5.257874136077589e-07,
+        "loss_position": 0.007918509654700756,
+        "loss_smoothness": 4.735473790873357e-09,
+        "loss_terminal": 0.0013993742177262902,
+        "loss_total": 0.009521348401904106,
+        "loss_velocity": 0.00020293403940740973,
+        "max_position_error_m": 0.029575351625680923,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02928237058222294,
+        "position_rmse_m": 0.022236954420804977,
+        "terminal_position_error_m": 0.029536185786128044,
+        "terminal_velocity_error_m_s": 0.044172946363687515,
+        "velocity_rmse_m_s": 0.044980186969041824,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 32,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009736201725900173,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005665132775902748,
+        "control_smoothness": 5.215613327891333e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.58004554421132e-12,
+        "loss_effort": 5.665133357979357e-07,
+        "loss_position": 0.00806342251598835,
+        "loss_smoothness": 5.215613718689838e-09,
+        "loss_terminal": 0.0014619012363255024,
+        "loss_total": 0.009736201725900173,
+        "loss_velocity": 0.00021030649077147245,
+        "max_position_error_m": 0.030147816985845566,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029523815959692,
+        "position_rmse_m": 0.022442135959863663,
+        "terminal_position_error_m": 0.030147245153784752,
+        "terminal_velocity_error_m_s": 0.03236629441380501,
+        "velocity_rmse_m_s": 0.04579796642065048,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 32,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000032-world-000",
+        "train-000032-world-001",
+        "train-000032-world-002",
+        "train-000032-world-003"
+      ],
+      "gradient_l2_norm": 0.00608729338273406,
+      "loss": 0.009767876006662846,
+      "metrics": {
+        "control_effort": 0.0005354710738174617,
+        "control_smoothness": 4.905217338091461e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.486510989110126e-12,
+        "loss_effort": 5.354711447580485e-07,
+        "loss_position": 0.008080834522843361,
+        "loss_smoothness": 4.905218009554346e-09,
+        "loss_terminal": 0.0014766327803954482,
+        "loss_total": 0.009767876006662846,
+        "loss_velocity": 0.0002098676050081849,
+        "max_position_error_m": 0.030320342630147934,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029935702681541443,
+        "position_rmse_m": 0.022449053823947906,
+        "terminal_position_error_m": 0.03031192719936371,
+        "terminal_velocity_error_m_s": 0.039368633180856705,
+        "velocity_rmse_m_s": 0.04578948765993118,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 33,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009727601893246174,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005664507043547928,
+        "control_smoothness": 5.217779744270956e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.578133878940793e-12,
+        "loss_effort": 5.6645075119377e-07,
+        "loss_position": 0.00805613212287426,
+        "loss_smoothness": 5.217780429944696e-09,
+        "loss_terminal": 0.0014607732882723212,
+        "loss_total": 0.009727601893246174,
+        "loss_velocity": 0.0002101252175634727,
+        "max_position_error_m": 0.03013617731630802,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02951301634311676,
+        "position_rmse_m": 0.022431984543800354,
+        "terminal_position_error_m": 0.030135581269860268,
+        "terminal_velocity_error_m_s": 0.032354556024074554,
+        "velocity_rmse_m_s": 0.04577815905213356,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 33,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000033-world-000",
+        "train-000033-world-001",
+        "train-000033-world-002",
+        "train-000033-world-003"
+      ],
+      "gradient_l2_norm": 0.006051965989172459,
+      "loss": 0.009648720733821392,
+      "metrics": {
+        "control_effort": 0.000543834175914526,
+        "control_smoothness": 4.998307304049376e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.49707328667448e-12,
+        "loss_effort": 5.43834175914526e-07,
+        "loss_position": 0.007967808283865452,
+        "loss_smoothness": 4.998307989723116e-09,
+        "loss_terminal": 0.0014731775736436248,
+        "loss_total": 0.009648720733821392,
+        "loss_velocity": 0.00020718573068734258,
+        "max_position_error_m": 0.030298486351966858,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.029680360108613968,
+        "position_rmse_m": 0.022303104400634766,
+        "terminal_position_error_m": 0.030298486351966858,
+        "terminal_velocity_error_m_s": 0.037593476474285126,
+        "velocity_rmse_m_s": 0.04549090564250946,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 34,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.009719016961753368,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005663949996232986,
+        "control_smoothness": 5.219987087912159e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.576223948393743e-12,
+        "loss_effort": 5.663950446432864e-07,
+        "loss_position": 0.008048840798437595,
+        "loss_smoothness": 5.219987553317651e-09,
+        "loss_terminal": 0.00145965744741261,
+        "loss_total": 0.009719016961753368,
+        "loss_velocity": 0.00020994637452531606,
+        "max_position_error_m": 0.030124664306640625,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02950221113860607,
+        "position_rmse_m": 0.0224218238145113,
+        "terminal_position_error_m": 0.030124027281999588,
+        "terminal_velocity_error_m_s": 0.03234317526221275,
+        "velocity_rmse_m_s": 0.04575861990451813,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 34,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    }
+  ],
+  "optimizer_state": {
+    "leaves": [
+      {
+        "data": 34,
+        "dtype": "int32",
+        "shape": []
+      },
+      {
+        "data": [
+          -1.4440930726777879e-06,
+          -0.00441405363380909,
+          -9.758095984579995e-05,
+          -0.0039049440529197454
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      },
+      {
+        "data": [
+          7.105884023556053e-12,
+          6.986518314988643e-07,
+          5.806464198343519e-10,
+          5.427717155725986e-07
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      }
+    ],
+    "tree_repr": "PyTreeDef((CustomNode(namedtuple[ScaleByAdamState], [*, *, *]), CustomNode(namedtuple[EmptyState], [])))"
+  },
+  "payload_sha256": "d0eeb63b9c09ed3402864bfd79cdbdebfb4afb6479402f4c0524d214c5c9dc08",
+  "provenance": {
+    "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/pilot_config.json --output-dir /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/runs/20260731T213826Z-2e16f365ecfd/runner-output",
+    "config_fingerprint": "6d0465b5776fe1f09b0f5b1ab8777d02b9b3bd01386d8f00cc6209fb97d2efaa",
+    "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/pilot_config.json",
+    "environment": {
+      "jax_backend": "cpu",
+      "jax_devices": [
+        "cpu:0"
+      ],
+      "packages": {
+        "flax": "0.12.8",
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8",
+        "pytest": "9.1.1"
+      },
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "python": "3.12.13"
+    },
+    "frozen_test_manifest_reference_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+    "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+    "git": {
+      "branch": "research/differentiable-mellinger",
+      "dirty": false,
+      "head": "2e16f365ecfd60357d846c159549fe910a4fd220",
+      "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+      "source_fingerprint": "8ff8317b01de2aafda276bd13af3f2ee920a9610b764344c05d0fc620ae87320",
+      "source_fingerprint_scope": [
+        "crazyflow",
+        "examples"
+      ],
+      "status_short": []
+    },
+    "resume_lineage": null,
+    "root_seed": 20260731,
+    "runtime_compatibility": {
+      "jax_backend": "cpu",
+      "jax_enable_x64": false,
+      "machine": "x86_64",
+      "packages": {
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8"
+      },
+      "python": "3.12.13"
+    },
+    "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+    "schema_version": "crazyflow.mellinger_research_provenance.v1",
+    "seed_coordinate_contract": "split -> episode -> world -> component",
+    "started_at_utc": "2026-07-31T21:38:28.165622+00:00",
+    "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+    "validation_manifest_id": "mellinger-validation-v1-20260731"
+  },
+  "raw_gains": {
+    "data": [
+      -0.9826962351799011,
+      -0.24054448306560516,
+      -1.3550060987472534,
+      -0.5256637334823608
+    ],
+    "dtype": "float32",
+    "shape": [
+      4
+    ]
+  },
+  "root_seed": 20260731,
+  "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+  "schema_version": "crazyflow.mellinger_research_checkpoint.v2",
+  "selected_raw_gains": {
+    "data": [
+      -0.9826962351799011,
+      -0.24054448306560516,
+      -1.3550060987472534,
+      -0.5256637334823608
+    ],
+    "dtype": "float32",
+    "shape": [
+      4
+    ]
+  },
+  "selection": {
+    "criterion": "minimum validation loss; earliest exact tie",
+    "selected_step": 34,
+    "selected_validation_loss": 0.009719016961753368,
+    "test_used_for_selection": false
+  },
+  "source_fingerprint": "8ff8317b01de2aafda276bd13af3f2ee920a9610b764344c05d0fc620ae87320",
+  "step": 34,
+  "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+  "validation_manifest_id": "mellinger-validation-v1-20260731"
+}

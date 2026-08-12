@@ -1,0 +1,14 @@
+{
+  "active_persistence_amendment": "2026-08-01-local-ssd-persistence-v1",
+  "decision": "NO-GO_RUNS_IN_SPRINT12A",
+  "external_storage_gate_required": false,
+  "h200_h400_started": false,
+  "local_persistence_gate_required": true,
+  "next_step": "Sprint 13 may verify and execute exactly seed 01 only under separate explicit authorization and the amended local-persistence preflight",
+  "pilot_in_confirmatory_panel": false,
+  "protocol_complete": true,
+  "research_processes_started": 0,
+  "schema_version": "crazyflow.h100_replication_protocol_gate.v1",
+  "seed_01_preparation_status": "GO_AFTER_SEPARATE_AUTHORIZATION_AND_EXACT_PREFLIGHT",
+  "test_manifest_opened": false
+}

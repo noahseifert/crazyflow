@@ -1,0 +1,50 @@
+{
+  "schema_version": "crazyflow.sprint9_verification_summary.v1",
+  "date": "2026-08-01",
+  "authorized_base_head": "d1d0cc0a400b8af81da9f435226a6b5797dc2c97",
+  "config": {
+    "validated": true,
+    "configured_updates": 5000,
+    "canonical_fingerprint": "23ee0f46f581b6453ec51915a8cd5410e7cd77d48c9d6a07caadee74a98c5fb5",
+    "sha256": "265e5ee3a0669d464eb07fe26e7ec147ef4c26ee0d6ba2a095e309e8362aad1e",
+    "semantic_diff_from_sprint8": [
+      "run_id",
+      "optimizer.steps: 50 -> 5000"
+    ]
+  },
+  "launcher": {
+    "bash_syntax_passed": true,
+    "dry_run_expected_exit": 3,
+    "dry_run_actual_exit": 3,
+    "dry_run_refused_no_go_before_creating_run_directory": true,
+    "tmux_path": "/usr/bin/tmux",
+    "tmux_version": "tmux 3.6"
+  },
+  "quality_checks": {
+    "pip_check": "PASS: No broken requirements found",
+    "ruff_check": "PASS: All checks passed",
+    "ruff_format_check": "PASS: 115 files already formatted",
+    "focused_pytest": "PASS: 21 passed, 5 skipped, 22 deselected in 27.92s",
+    "focused_pytest_scope": [
+      "tests/unit/test_mellinger_research.py",
+      "tests/unit/test_mellinger_checkpointing.py",
+      "tests/integration/test_mellinger_research_runner.py",
+      "tests/integration/test_examples.py -k mellinger"
+    ],
+    "covered_properties": [
+      "config validation",
+      "unique output and overwrite refusal",
+      "atomic checkpoint roundtrip",
+      "exact controlled resume in a new output directory",
+      "config, gain-registry, source and runtime fingerprint checks",
+      "checksum corruption rejection",
+      "nonfinite serialization rejection",
+      "complete provenance and opaque Test reference",
+      "no Test manifest opening by the runner"
+    ]
+  },
+  "new_training_processes_started": 0,
+  "long_pilot_started": false,
+  "decision": "NO-GO",
+  "blocking_gate": "Measured per-update full-history checkpoint growth projects all evaluated 5000-update fits beyond the hard 7200-second limit."
+}

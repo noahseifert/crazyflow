@@ -1,0 +1,64 @@
+{
+  "schema_version": "crazyflow.sprint7_trajectory_gate_evaluation.v1",
+  "predeclared_criteria": "artifacts/day7-trajectory/decision/pre_gate_criteria.json",
+  "seed_suite_sha256": "ff0b8b3534af1e2e5db5aa566e64f0e51c03bcd46fc988a8c33e15ed3852ce5f",
+  "scientific_payload_sha256_run1": "4118a23a1f562fc27fbe99cefc6dfd8c6a02966f973929d68ce57d32217c8069",
+  "scientific_payload_sha256_run2": "4118a23a1f562fc27fbe99cefc6dfd8c6a02966f973929d68ce57d32217c8069",
+  "deterministic_repetition_passed": true,
+  "paired_consistency": {
+    "seed_count": 128,
+    "same_attempt_across_horizons": true,
+    "h100_exact_prefix_of_h400": true,
+    "h200_exact_prefix_of_h400": true,
+    "h400_exact_legacy_v1": true,
+    "h400_attempt_matches_legacy_v1": true,
+    "all_returned_arrays_finite": true,
+    "different_seed_results_requirement_passed": true,
+    "different_seed_h400_positions_distinct_from_first_count": 127
+  },
+  "horizons": {
+    "H100": {
+      "success_count": 128,
+      "attempt_count_min_median_mean_max": [1.0, 1.0, 1.0, 1.0],
+      "rejection_reason_counts": {},
+      "median_position_displacement_rms_m": 0.008243627371044582,
+      "median_speed_rms_m_s": 0.044124871492385864,
+      "median_axis_spans_m": [0.015470921527594328, 0.010406939312815666, 0.007224708795547485],
+      "maximum_returned_acceleration_m_s2": 1.129547119140625,
+      "maximum_returned_jerk_m_s3": 6.643004417419434,
+      "near_stationary_count": 0
+    },
+    "H200": {
+      "success_count": 128,
+      "attempt_count_min_median_mean_max": [1.0, 1.0, 1.0, 1.0],
+      "rejection_reason_counts": {},
+      "median_position_displacement_rms_m": 0.04851689972247504,
+      "median_speed_rms_m_s": 0.1700664758682251,
+      "median_axis_spans_m": [0.09585801884531975, 0.07961242273449898, 0.049776941537857056],
+      "maximum_returned_acceleration_m_s2": 3.2493741512298584,
+      "maximum_returned_jerk_m_s3": 19.326162338256836,
+      "near_stationary_count": 0,
+      "median_position_rms_ratio_to_legacy_accepted_H200": 1.428450009782383,
+      "median_speed_rms_ratio_to_legacy_accepted_H200": 0.9542393180894575
+    },
+    "H400": {
+      "success_count": 128,
+      "attempt_count_min_median_mean_max": [1.0, 1.0, 1.0, 1.0],
+      "rejection_reason_counts": {},
+      "median_position_displacement_rms_m": 0.04833018740513709,
+      "median_speed_rms_m_s": 0.17459261417388916,
+      "median_axis_spans_m": [0.12729540467262268, 0.10762035101652145, 0.05764463543891907],
+      "maximum_returned_acceleration_m_s2": 3.5821354389190674,
+      "maximum_returned_jerk_m_s3": 19.326162338256836,
+      "near_stationary_count": 0
+    }
+  },
+  "criteria_results": {
+    "technical_construction_gate": true,
+    "diversity_gate": true,
+    "legacy_compatibility_gate": true,
+    "horizon_consistency_gate": true
+  },
+  "decision": "PASS for bounded local CPU pilot gates",
+  "claim_boundary": "Empirical technical construction evidence only; not proof of the full distribution, optimization, GPU readiness, Sim2Real, hardware, or safety."
+}

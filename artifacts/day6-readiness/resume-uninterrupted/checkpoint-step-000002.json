@@ -1,0 +1,307 @@
+{
+  "config_fingerprint": "69cb19645493c7905f89ce0e914add62e06bd5faf07d632e12d4de7e9240aa87",
+  "episode_index": 2,
+  "frozen_test_manifest_reference": "configs/research/mellinger/test_manifest.v1.json",
+  "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 0.0005476958467625082,
+      "validation_loss": 0.0005446682334877551
+    },
+    {
+      "step": 2,
+      "train_loss": 0.0006267180433496833,
+      "validation_loss": 0.0005445563001558185
+    }
+  ],
+  "metrics_records": [
+    {
+      "episode_ids": [
+        "train-000000-world-000"
+      ],
+      "gradient_l2_norm": 0.00010768110951175913,
+      "loss": 0.0005476958467625082,
+      "metrics": {
+        "control_effort": 0.003519471501931548,
+        "control_smoothness": 0.002316910307854414,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.0892638747521675e-12,
+        "loss_effort": 3.519471420077025e-06,
+        "loss_position": 0.00018928913050331175,
+        "loss_smoothness": 2.316910240551806e-06,
+        "loss_terminal": 9.535109711578116e-05,
+        "loss_total": 0.0005476958467625082,
+        "loss_velocity": 0.00025721927522681653,
+        "max_position_error_m": 0.007719743065536022,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.00691216392442584,
+        "position_rmse_m": 0.0034395596012473106,
+        "terminal_position_error_m": 0.007719743065536022,
+        "terminal_velocity_error_m_s": 0.08692450821399689,
+        "velocity_rmse_m_s": 0.050716787576675415,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 1,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000"
+      ],
+      "loss": 0.0005446682334877551,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0019912924617528915,
+        "control_smoothness": 0.000442343094618991,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.091343591359429e-12,
+        "loss_effort": 1.9912924926757114e-06,
+        "loss_position": 0.00019149668514728546,
+        "loss_smoothness": 4.423430937094963e-07,
+        "loss_terminal": 9.588470129529014e-05,
+        "loss_total": 0.0005446682334877551,
+        "loss_velocity": 0.000254853192018345,
+        "max_position_error_m": 0.007741313893347979,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.006939431186765432,
+        "position_rmse_m": 0.0034595581237226725,
+        "terminal_position_error_m": 0.007741313893347979,
+        "terminal_velocity_error_m_s": 0.08632133156061172,
+        "velocity_rmse_m_s": 0.05048298463225365,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 1,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "train-000001-world-000"
+      ],
+      "gradient_l2_norm": 0.00012060386507073417,
+      "loss": 0.0006267180433496833,
+      "metrics": {
+        "control_effort": 0.00588008901104331,
+        "control_smoothness": 0.004688073880970478,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.1014791469486926e-12,
+        "loss_effort": 5.880089247511933e-06,
+        "loss_position": 0.00021148825180716813,
+        "loss_smoothness": 4.688074113801122e-06,
+        "loss_terminal": 0.00010781356104416773,
+        "loss_total": 0.0006267180433496833,
+        "loss_velocity": 0.00029684806941077113,
+        "max_position_error_m": 0.008208743296563625,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.00733700767159462,
+        "position_rmse_m": 0.003635658882558346,
+        "terminal_position_error_m": 0.008208743296563625,
+        "terminal_velocity_error_m_s": 0.09389293938875198,
+        "velocity_rmse_m_s": 0.05448376387357712,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 2,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000"
+      ],
+      "loss": 0.0005445563001558185,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.001990967895835638,
+        "control_smoothness": 0.00044232013169676065,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.091329496731187e-12,
+        "loss_effort": 1.9909678030671785e-06,
+        "loss_position": 0.0001914700260385871,
+        "loss_smoothness": 4.42320157389986e-07,
+        "loss_terminal": 9.58669843384996e-05,
+        "loss_total": 0.0005445563001558185,
+        "loss_velocity": 0.00025478602037765086,
+        "max_position_error_m": 0.007740598171949387,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.006938942242413759,
+        "position_rmse_m": 0.0034593173768371344,
+        "terminal_position_error_m": 0.007740598171949387,
+        "terminal_velocity_error_m_s": 0.08630364388227463,
+        "velocity_rmse_m_s": 0.050476331263780594,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 2,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    }
+  ],
+  "optimizer_state": {
+    "leaves": [
+      {
+        "data": 2,
+        "dtype": "int32",
+        "shape": []
+      },
+      {
+        "data": [
+          -1.4104512224832888e-08,
+          -1.6073649931058753e-06,
+          1.2599537058122223e-07,
+          -2.1691826987080276e-05
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      },
+      {
+        "data": [
+          1.1267669842920744e-17,
+          1.4269281015024532e-13,
+          9.20401141200455e-16,
+          2.5985293777841534e-11
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      }
+    ],
+    "tree_repr": "PyTreeDef((CustomNode(namedtuple[ScaleByAdamState], [*, *, *]), CustomNode(namedtuple[EmptyState], [])))"
+  },
+  "payload_sha256": "79e9ac7ee905e26bdde04828a7693619eb4b0a047540f77856ff6fbc3ba35257",
+  "provenance": {
+    "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config configs/research/mellinger/sprint6_resume.json --output-dir artifacts/day6-readiness/resume-uninterrupted",
+    "config_fingerprint": "69cb19645493c7905f89ce0e914add62e06bd5faf07d632e12d4de7e9240aa87",
+    "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/sprint6_resume.json",
+    "environment": {
+      "jax_backend": "cpu",
+      "jax_devices": [
+        "cpu:0"
+      ],
+      "packages": {
+        "flax": "0.12.8",
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8",
+        "pytest": "9.1.1"
+      },
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "python": "3.12.13"
+    },
+    "frozen_test_manifest_reference_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+    "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+    "git": {
+      "branch": "research/differentiable-mellinger",
+      "dirty": false,
+      "head": "efc3da4d3ae70e4de74c4ee3bdceaf9fa4f628ab",
+      "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+      "source_fingerprint": "379b418c28e213dc2d4df7d9350ab75234be37e39884ac30f90ba3af521213b9",
+      "source_fingerprint_scope": [
+        "crazyflow",
+        "examples"
+      ],
+      "status_short": []
+    },
+    "resume_lineage": null,
+    "root_seed": 20260731,
+    "runtime_compatibility": {
+      "jax_backend": "cpu",
+      "jax_enable_x64": false,
+      "machine": "x86_64",
+      "packages": {
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8"
+      },
+      "python": "3.12.13"
+    },
+    "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+    "schema_version": "crazyflow.mellinger_research_provenance.v1",
+    "seed_coordinate_contract": "split -> episode -> world -> component",
+    "started_at_utc": "2026-07-31T18:53:55.455871+00:00",
+    "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+    "validation_manifest_id": "mellinger-validation-v1-20260731"
+  },
+  "raw_gains": {
+    "data": [
+      -0.9791043400764465,
+      -0.2724381685256958,
+      -1.38823664188385,
+      -0.5576145648956299
+    ],
+    "dtype": "float32",
+    "shape": [
+      4
+    ]
+  },
+  "root_seed": 20260731,
+  "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+  "schema_version": "crazyflow.mellinger_research_checkpoint.v2",
+  "selected_raw_gains": {
+    "data": [
+      -0.9791043400764465,
+      -0.2724381685256958,
+      -1.38823664188385,
+      -0.5576145648956299
+    ],
+    "dtype": "float32",
+    "shape": [
+      4
+    ]
+  },
+  "selection": {
+    "criterion": "minimum validation loss; earliest exact tie",
+    "selected_step": 2,
+    "selected_validation_loss": 0.0005445563001558185,
+    "test_used_for_selection": false
+  },
+  "source_fingerprint": "379b418c28e213dc2d4df7d9350ab75234be37e39884ac30f90ba3af521213b9",
+  "step": 2,
+  "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+  "validation_manifest_id": "mellinger-validation-v1-20260731"
+}

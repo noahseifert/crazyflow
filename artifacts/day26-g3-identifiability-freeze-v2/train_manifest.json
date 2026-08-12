@@ -1,0 +1,330 @@
+{
+  "cross_split_leakage_count": 0,
+  "optimizer_initialization_count": 0,
+  "optimizer_update_count": 0,
+  "parent_count": 12,
+  "parents": [
+    {
+      "attempt": 0,
+      "attempt_identity": "train-soft-hold-8301001/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "222dba9890168b6cab182b69ceb0ff98f5608ec2e42d3101592f4e29edac16cc",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "a93316d115beee75a18883f7c61c771bfa64ae32e120970e6e8f4bfb66db3d91",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-soft-hold-8301001",
+      "motion_class": "soft",
+      "pair_id": "pair-soft-hold",
+      "parent_digest": "a3fb6842f7ea1d1dba3e3aceda0e2c6d55e67d4c2820fb54ccc8a1dc8f6c34f3",
+      "profile": "hold",
+      "seed": 8301001
+    },
+    {
+      "attempt": 0,
+      "attempt_identity": "train-soft-climb-8301002/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "990f9769921085dfc426b5856a3655c94ae4d33dffe432333930c8a94f1ff1ee",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "eeb70aed03862b9b5655b415cdca4ce4d49cf8cefc06b827838bf5a28904b125",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-soft-climb-8301002",
+      "motion_class": "soft",
+      "pair_id": "pair-soft-climb",
+      "parent_digest": "9022ff15201191f09adf12b431259138027113480072bdc3863accb43c2a215f",
+      "profile": "climb",
+      "seed": 8301002
+    },
+    {
+      "attempt": 0,
+      "attempt_identity": "train-soft-descent-8301003/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "b4c93edccaab883a2877aec14bce6826320a4d6830c1778863eeb1f73db1e962",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "b7085f5fdb85c86f3c2884a1d368ccf09703dec0752eb55164b0cd2aef0bafe3",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-soft-descent-8301003",
+      "motion_class": "soft",
+      "pair_id": "pair-soft-descent",
+      "parent_digest": "a69a36097e8aad425b0dff26de08a2aa6235910bb0648da45edd442a1b4c8101",
+      "profile": "descent",
+      "seed": 8301003
+    },
+    {
+      "attempt": 0,
+      "attempt_identity": "train-nominal-hold-8301101/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "5717423bcdc00b5e1157ffc87387c493e5b4969d362aa9e0139efd659eeb0add",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "63560fa7c7983d0b34c95970d25ef798dc0a550722093e2f08688ea8ba3c5764",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-nominal-hold-8301101",
+      "motion_class": "nominal",
+      "pair_id": "pair-nominal-hold",
+      "parent_digest": "e2fc86408dd71d2a9ab22a7560d26cddab77ab19a49005aca09083d0505e0a02",
+      "profile": "hold",
+      "seed": 8301101
+    },
+    {
+      "attempt": 1,
+      "attempt_identity": "train-nominal-climb-8301102/attempt-1",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "e9fdd1d43a9d7ba70add085ca15a3c2a9f067a3e6b291f7e9d9201661a0ba511",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "fc02aa010a665c8738b54973fbd683631f9dde6c60179ae529d18acc7293c6e1",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-nominal-climb-8301102",
+      "motion_class": "nominal",
+      "pair_id": "pair-nominal-climb",
+      "parent_digest": "053feb3e3f4ca95a2fea31dfd92deca4a35cf7d26295f1dff7ad96a47a26a33f",
+      "profile": "climb",
+      "seed": 8301102
+    },
+    {
+      "attempt": 2,
+      "attempt_identity": "train-nominal-descent-8301103/attempt-2",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "3ec3d78b301d30af9a3d2d576283512ef4cc3dec97da586bd17ddeb633d4f8a1",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "52235693a32ea54750a6576e141a6b9503e7595a501848c31eaf4a90fb1bc049",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-nominal-descent-8301103",
+      "motion_class": "nominal",
+      "pair_id": "pair-nominal-descent",
+      "parent_digest": "f8a620315050b97f72f86424afdc933d845c19929c8acddbf927f67fbca56445",
+      "profile": "descent",
+      "seed": 8301103
+    },
+    {
+      "attempt": 3,
+      "attempt_identity": "train-dynamic-hold-8301201/attempt-3",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "bea2e0c4e8474d9b90f72caccc8a8f66e3d8cd75ccd20553a348b472e5c72d38",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "07f0eb36520c42268c3bf9fb68270a9f8f5574f565bd27db94cabe605074bad0",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-dynamic-hold-8301201",
+      "motion_class": "dynamic",
+      "pair_id": "pair-dynamic-hold",
+      "parent_digest": "d14e492943abc782ac18094c3567d563302aa52e02b9433c6ee4c148e7638076",
+      "profile": "hold",
+      "seed": 8301201
+    },
+    {
+      "attempt": 0,
+      "attempt_identity": "train-dynamic-climb-8301202/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "41c52a065757158c17419d967082cb0a430791063d93bf6738cf3d34f24b4e9f",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "bc6be5a77f1cc21b20f468869bca35fea4b870842ba794f56c81fd37cc3ade1a",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-dynamic-climb-8301202",
+      "motion_class": "dynamic",
+      "pair_id": "pair-dynamic-climb",
+      "parent_digest": "b8084ced0cf2ba38c8879889e005996908a453b07a185417738eb36954c090be",
+      "profile": "climb",
+      "seed": 8301202
+    },
+    {
+      "attempt": 8,
+      "attempt_identity": "train-dynamic-descent-8301203/attempt-8",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "b73dde6da51f9cf27bb287f24c3e14d927c077255fa5b98eea2b3a9b79b55935",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "d319499a3d976a43a664cd302a0154f7e42fd8b2edd7750696b738ab8d541929",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-dynamic-descent-8301203",
+      "motion_class": "dynamic",
+      "pair_id": "pair-dynamic-descent",
+      "parent_digest": "134b9daf9478bca67196c4062f23a40b7736ace7f3c3c24ddf76933668b47707",
+      "profile": "descent",
+      "seed": 8301203
+    },
+    {
+      "attempt": 9,
+      "attempt_identity": "train-near_limit-hold-8301301/attempt-9",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "7e64cf016aa6ad0ecc059c96777a4f4a8d478a94dcbae73c8418d02af8eea078",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "4d2ad76d3a950ddfa759ead47e2e23be3038d772525e4e43f7c05d3e159e161d",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-near_limit-hold-8301301",
+      "motion_class": "near_limit",
+      "pair_id": "pair-near_limit-hold",
+      "parent_digest": "b34450fbcc95b61f817aa8d562ba0cd8e9d5a38c6829a969e50c56adee89af8d",
+      "profile": "hold",
+      "seed": 8301301
+    },
+    {
+      "attempt": 0,
+      "attempt_identity": "train-near_limit-climb-8301302/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "e6d2609b67a08c02ff7201d1c63b69a875515c33900ae6ffa2125607038ef8cf",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "6df6af8058a29f00685aca5afbb7bef409bb62f9f347796e732a27502b5c2147",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-near_limit-climb-8301302",
+      "motion_class": "near_limit",
+      "pair_id": "pair-near_limit-climb",
+      "parent_digest": "3a6bc226ba8dad32278835baa226ac6ba7d89460a2f0791a2fa378314d40c984",
+      "profile": "climb",
+      "seed": 8301302
+    },
+    {
+      "attempt": 37,
+      "attempt_identity": "train-near_limit-descent-8301303/attempt-37",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "8745e5f84830a196b40e39d11d9719fe6dfa80f6e439e391ac53c10052a524b9",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "dea160df1e011b2ef4dd8d55e5776b1d94cc8653edfb95d5576ab2a044db813f",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "train-near_limit-descent-8301303",
+      "motion_class": "near_limit",
+      "pair_id": "pair-near_limit-descent",
+      "parent_digest": "3ecf81f03407cd7a147cca51a86d36461227bdc506708f7a3970bd334d9e49c9",
+      "profile": "descent",
+      "seed": 8301303
+    }
+  ],
+  "schema_version": "crazyflow.g3_identifiability_freeze_v2.v4",
+  "split": "train",
+  "split_disjointness_coordinates": [
+    "episode_id",
+    "seed",
+    "attempt_identity",
+    "component_key_digest",
+    "parent_digest"
+  ],
+  "test_manifest": null
+}

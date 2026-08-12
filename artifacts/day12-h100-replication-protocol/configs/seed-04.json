@@ -1,0 +1,72 @@
+{
+  "domain_randomization": {
+    "delay_enabled": false,
+    "delay_max_control_steps": 0,
+    "force_std_n": 0.0,
+    "mass_enabled": true,
+    "mass_half_width_kg": 0.0002,
+    "torque_std_nm": 0.0,
+    "wrench_correlation_time_s": 0.1,
+    "wrench_enabled": false
+  },
+  "optimizer": {
+    "checkpoint_interval": 100,
+    "gain_stage": 1,
+    "learning_rate": 0.001,
+    "steps": 5000
+  },
+  "root_seed": 1369406745,
+  "run_id": "sprint13-h100-replication-seed-04",
+  "schema_version": "crazyflow.mellinger_research_config.v1",
+  "test_manifest": "configs/research/mellinger/test_manifest.v1.json",
+  "train": {
+    "control_freq_hz": 100,
+    "drone": "cf2x_L250",
+    "horizon": 100,
+    "n_drones": 1,
+    "n_worlds": 4,
+    "sim_freq_hz": 500
+  },
+  "trajectory": {
+    "amplitude_m": [
+      0.18,
+      0.14,
+      0.08
+    ],
+    "center_m": [
+      0.0,
+      0.0,
+      0.75
+    ],
+    "distribution_version": "fixed_support_prefix_v2",
+    "harmonics": 3,
+    "max_acceleration_m_s2": 5.0,
+    "max_attempts": 16,
+    "max_jerk_m_s3": 35.0,
+    "max_speed_m_s": 1.5,
+    "max_tilt_rad": 0.7,
+    "max_yaw_rate_rad_s": 1.0,
+    "min_specific_force_m_s2": 2.0,
+    "minimum_duration_s": 1.0,
+    "support_duration_s": 4.0,
+    "workspace_max_m": [
+      0.6,
+      0.6,
+      1.2
+    ],
+    "workspace_min_m": [
+      -0.6,
+      -0.6,
+      0.35
+    ]
+  },
+  "validation": {
+    "control_freq_hz": 100,
+    "drone": "cf2x_L250",
+    "horizon": 100,
+    "n_drones": 1,
+    "n_worlds": 4,
+    "sim_freq_hz": 500
+  },
+  "validation_manifest": "configs/research/mellinger/validation_manifest.v1.json"
+}

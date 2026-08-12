@@ -1,0 +1,5024 @@
+{
+  "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_scaling_benchmark.py --config configs/research/mellinger/workstation.json --trajectory-diagnostics-only --diagnostic-horizons 100 --diagnostic-seed-count 1 --diagnostic-max-attempts 16 --output-dir artifacts/day7-trajectory/phase-a/h100-attempt-diagnostics",
+  "config": {
+    "domain_randomization": {
+      "delay_enabled": false,
+      "delay_max_control_steps": 0,
+      "force_std_n": 0.0,
+      "mass_enabled": true,
+      "mass_half_width_kg": 0.0002,
+      "torque_std_nm": 0.0,
+      "wrench_correlation_time_s": 0.1,
+      "wrench_enabled": false
+    },
+    "optimizer": {
+      "gain_stage": 1,
+      "learning_rate": 0.001,
+      "steps": 200
+    },
+    "root_seed": 20260731,
+    "run_id": "workstation-stage1-prepared-not-executed",
+    "schema_version": "crazyflow.mellinger_research_config.v1",
+    "test_manifest": "configs/research/mellinger/test_manifest.v1.json",
+    "train": {
+      "control_freq_hz": 100,
+      "drone": "cf2x_L250",
+      "horizon": 400,
+      "n_drones": 1,
+      "n_worlds": 16,
+      "sim_freq_hz": 500
+    },
+    "trajectory": {
+      "amplitude_m": [
+        0.18,
+        0.14,
+        0.08
+      ],
+      "center_m": [
+        0.0,
+        0.0,
+        0.75
+      ],
+      "harmonics": 3,
+      "max_acceleration_m_s2": 5.0,
+      "max_attempts": 16,
+      "max_jerk_m_s3": 35.0,
+      "max_speed_m_s": 1.5,
+      "max_tilt_rad": 0.7,
+      "max_yaw_rate_rad_s": 1.0,
+      "min_specific_force_m_s2": 2.0,
+      "workspace_max_m": [
+        0.6,
+        0.6,
+        1.2
+      ],
+      "workspace_min_m": [
+        -0.6,
+        -0.6,
+        0.35
+      ]
+    },
+    "validation": {
+      "control_freq_hz": 100,
+      "drone": "cf2x_L250",
+      "horizon": 400,
+      "n_drones": 1,
+      "n_worlds": 4,
+      "sim_freq_hz": 500
+    },
+    "validation_manifest": "configs/research/mellinger/validation_manifest.v1.json"
+  },
+  "config_fingerprint": "cfe43a45087f62114d5e8a49512adad87aab507a7df86a4bf795ac9d6cc48250",
+  "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/workstation.json",
+  "configured_max_attempts": 16,
+  "construction_only_contract": {
+    "jax_jit_called": false,
+    "simulation_built": false,
+    "test_manifest_opened": false,
+    "test_split_built_or_evaluated": false,
+    "training_run": false,
+    "validation_run": false
+  },
+  "diagnostic_max_attempts": 16,
+  "environment": {
+    "jax_backend": "cpu",
+    "jax_devices": [
+      "cpu:0"
+    ],
+    "jax_enable_x64": false,
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "git_branch": "research/differentiable-mellinger",
+  "git_head": "3286b5dc03ed110fe7166f5f12e5f4f31ecf8e68",
+  "higher_attempt_limit_estimate_only": false,
+  "horizons": [
+    {
+      "construction_wall_seconds": 1.291451964,
+      "duration_seconds": 1.0,
+      "horizon_control_intervals": 100,
+      "seeds": [
+        {
+          "attempt_count": 16,
+          "attempts": [
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "14aaf48afede4909834fd8b0d0e2cad2790d937b5ee0200530362eb97b6cfbed",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "4a932930b9f1c13efff93a9a232b6d8f38fb4efc29d7616a2fd7d156ecf044f7",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "cb09f211cd81bfb8a00a279de1e4dc4cf78d0c5667422717adab895e44ae2635",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "b5235b456eb83fab9c8462e9f943fce12a724abcbcdcdbb720fee63b0e16fc40",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 1,
+              "attempt_index": 0,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5893526077270508,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.010647394694387913,
+                  "observed_minus_limit": 0.5893526077270508,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 81,
+                  "time_seconds": 0.8100000023841858,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5656711459159851,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.0343288891017437,
+                  "observed_minus_limit": -0.5656711459159851,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 64,
+                  "time_seconds": 0.6399999856948853,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5502932667732239,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.04970673471689224,
+                  "observed_minus_limit": 0.5502932667732239,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 38,
+                  "time_seconds": 0.3799999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5082768201828003,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.09172319620847702,
+                  "observed_minus_limit": -0.5082768201828003,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.38354697823524475,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7335469722747803,
+                  "observed_minus_limit": 0.38354697823524475,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 33,
+                  "time_seconds": 0.32999998331069946,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4386158585548401,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7613841891288757,
+                  "observed_minus_limit": -0.4386158585548401,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 74,
+                  "time_seconds": 0.7400000095367432,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.12914562225341797,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.370854377746582,
+                  "observed_minus_limit": -0.12914562225341797,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -19.846715927124023,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 24.846715927124023,
+                  "observed_minus_limit": 19.846715927124023,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 54,
+                  "time_seconds": 0.5399999618530273,
+                  "violation_magnitude": 19.846715927124023
+                },
+                {
+                  "acceptance_margin": -516.489501953125,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 551.489501953125,
+                  "observed_minus_limit": 516.489501953125,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 516.489501953125
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.5181887707025588,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.2181887707025587,
+                  "observed_minus_limit": 0.5181887707025588,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 52,
+                  "time_seconds": 0.5199999809265137,
+                  "violation_magnitude": 0.5181887707025588
+                },
+                {
+                  "acceptance_margin": 5.315458144001922,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 7.315458144001922,
+                  "observed_minus_limit": 5.315458144001922,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    8.121286392211914,
+                    24.71295738220215,
+                    3.5969552993774414
+                  ],
+                  "component_rms": [
+                    3.189990758895874,
+                    9.668013572692871,
+                    1.7839347124099731
+                  ],
+                  "vector_norm_max": 24.846715927124023,
+                  "vector_norm_rms": 10.335809707641602
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    172.1177215576172,
+                    550.3367309570312,
+                    88.2665786743164
+                  ],
+                  "component_rms": [
+                    68.28264617919922,
+                    213.852294921875,
+                    41.18335723876953
+                  ],
+                  "vector_norm_max": 551.489501953125,
+                  "vector_norm_rms": 228.23541259765625
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.0343288891017437,
+                    0.09172319620847702,
+                    0.016453027725219727
+                  ],
+                  "component_rms": [
+                    0.01335761777095585,
+                    0.03249534807728698,
+                    0.007164149311960187
+                  ],
+                  "vector_norm_max": 0.0929957495145458,
+                  "vector_norm_rms": 0.03585664003421199
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.0343288891017437,
+                    0.09172319620847702,
+                    0.7613841891288757
+                  ],
+                  "component_max": [
+                    0.0343288891017437,
+                    0.09172319620847702,
+                    0.7613841891288757
+                  ],
+                  "component_min": [
+                    -0.010647394694387913,
+                    -0.04970673471689224,
+                    0.7335469722747803
+                  ],
+                  "component_rms": [
+                    0.0133576150983572,
+                    0.032495345920324326,
+                    0.7480068206787109
+                  ],
+                  "component_span": [
+                    0.044976282864809036,
+                    0.14142993092536926,
+                    0.02783721685409546
+                  ],
+                  "vector_norm_max": 0.7613885998725891,
+                  "vector_norm_rms": 0.7488314509391785
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 0.6808465137358369,
+                      "spectral_centroid_hz": 2.2422940282667807
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 5.055987719972384,
+                      "spectral_centroid_hz": 2.3075627519796535
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 0.24087318949803554,
+                      "spectral_centroid_hz": 1.7209672351832643
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    0.428022563457489,
+                    1.368833303451538,
+                    0.1897595226764679
+                  ],
+                  "component_rms": [
+                    0.1735396832227707,
+                    0.4933144152164459,
+                    0.08808539062738419
+                  ],
+                  "vector_norm_max": 1.370854377746582,
+                  "vector_norm_rms": 0.5303151607513428
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "d588276502048978a6037f5399314d51aff982e073a1882583d1eebf03ff72e9",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "500aaa13dd6fdb1629c50d820e9f8b2013c90dd6c0a45512a776fabf7e5f62db",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "e40505c119930f49b0d01a0e91bb21cea0a2e9ea8095755a800724eabc081c4f",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "f27c42468665a75d8c41b54a0518d2501b1558b9727cb56d8abf144a91c60050",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 2,
+              "attempt_index": 1,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5477750301361084,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.0522250160574913,
+                  "observed_minus_limit": 0.5477750301361084,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 50,
+                  "time_seconds": 0.5,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5694509744644165,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.030549030750989914,
+                  "observed_minus_limit": -0.5694509744644165,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 33,
+                  "time_seconds": 0.32999998331069946,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5397575497627258,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.06024247035384178,
+                  "observed_minus_limit": 0.5397575497627258,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 56,
+                  "time_seconds": 0.5600000023841858,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5508826971054077,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.049117352813482285,
+                  "observed_minus_limit": -0.5508826971054077,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 41,
+                  "time_seconds": 0.4099999964237213,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3672594726085663,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7172594666481018,
+                  "observed_minus_limit": 0.3672594726085663,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 41,
+                  "time_seconds": 0.4099999964237213,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.411162793636322,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7888372540473938,
+                  "observed_minus_limit": -0.411162793636322,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 62,
+                  "time_seconds": 0.6200000047683716,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.25052034854888916,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.2494796514511108,
+                  "observed_minus_limit": -0.25052034854888916,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 48,
+                  "time_seconds": 0.47999998927116394,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -18.413108825683594,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 23.413108825683594,
+                  "observed_minus_limit": 18.413108825683594,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 18.413108825683594
+                },
+                {
+                  "acceptance_margin": -494.8824462890625,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 529.8824462890625,
+                  "observed_minus_limit": 494.8824462890625,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 49,
+                  "time_seconds": 0.4899999797344208,
+                  "violation_magnitude": 494.8824462890625
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.7032921759890818,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.4032921759890817,
+                  "observed_minus_limit": 0.7032921759890818,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 59,
+                  "time_seconds": 0.5899999737739563,
+                  "violation_magnitude": 0.7032921759890818
+                },
+                {
+                  "acceptance_margin": 6.669524501036992,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 8.669524501036992,
+                  "observed_minus_limit": 6.669524501036992,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 23,
+                  "time_seconds": 0.22999998927116394,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    15.370468139648438,
+                    22.234468460083008,
+                    7.553683280944824
+                  ],
+                  "component_rms": [
+                    5.971323013305664,
+                    9.032227516174316,
+                    3.36480450630188
+                  ],
+                  "vector_norm_max": 23.413108825683594,
+                  "vector_norm_rms": 11.338418006896973
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    315.42291259765625,
+                    518.1463623046875,
+                    128.97000122070312
+                  ],
+                  "component_rms": [
+                    126.44611358642578,
+                    208.22506713867188,
+                    58.25321960449219
+                  ],
+                  "vector_norm_max": 529.8824462890625,
+                  "vector_norm_rms": 250.47898864746094
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.0522250160574913,
+                    0.06024247035384178,
+                    0.0388372540473938
+                  ],
+                  "component_rms": [
+                    0.01915211952238604,
+                    0.022858188372457577,
+                    0.01741968219706039
+                  ],
+                  "vector_norm_max": 0.07109321557620554,
+                  "vector_norm_rms": 0.034536151866082276
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.0522250160574913,
+                    0.06024247035384178,
+                    0.7888372540473938
+                  ],
+                  "component_max": [
+                    0.030549030750989914,
+                    0.049117352813482285,
+                    0.7888372540473938
+                  ],
+                  "component_min": [
+                    -0.0522250160574913,
+                    -0.06024247035384178,
+                    0.7172594666481018
+                  ],
+                  "component_rms": [
+                    0.019152119755744934,
+                    0.022858187556266785,
+                    0.7515358328819275
+                  ],
+                  "component_span": [
+                    0.08277404308319092,
+                    0.10935982316732407,
+                    0.07157778739929199
+                  ],
+                  "vector_norm_max": 0.7894890904426575,
+                  "vector_norm_rms": 0.7521272301673889
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 1.868285461249247,
+                      "spectral_centroid_hz": 2.4868997265263735
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 2.6582008467491622,
+                      "spectral_centroid_hz": 2.8520188970802742
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 1.538631690980221,
+                      "spectral_centroid_hz": 1.8866261291998707
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    0.7984140515327454,
+                    1.1377575397491455,
+                    0.5392572283744812
+                  ],
+                  "component_rms": [
+                    0.3133721649646759,
+                    0.42611777782440186,
+                    0.21928517520427704
+                  ],
+                  "vector_norm_max": 1.2494796514511108,
+                  "vector_norm_rms": 0.5725945234298706
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "d4f157df9436480b8f6f7c0b7ece39d875760df8ed4d549aeeb6dc32355319b2",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "850a7d7c98c5935837be25ffb3a282081ebc19d03323b0949a7f358e36b0d332",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "0c45ffc34e54541fec768fea7ce5cf86ddc3b1349a4dc2850e544ce4706809f1",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "5bcb58e38a5cbf74d8845580d047ff9f0374b23ec8b1453f78049ed8c8117607",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 3,
+              "attempt_index": 2,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.44796860218048096,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.15203140676021576,
+                  "observed_minus_limit": 0.44796860218048096,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 46,
+                  "time_seconds": 0.4599999785423279,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5653305053710938,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.03466951102018356,
+                  "observed_minus_limit": -0.5653305053710938,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 68,
+                  "time_seconds": 0.6800000071525574,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5359472632408142,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.0640527755022049,
+                  "observed_minus_limit": 0.5359472632408142,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5609385371208191,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.03906146436929703,
+                  "observed_minus_limit": -0.5609385371208191,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 63,
+                  "time_seconds": 0.6299999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3717125356197357,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7217125296592712,
+                  "observed_minus_limit": 0.3717125356197357,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 41,
+                  "time_seconds": 0.4099999964237213,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4223286509513855,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7776713967323303,
+                  "observed_minus_limit": -0.4223286509513855,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 58,
+                  "time_seconds": 0.5799999833106995,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.3167078495025635,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.8167078495025635,
+                  "observed_minus_limit": 0.3167078495025635,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.3167078495025635
+                },
+                {
+                  "acceptance_margin": -29.295852661132812,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 34.29585266113281,
+                  "observed_minus_limit": 29.295852661132812,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 29.295852661132812
+                },
+                {
+                  "acceptance_margin": -589.8429565429688,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 624.8429565429688,
+                  "observed_minus_limit": 589.8429565429688,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 53,
+                  "time_seconds": 0.5299999713897705,
+                  "violation_magnitude": 589.8429565429688
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.8692538654946491,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.569253865494649,
+                  "observed_minus_limit": 0.8692538654946491,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 57,
+                  "time_seconds": 0.5699999928474426,
+                  "violation_magnitude": 0.8692538654946491
+                },
+                {
+                  "acceptance_margin": -0.19175310863315365,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 1.8082468913668464,
+                  "observed_minus_limit": -0.19175310863315365,
+                  "passed": false,
+                  "relation": ">=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.19175310863315365
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    28.429433822631836,
+                    18.76490020751953,
+                    9.791695594787598
+                  ],
+                  "component_rms": [
+                    10.488123893737793,
+                    7.382717132568359,
+                    3.8655776977539062
+                  ],
+                  "vector_norm_max": 34.29585266113281,
+                  "vector_norm_rms": 13.395819664001465
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    497.6785888671875,
+                    395.26983642578125,
+                    201.28155517578125
+                  ],
+                  "component_rms": [
+                    200.76040649414062,
+                    157.5311279296875,
+                    81.16633605957031
+                  ],
+                  "vector_norm_max": 624.8429565429688,
+                  "vector_norm_rms": 267.7849426269531
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.15203140676021576,
+                    0.0640527755022049,
+                    0.02828747034072876
+                  ],
+                  "component_rms": [
+                    0.05431821156864012,
+                    0.023306080439907326,
+                    0.012599826218292216
+                  ],
+                  "vector_norm_max": 0.16575222194295575,
+                  "vector_norm_rms": 0.0604350652702398
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.15203140676021576,
+                    0.0640527755022049,
+                    0.7776713967323303
+                  ],
+                  "component_max": [
+                    0.03466951102018356,
+                    0.03906146436929703,
+                    0.7776713967323303
+                  ],
+                  "component_min": [
+                    -0.15203140676021576,
+                    -0.0640527755022049,
+                    0.7217125296592712
+                  ],
+                  "component_rms": [
+                    0.05431821197271347,
+                    0.02330608293414116,
+                    0.7480928301811218
+                  ],
+                  "component_span": [
+                    0.18670091032981873,
+                    0.10311423987150192,
+                    0.05595886707305908
+                  ],
+                  "vector_norm_max": 0.7785398364067078,
+                  "vector_norm_rms": 0.7504242658615112
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 13.560649537712186,
+                      "spectral_centroid_hz": 1.829679253024364
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 2.7463131557059146,
+                      "spectral_centroid_hz": 2.502002110845526
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 0.7891153750765375,
+                      "spectral_centroid_hz": 2.4964562460131523
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.4976229667663574,
+                    0.9951916337013245,
+                    0.5276421904563904
+                  ],
+                  "component_rms": [
+                    0.6443425416946411,
+                    0.3831779956817627,
+                    0.20395813882350922
+                  ],
+                  "vector_norm_max": 1.8167078495025635,
+                  "vector_norm_rms": 0.7769181132316589
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "cdf9ea1e9abc9084570c16d874be602c88e95c8f17d5df34cfc164fcc58959ab",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "9e26680019b6a9976230a9133a6b4adf0b7416cec4e8c61bcae7ce173c95c6b7",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "0af0817ce36f49021a2ec5661cdc12b6080a0ec7b24968ecdca572dd90ed5787",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "f5eac385a0a938b1701d20558fb31b63aa3db70547f7977a3e1903cebb631660",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 4,
+              "attempt_index": 3,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5815963745117188,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.018403656780719757,
+                  "observed_minus_limit": 0.5815963745117188,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 27,
+                  "time_seconds": 0.26999998092651367,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.45906439423561096,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.14093562960624695,
+                  "observed_minus_limit": -0.45906439423561096,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5543515086174011,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.04564851149916649,
+                  "observed_minus_limit": 0.5543515086174011,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 53,
+                  "time_seconds": 0.5299999713897705,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.553413450717926,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.04658656194806099,
+                  "observed_minus_limit": -0.553413450717926,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 38,
+                  "time_seconds": 0.3799999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.37711575627326965,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7271157503128052,
+                  "observed_minus_limit": 0.37711575627326965,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 65,
+                  "time_seconds": 0.6499999761581421,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.43251508474349976,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7674849629402161,
+                  "observed_minus_limit": -0.43251508474349976,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 29,
+                  "time_seconds": 0.28999999165534973,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.1075282096862793,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.3924717903137207,
+                  "observed_minus_limit": -0.1075282096862793,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 46,
+                  "time_seconds": 0.4599999785423279,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -21.90642738342285,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 26.90642738342285,
+                  "observed_minus_limit": 21.90642738342285,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 54,
+                  "time_seconds": 0.5399999618530273,
+                  "violation_magnitude": 21.90642738342285
+                },
+                {
+                  "acceptance_margin": -476.4183044433594,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 511.4183044433594,
+                  "observed_minus_limit": 476.4183044433594,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 476.4183044433594
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.6532508197065794,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.3532508197065793,
+                  "observed_minus_limit": 0.6532508197065794,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 53,
+                  "time_seconds": 0.5299999713897705,
+                  "violation_magnitude": 0.6532508197065794
+                },
+                {
+                  "acceptance_margin": 5.486341072003123,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 7.486341072003123,
+                  "observed_minus_limit": 5.486341072003123,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 31,
+                  "time_seconds": 0.3100000023841858,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    18.643388748168945,
+                    20.061126708984375,
+                    5.277800559997559
+                  ],
+                  "component_rms": [
+                    6.838308334350586,
+                    7.883764266967773,
+                    2.4689724445343018
+                  ],
+                  "vector_norm_max": 26.90642738342285,
+                  "vector_norm_rms": 10.724365234375
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    304.98077392578125,
+                    431.28045654296875,
+                    122.5181884765625
+                  ],
+                  "component_rms": [
+                    117.35137939453125,
+                    181.9813995361328,
+                    61.22249221801758
+                  ],
+                  "vector_norm_max": 511.4183044433594,
+                  "vector_norm_rms": 225.0261688232422
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.14093562960624695,
+                    0.04658656194806099,
+                    0.022884249687194824
+                  ],
+                  "component_rms": [
+                    0.05453240737096427,
+                    0.020419974505370118,
+                    0.009626146694849019
+                  ],
+                  "vector_norm_max": 0.14780318244237328,
+                  "vector_norm_rms": 0.05902051772615618
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.14093562960624695,
+                    0.04658656194806099,
+                    0.7674849629402161
+                  ],
+                  "component_max": [
+                    0.14093562960624695,
+                    0.04658656194806099,
+                    0.7674849629402161
+                  ],
+                  "component_min": [
+                    -0.018403656780719757,
+                    -0.04564851149916649,
+                    0.7271157503128052
+                  ],
+                  "component_rms": [
+                    0.054532404989004135,
+                    0.020419973880052567,
+                    0.7484533786773682
+                  ],
+                  "component_span": [
+                    0.1593392789363861,
+                    0.09223507344722748,
+                    0.04036921262741089
+                  ],
+                  "vector_norm_max": 0.7678703665733337,
+                  "vector_norm_rms": 0.7507151365280151
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 12.024417298688343,
+                      "spectral_centroid_hz": 1.4874101003545328
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 2.0616474251148396,
+                      "spectral_centroid_hz": 2.8093210262296284
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 0.45945706464716807,
+                      "spectral_centroid_hz": 1.7173874711666437
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.1028677225112915,
+                    0.9550288319587708,
+                    0.2475215494632721
+                  ],
+                  "component_rms": [
+                    0.4942035377025604,
+                    0.3717459738254547,
+                    0.11975553631782532
+                  ],
+                  "vector_norm_max": 1.3924717903137207,
+                  "vector_norm_rms": 0.6298995614051819
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "ef38f7d1903c575165ae05a6bf03f83e6559369b3dcd42d379d640e1407430f5",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "bf4076f6b604c6eeeed4cdda9089c534377ffa7f70a8cc12fb07f45343712cf2",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "b1f4633a737fd44a68eafdf1a4d1fa89da14035b2fa197180d3c5e046c113887",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "7002d98d3791ae99d8ac06e88dff6a86d27b3bd4813826e7b1e8273b48e3355e",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 5,
+              "attempt_index": 4,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5681416988372803,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.031858332455158234,
+                  "observed_minus_limit": 0.5681416988372803,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 43,
+                  "time_seconds": 0.429999977350235,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5346280932426453,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.06537190824747086,
+                  "observed_minus_limit": -0.5346280932426453,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 57,
+                  "time_seconds": 0.5699999928474426,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5485519766807556,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.051448069512844086,
+                  "observed_minus_limit": 0.5485519766807556,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 34,
+                  "time_seconds": 0.3400000035762787,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5365946292877197,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.06340538710355759,
+                  "observed_minus_limit": -0.5365946292877197,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 50,
+                  "time_seconds": 0.5,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3598586618900299,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7098586559295654,
+                  "observed_minus_limit": 0.3598586618900299,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 58,
+                  "time_seconds": 0.5799999833106995,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.41384679079055786,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.786153256893158,
+                  "observed_minus_limit": -0.41384679079055786,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 34,
+                  "time_seconds": 0.3400000035762787,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.24670839309692383,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.2532916069030762,
+                  "observed_minus_limit": -0.24670839309692383,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 43,
+                  "time_seconds": 0.429999977350235,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -19.163679122924805,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 24.163679122924805,
+                  "observed_minus_limit": 19.163679122924805,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 19.163679122924805
+                },
+                {
+                  "acceptance_margin": -534.89111328125,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 569.89111328125,
+                  "observed_minus_limit": 534.89111328125,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 52,
+                  "time_seconds": 0.5199999809265137,
+                  "violation_magnitude": 534.89111328125
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.6997525480456772,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.3997525480456772,
+                  "observed_minus_limit": 0.6997525480456772,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 36,
+                  "time_seconds": 0.35999998450279236,
+                  "violation_magnitude": 0.6997525480456772
+                },
+                {
+                  "acceptance_margin": 5.900179885837939,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 7.900179885837939,
+                  "observed_minus_limit": 5.900179885837939,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 78,
+                  "time_seconds": 0.7799999713897705,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    22.501544952392578,
+                    21.901470184326172,
+                    6.358152866363525
+                  ],
+                  "component_rms": [
+                    9.256837844848633,
+                    8.732300758361816,
+                    3.039113998413086
+                  ],
+                  "vector_norm_max": 24.163679122924805,
+                  "vector_norm_rms": 13.083515167236328
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    524.10009765625,
+                    507.58746337890625,
+                    96.42681884765625
+                  ],
+                  "component_rms": [
+                    216.3317108154297,
+                    202.84033203125,
+                    48.73445510864258
+                  ],
+                  "vector_norm_max": 569.89111328125,
+                  "vector_norm_rms": 300.53057861328125
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.06537190824747086,
+                    0.06340538710355759,
+                    0.04014134407043457
+                  ],
+                  "component_rms": [
+                    0.022853361997952765,
+                    0.02433762680339366,
+                    0.01946553722809399
+                  ],
+                  "vector_norm_max": 0.08307626998917285,
+                  "vector_norm_rms": 0.03864587135269498
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.06537190824747086,
+                    0.06340538710355759,
+                    0.786153256893158
+                  ],
+                  "component_max": [
+                    0.06537190824747086,
+                    0.06340538710355759,
+                    0.786153256893158
+                  ],
+                  "component_min": [
+                    -0.031858332455158234,
+                    -0.051448069512844086,
+                    0.7098586559295654
+                  ],
+                  "component_rms": [
+                    0.022853361442685127,
+                    0.02433762699365616,
+                    0.7494157552719116
+                  ],
+                  "component_span": [
+                    0.09723024070262909,
+                    0.11485345661640167,
+                    0.07629460096359253
+                  ],
+                  "vector_norm_max": 0.7879389524459839,
+                  "vector_norm_rms": 0.7501590251922607
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 2.513403424813482,
+                      "spectral_centroid_hz": 2.920025961342106
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 2.9705246111137193,
+                      "spectral_centroid_hz": 2.561310278211335
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 1.929045497409536,
+                      "spectral_centroid_hz": 1.6627632736645808
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.063950777053833,
+                    1.1633586883544922,
+                    0.5141181349754333
+                  ],
+                  "component_rms": [
+                    0.42599067091941833,
+                    0.41638827323913574,
+                    0.21772034466266632
+                  ],
+                  "vector_norm_max": 1.2532916069030762,
+                  "vector_norm_rms": 0.6342313289642334
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "78c597be8b39cbd3889cd6daa781295e76c464aaf1d377b42831d029a7ecacb7",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "302dde3ea12ee15c335a29aa6bb07f61cefb54be741392fab8dd5f460ab7e36e",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "9e48a54e927eface83cb9246f6361ce7a9cd1faec9aa7dffc7d54c31637a3629",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "6ea686afdb66944859077a5e3ee80a04d506c97040228c8b33026807a3129284",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 6,
+              "attempt_index": 5,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5829994678497314,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.017000529915094376,
+                  "observed_minus_limit": 0.5829994678497314,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 33,
+                  "time_seconds": 0.32999998331069946,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5642104744911194,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.03578953817486763,
+                  "observed_minus_limit": -0.5642104744911194,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 52,
+                  "time_seconds": 0.5199999809265137,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5531840324401855,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.04681599512696266,
+                  "observed_minus_limit": 0.5531840324401855,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 71,
+                  "time_seconds": 0.7099999785423279,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5521920919418335,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.04780791327357292,
+                  "observed_minus_limit": -0.5521920919418335,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3561612069606781,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7061612010002136,
+                  "observed_minus_limit": 0.3561612069606781,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 60,
+                  "time_seconds": 0.5999999642372131,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.40099865198135376,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7990013957023621,
+                  "observed_minus_limit": -0.40099865198135376,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 37,
+                  "time_seconds": 0.3700000047683716,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4472506046295166,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.0527493953704834,
+                  "observed_minus_limit": -0.4472506046295166,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 63,
+                  "time_seconds": 0.6299999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -16.130966186523438,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 21.130966186523438,
+                  "observed_minus_limit": 16.130966186523438,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 56,
+                  "time_seconds": 0.5600000023841858,
+                  "violation_magnitude": 16.130966186523438
+                },
+                {
+                  "acceptance_margin": -437.0241394042969,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 472.0241394042969,
+                  "observed_minus_limit": 437.0241394042969,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 62,
+                  "time_seconds": 0.6200000047683716,
+                  "violation_magnitude": 437.0241394042969
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.965451381174353,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.665451381174353,
+                  "observed_minus_limit": 0.965451381174353,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 38,
+                  "time_seconds": 0.3799999952316284,
+                  "violation_magnitude": 0.965451381174353
+                },
+                {
+                  "acceptance_margin": 3.2621789727114976,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 5.262178972711498,
+                  "observed_minus_limit": 3.2621789727114976,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 39,
+                  "time_seconds": 0.38999998569488525,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    7.756437301635742,
+                    19.355432510375977,
+                    10.309028625488281
+                  ],
+                  "component_rms": [
+                    3.0751399993896484,
+                    8.26295280456543,
+                    3.9685213565826416
+                  ],
+                  "vector_norm_max": 21.130966186523438,
+                  "vector_norm_rms": 9.668611526489258
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    138.66966247558594,
+                    458.8328857421875,
+                    174.95947265625
+                  ],
+                  "component_rms": [
+                    58.2032470703125,
+                    204.31729125976562,
+                    69.74886322021484
+                  ],
+                  "vector_norm_max": 472.0241394042969,
+                  "vector_norm_rms": 223.6024932861328
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.03578953817486763,
+                    0.04780791327357292,
+                    0.04900139570236206
+                  ],
+                  "component_rms": [
+                    0.013252408118758954,
+                    0.022468404256708156,
+                    0.023766862442177992
+                  ],
+                  "vector_norm_max": 0.06870792962153321,
+                  "vector_norm_rms": 0.03528908133027014
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.03578953817486763,
+                    0.04780791327357292,
+                    0.7990013957023621
+                  ],
+                  "component_max": [
+                    0.03578953817486763,
+                    0.04780791327357292,
+                    0.7990013957023621
+                  ],
+                  "component_min": [
+                    -0.017000529915094376,
+                    -0.04681599512696266,
+                    0.7061612010002136
+                  ],
+                  "component_rms": [
+                    0.013252408243715763,
+                    0.022468402981758118,
+                    0.7491645216941833
+                  ],
+                  "component_span": [
+                    0.052790068089962006,
+                    0.09462390840053558,
+                    0.09284019470214844
+                  ],
+                  "vector_norm_max": 0.7994806170463562,
+                  "vector_norm_rms": 0.7496185302734375
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 0.8777061245436147,
+                      "spectral_centroid_hz": 2.0885409029021518
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 2.4931594693190084,
+                      "spectral_centroid_hz": 2.344592190294511
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 2.873600291266589,
+                      "spectral_centroid_hz": 1.6840500071858855
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    0.4455559551715851,
+                    0.9888259172439575,
+                    0.6849689483642578
+                  ],
+                  "component_rms": [
+                    0.18289099633693695,
+                    0.3681633174419403,
+                    0.27071261405944824
+                  ],
+                  "vector_norm_max": 1.0527493953704834,
+                  "vector_norm_rms": 0.49221810698509216
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "3791b93e968c2c1b5f2d3a7ba4189f045841950f362057dc3865ab87d3e1d452",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "c8a2810f660ef1a2316aeb4414a1855850cff5cb81ce32ec0e7178745335057e",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "ac9a9daedaac56b7503d9574862a9b0f30c37a7c0ceec664bc6c42d5ddaecf7f",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "a17bde1219f48259bb32b681bd93f4908b0c8fb5dea89f55ec68d4531fd2d2a0",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 7,
+              "attempt_index": 6,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.48501211404800415,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.11498790234327316,
+                  "observed_minus_limit": 0.48501211404800415,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5762374997138977,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.023762552067637444,
+                  "observed_minus_limit": -0.5762374997138977,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 35,
+                  "time_seconds": 0.3499999940395355,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5280225872993469,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.07197744399309158,
+                  "observed_minus_limit": 0.5280225872993469,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 66,
+                  "time_seconds": 0.6599999666213989,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5348925590515137,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.06510746479034424,
+                  "observed_minus_limit": -0.5348925590515137,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 49,
+                  "time_seconds": 0.4899999797344208,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.39696648716926575,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7469664812088013,
+                  "observed_minus_limit": 0.39696648716926575,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 78,
+                  "time_seconds": 0.7799999713897705,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.38728266954421997,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.8127173781394958,
+                  "observed_minus_limit": -0.38728266954421997,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 45,
+                  "time_seconds": 0.44999998807907104,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.04317212104797363,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.4568278789520264,
+                  "observed_minus_limit": -0.04317212104797363,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 58,
+                  "time_seconds": 0.5799999833106995,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -22.653900146484375,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 27.653900146484375,
+                  "observed_minus_limit": 22.653900146484375,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 51,
+                  "time_seconds": 0.5099999904632568,
+                  "violation_magnitude": 22.653900146484375
+                },
+                {
+                  "acceptance_margin": -518.760498046875,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 553.760498046875,
+                  "observed_minus_limit": 518.760498046875,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 57,
+                  "time_seconds": 0.5699999928474426,
+                  "violation_magnitude": 518.760498046875
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.8976484702040857,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.5976484702040856,
+                  "observed_minus_limit": 0.8976484702040857,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 45,
+                  "time_seconds": 0.44999998807907104,
+                  "violation_magnitude": 0.8976484702040857
+                },
+                {
+                  "acceptance_margin": 4.236001849333076,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 6.236001849333076,
+                  "observed_minus_limit": 4.236001849333076,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 44,
+                  "time_seconds": 0.4399999976158142,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    18.4969539642334,
+                    22.938467025756836,
+                    10.030107498168945
+                  ],
+                  "component_rms": [
+                    7.287840843200684,
+                    9.323248863220215,
+                    3.533263921737671
+                  ],
+                  "vector_norm_max": 27.653900146484375,
+                  "vector_norm_rms": 12.349882125854492
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    319.5040283203125,
+                    528.8719482421875,
+                    169.08033752441406
+                  ],
+                  "component_rms": [
+                    131.92759704589844,
+                    212.25802612304688,
+                    68.40927124023438
+                  ],
+                  "vector_norm_max": 553.760498046875,
+                  "vector_norm_rms": 259.11041259765625
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.11498790234327316,
+                    0.07197744399309158,
+                    0.06271737813949585
+                  ],
+                  "component_rms": [
+                    0.0421737591553932,
+                    0.031010964896320853,
+                    0.022979912712656585
+                  ],
+                  "vector_norm_max": 0.12708411527601357,
+                  "vector_norm_rms": 0.05716976730212632
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.11498790234327316,
+                    0.07197744399309158,
+                    0.8127173781394958
+                  ],
+                  "component_max": [
+                    0.023762552067637444,
+                    0.06510746479034424,
+                    0.8127173781394958
+                  ],
+                  "component_min": [
+                    -0.11498790234327316,
+                    -0.07197744399309158,
+                    0.7469664812088013
+                  ],
+                  "component_rms": [
+                    0.042173758149147034,
+                    0.03101096674799919,
+                    0.7608091235160828
+                  ],
+                  "component_span": [
+                    0.13875044882297516,
+                    0.13708490133285522,
+                    0.06575089693069458
+                  ],
+                  "vector_norm_max": 0.8157000541687012,
+                  "vector_norm_rms": 0.7626078724861145
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 7.740401009155991,
+                      "spectral_centroid_hz": 1.756457745618159
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 4.890553404838499,
+                      "spectral_centroid_hz": 2.1494921698149683
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 2.1273797318795395,
+                      "spectral_centroid_hz": 1.5927995340884067
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.1162053346633911,
+                    1.3227847814559937,
+                    0.5238924026489258
+                  ],
+                  "component_rms": [
+                    0.46744266152381897,
+                    0.4648643732070923,
+                    0.2259477823972702
+                  ],
+                  "vector_norm_max": 1.4568278789520264,
+                  "vector_norm_rms": 0.6968886852264404
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "6325275cd3adb03f42a0b56acea2978e015b4ed56a42d47be5096cc4f5027e6c",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "e30a7f5ba4e220b0ad29f9559fd08b434f9f4351858a12997b9f31b961a6d55b",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "853b16202d49a1f4d0a59cc22e1aea561c876dee2cbafbd9f5b3f3c5a1cb46aa",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "03be559245a9506c634a7005243547f02d29264f71d4d11292b54f5e86bf90fb",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 8,
+              "attempt_index": 7,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5476840734481812,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.052315954118967056,
+                  "observed_minus_limit": 0.5476840734481812,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 63,
+                  "time_seconds": 0.6299999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.558817446231842,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.04118255153298378,
+                  "observed_minus_limit": -0.558817446231842,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 38,
+                  "time_seconds": 0.3799999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5481414794921875,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.05185855180025101,
+                  "observed_minus_limit": 0.5481414794921875,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 56,
+                  "time_seconds": 0.5600000023841858,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5450870990753174,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.05491289868950844,
+                  "observed_minus_limit": -0.5450870990753174,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 38,
+                  "time_seconds": 0.3799999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3736402094364166,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7236402034759521,
+                  "observed_minus_limit": 0.3736402094364166,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 67,
+                  "time_seconds": 0.6699999570846558,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.43559449911117554,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7644055485725403,
+                  "observed_minus_limit": -0.43559449911117554,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 53,
+                  "time_seconds": 0.5299999713897705,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3839062452316284,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.1160937547683716,
+                  "observed_minus_limit": -0.3839062452316284,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 48,
+                  "time_seconds": 0.47999998927116394,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -14.465633392333984,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 19.465633392333984,
+                  "observed_minus_limit": 14.465633392333984,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 54,
+                  "time_seconds": 0.5399999618530273,
+                  "violation_magnitude": 14.465633392333984
+                },
+                {
+                  "acceptance_margin": -381.3360595703125,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 416.3360595703125,
+                  "observed_minus_limit": 381.3360595703125,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 48,
+                  "time_seconds": 0.47999998927116394,
+                  "violation_magnitude": 381.3360595703125
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.9589073740599434,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.6589073740599434,
+                  "observed_minus_limit": 0.9589073740599434,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 53,
+                  "time_seconds": 0.5299999713897705,
+                  "violation_magnitude": 0.9589073740599434
+                },
+                {
+                  "acceptance_margin": 3.7045085137073333,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 5.704508513707333,
+                  "observed_minus_limit": 3.7045085137073333,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 28,
+                  "time_seconds": 0.2800000011920929,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    12.795602798461914,
+                    16.800058364868164,
+                    11.152122497558594
+                  ],
+                  "component_rms": [
+                    4.772845268249512,
+                    6.621405601501465,
+                    4.737155914306641
+                  ],
+                  "vector_norm_max": 19.465633392333984,
+                  "vector_norm_rms": 9.437356948852539
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    242.55032348632812,
+                    335.62664794921875,
+                    258.754638671875
+                  ],
+                  "component_rms": [
+                    96.41522216796875,
+                    135.14981079101562,
+                    114.18169403076172
+                  ],
+                  "vector_norm_max": 416.3360595703125,
+                  "vector_norm_rms": 201.49151611328125
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.052315954118967056,
+                    0.05491289868950844,
+                    0.02635979652404785
+                  ],
+                  "component_rms": [
+                    0.02348263737001509,
+                    0.024442473443430462,
+                    0.010998589512843177
+                  ],
+                  "vector_norm_max": 0.07232228042798523,
+                  "vector_norm_rms": 0.03563478268709459
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.052315954118967056,
+                    0.05491289868950844,
+                    0.7644055485725403
+                  ],
+                  "component_max": [
+                    0.04118255153298378,
+                    0.05491289868950844,
+                    0.7644055485725403
+                  ],
+                  "component_min": [
+                    -0.052315954118967056,
+                    -0.05185855180025101,
+                    0.7236402034759521
+                  ],
+                  "component_rms": [
+                    0.023482637479901314,
+                    0.02444247342646122,
+                    0.7463967204093933
+                  ],
+                  "component_span": [
+                    0.09349850565195084,
+                    0.10677145421504974,
+                    0.040765345096588135
+                  ],
+                  "vector_norm_max": 0.7656213641166687,
+                  "vector_norm_rms": 0.7471660375595093
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 2.804479938920471,
+                      "spectral_centroid_hz": 1.8676806940979533
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 2.9730407189233627,
+                      "spectral_centroid_hz": 2.268326067318808
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 0.5481087697958847,
+                      "spectral_centroid_hz": 3.0457709470385623
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    0.6646031737327576,
+                    0.961743950843811,
+                    0.46908631920814514
+                  ],
+                  "component_rms": [
+                    0.2949870824813843,
+                    0.36494889855384827,
+                    0.20860671997070312
+                  ],
+                  "vector_norm_max": 1.1160937547683716,
+                  "vector_norm_rms": 0.5135385394096375
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "e299acfc9bad865e4f4e84e3dc62585949f477783afbb38f26fc4506442a476a",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "80012614b89770c356e43be91684b757af6560505c7a2ebca44871afb98422fa",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "a4653ca3ae6036c0936b48c573dc3a2b341e0ce9b7e4c2e57a6bd2836545d1cd",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "c96171512c65b0755a3f2c48cd6bc16988da83fd53c4f0091b70907ef92ecbd8",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 9,
+              "attempt_index": 8,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4873642027378082,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.11263582855463028,
+                  "observed_minus_limit": 0.4873642027378082,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 32,
+                  "time_seconds": 0.3199999928474426,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4739375710487366,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.12606243789196014,
+                  "observed_minus_limit": -0.4739375710487366,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 49,
+                  "time_seconds": 0.4899999797344208,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.45065605640411377,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.14934398233890533,
+                  "observed_minus_limit": 0.45065605640411377,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 57,
+                  "time_seconds": 0.5699999928474426,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5808040499687195,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.01919598877429962,
+                  "observed_minus_limit": -0.5808040499687195,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 34,
+                  "time_seconds": 0.3400000035762787,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3613193929195404,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7113193869590759,
+                  "observed_minus_limit": 0.3613193929195404,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 46,
+                  "time_seconds": 0.4599999785423279,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.43270617723464966,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7672938704490662,
+                  "observed_minus_limit": -0.43270617723464966,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 62,
+                  "time_seconds": 0.6200000047683716,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.9117162227630615,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 2.4117162227630615,
+                  "observed_minus_limit": 0.9117162227630615,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 41,
+                  "time_seconds": 0.4099999964237213,
+                  "violation_magnitude": 0.9117162227630615
+                },
+                {
+                  "acceptance_margin": -39.70466232299805,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 44.70466232299805,
+                  "observed_minus_limit": 39.70466232299805,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 48,
+                  "time_seconds": 0.47999998927116394,
+                  "violation_magnitude": 39.70466232299805
+                },
+                {
+                  "acceptance_margin": -910.269775390625,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 945.269775390625,
+                  "observed_minus_limit": 910.269775390625,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 41,
+                  "time_seconds": 0.4099999964237213,
+                  "violation_magnitude": 910.269775390625
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.8394150852224078,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.5394150852224078,
+                  "observed_minus_limit": 0.8394150852224078,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 60,
+                  "time_seconds": 0.5999999642372131,
+                  "violation_magnitude": 0.8394150852224078
+                },
+                {
+                  "acceptance_margin": 6.376704777362125,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 8.376704777362125,
+                  "observed_minus_limit": 6.376704777362125,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 26,
+                  "time_seconds": 0.25999999046325684,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    43.201534271240234,
+                    28.01382827758789,
+                    11.735642433166504
+                  ],
+                  "component_rms": [
+                    17.019027709960938,
+                    9.901944160461426,
+                    4.444190979003906
+                  ],
+                  "vector_norm_max": 44.70466232299805,
+                  "vector_norm_rms": 20.185306549072266
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    920.8245849609375,
+                    502.55987548828125,
+                    241.85870361328125
+                  ],
+                  "component_rms": [
+                    374.7499694824219,
+                    199.15330505371094,
+                    99.3150863647461
+                  ],
+                  "vector_norm_max": 945.269775390625,
+                  "vector_norm_rms": 435.8475341796875
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.12606243789196014,
+                    0.14934398233890533,
+                    0.03868061304092407
+                  ],
+                  "component_rms": [
+                    0.051764747337878864,
+                    0.05280817783195977,
+                    0.013106787767962716
+                  ],
+                  "vector_norm_max": 0.16205586301278113,
+                  "vector_norm_rms": 0.07510047002836094
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.12606243789196014,
+                    0.14934398233890533,
+                    0.7672938704490662
+                  ],
+                  "component_max": [
+                    0.12606243789196014,
+                    0.01919598877429962,
+                    0.7672938704490662
+                  ],
+                  "component_min": [
+                    -0.11263582855463028,
+                    -0.14934398233890533,
+                    0.7113193869590759
+                  ],
+                  "component_rms": [
+                    0.051764752715826035,
+                    0.05280816927552223,
+                    0.7482907176017761
+                  ],
+                  "component_span": [
+                    0.23869827389717102,
+                    0.16853997111320496,
+                    0.055974483489990234
+                  ],
+                  "vector_norm_max": 0.7778289914131165,
+                  "vector_norm_rms": 0.7519356608390808
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 13.666643482213479,
+                      "spectral_centroid_hz": 2.4695730974798686
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 12.432491057197247,
+                      "spectral_centroid_hz": 1.7512655433973783
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 0.8592741225352576,
+                      "spectral_centroid_hz": 2.551739742077542
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    2.310065984725952,
+                    1.4253349304199219,
+                    0.5596651434898376
+                  ],
+                  "component_rms": [
+                    0.8563698530197144,
+                    0.5975841283798218,
+                    0.2204383760690689
+                  ],
+                  "vector_norm_max": 2.4117162227630615,
+                  "vector_norm_rms": 1.0672719478607178
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "a8c994bd7b6d20f65e7737560b93061c8a6a0ddc783c5795556893a5cfe2a48b",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "5fe3a8b98f275c5742471aa2caa9cfa5579fc73fb20f974d041093cf820ae7b0",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "6bf1c84b1d27fbd385267da9f3bb67d1e4d67f5fed618febcc405504a74fb9b3",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "c7067fd0b596a78cc88ae7a71292c88fcdaf1821baf3dab7b07b4976a2da2bd5",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 10,
+              "attempt_index": 9,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5743812918663025,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.02561875432729721,
+                  "observed_minus_limit": 0.5743812918663025,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 24,
+                  "time_seconds": 0.23999999463558197,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4815220832824707,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.1184779480099678,
+                  "observed_minus_limit": -0.4815220832824707,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 63,
+                  "time_seconds": 0.6299999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5219391584396362,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.07806088775396347,
+                  "observed_minus_limit": 0.5219391584396362,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 48,
+                  "time_seconds": 0.47999998927116394,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5241267681121826,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.07587327808141708,
+                  "observed_minus_limit": -0.5241267681121826,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 65,
+                  "time_seconds": 0.6499999761581421,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.36787185072898865,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7178718447685242,
+                  "observed_minus_limit": 0.36787185072898865,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 62,
+                  "time_seconds": 0.6200000047683716,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4233540892601013,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7766459584236145,
+                  "observed_minus_limit": -0.4233540892601013,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 48,
+                  "time_seconds": 0.47999998927116394,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.49101507663726807,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.991015076637268,
+                  "observed_minus_limit": 0.49101507663726807,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 56,
+                  "time_seconds": 0.5600000023841858,
+                  "violation_magnitude": 0.49101507663726807
+                },
+                {
+                  "acceptance_margin": -33.69182205200195,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 38.69182205200195,
+                  "observed_minus_limit": 33.69182205200195,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 63,
+                  "time_seconds": 0.6299999952316284,
+                  "violation_magnitude": 33.69182205200195
+                },
+                {
+                  "acceptance_margin": -887.8139038085938,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 922.8139038085938,
+                  "observed_minus_limit": 887.8139038085938,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 56,
+                  "time_seconds": 0.5600000023841858,
+                  "violation_magnitude": 887.8139038085938
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -1.0517862782261613,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.7517862782261613,
+                  "observed_minus_limit": 1.0517862782261613,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 1.0517862782261613
+                },
+                {
+                  "acceptance_margin": 3.6246059362109992,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 5.624605936210999,
+                  "observed_minus_limit": 3.6246059362109992,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 71,
+                  "time_seconds": 0.7099999785423279,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    29.366987228393555,
+                    24.72003746032715,
+                    15.133068084716797
+                  ],
+                  "component_rms": [
+                    12.751283645629883,
+                    9.926236152648926,
+                    6.306779384613037
+                  ],
+                  "vector_norm_max": 38.69182205200195,
+                  "vector_norm_rms": 17.346494674682617
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    703.00048828125,
+                    527.537109375,
+                    353.5799865722656
+                  ],
+                  "component_rms": [
+                    310.9095458984375,
+                    207.59048461914062,
+                    150.1016082763672
+                  ],
+                  "vector_norm_max": 922.8139038085938,
+                  "vector_norm_rms": 402.85113525390625
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.1184779480099678,
+                    0.07806088775396347,
+                    0.03212815523147583
+                  ],
+                  "component_rms": [
+                    0.043981715661057755,
+                    0.033903484149261476,
+                    0.013923576212518059
+                  ],
+                  "vector_norm_max": 0.14231986184387185,
+                  "vector_norm_rms": 0.05725123164173113
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.1184779480099678,
+                    0.07806088775396347,
+                    0.7766459584236145
+                  ],
+                  "component_max": [
+                    0.1184779480099678,
+                    0.07587327808141708,
+                    0.7766459584236145
+                  ],
+                  "component_min": [
+                    -0.02561875432729721,
+                    -0.07806088775396347,
+                    0.7178718447685242
+                  ],
+                  "component_rms": [
+                    0.04398171231150627,
+                    0.03390348330140114,
+                    0.747482180595398
+                  ],
+                  "component_span": [
+                    0.14409670233726501,
+                    0.15393416583538055,
+                    0.05877411365509033
+                  ],
+                  "vector_norm_max": 0.7807160019874573,
+                  "vector_norm_rms": 0.7495421767234802
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 7.620748555975413,
+                      "spectral_centroid_hz": 2.0418005031234308
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 5.8441910683453,
+                      "spectral_centroid_hz": 2.3564403395717486
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 0.9531888200469962,
+                      "spectral_centroid_hz": 3.1883180299741105
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.2770748138427734,
+                    1.432639241218567,
+                    0.6655176877975464
+                  ],
+                  "component_rms": [
+                    0.5802435278892517,
+                    0.5307457447052002,
+                    0.28149542212486267
+                  ],
+                  "vector_norm_max": 1.991015076637268,
+                  "vector_norm_rms": 0.8352324962615967
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "d382a9b9eaba7e6679895feacd5455e35d07386240129f5fdffedec7f72fcbbd",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "ac4b4ea2523a81d8ed0b455f3285af3ed27ad6c1af7313503ccad821d24b1c72",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "e799e98cc208b304b1bea7939358d6138f023c7a6a48b67fd814a8e32d941c8a",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "5d5a1a1486ba84ffc821d6283ec4bc13818f6b36b45633e2f0efbdfad601b6e8",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 11,
+              "attempt_index": 10,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5502628684043884,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.04973713681101799,
+                  "observed_minus_limit": 0.5502628684043884,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 59,
+                  "time_seconds": 0.5899999737739563,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5544768571853638,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.04552314430475235,
+                  "observed_minus_limit": -0.5544768571853638,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 43,
+                  "time_seconds": 0.429999977350235,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5076113939285278,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.09238865226507187,
+                  "observed_minus_limit": 0.5076113939285278,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 61,
+                  "time_seconds": 0.6100000143051147,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.493443101644516,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.10655692964792252,
+                  "observed_minus_limit": -0.493443101644516,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 44,
+                  "time_seconds": 0.4399999976158142,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.35243138670921326,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7024313807487488,
+                  "observed_minus_limit": 0.35243138670921326,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 58,
+                  "time_seconds": 0.5799999833106995,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4393059015274048,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.760694146156311,
+                  "observed_minus_limit": -0.4393059015274048,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 34,
+                  "time_seconds": 0.3400000035762787,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.6793560981750488,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 2.179356098175049,
+                  "observed_minus_limit": 0.6793560981750488,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 52,
+                  "time_seconds": 0.5199999809265137,
+                  "violation_magnitude": 0.6793560981750488
+                },
+                {
+                  "acceptance_margin": -33.21664047241211,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 38.21664047241211,
+                  "observed_minus_limit": 33.21664047241211,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 45,
+                  "time_seconds": 0.44999998807907104,
+                  "violation_magnitude": 33.21664047241211
+                },
+                {
+                  "acceptance_margin": -849.4296875,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 884.4296875,
+                  "observed_minus_limit": 849.4296875,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 52,
+                  "time_seconds": 0.5199999809265137,
+                  "violation_magnitude": 849.4296875
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.6909698058031934,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.3909698058031934,
+                  "observed_minus_limit": 0.6909698058031934,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 44,
+                  "time_seconds": 0.4399999976158142,
+                  "violation_magnitude": 0.6909698058031934
+                },
+                {
+                  "acceptance_margin": 5.406639064875442,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 7.406639064875442,
+                  "observed_minus_limit": 5.406639064875442,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 38,
+                  "time_seconds": 0.3799999952316284,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    17.56753158569336,
+                    34.51268005371094,
+                    6.355603218078613
+                  ],
+                  "component_rms": [
+                    7.08573055267334,
+                    13.90208911895752,
+                    2.410395622253418
+                  ],
+                  "vector_norm_max": 38.21664047241211,
+                  "vector_norm_rms": 15.78878402709961
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    399.0914306640625,
+                    788.419677734375,
+                    102.32292175292969
+                  ],
+                  "component_rms": [
+                    157.68963623046875,
+                    308.4648742675781,
+                    40.41154098510742
+                  ],
+                  "vector_norm_max": 884.4296875,
+                  "vector_norm_rms": 348.7831726074219
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.04973713681101799,
+                    0.10655692964792252,
+                    0.04756861925125122
+                  ],
+                  "component_rms": [
+                    0.02016863507549854,
+                    0.042535530459738145,
+                    0.018605580404220824
+                  ],
+                  "vector_norm_max": 0.11558151851417306,
+                  "vector_norm_rms": 0.05061830513241102
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.04973713681101799,
+                    0.10655692964792252,
+                    0.760694146156311
+                  ],
+                  "component_max": [
+                    0.04552314430475235,
+                    0.10655692964792252,
+                    0.760694146156311
+                  ],
+                  "component_min": [
+                    -0.04973713681101799,
+                    -0.09238865226507187,
+                    0.7024313807487488
+                  ],
+                  "component_rms": [
+                    0.02016863040626049,
+                    0.042535532265901566,
+                    0.7425747513771057
+                  ],
+                  "component_span": [
+                    0.09526027739048004,
+                    0.19894558191299438,
+                    0.058262765407562256
+                  ],
+                  "vector_norm_max": 0.7614012360572815,
+                  "vector_norm_rms": 0.7440654635429382
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 2.0736471379404757,
+                      "spectral_centroid_hz": 2.640625632813192
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 9.202357828735957,
+                      "spectral_centroid_hz": 2.4594765013660913
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 1.4695365829045703,
+                      "spectral_centroid_hz": 1.506020493242921
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    0.9515248537063599,
+                    1.941778302192688,
+                    0.4184390902519226
+                  ],
+                  "component_rms": [
+                    0.35088521242141724,
+                    0.6994645595550537,
+                    0.1746533066034317
+                  ],
+                  "vector_norm_max": 2.179356098175049,
+                  "vector_norm_rms": 0.8017947673797607
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "f6cca70e5987a964425970c70796f14e1d3ef15524846bb4b42f6b33f03521f8",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "e5563bd19514fd74e8d4aa0b784d2690dd61dd07044b769e5d14315d750ee952",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "4cfab8eb5375b6dd85efa9ab8b9f8fc2ac2cb568337de2b30e1845c4cac7f5bb",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "88a6922311de0db4d349cc08c5a4faf52ac83b24566c5c00921267dd884aad9a",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 12,
+              "attempt_index": 11,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5980204343795776,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.0019796104170382023,
+                  "observed_minus_limit": 0.5980204343795776,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 82,
+                  "time_seconds": 0.8199999928474426,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5699757933616638,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.030024223029613495,
+                  "observed_minus_limit": -0.5699757933616638,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 56,
+                  "time_seconds": 0.5600000023841858,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4696913957595825,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.1303086131811142,
+                  "observed_minus_limit": 0.4696913957595825,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.574323296546936,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.02567671611905098,
+                  "observed_minus_limit": -0.574323296546936,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 29,
+                  "time_seconds": 0.28999999165534973,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.39099130034446716,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7409912943840027,
+                  "observed_minus_limit": 0.39099130034446716,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 67,
+                  "time_seconds": 0.6699999570846558,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.43438535928726196,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7656146883964539,
+                  "observed_minus_limit": -0.43438535928726196,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 51,
+                  "time_seconds": 0.5099999904632568,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.04323077201843262,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.4567692279815674,
+                  "observed_minus_limit": -0.04323077201843262,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 39,
+                  "time_seconds": 0.38999998569488525,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -22.967079162597656,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 27.967079162597656,
+                  "observed_minus_limit": 22.967079162597656,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 22.967079162597656
+                },
+                {
+                  "acceptance_margin": -520.60595703125,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 555.60595703125,
+                  "observed_minus_limit": 520.60595703125,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 40,
+                  "time_seconds": 0.3999999761581421,
+                  "violation_magnitude": 520.60595703125
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.6524355579684584,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.3524355579684584,
+                  "observed_minus_limit": 0.6524355579684584,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 49,
+                  "time_seconds": 0.4899999797344208,
+                  "violation_magnitude": 0.6524355579684584
+                },
+                {
+                  "acceptance_margin": 3.992503557062564,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 5.992503557062564,
+                  "observed_minus_limit": 3.992503557062564,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 54,
+                  "time_seconds": 0.5399999618530273,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    2.199065923690796,
+                    27.802526473999023,
+                    5.127309799194336
+                  ],
+                  "component_rms": [
+                    0.9895801544189453,
+                    10.021828651428223,
+                    1.9868828058242798
+                  ],
+                  "vector_norm_max": 27.967079162597656,
+                  "vector_norm_rms": 10.264697074890137
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    43.208377838134766,
+                    554.3497924804688,
+                    112.55523681640625
+                  ],
+                  "component_rms": [
+                    15.31875228881836,
+                    217.52499389648438,
+                    44.81981658935547
+                  ],
+                  "vector_norm_max": 555.60595703125,
+                  "vector_norm_rms": 222.62213134765625
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.030024223029613495,
+                    0.1303086131811142,
+                    0.015614688396453857
+                  ],
+                  "component_rms": [
+                    0.014061480913196877,
+                    0.04458009747424203,
+                    0.00554398411441264
+                  ],
+                  "vector_norm_max": 0.13316316283207505,
+                  "vector_norm_rms": 0.04707277446832702
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.030024223029613495,
+                    0.1303086131811142,
+                    0.7656146883964539
+                  ],
+                  "component_max": [
+                    0.030024223029613495,
+                    0.02567671611905098,
+                    0.7656146883964539
+                  ],
+                  "component_min": [
+                    -0.0019796104170382023,
+                    -0.1303086131811142,
+                    0.7409912943840027
+                  ],
+                  "component_rms": [
+                    0.01406148076057434,
+                    0.04458009824156761,
+                    0.7503734230995178
+                  ],
+                  "component_span": [
+                    0.03200383484363556,
+                    0.15598532557487488,
+                    0.024623394012451172
+                  ],
+                  "vector_norm_max": 0.7754168510437012,
+                  "vector_norm_rms": 0.751828134059906
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 0.6212922652896846,
+                      "spectral_centroid_hz": 1.197500077288531
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 8.62242123342377,
+                      "spectral_centroid_hz": 1.9058338202348641
+                    },
+                    {
+                      "dominant_frequency_hz": 2.9702970297029703,
+                      "power": 0.15613189247256545,
+                      "spectral_centroid_hz": 2.6703465332484937
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    0.21026434004306793,
+                    1.4463549852371216,
+                    0.2527734935283661
+                  ],
+                  "component_rms": [
+                    0.08875105530023575,
+                    0.5467416048049927,
+                    0.09730347990989685
+                  ],
+                  "vector_norm_max": 1.4567692279815674,
+                  "vector_norm_rms": 0.562379777431488
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "afef56ac8af25cae01702e97ac4982cea59c70202754e375a667c2d9092f8584",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "d305749db42ff385773f7c1eb0928772f1711cb4a72d9209e88346157f1e38d0",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "885c8debd4e045c446ddfff7ce4efe9bee8e9bf049ddacee4bd05bec2f17553f",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "51eb8e66d5a127454eab81724291503b0da7d2fda56ff5ebacf25df6aa92406e",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 13,
+              "attempt_index": 12,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5752636194229126,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.02473641186952591,
+                  "observed_minus_limit": 0.5752636194229126,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 26,
+                  "time_seconds": 0.25999999046325684,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.44318389892578125,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.15681613981723785,
+                  "observed_minus_limit": -0.44318389892578125,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 44,
+                  "time_seconds": 0.4399999976158142,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5311238765716553,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.06887616962194443,
+                  "observed_minus_limit": 0.5311238765716553,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 58,
+                  "time_seconds": 0.5799999833106995,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.581606924533844,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.01839308999478817,
+                  "observed_minus_limit": -0.581606924533844,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 24,
+                  "time_seconds": 0.23999999463558197,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3617483079433441,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7117483019828796,
+                  "observed_minus_limit": 0.3617483079433441,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 40,
+                  "time_seconds": 0.3999999761581421,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4007776379585266,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7992224097251892,
+                  "observed_minus_limit": -0.4007776379585266,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 57,
+                  "time_seconds": 0.5699999928474426,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.5059168338775635,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 2.0059168338775635,
+                  "observed_minus_limit": 0.5059168338775635,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 51,
+                  "time_seconds": 0.5099999904632568,
+                  "violation_magnitude": 0.5059168338775635
+                },
+                {
+                  "acceptance_margin": -34.9919319152832,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 39.9919319152832,
+                  "observed_minus_limit": 34.9919319152832,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 44,
+                  "time_seconds": 0.4399999976158142,
+                  "violation_magnitude": 34.9919319152832
+                },
+                {
+                  "acceptance_margin": -827.6117553710938,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 862.6117553710938,
+                  "observed_minus_limit": 827.6117553710938,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 51,
+                  "time_seconds": 0.5099999904632568,
+                  "violation_magnitude": 827.6117553710938
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -1.064630789670074,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.764630789670074,
+                  "observed_minus_limit": 1.064630789670074,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 54,
+                  "time_seconds": 0.5399999618530273,
+                  "violation_magnitude": 1.064630789670074
+                },
+                {
+                  "acceptance_margin": 1.1178162103072133,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 3.1178162103072133,
+                  "observed_minus_limit": 1.1178162103072133,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 52,
+                  "time_seconds": 0.5199999809265137,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    37.82359313964844,
+                    13.443317413330078,
+                    14.251066207885742
+                  ],
+                  "component_rms": [
+                    14.219391822814941,
+                    5.093167781829834,
+                    5.743836402893066
+                  ],
+                  "vector_norm_max": 39.9919319152832,
+                  "vector_norm_rms": 16.159303665161133
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    785.2703247070312,
+                    288.4067687988281,
+                    328.37115478515625
+                  ],
+                  "component_rms": [
+                    316.0727844238281,
+                    118.93462371826172,
+                    126.44248962402344
+                  ],
+                  "vector_norm_max": 862.6117553710938,
+                  "vector_norm_rms": 360.6038513183594
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.15681613981723785,
+                    0.06887616962194443,
+                    0.04922240972518921
+                  ],
+                  "component_rms": [
+                    0.0519936281399581,
+                    0.026421880909658562,
+                    0.019272358272699273
+                  ],
+                  "vector_norm_max": 0.1617478985673332,
+                  "vector_norm_rms": 0.06142374908251449
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.15681613981723785,
+                    0.06887616962194443,
+                    0.7992224097251892
+                  ],
+                  "component_max": [
+                    0.15681613981723785,
+                    0.01839308999478817,
+                    0.7992224097251892
+                  ],
+                  "component_min": [
+                    -0.02473641186952591,
+                    -0.06887616962194443,
+                    0.7117483019828796
+                  ],
+                  "component_rms": [
+                    0.051993630826473236,
+                    0.026421882212162018,
+                    0.7526988983154297
+                  ],
+                  "component_span": [
+                    0.18155255913734436,
+                    0.08726926147937775,
+                    0.08747410774230957
+                  ],
+                  "vector_norm_max": 0.8022333979606628,
+                  "vector_norm_rms": 0.754954993724823
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 11.79240985787333,
+                      "spectral_centroid_hz": 2.1764766446796835
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 3.0321764066477943,
+                      "spectral_centroid_hz": 1.6285652535107278
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 1.8636784642184345,
+                      "spectral_centroid_hz": 2.2815265616500118
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.8131388425827026,
+                    0.7591558694839478,
+                    0.8385595679283142
+                  ],
+                  "component_rms": [
+                    0.7240561246871948,
+                    0.2818140387535095,
+                    0.295928955078125
+                  ],
+                  "vector_norm_max": 2.0059168338775635,
+                  "vector_norm_rms": 0.8314147591590881
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "ad3ad40ed9f7b3ec7738033a7f571d2a21ec98460e0f99eca595cd111849166b",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "e79ba2c7a44de00b8f57e54072e1f5ad03982e59834f27df6e573efcd8510e1f",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "451645e8c008a124e2e476e265caebf544875be7e580f479328e05ad9eb69c17",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "e8c14eb31c45ea263ae6b3a28ac6dd9985f9a1130fbbd8dfbfed67a628a6df6e",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 14,
+              "attempt_index": 13,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.45268794894218445,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.14731207489967346,
+                  "observed_minus_limit": 0.45268794894218445,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 51,
+                  "time_seconds": 0.5099999904632568,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.573167622089386,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.026832401752471924,
+                  "observed_minus_limit": -0.573167622089386,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 75,
+                  "time_seconds": 0.75,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5806506276130676,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.019349390640854836,
+                  "observed_minus_limit": 0.5806506276130676,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 76,
+                  "time_seconds": 0.7599999904632568,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5107011198997498,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.08929888159036636,
+                  "observed_minus_limit": -0.5107011198997498,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.3903249204158783,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7403249144554138,
+                  "observed_minus_limit": 0.3903249204158783,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 76,
+                  "time_seconds": 0.7599999904632568,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4122469425201416,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7877531051635742,
+                  "observed_minus_limit": -0.4122469425201416,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 41,
+                  "time_seconds": 0.4099999964237213,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.016074419021606445,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.4839255809783936,
+                  "observed_minus_limit": -0.016074419021606445,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 63,
+                  "time_seconds": 0.6299999952316284,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -12.706205368041992,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 17.706205368041992,
+                  "observed_minus_limit": 12.706205368041992,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 12.706205368041992
+                },
+                {
+                  "acceptance_margin": -328.68792724609375,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 363.68792724609375,
+                  "observed_minus_limit": 328.68792724609375,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 64,
+                  "time_seconds": 0.6399999856948853,
+                  "violation_magnitude": 328.68792724609375
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.3908049821054502,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.0908049821054502,
+                  "observed_minus_limit": 0.3908049821054502,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 57,
+                  "time_seconds": 0.5699999928474426,
+                  "violation_magnitude": 0.3908049821054502
+                },
+                {
+                  "acceptance_margin": 3.6333037692691743,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 5.633303769269174,
+                  "observed_minus_limit": 3.6333037692691743,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 39,
+                  "time_seconds": 0.38999998569488525,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    15.192422866821289,
+                    12.195759773254395,
+                    4.217914581298828
+                  ],
+                  "component_rms": [
+                    7.576491832733154,
+                    4.846071720123291,
+                    1.7469931840896606
+                  ],
+                  "vector_norm_max": 17.706205368041992,
+                  "vector_norm_rms": 9.161857604980469
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    261.99029541015625,
+                    259.6351318359375,
+                    79.70499420166016
+                  ],
+                  "component_rms": [
+                    120.48526000976562,
+                    93.88042449951172,
+                    35.935890197753906
+                  ],
+                  "vector_norm_max": 363.68792724609375,
+                  "vector_norm_rms": 156.91278076171875
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.14731207489967346,
+                    0.08929888159036636,
+                    0.03775310516357422
+                  ],
+                  "component_rms": [
+                    0.059636174407884865,
+                    0.03671736691916084,
+                    0.0167835520980259
+                  ],
+                  "vector_norm_max": 0.171386330517673,
+                  "vector_norm_rms": 0.07201615063658359
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.14731207489967346,
+                    0.08929888159036636,
+                    0.7877531051635742
+                  ],
+                  "component_max": [
+                    0.026832401752471924,
+                    0.08929888159036636,
+                    0.7877531051635742
+                  ],
+                  "component_min": [
+                    -0.14731207489967346,
+                    -0.019349390640854836,
+                    0.7403249144554138
+                  ],
+                  "component_rms": [
+                    0.05963616445660591,
+                    0.036717355251312256,
+                    0.7587493658065796
+                  ],
+                  "component_span": [
+                    0.17414447665214539,
+                    0.10864827036857605,
+                    0.0474281907081604
+                  ],
+                  "vector_norm_max": 0.7974960207939148,
+                  "vector_norm_rms": 0.761974573135376
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 15.09633875005338,
+                      "spectral_centroid_hz": 1.535780650242505
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 5.441950905060857,
+                      "spectral_centroid_hz": 1.4804845420845592
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 1.0584043154123786,
+                      "spectral_centroid_hz": 1.285768156273326
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.2141802310943604,
+                    0.8786135911941528,
+                    0.28029534220695496
+                  ],
+                  "component_rms": [
+                    0.5658138990402222,
+                    0.3328910768032074,
+                    0.12719789147377014
+                  ],
+                  "vector_norm_max": 1.4839255809783936,
+                  "vector_norm_rms": 0.6686861515045166
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "c3eb761ddc2eab8d85021fe264929df8b74a6dbbc742ca3fe10eea9578530ba1",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "a7f09e33db86943fe9a7af7facea57f9503aee8ea5f2f052c6f439cf4c78e363",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "b1f4e0a5ce1d5599c15340bafc42521689b153b354089b432f0ce2894ee669c6",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "87413e6d419a591801141a413a75802754275b32b5d8eb9de6ba6ad21785b08e",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 15,
+              "attempt_index": 14,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5848994255065918,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.015100614167749882,
+                  "observed_minus_limit": 0.5848994255065918,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 44,
+                  "time_seconds": 0.4399999976158142,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.4882145822048187,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.11178544908761978,
+                  "observed_minus_limit": -0.4882145822048187,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 60,
+                  "time_seconds": 0.5999999642372131,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5900505781173706,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.009949463419616222,
+                  "observed_minus_limit": 0.5900505781173706,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 27,
+                  "time_seconds": 0.26999998092651367,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5590298771858215,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.04097013920545578,
+                  "observed_minus_limit": -0.5590298771858215,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 67,
+                  "time_seconds": 0.6699999570846558,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.35178229212760925,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7017822861671448,
+                  "observed_minus_limit": 0.35178229212760925,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 37,
+                  "time_seconds": 0.3700000047683716,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.41024309396743774,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.7897569537162781,
+                  "observed_minus_limit": -0.41024309396743774,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 55,
+                  "time_seconds": 0.550000011920929,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.16962730884552002,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 1.33037269115448,
+                  "observed_minus_limit": -0.16962730884552002,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 52,
+                  "time_seconds": 0.5199999809265137,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -20.798009872436523,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 25.798009872436523,
+                  "observed_minus_limit": 20.798009872436523,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 59,
+                  "time_seconds": 0.5899999737739563,
+                  "violation_magnitude": 20.798009872436523
+                },
+                {
+                  "acceptance_margin": -516.5513305664062,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 551.5513305664062,
+                  "observed_minus_limit": 516.5513305664062,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 53,
+                  "time_seconds": 0.5299999713897705,
+                  "violation_magnitude": 516.5513305664062
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -1.1687205376820209,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.8687205376820208,
+                  "observed_minus_limit": 1.1687205376820209,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 53,
+                  "time_seconds": 0.5299999713897705,
+                  "violation_magnitude": 1.1687205376820209
+                },
+                {
+                  "acceptance_margin": 5.187827958752345,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 7.187827958752345,
+                  "observed_minus_limit": 5.187827958752345,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 26,
+                  "time_seconds": 0.25999999046325684,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    25.056930541992188,
+                    9.711164474487305,
+                    12.792306900024414
+                  ],
+                  "component_rms": [
+                    9.654388427734375,
+                    4.066047191619873,
+                    5.328896999359131
+                  ],
+                  "vector_norm_max": 25.798009872436523,
+                  "vector_norm_rms": 11.753173828125
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    549.9921875,
+                    226.0262451171875,
+                    269.0208740234375
+                  ],
+                  "component_rms": [
+                    219.97813415527344,
+                    95.56767272949219,
+                    107.140380859375
+                  ],
+                  "vector_norm_max": 551.5513305664062,
+                  "vector_norm_rms": 262.6835021972656
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.11178544908761978,
+                    0.04097013920545578,
+                    0.048217713832855225
+                  ],
+                  "component_rms": [
+                    0.037849926434123105,
+                    0.014160390894739229,
+                    0.019977415275887696
+                  ],
+                  "vector_norm_max": 0.1171191627021984,
+                  "vector_norm_rms": 0.04508026976921961
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.11178544908761978,
+                    0.04097013920545578,
+                    0.7897569537162781
+                  ],
+                  "component_max": [
+                    0.11178544908761978,
+                    0.04097013920545578,
+                    0.7897569537162781
+                  ],
+                  "component_min": [
+                    -0.015100614167749882,
+                    -0.009949463419616222,
+                    0.7017822861671448
+                  ],
+                  "component_rms": [
+                    0.03784992918372154,
+                    0.014160391874611378,
+                    0.7473472952842712
+                  ],
+                  "component_span": [
+                    0.12688606977462769,
+                    0.05091960355639458,
+                    0.0879746675491333
+                  ],
+                  "vector_norm_max": 0.7945823669433594,
+                  "vector_norm_rms": 0.7484390139579773
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 6.043506279449713,
+                      "spectral_centroid_hz": 1.9904046000164077
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 0.8790378921707128,
+                      "spectral_centroid_hz": 2.05314459211625
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 1.99228063356999,
+                      "spectral_centroid_hz": 2.2549222192736034
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.270344853401184,
+                    0.4918473958969116,
+                    0.7886375188827515
+                  ],
+                  "component_rms": [
+                    0.48661357164382935,
+                    0.194156676530838,
+                    0.2967771887779236
+                  ],
+                  "vector_norm_max": 1.33037269115448,
+                  "vector_norm_rms": 0.6021347641944885
+                }
+              }
+            },
+            {
+              "accepted": false,
+              "array_digests": {
+                "acceleration": {
+                  "dtype": "float32",
+                  "sha256": "16842a9f7766a72cacaf63e10eab46dde3997c41cf26db18ad4378553165ea84",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "jerk": {
+                  "dtype": "float32",
+                  "sha256": "54d5438aeb5eec889fca5f3976c69392e5d54cc21da530ea914027168a77b883",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "position": {
+                  "dtype": "float32",
+                  "sha256": "7b6810ce57305affb23da747e63abd0bb91273488290f8564cbb9bb999556d55",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                },
+                "velocity": {
+                  "dtype": "float32",
+                  "sha256": "5649996111452db4ff8fdc60ab9a358bac326ec28f7737b9226dfe83b0fc5c43",
+                  "shape": [
+                    101,
+                    3
+                  ]
+                }
+              },
+              "attempt_count": 16,
+              "attempt_index": 15,
+              "constraints": [
+                {
+                  "acceptance_margin": null,
+                  "limit": null,
+                  "name": "legacy_finite_position_velocity_acceleration_yaw_rate",
+                  "observed": null,
+                  "observed_minus_limit": null,
+                  "passed": true,
+                  "relation": "finite",
+                  "sample_index": null,
+                  "time_seconds": null,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5421659350395203,
+                  "limit": -0.6,
+                  "name": "workspace_x_minimum_m",
+                  "observed": -0.05783407390117645,
+                  "observed_minus_limit": 0.5421659350395203,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 30,
+                  "time_seconds": 0.29999998211860657,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.44901207089424133,
+                  "limit": 0.6,
+                  "name": "workspace_x_maximum_m",
+                  "observed": 0.15098795294761658,
+                  "observed_minus_limit": -0.44901207089424133,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 49,
+                  "time_seconds": 0.4899999797344208,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.547281801700592,
+                  "limit": -0.6,
+                  "name": "workspace_y_minimum_m",
+                  "observed": -0.052718233317136765,
+                  "observed_minus_limit": 0.547281801700592,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 68,
+                  "time_seconds": 0.6800000071525574,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.5224887132644653,
+                  "limit": 0.6,
+                  "name": "workspace_y_maximum_m",
+                  "observed": 0.07751134037971497,
+                  "observed_minus_limit": -0.5224887132644653,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 32,
+                  "time_seconds": 0.3199999928474426,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.382034033536911,
+                  "limit": 0.35,
+                  "name": "workspace_z_minimum_m",
+                  "observed": 0.7320340275764465,
+                  "observed_minus_limit": 0.382034033536911,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 67,
+                  "time_seconds": 0.6699999570846558,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": 0.37818020582199097,
+                  "limit": 1.2,
+                  "name": "workspace_z_maximum_m",
+                  "observed": 0.8218198418617249,
+                  "observed_minus_limit": -0.37818020582199097,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.558161735534668,
+                  "limit": 1.5,
+                  "name": "speed_m_s",
+                  "observed": 2.058161735534668,
+                  "observed_minus_limit": 0.558161735534668,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 40,
+                  "time_seconds": 0.3999999761581421,
+                  "violation_magnitude": 0.558161735534668
+                },
+                {
+                  "acceptance_margin": -29.132061004638672,
+                  "limit": 5.0,
+                  "name": "acceleration_m_s2",
+                  "observed": 34.13206100463867,
+                  "observed_minus_limit": 29.132061004638672,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 47,
+                  "time_seconds": 0.4699999988079071,
+                  "violation_magnitude": 29.132061004638672
+                },
+                {
+                  "acceptance_margin": -686.59765625,
+                  "limit": 35.0,
+                  "name": "jerk_m_s3",
+                  "observed": 721.59765625,
+                  "observed_minus_limit": 686.59765625,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 40,
+                  "time_seconds": 0.3999999761581421,
+                  "violation_magnitude": 686.59765625
+                },
+                {
+                  "acceptance_margin": 1.0,
+                  "limit": 1.0,
+                  "name": "yaw_rate_rad_s",
+                  "observed": 0.0,
+                  "observed_minus_limit": -1.0,
+                  "passed": true,
+                  "relation": "<=",
+                  "sample_index": 0,
+                  "time_seconds": 0.0,
+                  "violation_magnitude": 0.0
+                },
+                {
+                  "acceptance_margin": -0.9806606435053531,
+                  "limit": 0.7,
+                  "name": "tilt_rad",
+                  "observed": 1.680660643505353,
+                  "observed_minus_limit": 0.9806606435053531,
+                  "passed": false,
+                  "relation": "<=",
+                  "sample_index": 48,
+                  "time_seconds": 0.47999998927116394,
+                  "violation_magnitude": 0.9806606435053531
+                },
+                {
+                  "acceptance_margin": 6.450835441418018,
+                  "limit": 2.0,
+                  "name": "specific_force_m_s2",
+                  "observed": 8.450835441418018,
+                  "observed_minus_limit": 6.450835441418018,
+                  "passed": true,
+                  "relation": ">=",
+                  "sample_index": 40,
+                  "time_seconds": 0.3999999761581421,
+                  "violation_magnitude": 0.0
+                }
+              ],
+              "statistics": {
+                "acceleration_m_s2": {
+                  "component_abs_max": [
+                    30.381023406982422,
+                    16.998931884765625,
+                    13.225110054016113
+                  ],
+                  "component_rms": [
+                    11.591715812683105,
+                    7.625682830810547,
+                    5.061278343200684
+                  ],
+                  "vector_norm_max": 34.13206100463867,
+                  "vector_norm_rms": 14.769410133361816
+                },
+                "jerk_m_s3": {
+                  "component_abs_max": [
+                    595.051025390625,
+                    383.16705322265625,
+                    229.86532592773438
+                  ],
+                  "component_rms": [
+                    227.6710662841797,
+                    188.46006774902344,
+                    94.79853820800781
+                  ],
+                  "vector_norm_max": 721.59765625,
+                  "vector_norm_rms": 310.3837585449219
+                },
+                "position_displacement_m": {
+                  "component_abs_max": [
+                    0.15098795294761658,
+                    0.07751134037971497,
+                    0.07181984186172485
+                  ],
+                  "component_rms": [
+                    0.05477679464455899,
+                    0.031396886206386095,
+                    0.02575774617486614
+                  ],
+                  "vector_norm_max": 0.16711206487673907,
+                  "vector_norm_rms": 0.06818887873398255
+                },
+                "position_m": {
+                  "component_abs_max": [
+                    0.15098795294761658,
+                    0.07751134037971497,
+                    0.8218198418617249
+                  ],
+                  "component_max": [
+                    0.15098795294761658,
+                    0.07751134037971497,
+                    0.8218198418617249
+                  ],
+                  "component_min": [
+                    -0.05783407390117645,
+                    -0.052718233317136765,
+                    0.7320340275764465
+                  ],
+                  "component_rms": [
+                    0.05477679893374443,
+                    0.031396884471178055,
+                    0.7584461569786072
+                  ],
+                  "component_span": [
+                    0.20882202684879303,
+                    0.13022957742214203,
+                    0.08978581428527832
+                  ],
+                  "vector_norm_max": 0.835370659828186,
+                  "vector_norm_rms": 0.7610697150230408
+                },
+                "spectrum": {
+                  "frequency_resolution_hz": 0.9900990099009901,
+                  "method": "one_sided_dft_of_mean_removed_enveloped_position",
+                  "per_axis": [
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 14.118160513296846,
+                      "spectral_centroid_hz": 1.9224832472534275
+                    },
+                    {
+                      "dominant_frequency_hz": 0.9900990099009901,
+                      "power": 4.81749268018738,
+                      "spectral_centroid_hz": 1.6799193541671236
+                    },
+                    {
+                      "dominant_frequency_hz": 1.9801980198019802,
+                      "power": 3.0533307375720757,
+                      "spectral_centroid_hz": 1.8740123035364002
+                    }
+                  ]
+                },
+                "velocity_m_s": {
+                  "component_abs_max": [
+                    1.813246488571167,
+                    0.7478237152099609,
+                    0.7445617318153381
+                  ],
+                  "component_rms": [
+                    0.6886751651763916,
+                    0.3775210380554199,
+                    0.3116632103919983
+                  ],
+                  "vector_norm_max": 2.058161735534668,
+                  "vector_norm_rms": 0.8449435234069824
+                }
+              }
+            }
+          ],
+          "construction_wall_seconds": 1.290161797,
+          "episode_index": 0,
+          "jax_key_data": [
+            4045426346,
+            1070076077
+          ],
+          "success": false
+        }
+      ]
+    }
+  ],
+  "internal_total_seconds": 1.440215286,
+  "schema_version": "crazyflow.trajectory_construction_diagnostics.v1",
+  "scientific_payload_sha256": "262f8a4f7313cfc56102287889bed1a84ad7023cf03d3bcf387c5032f2a5a789",
+  "scope": "construction-only; no simulation, training, validation, test, or jax.jit",
+  "seed_suite": {
+    "coordinates": [
+      {
+        "component": "trajectory",
+        "episode_index": 0,
+        "jax_key_data": [
+          4045426346,
+          1070076077
+        ],
+        "root_seed": 20260731,
+        "split": "train",
+        "world": 0
+      }
+    ],
+    "sha256": "e20f739aafedba5aa019c3fb15a6e025a4050bddc155f4a7151966c955c59d8a",
+    "suite_id": "train-trajectory-root-20260731-episodes-0-0-world-0"
+  },
+  "source_dirty": true,
+  "source_fingerprint": "ae9d4b9a8cc49524a9d1dd94df5a531ff7576b3ee05a0e3f8b75492830e55631",
+  "source_status_short": [
+    " M crazyflow/control/mellinger/research/__init__.py",
+    " M crazyflow/control/mellinger/research/trajectories.py",
+    " M examples/jax/mellinger_scaling_benchmark.py"
+  ]
+}

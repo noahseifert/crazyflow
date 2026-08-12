@@ -1,10 +1,13 @@
 **.egg-info/
 **/__pycache__/
+*.py[cod]
 logs
 secrets
 **/*.secret
 saves
 .pytest_cache
+.ruff_cache/
+.mypy_cache/
 *.json
 **/*.csv
 .vscode
@@ -26,6 +29,16 @@ uv.lock
 
 # ProperDocs build output
 site/
+
+# Project-local JAX/XLA compilation and benchmark caches
+.jax_cache/
+.jax-cache/
+jax_cache/
+.xla_cache/
+
+# JSON result records are reproducible scientific evidence.
+!artifacts/**/*.json
+
 # Temporary files
 .DS_Store
 Thumbs.db

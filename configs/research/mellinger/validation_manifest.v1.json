@@ -1,0 +1,11 @@
+{
+  "schema_version": "crazyflow.mellinger_split_manifest.v1",
+  "manifest_id": "mellinger-validation-v1-20260731",
+  "split": "validation",
+  "episodes": [
+    {"episode_id": "validation-000", "seed": 310001, "difficulty": "technical"},
+    {"episode_id": "validation-001", "seed": 310019, "difficulty": "technical"},
+    {"episode_id": "validation-002", "seed": 310043, "difficulty": "nominal"},
+    {"episode_id": "validation-003", "seed": 310081, "difficulty": "nominal"}
+  ]
+}

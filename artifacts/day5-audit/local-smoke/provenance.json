@@ -1,0 +1,35 @@
+{
+  "command": "examples/jax/mellinger_domain_randomized_optimization.py --config configs/research/mellinger/smoke.json --output-dir artifacts/day5-audit/local-smoke",
+  "config_fingerprint": "9843e84ad0ba6d378b65142c119f1afface28e5d70f5b73a8d54a8a9ca41caed",
+  "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/smoke.json",
+  "ended_at_utc": "2026-07-31T17:44:18.507155+00:00",
+  "environment": {
+    "jax_backend": "cpu",
+    "jax_devices": [
+      "cpu:0"
+    ],
+    "packages": {
+      "flax": "0.12.8",
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8",
+      "pytest": "9.1.1"
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "git": {
+    "branch": "research/differentiable-mellinger",
+    "dirty": false,
+    "head": "c4492b187d336d75757c560fecced53c7ec47b7a",
+    "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+    "status_short": []
+  },
+  "schema_version": "crazyflow.mellinger_research_provenance.v1",
+  "started_at_utc": "2026-07-31T17:44:03.660881+00:00",
+  "test_manifest_id_recorded_but_not_evaluated": "mellinger-test-v1-20260731-frozen",
+  "validation_manifest_id": "mellinger-validation-v1-20260731",
+  "wall_seconds_internal": 14.846272782
+}

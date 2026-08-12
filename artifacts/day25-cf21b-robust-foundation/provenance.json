@@ -1,0 +1,245 @@
+{
+  "benchmark_input_sha256": "9ca5d2e07da2e41b1144117c744cd36a6a908e078bd4f7e21c06d44323b2e8d0",
+  "benchmark_raw_measurement_sha256": "282dc6e652a560152efac0f7dce62dd9d9bbc845fc4c05f5dda4fc48d2e564e5",
+  "checkout_branch_provenance": {
+    "included_in_reproducible_payload": false,
+    "reason": "checkout branch is a mutable execution-context reference; generator_commit is the canonical immutable science/code identity"
+  },
+  "claim_boundary": "Simulation-only baseline; no optimization, candidate, GPU, firmware, hardware, flight, safety, or transfer claim.",
+  "correction_decision": "D-047",
+  "decision": "D-045",
+  "duration_and_measurement_scope": {
+    "continuous_rollout_from_parent_start": {
+      "control_intervals": 600,
+      "duration_s": 6.0,
+      "parent_start_time_s": 0.0,
+      "reset_at_scored_window": false
+    },
+    "full_six_second_rollout_gates": [
+      "all_arrays_finite",
+      "ground_or_floor_activation",
+      "zero_thrust_activation"
+    ],
+    "parent_reference_support": {
+      "control_intervals": 800,
+      "duration_s": 8.0,
+      "reference_samples": 801,
+      "simulation_rollout_claim": false
+    },
+    "scored_window": {
+      "control_intervals": 200,
+      "duration_s": 2.0,
+      "interval_semantics": "half-open [warmup_s,warmup_s+2.0s)",
+      "warmup_options_s": [
+        2.0,
+        3.0,
+        4.0
+      ]
+    },
+    "scored_window_only_measurements": [
+      "integral_boundary_contact",
+      "stage_a_torque_clipping",
+      "stage_a_motor_clipping",
+      "stage_b_additional_clipping",
+      "tracking",
+      "loss_v1",
+      "reserve",
+      "wrench"
+    ]
+  },
+  "generator_commit": "2288ab2fe3b55f585fb9b14a8fe9d87c07eb6c1a",
+  "generator_commit_resolution": {
+    "rule": "first prescribed source/test commit after source_base_commit",
+    "stable_from_implementation_or_evidence_commit": true,
+    "subject": "research: add cf21b robust evaluator foundation"
+  },
+  "integration_target_branch": "research/differentiable-mellinger",
+  "jax": "0.10.1",
+  "numpy": "2.5.1",
+  "package_versions": {
+    "flax": "0.12.8",
+    "matplotlib": "3.11.1",
+    "mujoco": "3.10.0",
+    "scipy": "1.18.0"
+  },
+  "platform": "cf21B_500",
+  "post_integration_metadata_decision": "D-048",
+  "pre_correction_invariance": {
+    "benchmark_bytes_equal": true,
+    "numeric_report_projection": {
+      "coverage": "Every pre-existing numeric report path, including raw arrays, summaries, paired deltas, masses, and benchmark metadata.",
+      "new_values_at_all_old_paths": {
+        "path_count": 5465162,
+        "serialized_bytes": 644397249,
+        "sha256": "fd1195f9d10c88a2d550090631f6b21d0d4f80fd47a2bbe09a52e7c9a0975a61"
+      },
+      "old": {
+        "path_count": 5465162,
+        "serialized_bytes": 644397249,
+        "sha256": "fd1195f9d10c88a2d550090631f6b21d0d4f80fd47a2bbe09a52e7c9a0975a61"
+      }
+    },
+    "old_payload_sha256": {
+      "benchmark": "9ca5d2e07da2e41b1144117c744cd36a6a908e078bd4f7e21c06d44323b2e8d0",
+      "episode_contract": "d34f08a9053e489bbf51c91de1791057ebb468bd562a34b6ee1b6976dbb466d6",
+      "report": "31d4b468a31b140c1dfe14bd2f1bb3d72ecdf648d4b42094d707d37eb0e74afb"
+    },
+    "old_side_result_commit": "c4bbb57443836aecba52d72cb73a11ee4cbdb5dd",
+    "parent_identity_projection": {
+      "new": {
+        "record_count": 16,
+        "serialized_bytes": 18037,
+        "sha256": "bcb40e132f4b85e99f814f0a9db4d90244523b488697868ece8597d3654de82c"
+      },
+      "old": {
+        "record_count": 16,
+        "serialized_bytes": 18037,
+        "sha256": "bcb40e132f4b85e99f814f0a9db4d90244523b488697868ece8597d3654de82c"
+      }
+    },
+    "permitted_difference_boundary": "Only new derived aggregates/metadata, corrected prose, stable truthful generator commit provenance, and resulting checksums may differ from c4.",
+    "preexisting_tree_comparison": {
+      "contract_excluded_existing_paths": [
+        "/contract/position_construction"
+      ],
+      "contract_scalar_leaf_count": 199151,
+      "new_keys_allowed_only_for": [
+        "D-047 trajectory metadata",
+        "derived split/class aggregates",
+        "duration/measurement scope",
+        "invariance evidence"
+      ],
+      "report_excluded_existing_paths": [
+        "/generator_commit"
+      ],
+      "report_scalar_leaf_count": 6529968
+    },
+    "status": "PASS_PRE_CORRECTION_C4_INVARIANCE"
+  },
+  "protected_access": {
+    "day10_or_day13_raw": false,
+    "test_manifest_or_split": false
+  },
+  "python": "3.12.13",
+  "registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "report_input_identity": {
+    "commands": {
+      "dtype": "float32",
+      "sha256": "b8f77a2c6498ec994b8571a2f39f6209da4a22b20b6f79136eb13077c5a1cfbe",
+      "shape": [
+        600,
+        16,
+        1,
+        13
+      ]
+    },
+    "episode_ids": [
+      "train-soft-01-8101001",
+      "train-soft-02-8101002",
+      "train-nominal-01-8101101",
+      "train-nominal-02-8101102",
+      "train-dynamic-01-8101201",
+      "train-dynamic-02-8101202",
+      "train-near_limit-01-8101301",
+      "train-near_limit-02-8101302",
+      "validation-soft-01-8201001",
+      "validation-soft-02-8201002",
+      "validation-nominal-01-8201101",
+      "validation-nominal-02-8201102",
+      "validation-dynamic-01-8201201",
+      "validation-dynamic-02-8201202",
+      "validation-near_limit-01-8201301",
+      "validation-near_limit-02-8201302"
+    ],
+    "reference_position": {
+      "dtype": "float32",
+      "sha256": "8ba7f07a32c0a0bbfdf442c064783ad7cd775c96cc6449ce9c58ef0f1a66218c",
+      "shape": [
+        600,
+        16,
+        1,
+        3
+      ]
+    },
+    "reference_velocity": {
+      "dtype": "float32",
+      "sha256": "33dc3f1311d075b6a587228fd7e683458655e071f96731177f828b059de46bd5",
+      "shape": [
+        600,
+        16,
+        1,
+        3
+      ]
+    },
+    "window_starts": [
+      400,
+      200,
+      200,
+      300,
+      300,
+      400,
+      400,
+      200,
+      200,
+      300,
+      300,
+      400,
+      400,
+      200,
+      200,
+      300
+    ]
+  },
+  "reproduction_contract": "benchmark wallclock measured once; complete packages regenerated byte-identically from the unchanged checksum-pinned benchmark input",
+  "schema_version": "crazyflow.cf21b_robust_foundation.v1",
+  "source_base_commit": "a4e4136f8312851790555e3de6cdf23065252edd",
+  "vertical_excitation_contract": {
+    "axis": {
+      "direction": "positive",
+      "index": 2,
+      "name": "z"
+    },
+    "base_before_envelope": {
+      "acceleration_expression": "float32(0.0)",
+      "displacement_expression": "float32(0.06) * (time_s - float32(2.0))",
+      "jerk_expression": "float32(0.0)",
+      "time_origin_s": 2.0,
+      "velocity_expression": "float32(0.06)"
+    },
+    "causal_boundary": "No separate climb or controller-mass causal attribution without a controlled ablation; absolute Z metrics apply only to trajectories including this component.",
+    "central_rate": {
+      "dtype": "float32",
+      "float32_value_m_s": 0.05999999865889549,
+      "literal_m_s": "0.06"
+    },
+    "class_independent": true,
+    "composition_order": [
+      "scale_bounded_three_axis_fourier_parent_to_class_target_usage",
+      "add_enveloped_vertical_excitation_to_z_component",
+      "add_fixed_center_[0.0,0.0,0.75]_m"
+    ],
+    "derivative_construction": {
+      "highest_derivative_order": 3,
+      "method": "exact_product_rule_from_unchanged__enveloped_implementation",
+      "orders": [
+        "displacement",
+        "velocity",
+        "acceleration",
+        "jerk"
+      ]
+    },
+    "envelope": {
+      "continuity": "C3",
+      "entry_duration_s": 2.0,
+      "exit_duration_s": 2.0,
+      "function": "smoothstep7",
+      "same_envelope_as_bounded_fourier_parent": true,
+      "support_s": 8.0,
+      "unit_plateau_duration_s": 4.0
+    },
+    "future_distribution_boundary": "This fixed positive climb is not a future training distribution; a future G3 must cover hold/climb/descent diversity or explicitly justify another design.",
+    "identical_in_both_mass_variants": true,
+    "name": "retained_fixed_positive_z_central_climb"
+  },
+  "work_order": "WO-GR-G2-003"
+}

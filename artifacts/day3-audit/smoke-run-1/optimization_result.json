@@ -1,0 +1,1204 @@
+{
+  "all_validations_passed": true,
+  "checkpoint_selection": {
+    "combined_used": false,
+    "criterion": "minimum_train_loss",
+    "selected_step": 3,
+    "tie_break": "earliest_step",
+    "validation_used": false
+  },
+  "configuration": {
+    "control_frequency_hz": 100,
+    "drones_per_world": 1,
+    "finite_difference_epsilon_raw": 0.01,
+    "horizon_control_intervals": 20,
+    "learning_rate": 0.01,
+    "optimization_steps": 3,
+    "profile_repeats": 3,
+    "robustness_horizons": [
+      20
+    ],
+    "seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "worlds": 2
+  },
+  "gradient_diagnostics_at_best_train": {
+    "batch_separate": {
+      "batch_combined_loss": 0.0017025123815983534,
+      "gradient_max_abs_difference": 1.8189894035458565e-11,
+      "loss_difference": 2.3283064365386963e-10,
+      "separate_mean_loss": 0.0017025121487677097,
+      "separate_n1_losses": {
+        "circle": 0.0011195950210094452,
+        "figure8": 0.0022854292765259743
+      }
+    },
+    "directional_derivatives": {
+      "combined": [
+        {
+          "autodiff": -5.501971099874936e-05,
+          "direction_index": 0,
+          "finite_difference": -5.504116415977478e-05,
+          "raw_direction": {
+            "kd_xy": 1.0,
+            "kd_z": 0.0,
+            "kp_xy": 0.0,
+            "kp_z": 0.0
+          },
+          "relative_error": 0.00019490315753500909
+        },
+        {
+          "autodiff": -0.00010001724149333313,
+          "direction_index": 1,
+          "finite_difference": -0.00010006478987634182,
+          "raw_direction": {
+            "kd_xy": 0.0,
+            "kd_z": 1.0,
+            "kp_xy": 0.0,
+            "kp_z": 0.0
+          },
+          "relative_error": 0.0002376325719524175
+        },
+        {
+          "autodiff": -8.266494842246175e-05,
+          "direction_index": 2,
+          "finite_difference": -8.282950147986412e-05,
+          "raw_direction": {
+            "kd_xy": 0.5,
+            "kd_z": 0.5,
+            "kp_xy": 0.5,
+            "kp_z": 0.5
+          },
+          "relative_error": 0.000994251575320959
+        }
+      ],
+      "train": [
+        {
+          "autodiff": -8.085438457783312e-05,
+          "direction_index": 0,
+          "finite_difference": -8.064089342951775e-05,
+          "raw_direction": {
+            "kd_xy": 1.0,
+            "kd_z": 0.0,
+            "kp_xy": 0.0,
+            "kp_z": 0.0
+          },
+          "relative_error": 0.0013218834064900875
+        },
+        {
+          "autodiff": -9.840154234552756e-05,
+          "direction_index": 1,
+          "finite_difference": -9.938376024365425e-05,
+          "raw_direction": {
+            "kd_xy": 0.0,
+            "kd_z": 1.0,
+            "kp_xy": 0.0,
+            "kp_z": 0.0
+          },
+          "relative_error": 0.004965830594301224
+        },
+        {
+          "autodiff": -9.541776671539992e-05,
+          "direction_index": 2,
+          "finite_difference": -9.523937478661537e-05,
+          "raw_direction": {
+            "kd_xy": 0.5,
+            "kd_z": 0.5,
+            "kp_xy": 0.5,
+            "kp_z": 0.5
+          },
+          "relative_error": 0.0009356196969747543
+        }
+      ]
+    },
+    "gradients": {
+      "combined": {
+        "l2_norm": 0.00011443526454968378,
+        "leaves": {
+          "kd_xy": -5.501971099874936e-05,
+          "kd_z": -0.00010001724149333313,
+          "kp_xy": -2.7133255571243353e-06,
+          "kp_z": -7.579620614706073e-06
+        }
+      },
+      "train": {
+        "l2_norm": 0.00012764689745381474,
+        "leaves": {
+          "kd_xy": -8.085438457783312e-05,
+          "kd_z": -9.840154234552756e-05,
+          "kp_xy": -4.002224613941507e-06,
+          "kp_z": -7.5773914431920275e-06
+        }
+      },
+      "validation": {
+        "l2_norm": 0.00010602138354443014,
+        "leaves": {
+          "kd_xy": -2.9185053790570237e-05,
+          "kd_z": -0.00010163293336518109,
+          "kp_xy": -1.4244267276808387e-06,
+          "kp_z": -7.581851150462171e-06
+        }
+      }
+    },
+    "jit_eager": {
+      "gradient_max_abs_difference": 1.0913936421275139e-11,
+      "loss_difference": -2.3283064365386963e-10
+    },
+    "local_train_descent": {
+      "baseline_train_loss": 0.002285429509356618,
+      "decreased": true,
+      "gradient_norm_threshold": 1e-08,
+      "loss_difference": -1.2889504432678223e-06,
+      "status": "evaluated",
+      "step_length_raw": 0.01,
+      "trial_physical_gains": {
+        "kd_xy": 0.2044077068567276,
+        "kd_z": 0.5096460580825806,
+        "kp_xy": 0.4066430926322937,
+        "kp_z": 1.266524314880371
+      },
+      "trial_raw_gains": {
+        "kd_xy": -1.3499597311019897,
+        "kd_z": -0.5219111442565918,
+        "kp_xy": -0.9505886435508728,
+        "kp_z": -0.24388493597507477
+      },
+      "trial_train_loss": 0.00228414055891335
+    },
+    "maximum_directional_relative_errors": {
+      "combined": 0.000994251575320959,
+      "train": 0.004965830594301224
+    },
+    "piecewise_branch_fractions": {
+      "circle": {
+        "floor_clip_fraction": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "figure8": {
+        "floor_clip_fraction": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    "train_validation_gradient_cosine": {
+      "status": "defined",
+      "value": 0.9180117249488831
+    },
+    "world_order": {
+      "gradient_max_abs_difference": 0.0,
+      "loss_difference": 0.0
+    }
+  },
+  "loss_changes_initial_to_best_train": {
+    "combined": {
+      "absolute_magnitude": 4.926812835037708e-06,
+      "difference": -4.926812835037708e-06,
+      "initial": 0.001707437913864851,
+      "relative_change": -0.002885500430223948,
+      "selected": 0.0017025111010298133
+    },
+    "train": {
+      "absolute_magnitude": 5.688518285751343e-06,
+      "difference": -5.688518285751343e-06,
+      "initial": 0.0022911166306585073,
+      "relative_change": -0.00248285844973172,
+      "selected": 0.002285428112372756
+    },
+    "validation": {
+      "absolute_magnitude": 4.165223799645901e-06,
+      "difference": -4.165223799645901e-06,
+      "initial": 0.0011237593134865165,
+      "relative_change": -0.0037065088134603276,
+      "selected": 0.0011195940896868706
+    }
+  },
+  "loss_changes_initial_to_final": {
+    "combined": {
+      "absolute_magnitude": 4.926812835037708e-06,
+      "difference": -4.926812835037708e-06,
+      "initial": 0.001707437913864851,
+      "relative_change": -0.002885500430223948,
+      "selected": 0.0017025111010298133
+    },
+    "train": {
+      "absolute_magnitude": 5.688518285751343e-06,
+      "difference": -5.688518285751343e-06,
+      "initial": 0.0022911166306585073,
+      "relative_change": -0.00248285844973172,
+      "selected": 0.002285428112372756
+    },
+    "validation": {
+      "absolute_magnitude": 4.165223799645901e-06,
+      "difference": -4.165223799645901e-06,
+      "initial": 0.0011237593134865165,
+      "relative_change": -0.0037065088134603276,
+      "selected": 0.0011195940896868706
+    }
+  },
+  "optimization_history": [
+    {
+      "combined_loss": 0.001707437913864851,
+      "combined_metrics": {
+        "control_effort": 0.0018328638980165124,
+        "control_smoothness": 4.567223368212581e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084842281452337e-12,
+        "loss_effort": 1.832863972595078e-06,
+        "loss_position": 0.0005109099438413978,
+        "loss_smoothness": 4.567223754747829e-08,
+        "loss_terminal": 0.000292719341814518,
+        "loss_total": 0.001707437913864851,
+        "loss_velocity": 0.0009019301505759358,
+        "max_position_error_m": 0.01563980057835579,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.005650829058140516,
+        "velocity_rmse_m_s": 0.09496999531984329,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "gain_limit_distances": {
+        "kd_xy": {
+          "to_lower": 0.15000000298023225,
+          "to_upper": 0.5999999970197678
+        },
+        "kd_z": {
+          "to_lower": 0.4,
+          "to_upper": 0.7
+        },
+        "kp_xy": {
+          "to_lower": 0.3000000059604645,
+          "to_upper": 0.7999999940395355
+        },
+        "kp_z": {
+          "to_lower": 0.95,
+          "to_upper": 1.25
+        }
+      },
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "step": 0,
+      "train_gradient_for_next_update": {
+        "kd_xy": -7.964330143295228e-05,
+        "kd_z": -9.854765812633559e-05,
+        "kp_xy": -3.962873051932547e-06,
+        "kp_z": -7.611652108607814e-06
+      },
+      "train_gradient_l2_norm": 0.00012699738726951182,
+      "train_loss": 0.0022911166306585073,
+      "train_metrics": {
+        "control_effort": 0.00210552872158587,
+        "control_smoothness": 6.09204507782124e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.085060422929441e-12,
+        "loss_effort": 2.1055286651971983e-06,
+        "loss_position": 0.0006717538926750422,
+        "loss_smoothness": 6.092045623518061e-08,
+        "loss_terminal": 0.0003913654072675854,
+        "loss_total": 0.0022911166306585073,
+        "loss_velocity": 0.0012258309870958328,
+        "max_position_error_m": 0.01563980057835579,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.0064795538783073425,
+        "velocity_rmse_m_s": 0.11071724444627762,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "validation_loss": 0.0011237593134865165,
+      "validation_metrics": {
+        "control_effort": 0.0015601991908624768,
+        "control_smoothness": 3.0424014767049812e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084624139975233e-12,
+        "loss_effort": 1.5601992799929576e-06,
+        "loss_position": 0.00035006602411158383,
+        "loss_smoothness": 3.042401530706229e-08,
+        "loss_terminal": 0.00019407326180953532,
+        "loss_total": 0.0011237593134865165,
+        "loss_velocity": 0.0005780293722636998,
+        "max_position_error_m": 0.011013437062501907,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.0046775126829743385,
+        "velocity_rmse_m_s": 0.0760282427072525,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    {
+      "combined_loss": 0.0017058169469237328,
+      "combined_metrics": {
+        "control_effort": 0.0018328619189560413,
+        "control_smoothness": 4.586190698319115e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084697865722962e-12,
+        "loss_effort": 1.832861926231999e-06,
+        "loss_position": 0.0005105366581119597,
+        "loss_smoothness": 4.586190982536209e-08,
+        "loss_terminal": 0.0002924586005974561,
+        "loss_total": 0.0017058169469237328,
+        "loss_velocity": 0.0009009430068545043,
+        "max_position_error_m": 0.01563376374542713,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.005648764781653881,
+        "velocity_rmse_m_s": 0.09491802006959915,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "gain_limit_distances": {
+        "kd_xy": {
+          "to_lower": 0.15120343565940858,
+          "to_upper": 0.5987965643405915
+        },
+        "kd_z": {
+          "to_lower": 0.4025486946105957,
+          "to_upper": 0.6974513053894043
+        },
+        "kp_xy": {
+          "to_lower": 0.3021812677383423,
+          "to_upper": 0.7978187322616577
+        },
+        "kp_z": {
+          "to_lower": 0.9553942203521728,
+          "to_upper": 1.2446057796478271
+        }
+      },
+      "physical_gains": {
+        "kd_xy": 0.20120343565940857,
+        "kd_z": 0.5025486946105957,
+        "kp_xy": 0.4021812677383423,
+        "kp_z": 1.2553942203521729
+      },
+      "raw_gains": {
+        "kd_xy": -1.3762956857681274,
+        "kd_z": -0.549616813659668,
+        "kp_xy": -0.9708544015884399,
+        "kp_z": -0.26445019245147705
+      },
+      "step": 1,
+      "train_gradient_for_next_update": {
+        "kd_xy": -7.998021465027705e-05,
+        "kd_z": -9.83581630862318e-05,
+        "kp_xy": -3.971540991187794e-06,
+        "kp_z": -7.59116119297687e-06
+      },
+      "train_gradient_l2_norm": 0.00012706125562544912,
+      "train_loss": 0.002289227908477187,
+      "train_metrics": {
+        "control_effort": 0.002107191365212202,
+        "control_smoothness": 6.116164149716496e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.0849110198700727e-12,
+        "loss_effort": 2.1071914488857146e-06,
+        "loss_position": 0.0006713265320286155,
+        "loss_smoothness": 6.116164996683437e-08,
+        "loss_terminal": 0.00039106333861127496,
+        "loss_total": 0.002289227908477187,
+        "loss_velocity": 0.0012246696278452873,
+        "max_position_error_m": 0.01563376374542713,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.006477492395788431,
+        "velocity_rmse_m_s": 0.11066479235887527,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "validation_loss": 0.0011224061017856002,
+      "validation_metrics": {
+        "control_effort": 0.0015585323562845588,
+        "control_smoothness": 3.056217246921733e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.0844847115758514e-12,
+        "loss_effort": 1.5585324035782833e-06,
+        "loss_position": 0.0003497468132991344,
+        "loss_smoothness": 3.0562173236603485e-08,
+        "loss_terminal": 0.00019385386258363724,
+        "loss_total": 0.0011224061017856002,
+        "loss_velocity": 0.0005772163858637214,
+        "max_position_error_m": 0.011007209308445454,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.004675379954278469,
+        "velocity_rmse_m_s": 0.07597475498914719,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    {
+      "combined_loss": 0.0017041693208739161,
+      "combined_metrics": {
+        "control_effort": 0.0018329066224396229,
+        "control_smoothness": 4.6051394747337326e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084544776376207e-12,
+        "loss_effort": 1.8329067188460613e-06,
+        "loss_position": 0.000510147656314075,
+        "loss_smoothness": 4.6051397362134594e-08,
+        "loss_terminal": 0.000292190263280645,
+        "loss_total": 0.0017041693208739161,
+        "loss_velocity": 0.0008999524870887399,
+        "max_position_error_m": 0.015627745538949966,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.005646612029522657,
+        "velocity_rmse_m_s": 0.0948658213019371,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "gain_limit_distances": {
+        "kd_xy": {
+          "to_lower": 0.15241419970989228,
+          "to_upper": 0.5975858002901078
+        },
+        "kd_z": {
+          "to_lower": 0.4051040053367615,
+          "to_upper": 0.6948959946632385
+        },
+        "kp_xy": {
+          "to_lower": 0.3043724536895752,
+          "to_upper": 0.7956275463104248
+        },
+        "kp_z": {
+          "to_lower": 0.9607951164245605,
+          "to_upper": 1.2392048835754395
+        }
+      },
+      "physical_gains": {
+        "kd_xy": 0.20241419970989227,
+        "kd_z": 0.5051040053367615,
+        "kp_xy": 0.4043724536895752,
+        "kp_z": 1.2607951164245605
+      },
+      "raw_gains": {
+        "kd_xy": -1.3662959337234497,
+        "kd_z": -0.5396184325218201,
+        "kp_xy": -0.9608790874481201,
+        "kp_z": -0.25446414947509766
+      },
+      "step": 2,
+      "train_gradient_for_next_update": {
+        "kd_xy": -8.04179217084311e-05,
+        "kd_z": -9.83825302682817e-05,
+        "kp_xy": -3.98690281144809e-06,
+        "kp_z": -7.584854756714776e-06
+      },
+      "train_gradient_l2_norm": 0.00012735615018755198,
+      "train_loss": 0.002287347102537751,
+      "train_metrics": {
+        "control_effort": 0.002108917571604252,
+        "control_smoothness": 6.140402547316626e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.0847705072685185e-12,
+        "loss_effort": 2.1089176698296797e-06,
+        "loss_position": 0.000670907786116004,
+        "loss_smoothness": 6.140403030485686e-08,
+        "loss_terminal": 0.00039076231769286096,
+        "loss_total": 0.002287347102537751,
+        "loss_velocity": 0.001223506755195558,
+        "max_position_error_m": 0.015627745538949966,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.006475471891462803,
+        "velocity_rmse_m_s": 0.11061223596334457,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "validation_loss": 0.001120991539210081,
+      "validation_metrics": {
+        "control_effort": 0.001556895673274994,
+        "control_smoothness": 3.0698764021508396e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.0843190454838956e-12,
+        "loss_effort": 1.5568957678624429e-06,
+        "loss_position": 0.00034938755561597645,
+        "loss_smoothness": 3.069876441941233e-08,
+        "loss_terminal": 0.00019361819431651384,
+        "loss_total": 0.001120991539210081,
+        "loss_velocity": 0.0005763982771895826,
+        "max_position_error_m": 0.011000516824424267,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.004672978073358536,
+        "velocity_rmse_m_s": 0.07592089474201202,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    {
+      "combined_loss": 0.0017025111010298133,
+      "combined_metrics": {
+        "control_effort": 0.0018330097664147615,
+        "control_smoothness": 4.6241995732998475e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084386482859024e-12,
+        "loss_effort": 1.833009719121037e-06,
+        "loss_position": 0.0005097498651593924,
+        "loss_smoothness": 4.624200045100224e-08,
+        "loss_terminal": 0.000291917152935639,
+        "loss_total": 0.0017025111010298133,
+        "loss_velocity": 0.0008989647612906992,
+        "max_position_error_m": 0.015621501952409744,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.005644410382956266,
+        "velocity_rmse_m_s": 0.0948137491941452,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "gain_limit_distances": {
+        "kd_xy": {
+          "to_lower": 0.1536324590444565,
+          "to_upper": 0.5963675409555436
+        },
+        "kd_z": {
+          "to_lower": 0.4076660513877869,
+          "to_upper": 0.6923339486122131
+        },
+        "kp_xy": {
+          "to_lower": 0.30657377243041994,
+          "to_upper": 0.79342622756958
+        },
+        "kp_z": {
+          "to_lower": 0.966202688217163,
+          "to_upper": 1.233797311782837
+        }
+      },
+      "physical_gains": {
+        "kd_xy": 0.20363245904445648,
+        "kd_z": 0.5076660513877869,
+        "kp_xy": 0.4065737724304199,
+        "kp_z": 1.266202688217163
+      },
+      "raw_gains": {
+        "kd_xy": -1.3562939167022705,
+        "kd_z": -0.5296200513839722,
+        "kp_xy": -0.9509021639823914,
+        "kp_z": -0.24447855353355408
+      },
+      "step": 3,
+      "train_loss": 0.002285428112372756,
+      "train_metrics": {
+        "control_effort": 0.002110712928697467,
+        "control_smoothness": 6.164750811876729e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084608527463949e-12,
+        "loss_effort": 2.110712784997304e-06,
+        "loss_position": 0.0006704595289193094,
+        "loss_smoothness": 6.164751198411977e-08,
+        "loss_terminal": 0.0003904501209035516,
+        "loss_total": 0.002285428112372756,
+        "loss_velocity": 0.0012223459780216217,
+        "max_position_error_m": 0.015621501952409744,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.006473308429121971,
+        "velocity_rmse_m_s": 0.11055975407361984,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "validation_loss": 0.0011195940896868706,
+      "validation_metrics": {
+        "control_effort": 0.0015553066041320562,
+        "control_smoothness": 3.083648698520847e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084164438254099e-12,
+        "loss_effort": 1.5553066532447701e-06,
+        "loss_position": 0.0003490402305033058,
+        "loss_smoothness": 3.083648891788471e-08,
+        "loss_terminal": 0.00019338421407155693,
+        "loss_total": 0.0011195940896868706,
+        "loss_velocity": 0.0005755834863521159,
+        "max_position_error_m": 0.010993868112564087,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.00467065442353487,
+        "velocity_rmse_m_s": 0.07586722075939178,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    }
+  ],
+  "optimizer": {
+    "gradient_source": "train_loss_only",
+    "learning_rate": 0.01,
+    "name": "optax.adam",
+    "update_count": 3,
+    "version": "0.2.8"
+  },
+  "parameters": {
+    "best_train": {
+      "combined_loss": 0.0017025111010298133,
+      "combined_metrics": {
+        "control_effort": 0.0018330097664147615,
+        "control_smoothness": 4.6241995732998475e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084386482859024e-12,
+        "loss_effort": 1.833009719121037e-06,
+        "loss_position": 0.0005097498651593924,
+        "loss_smoothness": 4.624200045100224e-08,
+        "loss_terminal": 0.000291917152935639,
+        "loss_total": 0.0017025111010298133,
+        "loss_velocity": 0.0008989647612906992,
+        "max_position_error_m": 0.015621501952409744,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.005644410382956266,
+        "velocity_rmse_m_s": 0.0948137491941452,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "gain_limit_distances": {
+        "kd_xy": {
+          "to_lower": 0.1536324590444565,
+          "to_upper": 0.5963675409555436
+        },
+        "kd_z": {
+          "to_lower": 0.4076660513877869,
+          "to_upper": 0.6923339486122131
+        },
+        "kp_xy": {
+          "to_lower": 0.30657377243041994,
+          "to_upper": 0.79342622756958
+        },
+        "kp_z": {
+          "to_lower": 0.966202688217163,
+          "to_upper": 1.233797311782837
+        }
+      },
+      "physical_gains": {
+        "kd_xy": 0.20363245904445648,
+        "kd_z": 0.5076660513877869,
+        "kp_xy": 0.4065737724304199,
+        "kp_z": 1.266202688217163
+      },
+      "raw_gains": {
+        "kd_xy": -1.3562939167022705,
+        "kd_z": -0.5296200513839722,
+        "kp_xy": -0.9509021639823914,
+        "kp_z": -0.24447855353355408
+      },
+      "step": 3,
+      "train_loss": 0.002285428112372756,
+      "train_metrics": {
+        "control_effort": 0.002110712928697467,
+        "control_smoothness": 6.164750811876729e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084608527463949e-12,
+        "loss_effort": 2.110712784997304e-06,
+        "loss_position": 0.0006704595289193094,
+        "loss_smoothness": 6.164751198411977e-08,
+        "loss_terminal": 0.0003904501209035516,
+        "loss_total": 0.002285428112372756,
+        "loss_velocity": 0.0012223459780216217,
+        "max_position_error_m": 0.015621501952409744,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.006473308429121971,
+        "velocity_rmse_m_s": 0.11055975407361984,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "validation_loss": 0.0011195940896868706,
+      "validation_metrics": {
+        "control_effort": 0.0015553066041320562,
+        "control_smoothness": 3.083648698520847e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084164438254099e-12,
+        "loss_effort": 1.5553066532447701e-06,
+        "loss_position": 0.0003490402305033058,
+        "loss_smoothness": 3.083648891788471e-08,
+        "loss_terminal": 0.00019338421407155693,
+        "loss_total": 0.0011195940896868706,
+        "loss_velocity": 0.0005755834863521159,
+        "max_position_error_m": 0.010993868112564087,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.00467065442353487,
+        "velocity_rmse_m_s": 0.07586722075939178,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    "final": {
+      "combined_loss": 0.0017025111010298133,
+      "combined_metrics": {
+        "control_effort": 0.0018330097664147615,
+        "control_smoothness": 4.6241995732998475e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084386482859024e-12,
+        "loss_effort": 1.833009719121037e-06,
+        "loss_position": 0.0005097498651593924,
+        "loss_smoothness": 4.624200045100224e-08,
+        "loss_terminal": 0.000291917152935639,
+        "loss_total": 0.0017025111010298133,
+        "loss_velocity": 0.0008989647612906992,
+        "max_position_error_m": 0.015621501952409744,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.005644410382956266,
+        "velocity_rmse_m_s": 0.0948137491941452,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "gain_limit_distances": {
+        "kd_xy": {
+          "to_lower": 0.1536324590444565,
+          "to_upper": 0.5963675409555436
+        },
+        "kd_z": {
+          "to_lower": 0.4076660513877869,
+          "to_upper": 0.6923339486122131
+        },
+        "kp_xy": {
+          "to_lower": 0.30657377243041994,
+          "to_upper": 0.79342622756958
+        },
+        "kp_z": {
+          "to_lower": 0.966202688217163,
+          "to_upper": 1.233797311782837
+        }
+      },
+      "physical_gains": {
+        "kd_xy": 0.20363245904445648,
+        "kd_z": 0.5076660513877869,
+        "kp_xy": 0.4065737724304199,
+        "kp_z": 1.266202688217163
+      },
+      "raw_gains": {
+        "kd_xy": -1.3562939167022705,
+        "kd_z": -0.5296200513839722,
+        "kp_xy": -0.9509021639823914,
+        "kp_z": -0.24447855353355408
+      },
+      "step": 3,
+      "train_loss": 0.002285428112372756,
+      "train_metrics": {
+        "control_effort": 0.002110712928697467,
+        "control_smoothness": 6.164750811876729e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084608527463949e-12,
+        "loss_effort": 2.110712784997304e-06,
+        "loss_position": 0.0006704595289193094,
+        "loss_smoothness": 6.164751198411977e-08,
+        "loss_terminal": 0.0003904501209035516,
+        "loss_total": 0.002285428112372756,
+        "loss_velocity": 0.0012223459780216217,
+        "max_position_error_m": 0.015621501952409744,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.006473308429121971,
+        "velocity_rmse_m_s": 0.11055975407361984,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "validation_loss": 0.0011195940896868706,
+      "validation_metrics": {
+        "control_effort": 0.0015553066041320562,
+        "control_smoothness": 3.083648698520847e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084164438254099e-12,
+        "loss_effort": 1.5553066532447701e-06,
+        "loss_position": 0.0003490402305033058,
+        "loss_smoothness": 3.083648891788471e-08,
+        "loss_terminal": 0.00019338421407155693,
+        "loss_total": 0.0011195940896868706,
+        "loss_velocity": 0.0005755834863521159,
+        "max_position_error_m": 0.010993868112564087,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.00467065442353487,
+        "velocity_rmse_m_s": 0.07586722075939178,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    "initial": {
+      "combined_loss": 0.001707437913864851,
+      "combined_metrics": {
+        "control_effort": 0.0018328638980165124,
+        "control_smoothness": 4.567223368212581e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084842281452337e-12,
+        "loss_effort": 1.832863972595078e-06,
+        "loss_position": 0.0005109099438413978,
+        "loss_smoothness": 4.567223754747829e-08,
+        "loss_terminal": 0.000292719341814518,
+        "loss_total": 0.001707437913864851,
+        "loss_velocity": 0.0009019301505759358,
+        "max_position_error_m": 0.01563980057835579,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.005650829058140516,
+        "velocity_rmse_m_s": 0.09496999531984329,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "gain_limit_distances": {
+        "kd_xy": {
+          "to_lower": 0.15000000298023225,
+          "to_upper": 0.5999999970197678
+        },
+        "kd_z": {
+          "to_lower": 0.4,
+          "to_upper": 0.7
+        },
+        "kp_xy": {
+          "to_lower": 0.3000000059604645,
+          "to_upper": 0.7999999940395355
+        },
+        "kp_z": {
+          "to_lower": 0.95,
+          "to_upper": 1.25
+        }
+      },
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "step": 0,
+      "train_gradient_for_next_update": {
+        "kd_xy": -7.964330143295228e-05,
+        "kd_z": -9.854765812633559e-05,
+        "kp_xy": -3.962873051932547e-06,
+        "kp_z": -7.611652108607814e-06
+      },
+      "train_gradient_l2_norm": 0.00012699738726951182,
+      "train_loss": 0.0022911166306585073,
+      "train_metrics": {
+        "control_effort": 0.00210552872158587,
+        "control_smoothness": 6.09204507782124e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.085060422929441e-12,
+        "loss_effort": 2.1055286651971983e-06,
+        "loss_position": 0.0006717538926750422,
+        "loss_smoothness": 6.092045623518061e-08,
+        "loss_terminal": 0.0003913654072675854,
+        "loss_total": 0.0022911166306585073,
+        "loss_velocity": 0.0012258309870958328,
+        "max_position_error_m": 0.01563980057835579,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.0064795538783073425,
+        "velocity_rmse_m_s": 0.11071724444627762,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "validation_loss": 0.0011237593134865165,
+      "validation_metrics": {
+        "control_effort": 0.0015601991908624768,
+        "control_smoothness": 3.0424014767049812e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 2.084624139975233e-12,
+        "loss_effort": 1.5601992799929576e-06,
+        "loss_position": 0.00035006602411158383,
+        "loss_smoothness": 3.042401530706229e-08,
+        "loss_terminal": 0.00019407326180953532,
+        "loss_total": 0.0011237593134865165,
+        "loss_velocity": 0.0005780293722636998,
+        "max_position_error_m": 0.011013437062501907,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.0046775126829743385,
+        "velocity_rmse_m_s": 0.0760282427072525,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    }
+  },
+  "profiling": {
+    "cached_forward": {
+      "20": {
+        "maximum_seconds": 0.002245592,
+        "median_seconds": 0.001611732,
+        "minimum_seconds": 0.001561959,
+        "raw_seconds": [
+          0.002245592,
+          0.001611732,
+          0.001561959
+        ]
+      }
+    },
+    "cached_forward_backward": {
+      "20": {
+        "maximum_seconds": 0.023226676,
+        "median_seconds": 0.019365494,
+        "minimum_seconds": 0.01795616,
+        "raw_seconds": [
+          0.01795616,
+          0.019365494,
+          0.023226676
+        ]
+      }
+    },
+    "cached_optax_step": {
+      "maximum_seconds": 0.016692025,
+      "median_seconds": 0.015910379,
+      "minimum_seconds": 0.015833546,
+      "raw_seconds": [
+        0.016692025,
+        0.015910379,
+        0.015833546
+      ]
+    },
+    "compile_and_first_optimization_step_seconds": 13.177774462,
+    "forward_backward_h400_over_h200_median_ratio": null,
+    "h400_over_h200_exceeds_10": false,
+    "peak_memory_measured": false,
+    "repeats": 3,
+    "speedup_claim": false,
+    "successful_horizons": [
+      20
+    ],
+    "synchronization": "jax.block_until_ready",
+    "timer": "time.perf_counter_ns",
+    "total_update_loop_seconds": 21.087711452
+  },
+  "provenance": {
+    "base_head": "32cb8ffae8ec3b522c589dffc8cc6d9b97d8f1ed",
+    "branch": "research/differentiable-mellinger",
+    "head": "32cb8ffae8ec3b522c589dffc8cc6d9b97d8f1ed",
+    "historical_day2_execution": {
+      "head": "9eac04ea28997e76b9bc8c6e97ca53ef93398d55",
+      "preserved_unchanged": true,
+      "source_dirty": true,
+      "source_state_sha256": "a1d7f1dce6ed3b1aa9cbb7cc53abb4a3bcada379129dfbde1787c1a5d1564229"
+    },
+    "preflight_worktree": "clean",
+    "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+    "source_dirty": true,
+    "source_state_scope": [
+      "crazyflow",
+      "examples",
+      "tests",
+      "pyproject.toml",
+      "pixi.lock"
+    ],
+    "source_state_sha256": "8559648a3c52ca262f8eb5b4160540cc8e138c42c85d748f13daefe996d268f7",
+    "source_status_short": [
+      " M crazyflow/control/mellinger/__init__.py",
+      "?? crazyflow/control/mellinger/optimization.py",
+      "?? examples/jax/mellinger_gain_optimization.py",
+      "?? tests/unit/test_mellinger_gain_optimization.py"
+    ]
+  },
+  "robustness_summary": {
+    "baseline": {
+      "h200_audited_mismatch": {
+        "applicable": false,
+        "trajectories": {}
+      },
+      "mass_condition_mean_change_matched_minus_mismatch": -0.0004940345825161785,
+      "mass_condition_mean_relative_change": -0.28934262362486435,
+      "maximum_loss": 0.0022911166306585073,
+      "mean_loss": 0.0014604206808144227,
+      "worst_cell": {
+        "best_train_vs_baseline": {
+          "loss_difference": 0.0,
+          "loss_relative_change": 0.0
+        },
+        "cell_id": "baseline__h20__figure8__audited_mismatch",
+        "control_effort": 0.0021055308170616627,
+        "control_smoothness": 6.092051989980973e-05,
+        "controller_mass_kg": 0.028999999165534973,
+        "dynamics_mass_kg": 0.03189999982714653,
+        "floor_clip_fraction": 0.0,
+        "horizon": 20,
+        "loss_altitude": 2.085060422929441e-12,
+        "loss_effort": 2.1055307115602773e-06,
+        "loss_position": 0.0006717538926750422,
+        "loss_smoothness": 6.092052018402683e-08,
+        "loss_terminal": 0.0003913654072675854,
+        "loss_total": 0.0022911166306585073,
+        "loss_velocity": 0.001225830870680511,
+        "mass_condition": "audited_mismatch",
+        "max_position_error_m": 0.01563980057835579,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "parameter_set": "baseline",
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "position_rmse_m": 0.0064795538783073425,
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        },
+        "split": "train",
+        "trajectory": "figure8",
+        "velocity_rmse_m_s": 0.11071724444627762,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    "best_train": {
+      "h200_audited_mismatch": {
+        "applicable": false,
+        "trajectories": {}
+      },
+      "mass_condition_mean_change_matched_minus_mismatch": -0.0004909761482849717,
+      "mass_condition_mean_relative_change": -0.28838348298785166,
+      "maximum_loss": 0.002285428112372756,
+      "mean_loss": 0.001457023259717971,
+      "worst_cell": {
+        "best_train_vs_baseline": {
+          "loss_difference": -5.688518285751343e-06,
+          "loss_relative_change": -0.00248285844973172
+        },
+        "cell_id": "best_train__h20__figure8__audited_mismatch",
+        "control_effort": 0.002110719447955489,
+        "control_smoothness": 6.164781370898709e-05,
+        "controller_mass_kg": 0.028999999165534973,
+        "dynamics_mass_kg": 0.03189999982714653,
+        "floor_clip_fraction": 0.0,
+        "horizon": 20,
+        "loss_altitude": 2.084608527463949e-12,
+        "loss_effort": 2.110719378833892e-06,
+        "loss_position": 0.0006704595289193094,
+        "loss_smoothness": 6.164781751749615e-08,
+        "loss_terminal": 0.00039045006269589067,
+        "loss_total": 0.002285428112372756,
+        "loss_velocity": 0.0012223462108522654,
+        "mass_condition": "audited_mismatch",
+        "max_position_error_m": 0.01562150102108717,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "parameter_set": "best_train",
+        "physical_gains": {
+          "kd_xy": 0.20363245904445648,
+          "kd_z": 0.5076660513877869,
+          "kp_xy": 0.4065737724304199,
+          "kp_z": 1.266202688217163
+        },
+        "position_rmse_m": 0.006473308429121971,
+        "raw_gains": {
+          "kd_xy": -1.3562939167022705,
+          "kd_z": -0.5296200513839722,
+          "kp_xy": -0.9509021639823914,
+          "kp_z": -0.24447855353355408
+        },
+        "split": "train",
+        "trajectory": "figure8",
+        "velocity_rmse_m_s": 0.11055976152420044,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    }
+  },
+  "schema_version": "crazyflow.mellinger_gain_optimization.v1",
+  "split_and_objective": {
+    "combined_role": "evaluation_only_equal_arithmetic_mean",
+    "loss_components_normalizations_and_weights": {
+      "altitude_margin": 0.15,
+      "altitude_softness": 0.05,
+      "altitude_weight": 0.05,
+      "effort_weight": 0.001,
+      "position_scale": 0.25,
+      "position_weight": 1.0,
+      "smoothness_weight": 0.001,
+      "terminal_weight": 0.1,
+      "velocity_scale": 1.0,
+      "velocity_weight": 0.1
+    },
+    "train_objective": "per_case_loss[0]",
+    "validation_role": "evaluation_only",
+    "world_0": {
+      "split": "train",
+      "trajectory": "figure8",
+      "used_for_updates": true
+    },
+    "world_1": {
+      "split": "validation",
+      "trajectory": "circle",
+      "used_for_updates": false
+    }
+  },
+  "updates": [
+    {
+      "differentiated_objective": "train_loss_only",
+      "finite_gradient": true,
+      "finite_optax_state": true,
+      "finite_parameters": true,
+      "from_step": 0,
+      "to_step": 1,
+      "train_gradient": {
+        "kd_xy": -7.964330143295228e-05,
+        "kd_z": -9.854765812633559e-05,
+        "kp_xy": -3.962873051932547e-06,
+        "kp_z": -7.611652108607814e-06
+      },
+      "train_gradient_l2_norm": 0.00012699738726951182,
+      "train_loss": 0.0022911166306585073,
+      "update": 1
+    },
+    {
+      "differentiated_objective": "train_loss_only",
+      "finite_gradient": true,
+      "finite_optax_state": true,
+      "finite_parameters": true,
+      "from_step": 1,
+      "to_step": 2,
+      "train_gradient": {
+        "kd_xy": -7.998021465027705e-05,
+        "kd_z": -9.83581630862318e-05,
+        "kp_xy": -3.971540991187794e-06,
+        "kp_z": -7.59116119297687e-06
+      },
+      "train_gradient_l2_norm": 0.00012706125562544912,
+      "train_loss": 0.002289233263581991,
+      "update": 2
+    },
+    {
+      "differentiated_objective": "train_loss_only",
+      "finite_gradient": true,
+      "finite_optax_state": true,
+      "finite_parameters": true,
+      "from_step": 2,
+      "to_step": 3,
+      "train_gradient": {
+        "kd_xy": -8.04179217084311e-05,
+        "kd_z": -9.83825302682817e-05,
+        "kp_xy": -3.98690281144809e-06,
+        "kp_z": -7.584854756714776e-06
+      },
+      "train_gradient_l2_norm": 0.00012735615018755198,
+      "train_loss": 0.002287347801029682,
+      "update": 3
+    }
+  ],
+  "validations": {
+    "all_physical_gains_strictly_within_bounds": true,
+    "all_requested_profile_horizons_completed": true,
+    "all_updates_finite": true,
+    "batch_separate_combined_gradient_match": true,
+    "batch_separate_combined_loss_match": true,
+    "checkpoint_selected_by_minimum_train_loss_earliest_tie": true,
+    "combined_directional_derivatives": true,
+    "finite_train_validation_combined_gradients": true,
+    "gradient_controls_passed": true,
+    "h400_completed_when_requested": true,
+    "jit_eager_match": true,
+    "negative_train_gradient_local_descent": true,
+    "no_default_parameter_file_modified_by_experiment": true,
+    "requested_robustness_matrix_complete_and_finite": true,
+    "rollout_jaxpr_contains_scan": true,
+    "selected_checkpoint_after_step_zero": true,
+    "selected_train_loss_decreased": true,
+    "step0_matches_day2_h200_train_baseline_when_applicable": true,
+    "train_directional_derivatives": true,
+    "validation_excluded_from_gradient_update_and_selection": true,
+    "world_order_invariant_gradient": true,
+    "world_order_invariant_loss": true,
+    "zero_floor_and_nonfinite_fractions": true
+  },
+  "versions": {
+    "jax": "0.10.1",
+    "numpy": "2.5.1",
+    "optax": "0.2.8",
+    "python": "3.12.13"
+  }
+}

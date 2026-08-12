@@ -1,0 +1,204 @@
+{
+  "absolute_worktree_path_included": false,
+  "backend": "cpu",
+  "checkout_branch_included": false,
+  "claim_boundary": "Pure simulation identifiability diagnostics; no optimized candidate, physical calibration, integer/firmware differentiability, hardware transfer, safety, flight, or Sim2Real claim.",
+  "contract_and_manifest_hashes": {
+    "train_manifest": "6d6a8e1a6ecc6221fc7fae65a1ac216a050c73419a0799e18687419e973b7e4e",
+    "trajectory_contract": "d47912f63e23299e2c3ef13b5789f13e03718ded069d2e9b0955f72e4836b583",
+    "validation_manifest": "58159451316e0d0cd76724b2add675ccd55b2d70e3fcc733140a7f148f1fb118"
+  },
+  "devices": [
+    "cpu:cpu"
+  ],
+  "execution": {
+    "G4": "WITHHELD_PENDING_REBENCHMARK",
+    "batch_labels": [
+      "train-0-4",
+      "train-4-8",
+      "train-8-12",
+      "validation-12-16",
+      "validation-16-20",
+      "validation-20-24"
+    ],
+    "batch_parent_counts": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "batch_parent_ids": [
+      [
+        "train-soft-hold-8301001",
+        "train-soft-climb-8301002",
+        "train-soft-descent-8301003",
+        "train-nominal-hold-8301101"
+      ],
+      [
+        "train-nominal-climb-8301102",
+        "train-nominal-descent-8301103",
+        "train-dynamic-hold-8301201",
+        "train-dynamic-climb-8301202"
+      ],
+      [
+        "train-dynamic-descent-8301203",
+        "train-near_limit-hold-8301301",
+        "train-near_limit-climb-8301302",
+        "train-near_limit-descent-8301303"
+      ],
+      [
+        "validation-soft-hold-8401001",
+        "validation-soft-climb-8401002",
+        "validation-soft-descent-8401003",
+        "validation-nominal-hold-8401101"
+      ],
+      [
+        "validation-nominal-climb-8401102",
+        "validation-nominal-descent-8401103",
+        "validation-dynamic-hold-8401201",
+        "validation-dynamic-climb-8401202"
+      ],
+      [
+        "validation-dynamic-descent-8401203",
+        "validation-near_limit-hold-8401301",
+        "validation-near_limit-climb-8401302",
+        "validation-near_limit-descent-8401303"
+      ]
+    ],
+    "batch_timeout_seconds": 900,
+    "mode": "six-batches-of-four",
+    "resource_contract_and_result": {
+      "G4": "WITHHELD_PENDING_REBENCHMARK",
+      "batch_freeze_status": "WITHHELD_PENDING_REBENCHMARK",
+      "batch_labels": [
+        "train-0-4",
+        "train-4-8",
+        "train-8-12",
+        "validation-12-16",
+        "validation-16-20",
+        "validation-20-24"
+      ],
+      "batch_parent_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "batch_parent_ids": [
+        [
+          "train-soft-hold-8301001",
+          "train-soft-climb-8301002",
+          "train-soft-descent-8301003",
+          "train-nominal-hold-8301101"
+        ],
+        [
+          "train-nominal-climb-8301102",
+          "train-nominal-descent-8301103",
+          "train-dynamic-hold-8301201",
+          "train-dynamic-climb-8301202"
+        ],
+        [
+          "train-dynamic-descent-8301203",
+          "train-near_limit-hold-8301301",
+          "train-near_limit-climb-8301302",
+          "train-near_limit-descent-8301303"
+        ],
+        [
+          "validation-soft-hold-8401001",
+          "validation-soft-climb-8401002",
+          "validation-soft-descent-8401003",
+          "validation-nominal-hold-8401101"
+        ],
+        [
+          "validation-nominal-climb-8401102",
+          "validation-nominal-descent-8401103",
+          "validation-dynamic-hold-8401201",
+          "validation-dynamic-climb-8401202"
+        ],
+        [
+          "validation-dynamic-descent-8401203",
+          "validation-near_limit-hold-8401301",
+          "validation-near_limit-climb-8401302",
+          "validation-near_limit-descent-8401303"
+        ]
+      ],
+      "batch_timeout_seconds": 900,
+      "execution_mode": "six-batches-of-four",
+      "maximum_rss_absolute_limit_bytes": 25769803776,
+      "maximum_rss_fraction_of_mem_total": 0.7,
+      "minimum_mem_available_bytes": 8589934592,
+      "runtime_fallback_reason": null,
+      "runtime_fallback_used": false,
+      "schema_version": "crazyflow.g3_004.six_batches_of_four.d073.v1",
+      "selected_by_host_memory": false,
+      "selection_decision": "D-073",
+      "selection_policy": "prospective_fixed_after_observed_local_primary_24_oom",
+      "status": "PASS_SIX_BATCHES_OF_FOUR_RESOURCE_ENVELOPE",
+      "swap_used_required_bytes": 0,
+      "total_timeout_seconds": 2400,
+      "volatile_elapsed_rss_and_meminfo_in_package": false
+    },
+    "runtime_fallback_reason": null,
+    "runtime_fallback_used": false,
+    "selected_by_host_memory": false,
+    "selection_decision": "D-073",
+    "selection_policy": "prospective_fixed_after_observed_local_primary_24_oom",
+    "total_timeout_seconds": 2400
+  },
+  "generator_commit": "5c28db1aae6bee67f06a2764f535f5c38924495e",
+  "generator_commit_resolution": {
+    "paths": [
+      "examples/jax/mellinger_g3_freeze_v2.py",
+      "tests/unit/test_mellinger_g3_freeze_v2.py"
+    ],
+    "stable_across_generator_and_artifact_commit": true,
+    "subject": "research: support g3.4 recovery provenance"
+  },
+  "input_output_inventory": {
+    "checksum_entries": 12,
+    "package_payloads": [
+      "g3_freeze_report.json",
+      "trajectory_contract.json",
+      "train_manifest.json",
+      "validation_manifest.json",
+      "parameter_semantics.json",
+      "sensitivity_conditioning.json",
+      "loss_diagnostics.json",
+      "g4_g5_freeze_proposal.json",
+      "g3_freeze_overview.png",
+      "parameter_sensitivity_matrix.png",
+      "TECHNICAL_HANDOFF.md",
+      "provenance.json"
+    ],
+    "parents": 24
+  },
+  "integration_target_branch": "research/differentiable-mellinger",
+  "jax": "0.10.1",
+  "mjx_impl": "Impl.JAX",
+  "numpy": "2.5.1",
+  "optimizer_initialization_count": 0,
+  "optimizer_update_count": 0,
+  "package_versions": {
+    "flax": "0.12.8",
+    "matplotlib": "3.11.1",
+    "mujoco": "3.10.0",
+    "scipy": "1.18.0"
+  },
+  "platform": "cf21B_500",
+  "protected_access": {
+    "day10_raw_runs": false,
+    "day13_replication": false,
+    "protected_primary_data": false,
+    "test_manifest_data": false
+  },
+  "python": "3.12.13",
+  "schema_version": "crazyflow.g3_identifiability_freeze_v2.v4",
+  "source_base_commit": "77e24a4768d77a5aec19c18cad37423848051f0f",
+  "timestamp_included": false,
+  "warp_installed": false,
+  "work_order": "WO-GR-G3-004"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "crazyflow.sprint7_trajectory_decision.v1",
+  "decision_timing": "recorded before implementing or measuring the selected v2 distribution",
+  "legacy_evidence": {
+    "seed_suite_sha256": "6e9f4661e908bf055841185f53547e3f4a999250a89b3ddf06d52b1b0eb9a898",
+    "success_rates_with_16_attempts": {
+      "H20": 0.0,
+      "H50": 0.0,
+      "H100": 0.0,
+      "H200": 0.375,
+      "H400": 1.0
+    },
+    "h100_high_attempt_estimate": {
+      "accepted_candidates": 0,
+      "attempted_candidates": 2048,
+      "one_sided_95_percent_candidate_acceptance_upper_bound_approx": 0.001462,
+      "implied_16_attempt_success_upper_bound_approx": 0.02314,
+      "use": "acceptance-probability estimate only; forbidden as a pilot solution"
+    }
+  },
+  "options": [
+    {
+      "name": "increase_rejection_attempt_limit",
+      "decision": "reject",
+      "reason": "does not remove duration-dependent time compression or horizon-dependent conditioning; 0 of 2048 H100 candidates accepted"
+    },
+    {
+      "name": "horizon_dependent_amplitude_or_frequency_limits",
+      "decision": "reject",
+      "reason": "no single amplitude scaling preserves position, velocity, acceleration, and jerk together; risks short-horizon degeneration and changes the task distribution by horizon"
+    },
+    {
+      "name": "constructive_coefficient_scaling_or_projection",
+      "decision": "reject_for_sprint7",
+      "reason": "can force feasibility but creates a new pushforward distribution with bound-mass and horizon-dependent scaling bias that would need a separate study"
+    },
+    {
+      "name": "fixed_support_parent_with_horizon_prefixes",
+      "decision": "select",
+      "reason": "one physical time basis, one accepted parent distribution, exact prefix comparability, and exact H400 legacy candidate preservation are testable"
+    },
+    {
+      "name": "new_stationary_process_or_spline_family",
+      "decision": "defer",
+      "reason": "scientifically plausible but less backward-compatible and larger than the minimum change needed to resolve the measured blocker"
+    }
+  ],
+  "selected_distribution": {
+    "version": "fixed_support_prefix_v2",
+    "support_duration_seconds": 4.0,
+    "allowed_returned_duration_seconds": [1.0, 4.0],
+    "parent_validation": "all documented constraints are evaluated on the complete 4-second parent before slicing",
+    "explicit_tradeoff": "prefixes shorter than four seconds are not forced to return to hover at their endpoint"
+  },
+  "predeclared_128_seed_gate": {
+    "horizons": [100, 200, 400],
+    "seed_count": 128,
+    "attempt_limit": 16,
+    "technical": [
+      "128 of 128 successful for every horizon",
+      "no nonfinite value and every documented parent constraint passes",
+      "same accepted attempt index for each paired seed at H100, H200, and H400",
+      "H100 and H200 arrays are exact prefixes of paired H400 arrays",
+      "paired v2 H400 arrays and attempt indices exactly match legacy v1 H400",
+      "a fresh repeated process has the same timing-excluded scientific payload SHA-256"
+    ],
+    "diversity": {
+      "basis": "configured amplitudes and limits plus the pre-measured accepted legacy H200/H400 distributions",
+      "median_axis_span_minimum_fraction_of_configured_amplitude_at_H100": 0.05,
+      "median_position_displacement_rms_minimum_fraction_of_smallest_configured_amplitude_at_H100": 0.05,
+      "median_speed_rms_minimum_fraction_of_configured_max_speed_at_H100": 0.01,
+      "maximum_fraction_with_peak_displacement_below_one_percent_of_smallest_configured_amplitude": 0.05,
+      "v2_H200_median_position_displacement_rms_minimum_fraction_of_legacy_accepted_H200": 0.5,
+      "v2_H200_median_speed_rms_minimum_fraction_of_legacy_accepted_H200": 0.5,
+      "v2_H400": "exact paired legacy-v1 equality, not only a threshold"
+    }
+  },
+  "claim_boundary": "Passing is an empirical construction gate for the fixed CPU research path, not proof of the full distribution, optimization quality, GPU readiness, Sim2Real, hardware, or safety."
+}

@@ -1,0 +1,23 @@
+	Command being timed: "timeout --signal=TERM --kill-after=30s 21600s .venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/pilot_config.json --output-dir /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/runs/20260731T213826Z-2e16f365ecfd/runner-output"
+	User time (seconds): 56.36
+	System time (seconds): 8.20
+	Percent of CPU this job got: 229%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:28.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1252988
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 358449
+	Voluntary context switches: 307203
+	Involuntary context switches: 388
+	Swaps: 0
+	File system inputs: 112
+	File system outputs: 15480
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

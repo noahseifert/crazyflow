@@ -1,0 +1,92 @@
+{
+  "accepted_limitation": "The user knowingly accepts complete loss or failure of the single internal SSD. SHA-256 detects unnoticed modification but does not provide an independent backup.",
+  "amendment_id": "2026-08-01-local-ssd-persistence-v1",
+  "base_protocol_commit": "73868cfd84d25bec0c6612b31ee34f4e67acb307",
+  "effective_at_utc": "2026-08-01T12:51:18Z",
+  "observed_local_capacity": {
+    "available_bytes_at_adoption_preflight": 1006592950272,
+    "probe_command": "df -B1 --output=avail,target .",
+    "seed_01_threshold_passed": true
+  },
+  "protocol_origin_head": "a269046fb0e70cb5ecc8b4c1783b87aecd866b7f",
+  "reason": "The user elected to retain all raw replication data on the internal 2-TB SSD and not to use external storage.",
+  "replacement_rule": {
+    "accepted_single_drive_risk": true,
+    "after_every_attempt": "Generate a complete SHA-256 index of every run file and immediately verify the entire index locally with sha256sum -c. Preserve successful and failed attempts.",
+    "before_each_later_seed": "Re-run sha256sum -c for the complete index of the previous seed before launch.",
+    "expected_raw_bytes_per_remaining_seed": 437505563,
+    "external_destination_hash_verification_required": false,
+    "external_storage_capacity_check_required": false,
+    "external_storage_copy_required": false,
+    "forbidden_operations_during_series": [
+      "delete",
+      "move",
+      "rename",
+      "compress",
+      "modify"
+    ],
+    "integrity_failure_action": "Any missing file or SHA-256 mismatch blocks this and every later seed.",
+    "later_seed_minimum_local_free_bytes_formula": "10000000000 + 437505563 * remaining_seed_count_including_seed_to_start",
+    "limitation": "SHA-256 detects unnoticed change but is not an independent backup; total loss or failure of the single internal SSD can destroy all raw replication data.",
+    "local_free_reserve_bytes": 10000000000,
+    "mode": "internal_ssd_repository_artifact_area",
+    "ordinary_git_tracks_raw_runs": false,
+    "repository_run_root": "artifacts/day13-h100-replication/runs/",
+    "retain_complete_and_unchanged_throughout_confirmatory_series": true,
+    "seed_01_minimum_local_free_bytes": 20000000000,
+    "sprint10_pilot_must_remain_unchanged": true,
+    "storage_medium": "user-declared internal 2-TB SSD"
+  },
+  "research_processes_started_by_amendment": 0,
+  "schema_version": "crazyflow.h100_replication_protocol_amendment.v1",
+  "scope": {
+    "changed": [
+      "storage location",
+      "backup/fault-tolerance execution gates"
+    ],
+    "unchanged": [
+      "ten seeds and their order",
+      "all ten seed configs and hashes",
+      "scientific source and runtime requirements",
+      "H100 scientific and optimizer semantics",
+      "selection rule and tie-breaking",
+      "primary and secondary endpoints and uncertainty",
+      "technical failure and retry classification except storage preflight wording",
+      "GO/NO-GO scientific thresholds",
+      "strictly sequential execution",
+      "locked Test split"
+    ]
+  },
+  "sprint10_pilot_run_must_remain_unchanged": "artifacts/day10-sparse-long-pilot/runs/20260801T081232Z-1345032536fd",
+  "status": "ADOPTED_PRE_SEED_01",
+  "superseded_rule": {
+    "external_capacity_copy_and_destination_verification_were_gates": true,
+    "historical_authority": "73868cfd84d25bec0c6612b31ee34f4e67acb307",
+    "summary": "After every attempt, copy the raw run and SHA-256 index byte-for-byte to approved backed-up external research storage and verify all hashes at the destination before the next seed."
+  },
+  "test_manifest_opened_by_amendment": false,
+  "timing_and_bias_control": {
+    "adopted_before_seed_01": true,
+    "confirmatory_results_known_at_adoption": false,
+    "confirmatory_seeds_started_before_adoption": 0,
+    "result_dependent_change": false
+  },
+  "unchanged_fingerprints": {
+    "gain_registry": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+    "runtime": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+    "source": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+    "validation_manifest": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20"
+  },
+  "unchanged_seed_config_sha256": {
+    "seed-01": "278a00221637a31f9fef67be0c6f6ee69081f800314b724599553a63dae8b213",
+    "seed-02": "38ee16e0fc8bb8bbc432aa0dc9b9b91c9b8e71e53833cb0a92825f27840d3ebd",
+    "seed-03": "4cb0962c00d7c659689137ef4578e535ca4d4442e96fa4d822ad4b9f90ae7e80",
+    "seed-04": "a0b29c1999499dc756aea79b16b6e925251187297f631296b2145cb809e4fc62",
+    "seed-05": "ee95ae20a9cc4132d3766dec5ba6ef9de3670a49f2b2dc95832ee2bd7f4ab39b",
+    "seed-06": "edf1365a624ee11dc9283c9659a4bfbfab290025c3bc2cbf686a9be43a009dff",
+    "seed-07": "d42edf96573cb2754a9425d3d96f11ca78158cec4ab4e9361766dc974bb62aeb",
+    "seed-08": "680cad7dd16e5c1a9f408c4e9a60343a6df7af54268ed1ecf054254acd29f9c4",
+    "seed-09": "6e18395b50bf6a5657e99bbcdd6a73e242ac5fdf508d4acb69fd05d9f07fd04e",
+    "seed-10": "26af5d38f00effb4ea9b1a0924991e7219a519796aa23e033d540e1f8c5d0ae6"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "base_commit": "97134b45cfce6efdf9915810ae01518a2f7b54c0",
+  "branch": "codex/wo-gr-f0-002",
+  "commands": {
+    "deterministic_reproduction": "generate two fresh /tmp package directories with the exact diagnostic command; require diff -qr to be empty and SHA256SUMS 5/5 PASS in each",
+    "f0_1_full_normal_and_fallback_cli": "NOT_EXECUTED_PROTECTED_DAY13_READ_PROHIBITED: both full F0.1 CLI modes would reread protected Day-13 inputs, so neither command was executed in WO-GR-F0-002",
+    "f0_1_gate_regression_executed": "load the checksum-verified accepted Day-21 candidate; call the real frozen build_rollout_trace_bundle; require Default motor_saturation_fraction 0.0 and Seed-05 motor_saturation_fraction 0.027499999850988388; pass that unchanged bundle through build_rollout and require EvidenceError at the unchanged technical gate with no output path supplied or created",
+    "f0_1_source_and_test_regression_executed": "verify by source diff that F0.1 parse_args, CLI, fallback branch, output paths, and fallback behavior are unchanged; run the existing F0.1 tests; verify the accepted Day-21 SHA256SUMS 9/9",
+    "focused_pytest": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-002 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-f0-002-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m pytest -q -p no:cacheprovider tests/unit/test_mellinger_saturation_diagnostic.py tests/unit/test_mellinger_friday_evidence.py tests/unit/test_mellinger_tracking.py tests/unit/test_mellinger_batch_diagnostics.py",
+    "generate": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-002 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-f0-002-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_saturation_diagnostic.py --diagnostic-only-saturation-present --output-dir artifacts/day22-saturation-diagnostic",
+    "ruff_check": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-002 PYTHONDONTWRITEBYTECODE=1 RUFF_CACHE_DIR=/tmp/crazyflow-gradient-f0-002-ruff /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff check examples/jax/mellinger_friday_evidence.py examples/jax/mellinger_saturation_diagnostic.py tests/unit/test_mellinger_saturation_diagnostic.py",
+    "ruff_format_check": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-002 PYTHONDONTWRITEBYTECODE=1 /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff format --check examples/jax/mellinger_friday_evidence.py examples/jax/mellinger_saturation_diagnostic.py tests/unit/test_mellinger_saturation_diagnostic.py",
+    "verify_checksums": "cd artifacts/day22-saturation-diagnostic && sha256sum --quiet -c SHA256SUMS"
+  },
+  "configuration": {
+    "diagnostic_status": "DIAGNOSTIC_ONLY_SATURATION_PRESENT",
+    "duration_seconds": 1.0,
+    "dynamics": "first_principles",
+    "horizon_control_intervals": 100,
+    "initial_position_m": [
+      0.0,
+      0.0,
+      0.75
+    ],
+    "initial_rotor_velocity_rad_s": [
+      18967.771484375,
+      18967.771484375,
+      18967.771484375,
+      18967.771484375
+    ],
+    "initial_velocity_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "integrator": "explicit_euler",
+    "normal_zero_saturation_gate_unchanged": true,
+    "platform": "cf2x_L250",
+    "saturation_tolerance": 0.0001,
+    "seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "simulation_steps_per_reference": 5,
+    "state_control_frequency_hz": 100,
+    "trajectory": {
+      "amplitude_m": [
+        0.3,
+        0.15
+      ],
+      "center_m": [
+        0.0,
+        0.0,
+        0.75
+      ],
+      "kind": "figure8",
+      "period_seconds": 3.0,
+      "ramp_duration_seconds": 0.5,
+      "yaw_rad": 0.0
+    }
+  },
+  "environment": {
+    "implementation": "CPython",
+    "jax": "0.10.1",
+    "jax_backend": "cpu",
+    "jax_enable_x64": false,
+    "jaxlib": "0.10.1",
+    "machine": "x86_64",
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.1",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "inputs": {
+    "accepted_day21_checksum_index": {
+      "path": "artifacts/day21-friday-evidence/SHA256SUMS",
+      "sha256": "b64e0523600b5a24c9dcd58ec7fa45b42143f5ccdbf5b7a49cc676f21a4c8a21"
+    },
+    "accepted_day21_generator_commit": "2499aad364a44eadcc259005f4c18d8a21acb332",
+    "candidate_identity": {
+      "label": "provisional visualization candidate",
+      "physical_gains": {
+        "kd_xy": 0.7022475004196167,
+        "kd_z": 1.0895649194717407,
+        "kp_xy": 0.32308459281921387,
+        "kp_z": 2.310833215713501
+      },
+      "rule": "smallest existing selected validation loss among ten frozen H100 runs",
+      "seed": 5,
+      "selected_raw_gains": [
+        -1.3688596487045288,
+        2.3636748790740967,
+        1.8979853391647339,
+        2.1928365230560303
+      ],
+      "selected_step": 5000,
+      "selected_validation_loss": 0.002523899544030428
+    },
+    "five_verified_day21_payloads": [
+      {
+        "path": "artifacts/day21-friday-evidence/PRESENTATION_HANDOFF.md",
+        "sha256": "9c98a835855e5d5c7b351be08d33c47ce3e3102cb52df0012275a64dc6eec1b7"
+      },
+      {
+        "path": "artifacts/day21-friday-evidence/friday_evidence.json",
+        "sha256": "6a533f4b7ba892bda31aadf040dce875132e15cff582e7f96c00530ce0ec3a14"
+      },
+      {
+        "path": "artifacts/day21-friday-evidence/h100_selected_end_gains.png",
+        "sha256": "a55f7bb2a7ace966eab0668481269dcf5b2990bfed622b2e34a514a02bd5d192"
+      },
+      {
+        "path": "artifacts/day21-friday-evidence/h100_selected_gain_evolution.png",
+        "sha256": "ec0ee54e3e88d310d6c0f44a3b7dd9e122af5051bcd89e095b7ab0d60c62b316"
+      },
+      {
+        "path": "artifacts/day21-friday-evidence/provenance.json",
+        "sha256": "805b7042f1223345ff581ddd410e4fab2033955848b8564df3d204a87c651ca8"
+      }
+    ],
+    "protected_day10_day13_read": false,
+    "test_manifest_opened": false
+  },
+  "output_checksum_rule": "SHA256SUMS covers the five other files, not itself",
+  "output_inventory": [
+    "PRESENTATION_HANDOFF.md",
+    "motor_saturation_detail.png",
+    "provenance.json",
+    "saturation_diagnostic.json",
+    "trajectory_error_saturation.png",
+    "SHA256SUMS"
+  ],
+  "package_commit": "recorded externally in worker handoff and independent review",
+  "result_commit_generator_and_tests": "2d90302f883de2ab2b03c60706314d1097f75d25",
+  "schema_version": "crazyflow.saturation_diagnostic_provenance.v1",
+  "work_order": "WO-GR-F0-002",
+  "worker": "WO-GR-F0-002-WORKER-01 /root/wo_gr_f0_002_worker",
+  "worktree": "/tmp/crazyflow-gradient-research-wo-gr-f0-002"
+}

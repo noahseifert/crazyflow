@@ -1,0 +1,66 @@
+{
+  "schema_version": "crazyflow.sprint10_sparse_release_gate.v1",
+  "decision": "GO",
+  "authorized_runs": 1,
+  "requested_updates": 5000,
+  "checkpoint_interval": 100,
+  "hard_wall_limit_seconds": 7200,
+  "peak_rss_limit_gib": 12.0,
+  "artifact_limit_gib": 2.0,
+  "implementation": {
+    "git_head": "a58b78861cd15e904f7883668a689f297524f4a1",
+    "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e"
+  },
+  "prepared_config": {
+    "path": "artifacts/day10-sparse-long-pilot/pilot_config.json",
+    "sha256": "6c6c166a19d4f9fb306597cdd111ff9fd78d7b176068635a7cd21045480864f1",
+    "canonical_fingerprint": "859ca650fbe598c24172cba233b9ed15c7f51d23063b7dd6210847ead8910769",
+    "scientific_diff_from_sprint9": [
+      "run_id",
+      "optimizer.checkpoint_interval: implicit 1 -> explicit 100"
+    ]
+  },
+  "analysis": {
+    "path": "artifacts/day10-sparse-long-pilot/sparse_analysis.json",
+    "sha256": "7499f55e95bea1a06823b5ee666b39c11ce8f931647019c72b0782d525a12ef0",
+    "byte_identical_reproduction_passed": true
+  },
+  "measured_smoke": {
+    "updates": 210,
+    "checkpoint_steps": [100, 200, 210],
+    "checkpoint_sizes_bytes": [335925, 667310, 700428],
+    "checkpoint_seconds": [0.036024238, 0.069061382, 0.063584925],
+    "external_wall_seconds": 55.99,
+    "peak_rss_kib": 1309284,
+    "swaps": 0,
+    "exit_status": 0
+  },
+  "projection": {
+    "conservative_wall_seconds": 2289.545259811676,
+    "predicted_checkpoint_bytes_total": 422729347,
+    "predicted_final_checkpoint_bytes": 16573248,
+    "expected_total_artifact_bytes": 437666785,
+    "conservative_total_artifact_bytes": 875333570,
+    "expected_total_files_after_completion": 61
+  },
+  "passed_gates": {
+    "all_tests": true,
+    "smoke_exit_zero": true,
+    "all_values_finite": true,
+    "checkpoint_schedule_and_payloads": true,
+    "exact_resume": true,
+    "peak_rss_below_12_gib": true,
+    "swap_zero": true,
+    "artifact_projection_at_most_2_gib": true,
+    "runtime_projection_below_7200_seconds": true,
+    "scientific_semantics_unchanged": true,
+    "test_split_unopened": true,
+    "tmux_available": true
+  },
+  "automatic_second_run": false,
+  "automatic_resume": false,
+  "automatic_extension": false,
+  "test_evaluation": false,
+  "h200_or_h400": false,
+  "seed_loop": false
+}

@@ -1,0 +1,1142 @@
+{
+  "aggregates": {
+    "all_validation_curves_strictly_decreased_every_update": true,
+    "mean_gradient_l2_norm_at_step_5000": 0.00027522838208824394,
+    "mean_train_loss_at_step_5000": 0.00247700703330338,
+    "minimum_selected_gain_normalized_bound_distance": 0.08598490194840865,
+    "panel_technical_metric_maxima": {
+      "floor_clip_fraction": 0.0,
+      "max_position_error_m": 0.03437680006027222,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    "peak_rss_kib_range": [
+      2188252,
+      2211196
+    ],
+    "relative_validation_improvement": {
+      "confidence_interval_95_percent_student_t": [
+        0.7477577235740132,
+        0.7478202493264239
+      ],
+      "confidence_interval_half_width": 3.1262876205374105e-05,
+      "count": 10,
+      "mean": 0.7477889864502185,
+      "median": 0.7477787014919791,
+      "q1_linear": 0.7477647180902545,
+      "q3_linear": 0.7478196218793769,
+      "sample_standard_deviation_ddof_1": 4.370248745099389e-05,
+      "student_t_critical_0_975_df_9": 2.2621571627409915,
+      "values_in_manifest_order": [
+        0.7477678797793251,
+        0.7477194710518172,
+        0.7477636641938976,
+        0.7477865050704886,
+        0.7478654052322541,
+        0.7477562443979378,
+        0.7477928125151768,
+        0.747838426013709,
+        0.7478285583341102,
+        0.7477708979134696
+      ]
+    },
+    "selected_validation_loss": {
+      "confidence_interval_95_percent_student_t": [
+        0.002524350301011905,
+        0.002524974200293914
+      ],
+      "confidence_interval_half_width": 3.119496410046364e-07,
+      "count": 10,
+      "mean": 0.0025246622506529095,
+      "median": 0.0025247629964724183,
+      "q1_linear": 0.0025243545533157885,
+      "q3_linear": 0.00252490455750376,
+      "sample_standard_deviation_ddof_1": 4.360755287449738e-07,
+      "student_t_critical_0_975_df_9": 2.2621571627409915,
+      "values_in_manifest_order": [
+        0.002524877665564418,
+        0.002525355899706483,
+        0.0025249135214835405,
+        0.0025246848817914724,
+        0.002523899544030428,
+        0.002524987794458866,
+        0.0025246264412999153,
+        0.0025241717230528593,
+        0.0025242639239877462,
+        0.002524841111153364
+      ]
+    },
+    "total_checkpoint_payload_hashes_verified": 500,
+    "total_external_wall_seconds": 9286.5,
+    "total_indexed_raw_files_verified": 600,
+    "total_metric_rows": 100000,
+    "total_raw_run_bytes": 4375130360,
+    "total_raw_run_files": 610,
+    "total_test_metric_rows": 0
+  },
+  "claim_boundary": "Positive simulation evidence under the frozen H100 configuration and documented Validation selection only; no Test, H200/H400, hardware, firmware, flight, or Sim2Real evidence.",
+  "horizon_gate": {
+    "data_derived_gates": {
+      "all_final_validation_losses_at_most_1_10_times_selected": true,
+      "all_raw_run_indexes_and_checkpoint_payload_hashes_verified": true,
+      "all_relative_validation_improvements_positive": true,
+      "all_selected_gain_bound_distances_at_least_0_01": true,
+      "all_test_boundaries_closed": true,
+      "at_least_eight_improvements_at_least_0_50": true,
+      "improvement_ci_lower_bound_at_least_0_50": true,
+      "selected_loss_relative_ci_half_width_at_most_0_25": true,
+      "ten_of_ten_predeclared_seeds_complete_and_integrity_valid": true
+    },
+    "data_derived_gates_all_pass": true,
+    "execution_protocol_conformity_gate": {
+      "reason": "The frozen gate also requires absence of unplanned execution-protocol change. That governance determination needs authorization/deviation evidence and is therefore kept outside this numerical synthesis.",
+      "status": "NOT_DERIVABLE_FROM_RAW_RUNS_ALONE"
+    },
+    "h200_h400_authorization": "NOT_GRANTED_BY_THIS_ANALYSIS"
+  },
+  "input_contract": {
+    "active_persistence_amendment": {
+      "base_protocol_commit": "73868cfd84d25bec0c6612b31ee34f4e67acb307",
+      "effective_at_utc": "2026-08-01T12:51:18Z",
+      "id": "2026-08-01-local-ssd-persistence-v1",
+      "scope": "persistence and single-drive fault tolerance only"
+    },
+    "analysis_plan_schema": "crazyflow.h100_replication_analysis_plan.v1",
+    "analysis_plan_sha256": "e5bfdd14525f40d97814437f828de0dda3e2de57571a23002a1b3dff4b04d488",
+    "normalized_seed_config_sha256": "4230607ed3ca36f07e06bc6df962506266d78c2013328a59f39c88f376662a4e",
+    "protocol_origin_head": "a269046fb0e70cb5ecc8b4c1783b87aecd866b7f",
+    "protocol_status": "FROZEN_PROTOCOL_ONLY_NO_RUN_AUTHORIZATION",
+    "required_gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+    "required_runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+    "required_source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+    "required_validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+    "requirements_sha256": "18b7a19f1458cdf197fc21a3eb9f1be61f42c21ee2e618fedf4c321e70c22816",
+    "seed_manifest_sha256": "60da60dc3bbd75d886464ef9831e52405d1f4ece69921cfac81ba186b3038ce6",
+    "selection_rule": {
+      "candidate_steps": "every completed post-update step 1 through 5000",
+      "checkpoint_note": "Checkpoint files occur every 100 updates, but each stores selected_step and selected_raw_gains even when that selected step lies between checkpoint files.",
+      "implementation": "update only when validation_loss < best_validation",
+      "operation": "global minimum within each seed",
+      "quantity": "fixed Validation loss",
+      "step_zero_is_not_a_candidate": true,
+      "test_used": false,
+      "tie_breaking": "an exact equality does not update, therefore the earliest exact tie wins"
+    },
+    "software_runtime": {
+      "jax_backend": "cpu",
+      "jax_enable_x64": false,
+      "machine": "x86_64",
+      "packages": {
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8"
+      },
+      "python": "3.12.13"
+    },
+    "uncertainty": {
+      "confidence_interval": "two-sided 95% Student-t interval for the mean",
+      "critical_value_t_0.975_df_9": 2.2621571627409915,
+      "degrees_of_freedom": 9,
+      "formula": "mean +/- critical_value * sample_sd / sqrt(10)",
+      "sample_standard_deviation": "ddof=1"
+    }
+  },
+  "schema_version": "crazyflow.h100_replication_synthesis.v1",
+  "scope": "Deterministic analysis of the ten existing H100 Train/Validation runs only; no simulation, optimization, new seed, or Test access.",
+  "seeds": [
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 1,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08619601076299493,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-01.json",
+        "released_config_sha256": "278a00221637a31f9fef67be0c6f6ee69081f800314b724599553a63dae8b213",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 926.64,
+        "peak_rss_kib": 2188252,
+        "swaps": 0
+      },
+      "root_seed": 1432116264,
+      "run_bytes": 437512760,
+      "run_file_count": 61,
+      "run_id": "20260801T132718Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-01/20260801T132718Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-01/20260801T132718Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "547b2d20f6a13a22d85d7fea3ceb506dcedfe17038a472e2bfaf7e2a9643efc1"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.1290543715159099,
+          "upper_bound": 0.8,
+          "value": 0.7032092213630676
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10065551237626506,
+          "upper_bound": 1.2,
+          "value": 1.0892789363861084
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.20981370860880075,
+          "upper_bound": 1.2,
+          "value": 0.3307950794696808
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08619601076299493,
+          "upper_bound": 2.5,
+          "value": 2.310368776321411
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7477678797793251,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.002524877665564418,
+        "validation_loss_at_step_1": 0.010010135360062122,
+        "validation_loss_at_step_5000": 0.002524877665564418,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03294660896062851,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.00027069917996414006,
+        "gradient_l2_norm_at_step_5000": 0.00027069917996414006,
+        "loss_at_selected_step": 0.0024418204557150602,
+        "loss_at_step_5000": 0.0024418204557150602
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 2,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.086247595873746,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-02.json",
+        "released_config_sha256": "38ee16e0fc8bb8bbc432aa0dc9b9b91c9b8e71e53833cb0a92825f27840d3ebd",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 917.23,
+        "peak_rss_kib": 2195068,
+        "swaps": 0
+      },
+      "root_seed": 366692846,
+      "run_bytes": 437508163,
+      "run_file_count": 61,
+      "run_id": "20260801T174120Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-02/20260801T174120Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-02/20260801T174120Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "5a65d0cf8b1153e9f9a064214529f11e0d3ff5c0eb51454804cbe1f74b7fa431"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.13298335075378423,
+          "upper_bound": 0.8,
+          "value": 0.7002624869346619
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10069810260425911,
+          "upper_bound": 1.2,
+          "value": 1.089232087135315
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.21856814081018625,
+          "upper_bound": 1.2,
+          "value": 0.34042495489120483
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.086247595873746,
+          "upper_bound": 2.5,
+          "value": 2.310255289077759
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7477194710518172,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.002525355899706483,
+        "validation_loss_at_step_1": 0.010010110214352608,
+        "validation_loss_at_step_5000": 0.002525355899706483,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03306594863533974,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.0002805308031383902,
+        "gradient_l2_norm_at_step_5000": 0.0002805308031383902,
+        "loss_at_selected_step": 0.0025458766613155603,
+        "loss_at_step_5000": 0.0025458766613155603
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 3,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08618430657820267,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-03.json",
+        "released_config_sha256": "4cb0962c00d7c659689137ef4578e535ca4d4442e96fa4d822ad4b9f90ae7e80",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 931.17,
+        "peak_rss_kib": 2196884,
+        "swaps": 0
+      },
+      "root_seed": 235438753,
+      "run_bytes": 437511565,
+      "run_file_count": 61,
+      "run_id": "20260801T200824Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-03/20260801T200824Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-03/20260801T200824Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "fb81310c272eed35b456c74e63781877dc0b9a7ca4dbdc0fa3937f8faf5f836a"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.13186969757080083,
+          "upper_bound": 0.8,
+          "value": 0.7010977268218994
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10059309005737302,
+          "upper_bound": 1.2,
+          "value": 1.0893476009368896
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.20425533164631238,
+          "upper_bound": 1.2,
+          "value": 0.3246808648109436
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08618430657820267,
+          "upper_bound": 2.5,
+          "value": 2.310394525527954
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7477636641938976,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.0025249135214835405,
+        "validation_loss_at_step_1": 0.010010110214352608,
+        "validation_loss_at_step_5000": 0.0025249135214835405,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03305360674858093,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.00028326897881925106,
+        "gradient_l2_norm_at_step_5000": 0.00028326897881925106,
+        "loss_at_selected_step": 0.0025079036131501198,
+        "loss_at_step_5000": 0.0025079036131501198
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 4,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08610031821511008,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-04.json",
+        "released_config_sha256": "a0b29c1999499dc756aea79b16b6e925251187297f631296b2145cb809e4fc62",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 927.67,
+        "peak_rss_kib": 2203984,
+        "swaps": 0
+      },
+      "root_seed": 1369406745,
+      "run_bytes": 437509229,
+      "run_file_count": 61,
+      "run_id": "20260801T202907Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-04/20260801T202907Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-04/20260801T202907Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "d24d9e4622f69633e16668d30a1fd2b30e329c9b609d0391937e2b5df884176e"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.1330537637074789,
+          "upper_bound": 0.8,
+          "value": 0.7002096772193909
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.1005695733157071,
+          "upper_bound": 1.2,
+          "value": 1.0893734693527222
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.21732240373438058,
+          "upper_bound": 1.2,
+          "value": 0.3390546441078186
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08610031821511008,
+          "upper_bound": 2.5,
+          "value": 2.310579299926758
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7477865050704886,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.0025246848817914724,
+        "validation_loss_at_step_1": 0.010010110214352608,
+        "validation_loss_at_step_5000": 0.0025246848817914724,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03437680006027222,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.0002711382112465799,
+        "gradient_l2_norm_at_step_5000": 0.0002711382112465799,
+        "loss_at_selected_step": 0.0024716861080378294,
+        "loss_at_step_5000": 0.0024716861080378294
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 5,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08598490194840865,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-05.json",
+        "released_config_sha256": "ee95ae20a9cc4132d3766dec5ba6ef9de3670a49f2b2dc95832ee2bd7f4ab39b",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 927.86,
+        "peak_rss_kib": 2211196,
+        "swaps": 0
+      },
+      "root_seed": 1081462774,
+      "run_bytes": 437503085,
+      "run_file_count": 61,
+      "run_id": "20260801T204740Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-05/20260801T204740Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-05/20260801T204740Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "2139944548852ecb056f80fa3dc107eaa3945c9da3ac22e8528cd2c19eac8765"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.13033666610717778,
+          "upper_bound": 0.8,
+          "value": 0.7022475004196167
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10039552775296295,
+          "upper_bound": 1.2,
+          "value": 1.0895649194717407
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.20280417529019445,
+          "upper_bound": 1.2,
+          "value": 0.32308459281921387
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08598490194840865,
+          "upper_bound": 2.5,
+          "value": 2.310833215713501
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7478654052322541,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.002523899544030428,
+        "validation_loss_at_step_1": 0.010010127909481525,
+        "validation_loss_at_step_5000": 0.002523899544030428,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03331386297941208,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.00026032316964119673,
+        "gradient_l2_norm_at_step_5000": 0.00026032316964119673,
+        "loss_at_selected_step": 0.002348528243601322,
+        "loss_at_step_5000": 0.002348528243601322
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 6,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08617617867209694,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-06.json",
+        "released_config_sha256": "edf1365a624ee11dc9283c9659a4bfbfab290025c3bc2cbf686a9be43a009dff",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 932.06,
+        "peak_rss_kib": 2190892,
+        "swaps": 0
+      },
+      "root_seed": 1276309202,
+      "run_bytes": 437509728,
+      "run_file_count": 61,
+      "run_id": "20260801T214411Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-06/20260801T214411Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-06/20260801T214411Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "6b32af4271b09cfa4275c4f82268ae7e6a30a90ff0a8870e0345e93e700258cf"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.13134605089823412,
+          "upper_bound": 0.8,
+          "value": 0.7014904618263245
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10064749284224074,
+          "upper_bound": 1.2,
+          "value": 1.0892877578735352
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.2050544402816079,
+          "upper_bound": 1.2,
+          "value": 0.3255598843097687
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08617617867209694,
+          "upper_bound": 2.5,
+          "value": 2.3104124069213867
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7477562443979378,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.002524987794458866,
+        "validation_loss_at_step_1": 0.010010110214352608,
+        "validation_loss_at_step_5000": 0.002524987794458866,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03369568660855293,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.00026570481713861227,
+        "gradient_l2_norm_at_step_5000": 0.00026570481713861227,
+        "loss_at_selected_step": 0.0024181101471185684,
+        "loss_at_step_5000": 0.0024181101471185684
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 7,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08611397309736771,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-07.json",
+        "released_config_sha256": "d42edf96573cb2754a9425d3d96f11ca78158cec4ab4e9361766dc974bb62aeb",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 940.2,
+        "peak_rss_kib": 2201248,
+        "swaps": 0
+      },
+      "root_seed": 987511476,
+      "run_bytes": 437513131,
+      "run_file_count": 61,
+      "run_id": "20260801T220659Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-07/20260801T220659Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-07/20260801T220659Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "85af19ed743d73267bfd064cc4fe9edbf5d192939e8226f263ad0396d14ace13"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.1311623096466065,
+          "upper_bound": 0.8,
+          "value": 0.7016282677650452
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.1005541844801469,
+          "upper_bound": 1.2,
+          "value": 1.0893903970718384
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.19861648841337726,
+          "upper_bound": 1.2,
+          "value": 0.31847813725471497
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08611397309736771,
+          "upper_bound": 2.5,
+          "value": 2.310549259185791
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7477928125151768,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.0025246264412999153,
+        "validation_loss_at_step_1": 0.0100101288408041,
+        "validation_loss_at_step_5000": 0.0025246264412999153,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03245780989527702,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.00027861035778187215,
+        "gradient_l2_norm_at_step_5000": 0.00027861035778187215,
+        "loss_at_selected_step": 0.002476578578352928,
+        "loss_at_step_5000": 0.002476578578352928
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 8,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08602586659518155,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-08.json",
+        "released_config_sha256": "680cad7dd16e5c1a9f408c4e9a60343a6df7af54268ed1ecf054254acd29f9c4",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 941.8,
+        "peak_rss_kib": 2198488,
+        "swaps": 0
+      },
+      "root_seed": 2125653507,
+      "run_bytes": 437527894,
+      "run_file_count": 61,
+      "run_id": "20260801T222701Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-08/20260801T222701Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-08/20260801T222701Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "82b9ce3b2ea626aade6dcc8fd21aa5c07e184792a0d5528e2a29f046c26d620d"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.13097324371337896,
+          "upper_bound": 0.8,
+          "value": 0.7017700672149658
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10045491565357552,
+          "upper_bound": 1.2,
+          "value": 1.089499592781067
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.20669914917512375,
+          "upper_bound": 1.2,
+          "value": 0.3273690640926361
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08602586659518155,
+          "upper_bound": 2.5,
+          "value": 2.3107430934906006
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.747838426013709,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.0025241717230528593,
+        "validation_loss_at_step_1": 0.010010136291384697,
+        "validation_loss_at_step_5000": 0.0025241717230528593,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.03396197408437729,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.0002719280309975147,
+        "gradient_l2_norm_at_step_5000": 0.0002719280309975147,
+        "loss_at_selected_step": 0.0024688600096851587,
+        "loss_at_step_5000": 0.0024688600096851587
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 9,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08603041822260075,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-09.json",
+        "released_config_sha256": "6e18395b50bf6a5657e99bbcdd6a73e242ac5fdf508d4acb69fd05d9f07fd04e",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 923.14,
+        "peak_rss_kib": 2205892,
+        "swaps": 0
+      },
+      "root_seed": 31735934,
+      "run_bytes": 437517580,
+      "run_file_count": 61,
+      "run_id": "20260801T230606Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-09/20260801T230606Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-09/20260801T230606Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "c525e4ed8553b4f57b4b96784aacc2c0f25df03866d821d09d198427022ee419"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.13210159937540697,
+          "upper_bound": 0.8,
+          "value": 0.7009238004684448
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10046380216425113,
+          "upper_bound": 1.2,
+          "value": 1.0894898176193237
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.21023782274939798,
+          "upper_bound": 1.2,
+          "value": 0.33126160502433777
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08603041822260075,
+          "upper_bound": 2.5,
+          "value": 2.3107330799102783
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7478285583341102,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.0025242639239877462,
+        "validation_loss_at_step_1": 0.010010110214352608,
+        "validation_loss_at_step_5000": 0.0025242639239877462,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.032955653965473175,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.0002883952984120697,
+        "gradient_l2_norm_at_step_5000": 0.0002883952984120697,
+        "loss_at_selected_step": 0.002548334188759327,
+        "loss_at_step_5000": 0.002548334188759327
+      }
+    },
+    {
+      "checkpoint_payload_hashes_verified": 50,
+      "index": 10,
+      "metric_rows": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "minimum_selected_gain_normalized_bound_distance": 0.08617271076549182,
+      "provenance": {
+        "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+        "git_branch": "research/differentiable-mellinger",
+        "git_head": "ff85c8e9c0e73bcf97dfd5f2a747aa374a834f91",
+        "released_config_path": "artifacts/day12-h100-replication-protocol/configs/seed-10.json",
+        "released_config_sha256": "26af5d38f00effb4ea9b1a0924991e7219a519796aa23e033d540e1f8c5d0ae6",
+        "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+        "scientific_source_dirty": false,
+        "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+        "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+        "validation_manifest_id": "mellinger-validation-v1-20260731"
+      },
+      "resources": {
+        "external_wall_seconds": 918.73,
+        "peak_rss_kib": 2198668,
+        "swaps": 0
+      },
+      "root_seed": 986925065,
+      "run_bytes": 437517225,
+      "run_file_count": 61,
+      "run_id": "20260801T232739Z-ff85c8e9c0e7",
+      "run_path": "artifacts/day13-h100-replication/runs/seed-10/20260801T232739Z-ff85c8e9c0e7",
+      "run_sha256_index": {
+        "all_indexed_hashes_verified": true,
+        "indexed_file_count": 60,
+        "path": "artifacts/day13-h100-replication/runs/seed-10/20260801T232739Z-ff85c8e9c0e7/RUN_SHA256SUMS",
+        "sha256": "707481d543de95a629dec3b93d985fcb9d41f0f235086e2a949ed282efd460ba"
+      },
+      "selected_physical_gains": {
+        "kd_xy": {
+          "lower_bound": 0.05,
+          "normalized_nearest_bound_distance": 0.131176773707072,
+          "upper_bound": 0.8,
+          "value": 0.701617419719696
+        },
+        "kd_z": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.10061216354370114,
+          "upper_bound": 1.2,
+          "value": 1.0893266201019287
+        },
+        "kp_xy": {
+          "lower_bound": 0.1,
+          "normalized_nearest_bound_distance": 0.21753706173463302,
+          "upper_bound": 1.2,
+          "value": 0.3392907679080963
+        },
+        "kp_z": {
+          "lower_bound": 0.3,
+          "normalized_nearest_bound_distance": 0.08617271076549182,
+          "upper_bound": 2.5,
+          "value": 2.310420036315918
+        }
+      },
+      "selection": {
+        "candidate_steps": [
+          1,
+          5000
+        ],
+        "relative_validation_improvement": 0.7477708979134696,
+        "rule": "global fixed-Validation minimum; earliest exact tie",
+        "selected_step": 5000,
+        "selected_validation_loss": 0.002524841111153364,
+        "validation_loss_at_step_1": 0.010010110214352608,
+        "validation_loss_at_step_5000": 0.002524841111153364,
+        "validation_strictly_decreased_every_update": true
+      },
+      "technical_metric_maxima": {
+        "floor_clip_fraction": 0.0,
+        "max_position_error_m": 0.032707251608371735,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "test_boundary": {
+        "analysis_opened_test_manifest": false,
+        "frozen_reference_recorded_but_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+        "run_summary_test_manifest_opened": false,
+        "run_summary_test_metrics_present": false,
+        "test_used_for_selection": false
+      },
+      "train": {
+        "gradient_l2_norm_at_selected_step": 0.00028168497374281287,
+        "gradient_l2_norm_at_step_5000": 0.00028168497374281287,
+        "loss_at_selected_step": 0.002542372327297926,
+        "loss_at_step_5000": 0.002542372327297926
+      }
+    }
+  ],
+  "source_run_index_set": {
+    "file": "artifacts/day19-h100-analysis/SOURCE_RUN_INDEXES.sha256",
+    "run_index_count": 10,
+    "sha256": "55adbbf70a7acf2b1cf21280d6cf325e45db6aec163a294498c7f7d5715e52af"
+  },
+  "status": "PASS",
+  "test_boundary": {
+    "analysis_opened_test_manifest": false,
+    "locked_by_frozen_plan": true,
+    "test_metric_rows": 0,
+    "test_used_for_selection": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "base_commit": "4eb411d5f181baf1742ea0cf980199f5e9a8e3b1",
+  "branch": "codex/wo-gr-f0-001",
+  "commands": {
+    "focused_pytest": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-001 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-f0-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m pytest -q -p no:cacheprovider tests/unit/test_mellinger_friday_evidence.py tests/unit/test_h100_replication_analysis.py tests/unit/test_mellinger_batch_diagnostics.py tests/unit/test_mellinger_loss_diagnostics.py",
+    "generate": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-001 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-f0-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_friday_evidence.py --h100-root /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day13-h100-replication/runs --fallback-existing-evidence --output-dir artifacts/day21-friday-evidence",
+    "ruff_check": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-001 PYTHONDONTWRITEBYTECODE=1 RUFF_CACHE_DIR=/tmp/crazyflow-gradient-f0-ruff /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff check examples/jax/mellinger_friday_evidence.py tests/unit/test_mellinger_friday_evidence.py",
+    "ruff_format_check": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-001 PYTHONDONTWRITEBYTECODE=1 /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff format --check examples/jax/mellinger_friday_evidence.py tests/unit/test_mellinger_friday_evidence.py",
+    "two_target_reproduction_and_diff": "repro_a=\"$(mktemp -d /tmp/wo-gr-f0-repro-a.XXXXXX)\"; repro_b=\"$(mktemp -d /tmp/wo-gr-f0-repro-b.XXXXXX)\"; for target in \"$repro_a/package\" \"$repro_b/package\"; do PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-001 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-f0-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_friday_evidence.py --h100-root /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day13-h100-replication/runs --fallback-existing-evidence --output-dir \"$target\"; done; diff -qr \"$repro_a/package\" \"$repro_b/package\"",
+    "verify_checksums": "cd artifacts/day21-friday-evidence && sha256sum --quiet -c SHA256SUMS"
+  },
+  "configuration": {
+    "control_frequency_hz": 100,
+    "fallback_existing_evidence": true,
+    "h100_run_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "horizon": 100,
+    "integrator": "explicit_euler",
+    "platform": "cf2x_L250",
+    "rollout_seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "test_opened": false
+  },
+  "environment": {
+    "implementation": "CPython",
+    "jax": "0.10.1",
+    "jax_backend": "cpu",
+    "jax_enable_x64": false,
+    "jaxlib": "0.10.1",
+    "machine": "x86_64",
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.1",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "inputs": {
+    "day19_analysis": {
+      "hash_class": "currently verified against tracked Day-19 SHA256SUMS",
+      "path": "artifacts/day19-h100-analysis/h100_replication_analysis.json",
+      "sha256": "8690f1c35309ea61b7d659d5c1f90284bd590f444a1999625f6ce1cb3323ea96"
+    },
+    "day19_source_run_indexes": {
+      "count": 10,
+      "hash_class": "ten small RUN_SHA256SUMS files currently verified",
+      "path": "artifacts/day19-h100-analysis/SOURCE_RUN_INDEXES.sha256",
+      "sha256": "55adbbf70a7acf2b1cf21280d6cf325e45db6aec163a294498c7f7d5715e52af"
+    },
+    "day20_checksum_index": {
+      "path": "artifacts/day20-stage2-loss-diagnostics/SHA256SUMS",
+      "sha256": "3ca5dab192030c12245945152d775bc1bf2b9a77c49da5cd7ecd68eede4c254a"
+    },
+    "day20_loss_diagnostics": {
+      "path": "artifacts/day20-stage2-loss-diagnostics/loss_diagnostics.json",
+      "sha256": "9f4821b804b928e5c95cc3fc7aef6cfa6f96e826de8f109374321cc3abee5151"
+    },
+    "h100_live_root": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day13-h100-replication/runs",
+    "h100_payload_integrity": "accepted Day-19 digests inherited; no current full hash of 4.38 GB payload"
+  },
+  "output_checksum_rule": "SHA256SUMS covers the 9 other fallback output files, not itself",
+  "output_inventory": [
+    "friday_evidence.json",
+    "h100_loss_curves.png",
+    "h100_runtime_and_reliability.png",
+    "h100_selected_gain_evolution.png",
+    "h100_selected_end_gains.png",
+    "stage2_loss_contributions.png",
+    "stage2_loss_term_gain_gradients.png",
+    "provenance.json",
+    "PRESENTATION_HANDOFF.md",
+    "SHA256SUMS"
+  ],
+  "package_commit": "recorded externally in worker handoff and independent review",
+  "result_commit_generator_and_tests": "2499aad364a44eadcc259005f4c18d8a21acb332",
+  "rollout_evidence": "WITHHELD_TECHNICAL_GATE",
+  "schema_version": "crazyflow.friday_evidence_provenance.v1",
+  "selected_checkpoint": {
+    "candidate_label": "provisional visualization candidate",
+    "read_mode": "bounded file tail, maximum 131072 bytes",
+    "relative_path": "artifacts/day13-h100-replication/runs/seed-05/20260801T204740Z-ff85c8e9c0e7/runner-output/checkpoint-step-005000.json",
+    "seed": 5,
+    "update": 5000
+  },
+  "work_order": "WO-GR-F0-001",
+  "worker": "WO-GR-F0-001-WORKER-01 /root/wo_gr_f0_001_worker",
+  "worktree": "/tmp/crazyflow-gradient-research-wo-gr-f0-001"
+}

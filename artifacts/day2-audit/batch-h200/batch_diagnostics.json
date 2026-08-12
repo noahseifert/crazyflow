@@ -1,0 +1,1005 @@
+{
+  "aggregation_checks": {
+    "batch_per_case_loss_max_abs_difference": 4.470348358154297e-08,
+    "combined_vs_separate_mean_gradient_max_abs_difference": 7.264316082000732e-08,
+    "combined_vs_separate_mean_loss_difference": -4.284083843231201e-08,
+    "day1_h200_regression": {
+      "applicable": true,
+      "comparisons": {
+        "circle": {
+          "actual": {
+            "gradient": {
+              "kd_xy": -0.011416712775826454,
+              "kd_z": -0.0025448270607739687,
+              "kp_xy": 0.00048196196439675987,
+              "kp_z": -0.009044538252055645
+            },
+            "loss": 0.024092886596918106
+          },
+          "expected": {
+            "gradient": {
+              "kd_xy": -0.011416671797633171,
+              "kd_z": -0.002544915769249201,
+              "kp_xy": 0.00048197622527368367,
+              "kp_z": -0.009044521488249302
+            },
+            "loss": 0.02409282885491848
+          },
+          "gradient_differences": {
+            "kd_xy": -4.0978193283081055e-08,
+            "kd_z": 8.870847523212433e-08,
+            "kp_xy": -1.4260876923799515e-08,
+            "kp_z": -1.6763806343078613e-08
+          },
+          "loss_difference": 5.774199962615967e-08,
+          "passed": true
+        },
+        "figure8": {
+          "actual": {
+            "gradient": {
+              "kd_xy": -0.05069835111498833,
+              "kd_z": -0.0047681150026619434,
+              "kp_xy": 0.02074277400970459,
+              "kp_z": -0.010739999823272228
+            },
+            "loss": 0.07310400903224945
+          },
+          "expected": {
+            "gradient": {
+              "kd_xy": -0.050698306411504745,
+              "kd_z": -0.0047681089490652084,
+              "kp_xy": 0.020742792636156082,
+              "kp_z": -0.010739986784756184
+            },
+            "loss": 0.07310394197702408
+          },
+          "gradient_differences": {
+            "kd_xy": -4.470348358154297e-08,
+            "kd_z": -6.05359673500061e-09,
+            "kp_xy": -1.862645149230957e-08,
+            "kp_z": -1.30385160446167e-08
+          },
+          "loss_difference": 6.705522537231445e-08,
+          "passed": true
+        }
+      },
+      "passed": true
+    },
+    "deterministic_replay": true,
+    "jit_eager_gradient_max_abs_difference": 1.6763806343078613e-08,
+    "jit_eager_loss_difference": 1.4901161193847656e-08,
+    "reordered_combined_gradient_max_abs_difference": 0.0,
+    "reordered_combined_loss_difference": 0.0,
+    "separate_n1_gradients": {
+      "circle": {
+        "kd_xy": -0.011416712775826454,
+        "kd_z": -0.0025448270607739687,
+        "kp_xy": 0.00048196196439675987,
+        "kp_z": -0.009044538252055645
+      },
+      "figure8": {
+        "kd_xy": -0.05069835111498833,
+        "kd_z": -0.0047681150026619434,
+        "kp_xy": 0.02074277400970459,
+        "kp_z": -0.010739999823272228
+      }
+    },
+    "separate_n1_losses": {
+      "circle": 0.024092886596918106,
+      "figure8": 0.07310400903224945
+    }
+  },
+  "all_validations_passed": true,
+  "diagnostics": {
+    "combined": {
+      "control_effort": 0.001210721442475915,
+      "control_smoothness": 1.539369077363517e-05,
+      "floor_clip_fraction": 0.0,
+      "loss_altitude": 5.727997937077234e-12,
+      "loss_effort": 1.2107215070500388e-06,
+      "loss_position": 0.041051335632801056,
+      "loss_smoothness": 1.5393691654708164e-08,
+      "loss_terminal": 0.00298022641800344,
+      "loss_total": 0.048598404973745346,
+      "loss_velocity": 0.0045656175352633,
+      "max_position_error_m": 0.09199001640081406,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "position_rmse_m": 0.050652824342250824,
+      "velocity_rmse_m_s": 0.21367304027080536,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    "per_case": {
+      "circle_validation": {
+        "control_effort": 0.0004776568675879389,
+        "control_smoothness": 6.191593911353266e-06,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 5.487882284022083e-12,
+        "loss_effort": 4.776568971465167e-07,
+        "loss_position": 0.021152760833501816,
+        "loss_smoothness": 6.191594348337048e-09,
+        "loss_terminal": 0.0017471275059506297,
+        "loss_total": 0.024092847481369972,
+        "loss_velocity": 0.0011924774153158069,
+        "max_position_error_m": 0.048079244792461395,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.03635997325181961,
+        "velocity_rmse_m_s": 0.1092006117105484,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "figure8_train": {
+        "control_effort": 0.0019437859300523996,
+        "control_smoothness": 2.4595787181169726e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 5.9681140238132535e-12,
+        "loss_effort": 1.9437861737969797e-06,
+        "loss_position": 0.060949910432100296,
+        "loss_smoothness": 2.459578851699007e-08,
+        "loss_terminal": 0.004213325213640928,
+        "loss_total": 0.07310396432876587,
+        "loss_velocity": 0.007938757538795471,
+        "max_position_error_m": 0.09199001640081406,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.06172008812427521,
+        "velocity_rmse_m_s": 0.28175798058509827,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    "train": {
+      "control_effort": 0.0019437859300523996,
+      "control_smoothness": 2.4595787181169726e-05,
+      "floor_clip_fraction": 0.0,
+      "loss_altitude": 5.9681140238132535e-12,
+      "loss_effort": 1.9437861737969797e-06,
+      "loss_position": 0.060949910432100296,
+      "loss_smoothness": 2.459578851699007e-08,
+      "loss_terminal": 0.004213325213640928,
+      "loss_total": 0.07310396432876587,
+      "loss_velocity": 0.007938757538795471,
+      "max_position_error_m": 0.09199001640081406,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "position_rmse_m": 0.06172008812427521,
+      "velocity_rmse_m_s": 0.28175798058509827,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    "validation": {
+      "control_effort": 0.0004776568675879389,
+      "control_smoothness": 6.191593911353266e-06,
+      "floor_clip_fraction": 0.0,
+      "loss_altitude": 5.487882284022083e-12,
+      "loss_effort": 4.776568971465167e-07,
+      "loss_position": 0.021152760833501816,
+      "loss_smoothness": 6.191594348337048e-09,
+      "loss_terminal": 0.0017471275059506297,
+      "loss_total": 0.024092847481369972,
+      "loss_velocity": 0.0011924774153158069,
+      "max_position_error_m": 0.048079244792461395,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "position_rmse_m": 0.03635997325181961,
+      "velocity_rmse_m_s": 0.1092006117105484,
+      "zero_thrust_gate_fraction": 0.0
+    }
+  },
+  "directional_derivatives": {
+    "combined": [
+      {
+        "autodiff": 0.010612358339130878,
+        "direction_index": 0,
+        "finite_difference": 0.010610371828079224,
+        "raw_direction": {
+          "kd_xy": 0.0,
+          "kd_z": 0.0,
+          "kp_xy": 1.0,
+          "kp_z": 0.0
+        },
+        "relative_error": 9.36029537115246e-05
+      },
+      {
+        "autodiff": -0.0034481913316994905,
+        "direction_index": 1,
+        "finite_difference": -0.003445148468017578,
+        "raw_direction": {
+          "kd_xy": 0.5,
+          "kd_z": -0.5,
+          "kp_xy": 0.5,
+          "kp_z": -0.5
+        },
+        "relative_error": 0.000441420212155208
+      },
+      {
+        "autodiff": -0.024351714178919792,
+        "direction_index": 2,
+        "finite_difference": -0.024351105093955994,
+        "raw_direction": {
+          "kd_xy": 0.5006262063980103,
+          "kd_z": -0.35043832659721375,
+          "kp_xy": -0.2503131031990051,
+          "kp_z": 0.7509392499923706
+        },
+        "relative_error": 1.250615059689153e-05
+      }
+    ],
+    "train": [
+      {
+        "autodiff": 0.020742760971188545,
+        "direction_index": 0,
+        "finite_difference": 0.02073347568511963,
+        "raw_direction": {
+          "kd_xy": 0.0,
+          "kd_z": 0.0,
+          "kp_xy": 1.0,
+          "kp_z": 0.0
+        },
+        "relative_error": 0.0002238699671579525
+      },
+      {
+        "autodiff": -0.007223699241876602,
+        "direction_index": 1,
+        "finite_difference": -0.007222220301628113,
+        "raw_direction": {
+          "kd_xy": 0.5,
+          "kd_z": -0.5,
+          "kp_xy": 0.5,
+          "kp_z": -0.5
+        },
+        "relative_error": 0.00010237764217890799
+      },
+      {
+        "autodiff": -0.03696722537279129,
+        "direction_index": 2,
+        "finite_difference": -0.03695935010910034,
+        "raw_direction": {
+          "kd_xy": 0.5006262063980103,
+          "kd_z": -0.35043832659721375,
+          "kp_xy": -0.2503131031990051,
+          "kp_z": 0.7509392499923706
+        },
+        "relative_error": 0.00010652816854417324
+      }
+    ]
+  },
+  "experiment": {
+    "combined_mask": [
+      1.0,
+      1.0
+    ],
+    "command_shape": [
+      200,
+      2,
+      1,
+      13
+    ],
+    "control_frequency_hz": 100,
+    "controller_mass_kg": 0.029,
+    "drones_per_world": 1,
+    "duration_seconds": 2.0,
+    "dynamics_mass_kg": 0.0319,
+    "finite_difference_epsilon_raw": 0.01,
+    "gain_perturbation_fraction": 0.1,
+    "horizon_control_intervals": 200,
+    "local_descent_step_length_raw": 0.01,
+    "mass_is_experiment_variable": false,
+    "profile_repeats": 5,
+    "seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "split": [
+      {
+        "batch_index": 0,
+        "drones": 1,
+        "split": "train",
+        "trajectory": "figure8",
+        "world": 0
+      },
+      {
+        "batch_index": 1,
+        "drones": 1,
+        "split": "validation",
+        "trajectory": "circle",
+        "world": 1
+      }
+    ],
+    "steps_per_control_interval": 5,
+    "trace_shapes": {
+      "ang_vel": [
+        200,
+        2,
+        1,
+        3
+      ],
+      "attitude_command": [
+        200,
+        2,
+        1,
+        4
+      ],
+      "commanded_rotor_vel": [
+        200,
+        2,
+        1,
+        4
+      ],
+      "force_torque_command": [
+        200,
+        2,
+        1,
+        4
+      ],
+      "pos": [
+        200,
+        2,
+        1,
+        3
+      ],
+      "quat": [
+        200,
+        2,
+        1,
+        4
+      ],
+      "rotor_vel": [
+        200,
+        2,
+        1,
+        4
+      ],
+      "state_command": [
+        200,
+        2,
+        1,
+        13
+      ],
+      "vel": [
+        200,
+        2,
+        1,
+        3
+      ]
+    },
+    "train_mask": [
+      1.0,
+      0.0
+    ],
+    "validation_mask": [
+      0.0,
+      1.0
+    ],
+    "worlds": 2
+  },
+  "gain_parameterization": {
+    "baseline_kd_N_s_per_m": [
+      0.20000000298023224,
+      0.20000000298023224,
+      0.5
+    ],
+    "baseline_kp_N_per_m": [
+      0.4000000059604645,
+      0.4000000059604645,
+      1.25
+    ],
+    "baseline_physical_gains": {
+      "kd_xy": 0.20000000298023224,
+      "kd_z": 0.5,
+      "kp_xy": 0.4000000059604645,
+      "kp_z": 1.25
+    },
+    "baseline_raw_gains": {
+      "kd_xy": -1.3862943649291992,
+      "kd_z": -0.5596157312393188,
+      "kp_xy": -0.9808291792869568,
+      "kp_z": -0.2744370102882385
+    },
+    "bounds": {
+      "kd_xy": [
+        0.05,
+        0.8
+      ],
+      "kd_z": [
+        0.1,
+        1.2
+      ],
+      "kp_xy": [
+        0.1,
+        1.2
+      ],
+      "kp_z": [
+        0.3,
+        2.5
+      ]
+    },
+    "transform": "lower + (upper - lower) * sigmoid(raw)"
+  },
+  "gain_sensitivity": {
+    "kd_xy": {
+      "baseline": {
+        "losses": {
+          "combined": 0.048598404973745346,
+          "train": 0.07310396432876587,
+          "validation": 0.024092847481369972
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      },
+      "bounds": [
+        0.05,
+        0.8
+      ],
+      "central_sensitivity_per_physical_unit": {
+        "combined": -0.26169083622558664,
+        "train": -0.42610857000785224,
+        "validation": -0.09727324214170514
+      },
+      "minus": {
+        "loss_differences_from_baseline": {
+          "combined": 0.005795653909444809,
+          "train": 0.009341739118099213,
+          "validation": 0.0022495687007904053
+        },
+        "losses": {
+          "combined": 0.054394058883190155,
+          "train": 0.08244570344686508,
+          "validation": 0.026342416182160378
+        },
+        "physical_gains": {
+          "kd_xy": 0.18000000715255737,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.5621849298477173,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      },
+      "plus": {
+        "loss_differences_from_baseline": {
+          "combined": -0.004671979695558548,
+          "train": -0.0077026039361953735,
+          "validation": -0.00164136104285717
+        },
+        "losses": {
+          "combined": 0.0439264252781868,
+          "train": 0.0654013603925705,
+          "validation": 0.022451486438512802
+        },
+        "physical_gains": {
+          "kd_xy": 0.2200000137090683,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.2272295951843262,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      }
+    },
+    "kd_z": {
+      "baseline": {
+        "losses": {
+          "combined": 0.048598404973745346,
+          "train": 0.07310396432876587,
+          "validation": 0.024092847481369972
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      },
+      "bounds": [
+        0.1,
+        1.2
+      ],
+      "central_sensitivity_per_physical_unit": {
+        "combined": -0.014409050345420832,
+        "train": -0.0187491625547409,
+        "validation": -0.010068956762552258
+      },
+      "minus": {
+        "loss_differences_from_baseline": {
+          "combined": 0.0007757991552352905,
+          "train": 0.0010269731283187866,
+          "validation": 0.0005246233195066452
+        },
+        "losses": {
+          "combined": 0.04937420412898064,
+          "train": 0.07413093745708466,
+          "validation": 0.024617470800876617
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.44999998807907104,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.7621400356292725,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      },
+      "plus": {
+        "loss_differences_from_baseline": {
+          "combined": -0.0006651058793067932,
+          "train": -0.000847943127155304,
+          "validation": -0.00048227235674858093
+        },
+        "losses": {
+          "combined": 0.04793329909443855,
+          "train": 0.07225602120161057,
+          "validation": 0.02361057512462139
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.550000011920929,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.36772483587265015,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      }
+    },
+    "kp_xy": {
+      "baseline": {
+        "losses": {
+          "combined": 0.048598404973745346,
+          "train": 0.07310396432876587,
+          "validation": 0.024092847481369972
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      },
+      "bounds": [
+        0.1,
+        1.2
+      ],
+      "central_sensitivity_per_physical_unit": {
+        "combined": 0.04869345503012159,
+        "train": 0.09517529837525937,
+        "validation": 0.002211565118855758
+      },
+      "minus": {
+        "loss_differences_from_baseline": {
+          "combined": -0.0018596760928630829,
+          "train": -0.0036411285400390625,
+          "validation": -7.822364568710327e-05
+        },
+        "losses": {
+          "combined": 0.04673872888088226,
+          "train": 0.0694628357887268,
+          "validation": 0.02401462383568287
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.35999998450279236,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -1.172720193862915,
+          "kp_z": -0.2744370102882385
+        }
+      },
+      "plus": {
+        "loss_differences_from_baseline": {
+          "combined": 0.0020358003675937653,
+          "train": 0.003972895443439484,
+          "validation": 9.870156645774841e-05
+        },
+        "losses": {
+          "combined": 0.05063420534133911,
+          "train": 0.07707685977220535,
+          "validation": 0.02419154904782772
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4399999976158142,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.8043727874755859,
+          "kp_z": -0.2744370102882385
+        }
+      }
+    },
+    "kp_z": {
+      "baseline": {
+        "losses": {
+          "combined": 0.048598404973745346,
+          "train": 0.07310396432876587,
+          "validation": 0.024092847481369972
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        }
+      },
+      "bounds": [
+        0.3,
+        2.5
+      ],
+      "central_sensitivity_per_physical_unit": {
+        "combined": -0.018536075949668884,
+        "train": -0.020123600959777832,
+        "validation": -0.01694854348897934
+      },
+      "minus": {
+        "loss_differences_from_baseline": {
+          "combined": 0.0025791339576244354,
+          "train": 0.002795703709125519,
+          "validation": 0.0023625604808330536
+        },
+        "losses": {
+          "combined": 0.05117753893136978,
+          "train": 0.07589966803789139,
+          "validation": 0.026455407962203026
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.125
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.5108256340026855
+        }
+      },
+      "plus": {
+        "loss_differences_from_baseline": {
+          "combined": -0.0020548850297927856,
+          "train": -0.002235196530818939,
+          "validation": -0.0018745753914117813
+        },
+        "losses": {
+          "combined": 0.04654351994395256,
+          "train": 0.07086876779794693,
+          "validation": 0.02221827208995819
+        },
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.375
+        },
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.04546236991882324
+        }
+      }
+    }
+  },
+  "gradients": {
+    "combined": {
+      "l2_norm": 0.03447338938713074,
+      "leaves": {
+        "kd_xy": -0.031057460233569145,
+        "kd_z": -0.003656459506601095,
+        "kp_xy": 0.010612358339130878,
+        "kp_z": -0.00989225972443819
+      }
+    },
+    "train": {
+      "l2_norm": 0.056023720651865005,
+      "leaves": {
+        "kd_xy": -0.05069825425744057,
+        "kd_z": -0.004768092185258865,
+        "kp_xy": 0.020742760971188545,
+        "kp_z": -0.010740003548562527
+      }
+    },
+    "validation": {
+      "l2_norm": 0.014793653041124344,
+      "leaves": {
+        "kd_xy": -0.011416674591600895,
+        "kd_z": -0.0025448256637901068,
+        "kp_xy": 0.00048196566058322787,
+        "kp_z": -0.009044516831636429
+      }
+    }
+  },
+  "local_descent": {
+    "combined": {
+      "baseline_loss": 0.048598404973745346,
+      "decreased": true,
+      "loss_difference": -0.00034363940358161926,
+      "step_length_raw": 0.01,
+      "trial_loss": 0.04825476557016373,
+      "trial_physical_gains": {
+        "kd_xy": 0.20108400285243988,
+        "kd_z": 0.5002700686454773,
+        "kp_xy": 0.3993288576602936,
+        "kp_z": 1.2515491247177124
+      },
+      "trial_raw_gains": {
+        "kd_xy": -1.3772852420806885,
+        "kd_z": -0.5585550665855408,
+        "kp_xy": -0.9839075803756714,
+        "kp_z": -0.2715674638748169
+      }
+    },
+    "train": {
+      "baseline_loss": 0.07310396432876587,
+      "decreased": true,
+      "loss_difference": -0.0005582049489021301,
+      "step_length_raw": 0.01,
+      "trial_loss": 0.07254575937986374,
+      "trial_physical_gains": {
+        "kd_xy": 0.20108889043331146,
+        "kd_z": 0.5002166628837585,
+        "kp_xy": 0.3991928696632385,
+        "kp_z": 1.2510348558425903
+      },
+      "trial_raw_gains": {
+        "kd_xy": -1.3772449493408203,
+        "kd_z": -0.558764636516571,
+        "kp_xy": -0.9845317006111145,
+        "kp_z": -0.27251997590065
+      }
+    }
+  },
+  "losses": {
+    "combined": {
+      "components": {
+        "loss_altitude": 5.727997937077234e-12,
+        "loss_effort": 1.2107215070500388e-06,
+        "loss_position": 0.041051335632801056,
+        "loss_smoothness": 1.5393691654708164e-08,
+        "loss_terminal": 0.00298022641800344,
+        "loss_velocity": 0.0045656175352633
+      },
+      "loss_total": 0.048598404973745346
+    },
+    "per_case": {
+      "circle_validation": {
+        "control_effort": 0.0004776568675879389,
+        "control_smoothness": 6.191593911353266e-06,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 5.487882284022083e-12,
+        "loss_effort": 4.776568971465167e-07,
+        "loss_position": 0.021152760833501816,
+        "loss_smoothness": 6.191594348337048e-09,
+        "loss_terminal": 0.0017471275059506297,
+        "loss_total": 0.024092847481369972,
+        "loss_velocity": 0.0011924774153158069,
+        "max_position_error_m": 0.048079244792461395,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.03635997325181961,
+        "velocity_rmse_m_s": 0.1092006117105484,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "figure8_train": {
+        "control_effort": 0.0019437859300523996,
+        "control_smoothness": 2.4595787181169726e-05,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 5.9681140238132535e-12,
+        "loss_effort": 1.9437861737969797e-06,
+        "loss_position": 0.060949910432100296,
+        "loss_smoothness": 2.459578851699007e-08,
+        "loss_terminal": 0.004213325213640928,
+        "loss_total": 0.07310396432876587,
+        "loss_velocity": 0.007938757538795471,
+        "max_position_error_m": 0.09199001640081406,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "position_rmse_m": 0.06172008812427521,
+        "velocity_rmse_m_s": 0.28175798058509827,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    "train": {
+      "components": {
+        "loss_altitude": 5.9681140238132535e-12,
+        "loss_effort": 1.9437861737969797e-06,
+        "loss_position": 0.060949910432100296,
+        "loss_smoothness": 2.459578851699007e-08,
+        "loss_terminal": 0.004213325213640928,
+        "loss_velocity": 0.007938757538795471
+      },
+      "loss_total": 0.07310396432876587
+    },
+    "validation": {
+      "components": {
+        "loss_altitude": 5.487882284022083e-12,
+        "loss_effort": 4.776568971465167e-07,
+        "loss_position": 0.021152760833501816,
+        "loss_smoothness": 6.191594348337048e-09,
+        "loss_terminal": 0.0017471275059506297,
+        "loss_velocity": 0.0011924774153158069
+      },
+      "loss_total": 0.024092847481369972
+    }
+  },
+  "maximum_directional_relative_errors": {
+    "combined": 0.000441420212155208,
+    "train": 0.0002238699671579525
+  },
+  "profiling": {
+    "backend": "cpu",
+    "batch_command_shape": [
+      200,
+      2,
+      1,
+      13
+    ],
+    "cached_batch_forward": {
+      "maximum_seconds": 0.006772743,
+      "median_seconds": 0.006383277,
+      "minimum_seconds": 0.006217759,
+      "raw_seconds": [
+        0.006217759,
+        0.006772743,
+        0.006383277,
+        0.006603767,
+        0.006224812
+      ]
+    },
+    "cached_batch_forward_backward": {
+      "maximum_seconds": 0.158523609,
+      "median_seconds": 0.151880844,
+      "minimum_seconds": 0.148388891,
+      "raw_seconds": [
+        0.148388891,
+        0.149037039,
+        0.158523609,
+        0.151880844,
+        0.152366545
+      ]
+    },
+    "cached_sequential_two_case_forward": {
+      "maximum_seconds": 0.011817156,
+      "median_seconds": 0.01112143,
+      "minimum_seconds": 0.010207519,
+      "raw_seconds": [
+        0.011817156,
+        0.011213973,
+        0.01112143,
+        0.010240931,
+        0.010207519
+      ]
+    },
+    "cached_sequential_two_case_forward_backward": {
+      "maximum_seconds": 0.281013448,
+      "median_seconds": 0.274278655,
+      "minimum_seconds": 0.270861473,
+      "raw_seconds": [
+        0.277127952,
+        0.270861473,
+        0.274278655,
+        0.281013448,
+        0.273089262
+      ]
+    },
+    "compile_and_first_batch_forward_backward_seconds": 13.463255712,
+    "device_kind": "cpu",
+    "horizon_control_intervals": 200,
+    "jax_version": "0.10.1",
+    "platform": "cpu",
+    "ratios": {
+      "batch_over_sequential_forward": 0.5739618915912792,
+      "batch_over_sequential_forward_backward": 0.5537464955120186,
+      "sequential_over_batch_forward": 1.742275950111518,
+      "sequential_over_batch_forward_backward": 1.8058805032713672
+    },
+    "repeats": 5,
+    "single_command_shapes": [
+      [
+        200,
+        1,
+        1,
+        13
+      ],
+      [
+        200,
+        1,
+        1,
+        13
+      ]
+    ],
+    "synchronization": "jax.block_until_ready",
+    "timer": "time.perf_counter_ns"
+  },
+  "repository_state": {
+    "branch": "research/differentiable-mellinger",
+    "commit": "9eac04ea28997e76b9bc8c6e97ca53ef93398d55",
+    "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+    "source_dirty": true,
+    "source_state_sha256": "a1d7f1dce6ed3b1aa9cbb7cc53abb4a3bcada379129dfbde1787c1a5d1564229",
+    "source_status_short": [
+      " M crazyflow/control/mellinger/__init__.py",
+      " M crazyflow/control/mellinger/tracking.py",
+      "?? examples/jax/mellinger_batch_diagnostics.py",
+      "?? tests/unit/test_mellinger_batch_diagnostics.py"
+    ]
+  },
+  "schema_version": "crazyflow.mellinger_batch_diagnostics.v1",
+  "train_validation_gradient_cosine": {
+    "status": "defined",
+    "value": 0.842276394367218,
+    "zero_norm_behavior": "value is null when either exact L2 norm is zero"
+  },
+  "validations": {
+    "batch_per_case_losses_match_separate": true,
+    "case_order_invariant_gradient": true,
+    "case_order_invariant_loss": true,
+    "combined_directional_derivatives": true,
+    "combined_gradient_matches_separate_mean": true,
+    "combined_loss_matches_separate_mean": true,
+    "combined_negative_gradient_step_decreases_loss": true,
+    "command_shape_t_2_1_13": true,
+    "day1_h200_case_regression": true,
+    "deterministic_replay": true,
+    "finite_losses_metrics_states_gradients": true,
+    "gain_sensitivity_perturbations_in_bounds": true,
+    "gradient_norms_in_range": true,
+    "jit_eager_match": true,
+    "profiling_times_positive_finite": true,
+    "split_masks_disjoint_nonempty_complete": true,
+    "train_directional_derivatives": true,
+    "train_negative_gradient_step_decreases_loss": true,
+    "world_commands_distinct": true
+  },
+  "versions": {
+    "jax": "0.10.1",
+    "numpy": "2.5.1",
+    "python": "3.12.13"
+  }
+}

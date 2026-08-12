@@ -1,0 +1,35 @@
+{
+  "byte_identical": true,
+  "decompressed_bytes": 285845306,
+  "decompressed_sha256": "1b5dc30d6bbcd6274947fba5ab7237d7188183d04b4deac240607aab2c8b1078",
+  "f1_commit": "8f2c80e641f2f172b37bd0a47762bfdafdd6328d",
+  "f1_tree": "9a09ed788de3703edb3b2e32199576467b8803c1",
+  "gzip_argv": [
+    "env",
+    "-u",
+    "GZIP",
+    "LC_ALL=C",
+    "TZ=UTC",
+    "gzip",
+    "-n",
+    "-9",
+    "-c"
+  ],
+  "gzip_binary_path": "/usr/bin/gzip",
+  "gzip_binary_sha256": "2ba6fd35db5f0b5561e56b97124a08b067464b795e8e08278367f23dc539d549",
+  "gzip_blob": "d6401cbe8d99c4db8db640d9eaa51e28b87d02a2",
+  "gzip_bytes": 38011173,
+  "gzip_environment": {
+    "GZIP": "unset",
+    "LC_ALL": "C",
+    "TZ": "UTC"
+  },
+  "gzip_path": "artifacts/day25-cf21b-robust-foundation/robust_evaluation_report.json.gz",
+  "gzip_sha256": "93187aaf227047f1a2abedd3b1c0bfdc4734d95f6adafda74dff9f01ebf7189d",
+  "gzip_version_sha256": "ae720d255cf1557ee2dbb95b2dc7ed593493d90a086a6f4490438d92f621beea",
+  "original_blob": "4bcc0d5d8dd1a6879ac00ab3656244108741fbae",
+  "original_bytes": 285845306,
+  "original_path": "artifacts/day25-cf21b-robust-foundation/robust_evaluation_report.json",
+  "original_sha256": "1b5dc30d6bbcd6274947fba5ab7237d7188183d04b4deac240607aab2c8b1078",
+  "schema": "publishable_lineage_v1"
+}

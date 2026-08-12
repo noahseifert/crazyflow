@@ -1,0 +1,429 @@
+{
+  "claim_boundary": "proposal only; no G4 run, candidate selection, or approval",
+  "four_pd_gains_are_fallback_not_predecision": true,
+  "g4_executed": false,
+  "g5_executed": false,
+  "normalized_sensitivity_energy_coverage": 0.982421044994849,
+  "optimizer_initialization_count": 0,
+  "optimizer_update_count": 0,
+  "parameter_disposition": {
+    "kd_xy": {
+      "exclusion_reasons": [
+        "not individually GO-eligible"
+      ],
+      "objective_gradient_eligible": true,
+      "objective_gradient_withholding_reason": null,
+      "selected": false,
+      "single_parameter_category": "DIAGNOSTIC_ONLY",
+      "technical_robustness_eligible": true,
+      "technical_robustness_reason": null,
+      "withholding_reasons": []
+    },
+    "kd_z": {
+      "exclusion_reasons": [
+        "WITHHELD_TECHNICAL_ROBUSTNESS"
+      ],
+      "objective_gradient_eligible": true,
+      "objective_gradient_withholding_reason": null,
+      "selected": false,
+      "single_parameter_category": "WITHHELD",
+      "technical_robustness_eligible": false,
+      "technical_robustness_reason": "NONFINITE_NEAR_LIMIT_EFFECT_ROLLOUT",
+      "withholding_reasons": [
+        "WITHHELD_TECHNICAL_ROBUSTNESS"
+      ]
+    },
+    "ki_z": {
+      "exclusion_reasons": [
+        "not required by the smallest qualifying 90-percent-energy joint subset"
+      ],
+      "objective_gradient_eligible": true,
+      "objective_gradient_withholding_reason": null,
+      "selected": false,
+      "single_parameter_category": "GO_FOR_SINGLE_PARAMETER_OPTIMIZATION",
+      "technical_robustness_eligible": true,
+      "technical_robustness_reason": null,
+      "withholding_reasons": []
+    },
+    "kp_xy": {
+      "exclusion_reasons": [],
+      "objective_gradient_eligible": true,
+      "objective_gradient_withholding_reason": null,
+      "selected": true,
+      "single_parameter_category": "GO_FOR_SINGLE_PARAMETER_OPTIMIZATION",
+      "technical_robustness_eligible": true,
+      "technical_robustness_reason": null,
+      "withholding_reasons": []
+    },
+    "kp_z": {
+      "exclusion_reasons": [],
+      "objective_gradient_eligible": true,
+      "objective_gradient_withholding_reason": null,
+      "selected": true,
+      "single_parameter_category": "GO_FOR_SINGLE_PARAMETER_OPTIMIZATION",
+      "technical_robustness_eligible": true,
+      "technical_robustness_reason": null,
+      "withholding_reasons": []
+    },
+    "mass": {
+      "exclusion_reasons": [
+        "WITHHELD_TECHNICAL_ROBUSTNESS"
+      ],
+      "objective_gradient_eligible": true,
+      "objective_gradient_withholding_reason": null,
+      "selected": false,
+      "single_parameter_category": "WITHHELD",
+      "technical_robustness_eligible": false,
+      "technical_robustness_reason": "NONFINITE_NEAR_LIMIT_EFFECT_ROLLOUT",
+      "withholding_reasons": [
+        "WITHHELD_TECHNICAL_ROBUSTNESS"
+      ]
+    },
+    "mass_thrust": {
+      "exclusion_reasons": [
+        "WITHHELD_TECHNICAL_ROBUSTNESS"
+      ],
+      "objective_gradient_eligible": true,
+      "objective_gradient_withholding_reason": null,
+      "selected": false,
+      "single_parameter_category": "WITHHELD",
+      "technical_robustness_eligible": false,
+      "technical_robustness_reason": "NONFINITE_NEAR_LIMIT_EFFECT_ROLLOUT",
+      "withholding_reasons": [
+        "WITHHELD_TECHNICAL_ROBUSTNESS"
+      ]
+    }
+  },
+  "prospective_g5_gates": {
+    "at_least_one_rmse_improves": true,
+    "candidate_and_default_use_identical_contract_and_inputs": true,
+    "comparison_baseline": "repository-default parameters",
+    "comparison_parent_identity": "identical fixed Validation parents",
+    "dynamic_clip_interval_max_s": 0.02,
+    "dynamic_stage_a_motor_clip_fraction_max": 0.0025,
+    "dynamic_stage_b_zero": true,
+    "hard_gates": [
+      "contract",
+      "finite",
+      "ground_floor",
+      "zero_thrust",
+      "reproduction",
+      "checksum",
+      "technical"
+    ],
+    "integral_nearness_absolute_degradation_max": 0.02,
+    "integral_total_contact_increase_allowed": 0,
+    "maximum_feasible_stratum_degradation": 0.02,
+    "maximum_reserve_drop": 0.02,
+    "mean_primary_improvement_min": 0.05,
+    "minimum_feasible_motor_reserve": 0.05,
+    "near_limit_decides_nominal_pass": false,
+    "relative_primary_improvement_formula": "(default-candidate)/default",
+    "relative_regression_formula": "(candidate-default)/default",
+    "relative_regression_grouping": [
+      "feasible_motion_class_mean",
+      "feasible_vertical_profile_mean"
+    ],
+    "soft_nominal_zero_clips": true,
+    "wrench_degradation_bound": "max(1% platform scale, 5% default value)",
+    "xy_z_rmse_max_degradation": 0.02
+  },
+  "schema_version": "crazyflow.g3_identifiability_freeze_v2.v4",
+  "selected_parameter_contract": {
+    "kp_xy": {
+      "coordinate": "p(theta)=p_default*exp(theta)",
+      "default": 0.4,
+      "lower_bound": 0.1,
+      "theta_zero_is_repository_default": true,
+      "unit": "N/m",
+      "upper_bound": 1.2
+    },
+    "kp_z": {
+      "coordinate": "p(theta)=p_default*exp(theta)",
+      "default": 1.25,
+      "lower_bound": 0.3,
+      "theta_zero_is_repository_default": true,
+      "unit": "N/m",
+      "upper_bound": 2.5
+    }
+  },
+  "selected_parameters": [
+    "kp_xy",
+    "kp_z"
+  ],
+  "selection_group_evidence": {
+    "by_split": {
+      "train": {
+        "absolute_correlation": [
+          [
+            0.9999999999999936,
+            0.008395941608243862
+          ],
+          [
+            0.008395941608243862,
+            1.0000000000000022
+          ]
+        ],
+        "condition_number": 3.7945348112312525,
+        "condition_number_status": "FINITE",
+        "maximum_off_diagonal_absolute_correlation": 0.008395941608243862,
+        "passed": true,
+        "rank": 2,
+        "sigma_min_over_sigma_max": 0.26353691552391356,
+        "singular_values": [
+          18.006843657154196,
+          4.7454680357277645
+        ]
+      },
+      "validation": {
+        "absolute_correlation": [
+          [
+            1.000000000000011,
+            0.0033623209141461405
+          ],
+          [
+            0.0033623209141461405,
+            0.9999999999999939
+          ]
+        ],
+        "condition_number": 3.307051572627891,
+        "condition_number_status": "FINITE",
+        "maximum_off_diagonal_absolute_correlation": 0.0033623209141461405,
+        "passed": true,
+        "rank": 2,
+        "sigma_min_over_sigma_max": 0.302384156411981,
+        "singular_values": [
+          17.41366377210095,
+          5.265616029768621
+        ]
+      }
+    },
+    "category": "GO_FOR_JOINT_OPTIMIZATION",
+    "excluded_withheld_parameters": [],
+    "excluded_withholding_reasons": {},
+    "parameters": [
+      "kp_xy",
+      "kp_z"
+    ]
+  },
+  "selection_rule": {
+    "joint_gates_required": true,
+    "members_individually_go_eligible": true,
+    "minimum_energy_coverage": 0.9,
+    "requires_xy_and_z_effective_members": true,
+    "tie_break": [
+      "smallest_parameter_count",
+      "lowest_condition_number",
+      "mandatory_parameter_order"
+    ]
+  },
+  "status": "PROPOSE_G4_PARAMETER_FREEZE_FOR_HAUPTLEITUNG_REVIEW",
+  "training_contract": {
+    "batch_schedule": {
+      "batch_count": 9,
+      "batches": [
+        {
+          "batch_index": 0,
+          "stratum_world_counts": {
+            "dynamic/climb": 3,
+            "dynamic/descent": 3,
+            "dynamic/hold": 3,
+            "nominal/climb": 4,
+            "nominal/descent": 3,
+            "nominal/hold": 4,
+            "soft/climb": 4,
+            "soft/descent": 4,
+            "soft/hold": 4
+          }
+        },
+        {
+          "batch_index": 1,
+          "stratum_world_counts": {
+            "dynamic/climb": 3,
+            "dynamic/descent": 3,
+            "dynamic/hold": 3,
+            "nominal/climb": 4,
+            "nominal/descent": 4,
+            "nominal/hold": 4,
+            "soft/climb": 4,
+            "soft/descent": 4,
+            "soft/hold": 3
+          }
+        },
+        {
+          "batch_index": 2,
+          "stratum_world_counts": {
+            "dynamic/climb": 3,
+            "dynamic/descent": 3,
+            "dynamic/hold": 4,
+            "nominal/climb": 4,
+            "nominal/descent": 4,
+            "nominal/hold": 4,
+            "soft/climb": 3,
+            "soft/descent": 4,
+            "soft/hold": 3
+          }
+        },
+        {
+          "batch_index": 3,
+          "stratum_world_counts": {
+            "dynamic/climb": 4,
+            "dynamic/descent": 3,
+            "dynamic/hold": 4,
+            "nominal/climb": 4,
+            "nominal/descent": 4,
+            "nominal/hold": 4,
+            "soft/climb": 3,
+            "soft/descent": 3,
+            "soft/hold": 3
+          }
+        },
+        {
+          "batch_index": 4,
+          "stratum_world_counts": {
+            "dynamic/climb": 4,
+            "dynamic/descent": 4,
+            "dynamic/hold": 4,
+            "nominal/climb": 4,
+            "nominal/descent": 4,
+            "nominal/hold": 3,
+            "soft/climb": 3,
+            "soft/descent": 3,
+            "soft/hold": 3
+          }
+        },
+        {
+          "batch_index": 5,
+          "stratum_world_counts": {
+            "dynamic/climb": 4,
+            "dynamic/descent": 4,
+            "dynamic/hold": 4,
+            "nominal/climb": 3,
+            "nominal/descent": 4,
+            "nominal/hold": 3,
+            "soft/climb": 3,
+            "soft/descent": 3,
+            "soft/hold": 4
+          }
+        },
+        {
+          "batch_index": 6,
+          "stratum_world_counts": {
+            "dynamic/climb": 4,
+            "dynamic/descent": 4,
+            "dynamic/hold": 4,
+            "nominal/climb": 3,
+            "nominal/descent": 3,
+            "nominal/hold": 3,
+            "soft/climb": 4,
+            "soft/descent": 3,
+            "soft/hold": 4
+          }
+        },
+        {
+          "batch_index": 7,
+          "stratum_world_counts": {
+            "dynamic/climb": 4,
+            "dynamic/descent": 4,
+            "dynamic/hold": 3,
+            "nominal/climb": 3,
+            "nominal/descent": 3,
+            "nominal/hold": 3,
+            "soft/climb": 4,
+            "soft/descent": 4,
+            "soft/hold": 4
+          }
+        },
+        {
+          "batch_index": 8,
+          "stratum_world_counts": {
+            "dynamic/climb": 3,
+            "dynamic/descent": 4,
+            "dynamic/hold": 3,
+            "nominal/climb": 3,
+            "nominal/descent": 3,
+            "nominal/hold": 4,
+            "soft/climb": 4,
+            "soft/descent": 4,
+            "soft/hold": 4
+          }
+        }
+      ],
+      "executed": false,
+      "feasible_stratum_order": [
+        "soft/hold",
+        "soft/climb",
+        "soft/descent",
+        "nominal/hold",
+        "nominal/climb",
+        "nominal/descent",
+        "dynamic/hold",
+        "dynamic/climb",
+        "dynamic/descent"
+      ],
+      "per_batch_allocation_values": [
+        3,
+        4
+      ],
+      "total_slots_per_stratum": {
+        "dynamic/climb": 32,
+        "dynamic/descent": 32,
+        "dynamic/hold": 32,
+        "nominal/climb": 32,
+        "nominal/descent": 32,
+        "nominal/hold": 32,
+        "soft/climb": 32,
+        "soft/descent": 32,
+        "soft/hold": 32
+      },
+      "total_world_slots": 288,
+      "worlds_per_batch": 32
+    },
+    "development_seed": 9104001,
+    "g3_execution_mode": "six-batches-of-four",
+    "g3_execution_selected_by": "D-073",
+    "g3_runtime_fallback_used": false,
+    "g4_batch_freeze_status": "WITHHELD_PENDING_REBENCHMARK",
+    "gradient_convergence": "median dimensionless L2 last 100 <=0.1 initial or <=1e-4",
+    "plateau": "after >=1000 updates; three windows, median 250-vs-250 improvement <0.2%",
+    "population": "Soft/Nominal/Dynamic balanced Hold/Climb/Descent; Near-limit separate",
+    "primary_objective": "mean feasible Train Loss v1",
+    "resource_fallback_decision": "WITHHELD_PENDING_REBENCHMARK",
+    "resume_reproduction": "next ten steps",
+    "resume_state": [
+      "physical_and_raw_parameters",
+      "optimizer_state",
+      "step",
+      "rng",
+      "source_commit",
+      "contract_manifest_loss_hashes"
+    ],
+    "secondary_metrics": [
+      "loss_v1_position",
+      "loss_v1_velocity",
+      "loss_v1_effort",
+      "loss_v1_smoothness",
+      "loss_v1_terminal",
+      "loss_v1_altitude",
+      "position_rmse_xy",
+      "position_rmse_z",
+      "velocity_rmse_xy",
+      "velocity_rmse_z",
+      "mean_signed_z_error",
+      "terminal_signed_z_error",
+      "integral_rms_max_terminal_by_axis",
+      "integral_z_nearness_and_contact",
+      "control_effort",
+      "control_smoothness",
+      "minimum_normalized_motor_reserve",
+      "stage_a_torque_motor_clip_rate_duration_bound_channel",
+      "stage_b_motor_clip_rate_duration_bound_channel",
+      "requested_wrench_by_axis_and_class",
+      "realized_wrench_by_axis_and_class",
+      "absolute_and_platform_normalized_wrench_distortion"
+    ],
+    "test": "closed",
+    "validation": "fixed checkpoints; lowest valid mean, earlier when difference <=1e-6",
+    "validation_updates_or_episode_tuning": false
+  }
+}

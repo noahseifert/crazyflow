@@ -1,0 +1,53 @@
+{
+  "final_physical_gains": {
+    "kd_xy": 0.1998821347951889,
+    "kd_z": 0.5002545714378357,
+    "kp_xy": 0.40018168091773987,
+    "kp_z": 1.2505390644073486
+  },
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 0.0005378891946747899,
+      "validation_loss": 0.0005391469458118081
+    }
+  ],
+  "schema_version": "crazyflow.mellinger_research_run_summary.v1",
+  "scientific_claim": "technical local smoke only",
+  "selected": {
+    "criterion": "minimum validation loss; earliest exact tie",
+    "selected_raw_gains": [
+      -0.9799967408180237,
+      -0.2734382748603821,
+      -1.3872767686843872,
+      -0.5586158037185669
+    ],
+    "selected_step": 1,
+    "selected_validation_loss": 0.0005391469458118081,
+    "test_used_for_selection": false
+  },
+  "selected_physical_gains": {
+    "kd_xy": 0.1998821347951889,
+    "kd_z": 0.5002545714378357,
+    "kp_xy": 0.40018168091773987,
+    "kp_z": 1.2505390644073486
+  },
+  "status": "success",
+  "test_metrics_present": false,
+  "timing": {
+    "train_compile_seconds": 8.204728028,
+    "train_first_execution_seconds": 0.01378041,
+    "validation_compile_seconds": 0.882622932,
+    "validation_first_execution_seconds": 0.002459971,
+    "validation_steady_seconds": [
+      0.000977934,
+      0.000800173,
+      0.000802878
+    ]
+  },
+  "warnings": [
+    "Delay and wrench values in the smoke preset are uncalibrated technical heuristics.",
+    "No test episode was built or evaluated.",
+    "Simulation evidence is not hardware or firmware validation."
+  ]
+}

@@ -1,0 +1,17 @@
+Git commit:
+800a4e4835c3e5e8e47db82422cddb39a474ab40
+
+Git status:
+ M crazyflow/control/mellinger/__init__.py
+?? artifacts/
+?? crazyflow/control/mellinger/tracking.py
+?? crazyflow/trajectory.py
+?? docs/user-guide/mellinger-gradient-rollout.md
+?? examples/jax/mellinger_tracking.py
+?? tests/unit/test_mellinger_tracking.py
+
+Python:
+Python 3.12.13
+
+System:
+Linux Laptop 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux

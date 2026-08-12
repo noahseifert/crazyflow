@@ -1,0 +1,171 @@
+{
+  "claim_boundary": "public simulation evidence only; no test-split, convergence, speedup, superiority, robustness, firmware, hardware, or flight claim",
+  "immutable_product": [
+    {
+      "blob": "580495702d76835794ad427eef5cd1c8c2099353",
+      "mode": "100644",
+      "path": "configs/research/mellinger/g4_joint_v1.json",
+      "sha256": "02310c0a3ef96c9ac121389925ec07df168ea1bc957677bc6595e263fac28a67"
+    },
+    {
+      "blob": "8e135ce7199a3180116b1bcdb331796a40521977",
+      "mode": "100644",
+      "path": "crazyflow/__init__.py",
+      "sha256": "664de310c185f510ef3fef7200a6249b0b37b7716b2d7160909c383a5b75c0bc"
+    },
+    {
+      "blob": "54c7a6bd6a7b340b42169d092a22afd072cdf71c",
+      "mode": "100644",
+      "path": "pyproject.toml",
+      "sha256": "4ef3f08a5470a2d501881ff7b467397cdb3996631cad2999ee213cdc2e9ee882"
+    },
+    {
+      "blob": "6c6fdcca0bc30e8b0315ffbc587fffa87eaf2f2a",
+      "mode": "100644",
+      "path": "pixi.lock",
+      "sha256": "a38831c8560cdc3d04c9f74709bbf2e3050c477571f8101629f2d2149fa5c7ec"
+    }
+  ],
+  "interface_parent": {
+    "commit": "05cd1db24092f71f39ad23a576bca243a431c035",
+    "tree": "fce30d3619f9cca2e912c9ac82afd569a27a3a4c"
+  },
+  "parity_contract": {
+    "default_rollout_parent_count": 4,
+    "default_rollout_tolerance": {
+      "atol": 1e-06,
+      "rtol": 1e-05
+    },
+    "loss_gradient_parent_count": 32,
+    "loss_gradient_tolerance": {
+      "atol": 1e-07,
+      "rtol": 1e-05
+    },
+    "optimizer_update_count": 0
+  },
+  "protection": {
+    "closed_test_role": "opaque_string_only",
+    "contents_opened_or_hashed": false,
+    "later_stage_authorized": false,
+    "protected_children_listed": false
+  },
+  "public_inputs": [
+    {
+      "mode": "100644",
+      "path": "artifacts/day26-g3-identifiability-freeze-v2/trajectory_contract.json",
+      "sha256": "d47912f63e23299e2c3ef13b5789f13e03718ded069d2e9b0955f72e4836b583"
+    },
+    {
+      "mode": "100644",
+      "path": "artifacts/day26-g3-identifiability-freeze-v2/train_manifest.json",
+      "sha256": "6d6a8e1a6ecc6221fc7fae65a1ac216a050c73419a0799e18687419e973b7e4e"
+    },
+    {
+      "mode": "100644",
+      "path": "artifacts/day26-g3-identifiability-freeze-v2/validation_manifest.json",
+      "sha256": "58159451316e0d0cd76724b2add675ccd55b2d70e3fcc733140a7f148f1fb118"
+    },
+    {
+      "mode": "100644",
+      "path": "artifacts/day26-g3-identifiability-freeze-v2/g4_g5_freeze_proposal.json",
+      "sha256": "165a443664a8f0a123b1ce99680fb332eb34664d1b98c9c7f4ecfdd4a0381a38"
+    },
+    {
+      "mode": "100644",
+      "path": "artifacts/day26-g3-identifiability-freeze-v2/loss_diagnostics.json",
+      "sha256": "2fe46c85cce24762c4e0395a241830e277e50735fa86464e0890b3514c09b780"
+    },
+    {
+      "mode": "100644",
+      "path": "artifacts/day26-g3-identifiability-freeze-v2/parameter_semantics.json",
+      "sha256": "743fba3250e919913fae775a139e049ca6f1112cca6f26d516be9d25736a2a84"
+    }
+  ],
+  "resume_contract": {
+    "continuous": {
+      "end_update": 20,
+      "start_update": 0
+    },
+    "exact_atol": 0.0,
+    "exact_rtol": 0.0,
+    "maximum_updates_this_process": [
+      10,
+      20
+    ],
+    "resume": {
+      "end_update": 20,
+      "start_update": 10
+    },
+    "scope": "gpu_internal"
+  },
+  "runtime_profiles": {
+    "local_cpu": {
+      "backend": "cpu",
+      "environment_manager": "repository_venv",
+      "jax_platforms": "cpu",
+      "observed_backend": "cpu"
+    },
+    "remote_pixi_cpu": {
+      "backend": "cpu",
+      "environment_manager": "pixi",
+      "jax_platforms": "cpu",
+      "observed_backend": "cpu"
+    },
+    "remote_pixi_gpu": {
+      "backend": "gpu",
+      "device_kind_contains": "RTX 5090",
+      "environment_manager": "pixi",
+      "jax_platforms": "cuda",
+      "observed_backend": "gpu"
+    }
+  },
+  "schema_version": "crazyflow.mellinger_g4_backend_input_manifest.v1",
+  "science": {
+    "development_seed": 9104001,
+    "effective_batch_size": 32,
+    "float_dtype": "float32",
+    "loss_terms": [
+      "position",
+      "velocity",
+      "effort",
+      "smoothness",
+      "terminal",
+      "altitude"
+    ],
+    "loss_version": "v1",
+    "microbatch_count": 8,
+    "microbatch_size": 4,
+    "parameter_names": [
+      "kp_xy",
+      "kp_z"
+    ],
+    "parent_count": 288,
+    "raw_bounds": [
+      [
+        -1.3862943611198906,
+        1.0986122886681098
+      ],
+      [
+        -1.4271163556401458,
+        0.6931471805599453
+      ]
+    ],
+    "validation_and_near_limit_separate": true,
+    "x64_enabled": false
+  },
+  "throughput_contract": {
+    "block_until_ready": true,
+    "effective_worlds": 32,
+    "microbatches": 8,
+    "steady_samples": [
+      1,
+      2,
+      3
+    ],
+    "updates_per_sample": 1,
+    "warmup_samples": [
+      1
+    ],
+    "worlds_per_microbatch": 4
+  }
+}

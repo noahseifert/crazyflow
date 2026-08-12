@@ -1,0 +1,69 @@
+{
+  "checkpoint_policy": {
+    "configured_final_step_always_checkpointed": true,
+    "interval_completed_updates": 100,
+    "metrics_persistence": "durable append per completed update; full history at end",
+    "planned_process_stop_always_checkpointed": true
+  },
+  "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config artifacts/day10-sparse-long-pilot/smoke_config.json --resume artifacts/day10-sparse-long-pilot/smoke-210/checkpoint-step-000200.json --equivalence-reference-checkpoint artifacts/day10-sparse-long-pilot/smoke-210/checkpoint-step-000210.json --output-dir artifacts/day10-sparse-long-pilot/smoke-resumed-200-to-210",
+  "config_fingerprint": "27b0b8ebb9989077b560d5eb5fa7ace57e910ea81c1fa984d5c02c40f2fc13c5",
+  "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day10-sparse-long-pilot/smoke_config.json",
+  "ended_at_utc": "2026-08-01T07:57:44.025327+00:00",
+  "environment": {
+    "jax_backend": "cpu",
+    "jax_devices": [
+      "cpu:0"
+    ],
+    "packages": {
+      "flax": "0.12.8",
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8",
+      "pytest": "9.1.1"
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "frozen_test_manifest_reference_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+  "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "git": {
+    "branch": "research/differentiable-mellinger",
+    "dirty": false,
+    "head": "a58b78861cd15e904f7883668a689f297524f4a1",
+    "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+    "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+    "source_fingerprint_scope": [
+      "crazyflow",
+      "examples"
+    ],
+    "status_short": []
+  },
+  "resume_lineage": {
+    "checkpoint_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day10-sparse-long-pilot/smoke-210/checkpoint-step-000200.json",
+    "checkpoint_sha256": "3b7713f520fa6c94f22165a95b636d85934055b5b2890fe25dcceca60108aca5",
+    "parent_command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config artifacts/day10-sparse-long-pilot/smoke_config.json --output-dir artifacts/day10-sparse-long-pilot/smoke-210",
+    "parent_source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+    "parent_step": 200
+  },
+  "root_seed": 20260731,
+  "runtime_compatibility": {
+    "jax_backend": "cpu",
+    "jax_enable_x64": false,
+    "machine": "x86_64",
+    "packages": {
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8"
+    },
+    "python": "3.12.13"
+  },
+  "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+  "schema_version": "crazyflow.mellinger_research_provenance.v1",
+  "seed_coordinate_contract": "split -> episode -> world -> component",
+  "started_at_utc": "2026-08-01T07:57:25.888660+00:00",
+  "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+  "validation_manifest_id": "mellinger-validation-v1-20260731",
+  "wall_seconds_internal": 18.136670272
+}

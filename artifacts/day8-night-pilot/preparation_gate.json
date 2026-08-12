@@ -1,0 +1,59 @@
+{
+  "schema_version": "crazyflow.sprint8_preparation_gate.v1",
+  "decision": "GO",
+  "scientific_claim": "technical and exploratory CPU pilot preparation only",
+  "measurement": {
+    "command": "/usr/bin/time -v -o artifacts/day8-night-pilot/timing/preflight-h100-w4.time.txt timeout --signal=TERM --kill-after=30s 300s .venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config artifacts/day8-night-pilot/preflight_config.json --output-dir artifacts/day8-night-pilot/preflight-h100-w4",
+    "git_head": "1990b2292b849fa735b3b9926e31c5df3f14d609",
+    "config_fingerprint": "273203c2d4256df35d902b3e2dbe9336352a5cb4464de4c58aec48f986e1798c",
+    "exit_status": 0,
+    "external_wall_seconds": 19.24,
+    "peak_rss_kib": 1198476,
+    "peak_rss_gib": 1.1429557800292969,
+    "swaps": 0,
+    "train_compile_seconds": 7.432617069,
+    "validation_compile_seconds": 0.725118265,
+    "total_compile_seconds": 8.157735334,
+    "train_first_execution_seconds": 0.155692356,
+    "first_completed_update_operational_seconds": 13.097996711730957,
+    "second_completed_update_steady_operational_seconds": 4.096372365951538,
+    "validation_steady_seconds": [0.002953741, 0.003233002, 0.004259748],
+    "train_losses": [0.010203863494098186, 0.010006280615925789],
+    "validation_losses": [0.010010135360062122, 0.01000117789953947],
+    "gradient_l2_norms": [0.006251446437090635, 0.006109291687607765]
+  },
+  "gate": {
+    "exit_zero": true,
+    "all_values_finite": true,
+    "all_technical_gates_passed": true,
+    "complete_artifacts": true,
+    "both_checkpoint_payload_checksums_valid": true,
+    "peak_rss_below_12_gib": true,
+    "no_relevant_swap": true,
+    "runtime_plausible": true,
+    "test_manifest_opened": false,
+    "test_episode_built_or_evaluated": false,
+    "passed": true
+  },
+  "budget_recommendation": {
+    "candidate_updates": [10, 25, 50],
+    "estimated_wall_seconds": {
+      "10": 52.01134437084198,
+      "25": 113.45692986011505,
+      "50": 215.8662390089035
+    },
+    "recommended_updates": 50,
+    "reason": "The largest allowed update count provides the strongest bounded technical stability and repeated-checkpoint observation while the measured estimate is about 3.6 minutes and a twofold safety estimate is about 7.2 minutes, both far below six hours.",
+    "hard_wall_budget_seconds": 21600,
+    "automatic_extension": false,
+    "automatic_second_configuration": false
+  },
+  "exclusions": [
+    "no Test split access or evaluation",
+    "no H200 or H400 follow-on",
+    "no seed loop",
+    "no GPU claim",
+    "no main-run claim",
+    "no firmware, hardware, physical-safety, or Sim2Real claim"
+  ]
+}

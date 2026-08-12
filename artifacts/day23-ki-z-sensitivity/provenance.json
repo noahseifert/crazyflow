@@ -1,0 +1,73 @@
+{
+  "base_commit": "853b3d738233436d438d821e50198d9742965697",
+  "branch": "codex/wo-gr-s2-002",
+  "determinism_rule": "two fresh packages from generator commit must be byte-identical",
+  "environment": {
+    "backend": "cpu",
+    "devices": [
+      "cpu:0"
+    ],
+    "jax": "0.10.1",
+    "jax_enable_x64": false,
+    "jaxlib": "0.10.1",
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.1",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "exact_commands": [
+    "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-s2-002 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-s2-002-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_ki_z_sensitivity.py --run-ki-z-identifiability-pilot --output-dir artifacts/day23-ki-z-sensitivity",
+    "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-s2-002 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-s2-002-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m pytest -q -p no:cacheprovider tests/unit/test_mellinger_ki_z_sensitivity.py tests/unit/test_mellinger_research.py tests/unit/test_mellinger_tracking.py tests/unit/test_mellinger_gain_optimization.py",
+    "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-s2-002 PYTHONDONTWRITEBYTECODE=1 RUFF_CACHE_DIR=/tmp/crazyflow-gradient-s2-002-ruff /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff check examples/jax/mellinger_ki_z_sensitivity.py tests/unit/test_mellinger_ki_z_sensitivity.py",
+    "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-s2-002 PYTHONDONTWRITEBYTECODE=1 /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff format --check examples/jax/mellinger_ki_z_sensitivity.py tests/unit/test_mellinger_ki_z_sensitivity.py",
+    "(cd artifacts/day23-ki-z-sensitivity && sha256sum --quiet -c SHA256SUMS)"
+  ],
+  "frozen_contract_identity": "420898a7f37cc95806349d426d6deeb80ab39d772f2f2d384ad7796d18a1e1f2",
+  "generator_commit": "beb59393280b6b515c328edce13c430ebfbaa826",
+  "input_sources": [
+    {
+      "path": "crazyflow/control/mellinger/research/gains.py",
+      "sha256": "8a88ce76cd9b21a887e7bd545c02b22bae940745143445f2c75c348c4c0bdfb5"
+    },
+    {
+      "path": "crazyflow/control/mellinger/tracking.py",
+      "sha256": "fc2ada43bfcf127d3cb9f7cb6744d55609612cf9cf1fadbf16b1f1ba72447215"
+    },
+    {
+      "path": "crazyflow/control/mellinger/optimization.py",
+      "sha256": "9537f9af15132f77db651d81579c832bb99643652a05a6a884b066024d6fe1a2"
+    },
+    {
+      "path": "crazyflow/control/mellinger/params.toml",
+      "sha256": "fa7107257afbeaf01afe0ff1d1c2b4f13b47cd3fc6a19f7db9268fa5a22baed5"
+    },
+    {
+      "path": "crazyflow/drones/params.toml",
+      "sha256": "c3f4d2991925ee0ab0354107a2cfcc6be890dfbd985795e9d5d5055b55b851de"
+    },
+    {
+      "path": "examples/jax/mellinger_ki_z_sensitivity.py",
+      "sha256": "385a8449c72a445fc11028bd001953c693ceec74eafadaeb1e109deea4f274b1"
+    }
+  ],
+  "optimizer_steps": 0,
+  "output_inventory": [
+    "PRESENTATION_HANDOFF.md",
+    "ki_z_sensitivity.json",
+    "ki_z_sensitivity.png",
+    "provenance.json",
+    "SHA256SUMS"
+  ],
+  "presentation_dependency": "none; backup/next-step evidence only",
+  "protected_inputs_opened": [],
+  "schema_version": "crazyflow.ki_z_sensitivity.provenance.v1",
+  "sha256_indexed_payloads": [
+    "PRESENTATION_HANDOFF.md",
+    "ki_z_sensitivity.json",
+    "ki_z_sensitivity.png",
+    "provenance.json"
+  ],
+  "status": "GO_FOR_FUTURE_KI_Z_OPTIMIZATION",
+  "worker": "WO-GR-S2-002-WORKER-01 /root/wo_gr_s2_002_worker",
+  "worktree": "/tmp/crazyflow-gradient-research-wo-gr-s2-002"
+}

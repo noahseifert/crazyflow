@@ -1,0 +1,25 @@
+{
+  "command": "examples/jax/mellinger_scaling_benchmark.py --worlds 1 --horizon 20 --output-dir artifacts/day5-audit/scaling-w1",
+  "compile_seconds": 6.396366078,
+  "drones_per_world": 1,
+  "first_execution_seconds": 0.011486793,
+  "gain_stage": 1,
+  "git_head": "c4492b187d336d75757c560fecced53c7ec47b7a",
+  "gradient_l2_norm": 0.00010759282304206863,
+  "horizon_control_intervals": 20,
+  "loss": 0.0005442822584882379,
+  "process_max_rss_kib": 1024072,
+  "schema_version": "crazyflow.mellinger_scaling_benchmark.v1",
+  "scope": "technical CPU gradient benchmark; not an optimization or performance claim",
+  "status": "success",
+  "steady_execution_seconds": [
+    0.010204988,
+    0.009938353,
+    0.009092546,
+    0.009023315,
+    0.009443281
+  ],
+  "steady_median_seconds": 0.009443281,
+  "test_split_built_or_evaluated": false,
+  "worlds": 1
+}

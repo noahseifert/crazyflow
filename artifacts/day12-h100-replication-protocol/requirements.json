@@ -1,0 +1,242 @@
+{
+  "active_persistence_amendment": "2026-08-01-local-ssd-persistence-v1",
+  "backend": "cpu",
+  "config_base_fingerprint": "859ca650fbe598c24172cba233b9ed15c7f51d23063b7dd6210847ead8910769",
+  "config_base_path": "artifacts/day10-sparse-long-pilot/pilot_config.json",
+  "config_base_sha256": "6c6c166a19d4f9fb306597cdd111ff9fd78d7b176068635a7cd21045480864f1",
+  "environment_reference": {
+    "jax_backend": "cpu",
+    "jax_devices": [
+      "cpu:0"
+    ],
+    "packages": {
+      "flax": "0.12.8",
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8",
+      "pytest": "9.1.1"
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "jax_enable_x64": false,
+  "only_per_seed_config_differences": [
+    "run_id",
+    "root_seed"
+  ],
+  "persistence_requirements": {
+    "accepted_single_drive_risk": true,
+    "after_every_attempt": "Generate a complete SHA-256 index of every run file and immediately verify the entire index locally with sha256sum -c. Preserve successful and failed attempts.",
+    "before_each_later_seed": "Re-run sha256sum -c for the complete index of the previous seed before launch.",
+    "expected_raw_bytes_per_remaining_seed": 437505563,
+    "external_destination_hash_verification_required": false,
+    "external_storage_capacity_check_required": false,
+    "external_storage_copy_required": false,
+    "forbidden_operations_during_series": [
+      "delete",
+      "move",
+      "rename",
+      "compress",
+      "modify"
+    ],
+    "integrity_failure_action": "Any missing file or SHA-256 mismatch blocks this and every later seed.",
+    "later_seed_minimum_local_free_bytes_formula": "10000000000 + 437505563 * remaining_seed_count_including_seed_to_start",
+    "limitation": "SHA-256 detects unnoticed change but is not an independent backup; total loss or failure of the single internal SSD can destroy all raw replication data.",
+    "local_free_reserve_bytes": 10000000000,
+    "mode": "internal_ssd_repository_artifact_area",
+    "ordinary_git_tracks_raw_runs": false,
+    "repository_run_root": "artifacts/day13-h100-replication/runs/",
+    "retain_complete_and_unchanged_throughout_confirmatory_series": true,
+    "seed_01_minimum_local_free_bytes": 20000000000,
+    "sprint10_pilot_must_remain_unchanged": true,
+    "storage_medium": "user-declared internal 2-TB SSD"
+  },
+  "protocol_origin_head": "a269046fb0e70cb5ecc8b4c1783b87aecd866b7f",
+  "repository_branch": "research/differentiable-mellinger",
+  "required_gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "required_runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+  "required_source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e",
+  "required_validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+  "required_validation_manifest_id": "mellinger-validation-v1-20260731",
+  "runtime": {
+    "jax_backend": "cpu",
+    "jax_enable_x64": false,
+    "machine": "x86_64",
+    "packages": {
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8"
+    },
+    "python": "3.12.13"
+  },
+  "schema_version": "crazyflow.h100_replication_requirements.v1",
+  "scientific_semantics": {
+    "controller_mass_assumption_kg": 0.029,
+    "controller_mass_is_not_randomized": true,
+    "disabled": {
+      "action_delay": true,
+      "automatic_extension": true,
+      "automatic_resume": true,
+      "h200": true,
+      "h400": true,
+      "non_stage1_gains": true,
+      "parallel_seed_execution": true,
+      "sensor_noise": true,
+      "test_evaluation": true,
+      "ukf": true,
+      "wrench_randomization": true
+    },
+    "domain_randomization": {
+      "delay_enabled": false,
+      "delay_max_control_steps": 0,
+      "force_std_n": 0.0,
+      "mass_enabled": true,
+      "mass_half_width_kg": 0.0002,
+      "torque_std_nm": 0.0,
+      "wrench_correlation_time_s": 0.1,
+      "wrench_enabled": false
+    },
+    "gains": [
+      {
+        "axes": [
+          0,
+          1
+        ],
+        "controller": "state",
+        "lower": 0.1,
+        "name": "kp_xy",
+        "parameter": "kp",
+        "unit": "N/m",
+        "upper": 1.2
+      },
+      {
+        "axes": [
+          2
+        ],
+        "controller": "state",
+        "lower": 0.3,
+        "name": "kp_z",
+        "parameter": "kp",
+        "unit": "N/m",
+        "upper": 2.5
+      },
+      {
+        "axes": [
+          0,
+          1
+        ],
+        "controller": "state",
+        "lower": 0.05,
+        "name": "kd_xy",
+        "parameter": "kd",
+        "unit": "N s/m",
+        "upper": 0.8
+      },
+      {
+        "axes": [
+          2
+        ],
+        "controller": "state",
+        "lower": 0.1,
+        "name": "kd_z",
+        "parameter": "kd",
+        "unit": "N s/m",
+        "upper": 1.2
+      }
+    ],
+    "loss_aggregation": "equal arithmetic mean over the four cases in each split",
+    "loss_config": {
+      "altitude_margin": 0.15,
+      "altitude_softness": 0.05,
+      "altitude_weight": 0.05,
+      "effort_weight": 0.001,
+      "position_scale": 0.25,
+      "position_weight": 1.0,
+      "smoothness_weight": 0.001,
+      "terminal_weight": 0.1,
+      "velocity_scale": 1.0,
+      "velocity_weight": 0.1
+    },
+    "nominal_dynamics_mass_kg": 0.0319,
+    "optimizer": {
+      "checkpoint_interval": 100,
+      "gain_stage": 1,
+      "learning_rate": 0.001,
+      "steps": 5000
+    },
+    "optimizer_implementation": "optax.adam",
+    "optimizer_version": "0.2.8",
+    "shared_gain_vector_across_worlds": true,
+    "train": {
+      "control_freq_hz": 100,
+      "drone": "cf2x_L250",
+      "horizon": 100,
+      "n_drones": 1,
+      "n_worlds": 4,
+      "sim_freq_hz": 500
+    },
+    "trajectory": {
+      "amplitude_m": [
+        0.18,
+        0.14,
+        0.08
+      ],
+      "center_m": [
+        0.0,
+        0.0,
+        0.75
+      ],
+      "distribution_version": "fixed_support_prefix_v2",
+      "harmonics": 3,
+      "max_acceleration_m_s2": 5.0,
+      "max_attempts": 16,
+      "max_jerk_m_s3": 35.0,
+      "max_speed_m_s": 1.5,
+      "max_tilt_rad": 0.7,
+      "max_yaw_rate_rad_s": 1.0,
+      "min_specific_force_m_s2": 2.0,
+      "minimum_duration_s": 1.0,
+      "support_duration_s": 4.0,
+      "workspace_max_m": [
+        0.6,
+        0.6,
+        1.2
+      ],
+      "workspace_min_m": [
+        -0.6,
+        -0.6,
+        0.35
+      ]
+    },
+    "true_dynamics_mass_variation_kg": [
+      -0.0002,
+      0.0002
+    ],
+    "validation": {
+      "control_freq_hz": 100,
+      "drone": "cf2x_L250",
+      "horizon": 100,
+      "n_drones": 1,
+      "n_worlds": 4,
+      "sim_freq_hz": 500
+    }
+  },
+  "scientific_source_scope": [
+    "crazyflow",
+    "examples"
+  ],
+  "status": "FROZEN_NOT_EXECUTED",
+  "test_manifest_policy": {
+    "must_not_open_parse_validate_build_simulate_or_evaluate": true,
+    "opaque_reference_only": true,
+    "reference": "configs/research/mellinger/test_manifest.v1.json"
+  },
+  "validation_manifest": {
+    "fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+    "fixed_worlds_per_seed": 4,
+    "manifest_id": "mellinger-validation-v1-20260731",
+    "path": "configs/research/mellinger/validation_manifest.v1.json"
+  }
+}

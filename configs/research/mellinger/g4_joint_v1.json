@@ -1,0 +1,191 @@
+{
+  "checkpoint": {
+    "atomic": true,
+    "overwrite": false,
+    "resume_comparison": "updates_11_through_20_byte_identical",
+    "schema_version": "crazyflow.mellinger_g4_checkpoint.v1"
+  },
+  "claim_boundary": "technical simulation evidence only; no candidate, firmware, hardware, or flight claim",
+  "forwardability": {
+    "dynamic_additional_stage_b_clips": 0,
+    "dynamic_max_clip_interval_s": 0.02,
+    "dynamic_stage_a_motor_clip_fraction_max": 0.0025,
+    "integral_contact_increase_max": 0,
+    "integral_nearness_degradation_max": 0.02,
+    "maximum_group_loss_regression": 0.02,
+    "maximum_motor_reserve_drop": 0.02,
+    "maximum_rmse_degradation": 0.02,
+    "minimum_motor_reserve": 0.05,
+    "minimum_primary_loss_improvement": 0.05,
+    "soft_nominal_additional_stage_b_clips": 0,
+    "soft_nominal_stage_a_motor_clips": 0,
+    "soft_nominal_stage_a_torque_clips": 0,
+    "wrench_degradation": "max(1% platform scale, 5% default)"
+  },
+  "loss_v1": {
+    "loss_v2_weight": 0.0,
+    "rollout_seconds": 6.0,
+    "score_seconds": 2.0,
+    "terms": {
+      "altitude": {
+        "margin_m": 0.15,
+        "scale": 1.0,
+        "softness_m": 0.05,
+        "weight": 0.05
+      },
+      "effort": {
+        "scale": 1.0,
+        "weight": 0.001
+      },
+      "position": {
+        "scale": 0.0625,
+        "weight": 1.0
+      },
+      "smoothness": {
+        "scale": 1.0,
+        "weight": 0.001
+      },
+      "terminal": {
+        "scale": 0.0625,
+        "weight": 0.1
+      },
+      "velocity": {
+        "scale": 1.0,
+        "weight": 0.1
+      }
+    }
+  },
+  "optimizer": {
+    "b1": 0.9,
+    "b2": 0.999,
+    "effective_batch_size": 32,
+    "eps": 1e-08,
+    "eps_root": 0.0,
+    "gradient_clipping": null,
+    "learning_rate": 0.001,
+    "maximum_updates": 2000,
+    "microbatch_count": 8,
+    "microbatch_size": 4,
+    "name": "projected_adam",
+    "schedule": null,
+    "weight_decay": 0.0
+  },
+  "parameters": {
+    "kp_xy": {
+      "contract_default": 0.4,
+      "coordinate": "p_default*exp(theta)",
+      "indices": [
+        0,
+        1
+      ],
+      "physical_bounds": [
+        0.1,
+        1.2
+      ],
+      "raw_bounds": [
+        -1.3862943611198906,
+        1.0986122886681098
+      ],
+      "runtime_default": 0.4000000059604645,
+      "theta_start": 0.0
+    },
+    "kp_z": {
+      "contract_default": 1.25,
+      "coordinate": "p_default*exp(theta)",
+      "indices": [
+        2
+      ],
+      "physical_bounds": [
+        0.3,
+        2.5
+      ],
+      "raw_bounds": [
+        -1.4271163556401458,
+        0.6931471805599453
+      ],
+      "runtime_default": 1.25,
+      "theta_start": 0.0
+    }
+  },
+  "parents": {
+    "batch_stratum_counts": [
+      [4, 4, 4, 4, 4, 3, 3, 3, 3],
+      [3, 4, 4, 4, 4, 4, 3, 3, 3],
+      [3, 3, 4, 4, 4, 4, 4, 3, 3],
+      [3, 3, 3, 4, 4, 4, 4, 4, 3],
+      [3, 3, 3, 3, 4, 4, 4, 4, 4],
+      [4, 3, 3, 3, 3, 4, 4, 4, 4],
+      [4, 4, 3, 3, 3, 3, 4, 4, 4],
+      [4, 4, 4, 3, 3, 3, 3, 4, 4],
+      [4, 4, 4, 4, 3, 3, 3, 3, 4]
+    ],
+    "development_seed": 9104001,
+    "near_limit_identities": [
+      "train-near_limit-hold-8301301/attempt-9",
+      "train-near_limit-climb-8301302/attempt-0",
+      "train-near_limit-descent-8301303/attempt-37",
+      "validation-near_limit-hold-8401301/attempt-22",
+      "validation-near_limit-climb-8401302/attempt-4",
+      "validation-near_limit-descent-8401303/attempt-17"
+    ],
+    "stratum_order": [
+      "soft/hold",
+      "soft/climb",
+      "soft/descent",
+      "nominal/hold",
+      "nominal/climb",
+      "nominal/descent",
+      "dynamic/hold",
+      "dynamic/climb",
+      "dynamic/descent"
+    ],
+    "total_train_parents": 288,
+    "validation_identities": [
+      "validation-soft-hold-8401001/attempt-0",
+      "validation-soft-climb-8401002/attempt-1",
+      "validation-soft-descent-8401003/attempt-0",
+      "validation-nominal-hold-8401101/attempt-2",
+      "validation-nominal-climb-8401102/attempt-1",
+      "validation-nominal-descent-8401103/attempt-1",
+      "validation-dynamic-hold-8401201/attempt-5",
+      "validation-dynamic-climb-8401202/attempt-4",
+      "validation-dynamic-descent-8401203/attempt-1"
+    ],
+    "worlds_per_batch": 32
+  },
+  "protection": {
+    "children_listed": false,
+    "closed_test": "configs/research/mellinger/test_manifest.v1.json",
+    "closed_test_role": "opaque_string_only",
+    "contents_opened_or_hashed": false,
+    "opaque_roots": [
+      "BACHELORARBEIT_VERSTAENDNIS_UEBERGABE.md",
+      "artifacts/day10-sparse-long-pilot/runs/",
+      "artifacts/day13-h100-replication/"
+    ]
+  },
+  "public_day26_sha256": {
+    "artifacts/day26-g3-identifiability-freeze-v2/g4_g5_freeze_proposal.json": "165a443664a8f0a123b1ce99680fb332eb34664d1b98c9c7f4ecfdd4a0381a38",
+    "artifacts/day26-g3-identifiability-freeze-v2/loss_diagnostics.json": "2fe46c85cce24762c4e0395a241830e277e50735fa86464e0890b3514c09b780",
+    "artifacts/day26-g3-identifiability-freeze-v2/parameter_semantics.json": "743fba3250e919913fae775a139e049ca6f1112cca6f26d516be9d25736a2a84",
+    "artifacts/day26-g3-identifiability-freeze-v2/train_manifest.json": "6d6a8e1a6ecc6221fc7fae65a1ac216a050c73419a0799e18687419e973b7e4e",
+    "artifacts/day26-g3-identifiability-freeze-v2/trajectory_contract.json": "d47912f63e23299e2c3ef13b5789f13e03718ded069d2e9b0955f72e4836b583",
+    "artifacts/day26-g3-identifiability-freeze-v2/validation_manifest.json": "58159451316e0d0cd76724b2add675ccd55b2d70e3fcc733140a7f148f1fb118"
+  },
+  "resources": {
+    "maximum_rss_fraction_of_mem_total": 0.7,
+    "minimum_mem_available_bytes": 8589934592,
+    "retained_ad_trace_count": 0,
+    "swap_used_required_bytes": 0
+  },
+  "runtime": {
+    "backend": "cpu",
+    "interpreter": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python",
+    "jax_enable_x64": false,
+    "python_dont_write_bytecode": true,
+    "python_no_user_site": true,
+    "repository_root": "/home/noah3/bachelorarbeit/worktrees/crazyflow-gradient-research-wo-gr-g4-004"
+  },
+  "schema_version": "crazyflow.mellinger_g4_joint.v1",
+  "source_base_commit": "c57312201d7ac56d3c6556738e07e4270e0729e5"
+}

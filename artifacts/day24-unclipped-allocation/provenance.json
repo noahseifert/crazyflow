@@ -1,0 +1,165 @@
+{
+  "base_commit": "bcc8b0d57c9f88dd1279ec94a05e14b45776ed0b",
+  "branch": "codex/wo-gr-f0-003",
+  "commands": {
+    "accepted_checksums": "sha256sum --quiet -c for Day 19, Day 21, Day 22, and Day 23 accepted packages; analyzer not executed",
+    "deterministic_reproduction": "two fresh /tmp packages from the generator/test commit; 4/4 checksums and byte identity to each other and final package",
+    "focused_pytest": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-003 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-f0-003-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m pytest -q -p no:cacheprovider tests/unit/test_mellinger_unclipped_allocation_diagnostic.py tests/unit/test_mellinger_saturation_diagnostic.py tests/unit/test_mellinger_friday_evidence.py tests/unit/test_mellinger_tracking.py tests/unit/control/test_mellinger.py tests/unit/control/test_transform.py",
+    "generate": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-003 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/crazyflow-gradient-f0-003-matplotlib /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_unclipped_allocation_diagnostic.py --diagnostic-only-unclipped-allocation --output-dir artifacts/day24-unclipped-allocation",
+    "ruff_check": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-003 PYTHONDONTWRITEBYTECODE=1 RUFF_CACHE_DIR=/tmp/crazyflow-gradient-f0-003-ruff /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff check examples/jax/mellinger_unclipped_allocation_diagnostic.py tests/unit/test_mellinger_unclipped_allocation_diagnostic.py",
+    "ruff_format_check": "PYTHONPATH=/tmp/crazyflow-gradient-research-wo-gr-f0-003 PYTHONDONTWRITEBYTECODE=1 /home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python -m ruff format --check examples/jax/mellinger_unclipped_allocation_diagnostic.py tests/unit/test_mellinger_unclipped_allocation_diagnostic.py"
+  },
+  "configuration": {
+    "control_intervals": 100,
+    "diagnostic_status": "DIAGNOSTIC_ONLY_SATURATION_PRESENT",
+    "duration_seconds": 1.0,
+    "dynamics": "first_principles",
+    "horizon_control_intervals": 100,
+    "initial_position_m": [
+      0.0,
+      0.0,
+      0.75
+    ],
+    "initial_rotor_velocity_rad_s": [
+      18967.771484375,
+      18967.771484375,
+      18967.771484375,
+      18967.771484375
+    ],
+    "initial_velocity_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "integrator": "explicit_euler",
+    "interval_definition_s": "[index / 100, (end_index + 1) / 100)",
+    "normal_zero_saturation_gate_unchanged": true,
+    "platform": "cf2x_L250",
+    "seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "simulation_steps_per_reference": 5,
+    "simulation_substeps_per_interval": 5,
+    "state_control_frequency_hz": 100,
+    "state_time_definition_s": "(index + 1) / 100",
+    "stored_substep_one_based": 5,
+    "trajectory": {
+      "amplitude_m": [
+        0.3,
+        0.15
+      ],
+      "center_m": [
+        0.0,
+        0.0,
+        0.75
+      ],
+      "kind": "figure8",
+      "period_seconds": 3.0,
+      "ramp_duration_seconds": 0.5,
+      "yaw_rad": 0.0
+    }
+  },
+  "environment": {
+    "implementation": "CPython",
+    "jax": "0.10.1",
+    "jax_backend": "cpu",
+    "jax_enable_x64": false,
+    "jaxlib": "0.10.1",
+    "machine": "x86_64",
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.1",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "inputs": {
+    "accepted_day22_checksum_index": {
+      "path": "artifacts/day22-saturation-diagnostic/SHA256SUMS",
+      "sha256": "8fa0b309cea5d4903675527625e8a71cb92b831ba6d6155ab37b967adaee3c68"
+    },
+    "accepted_day22_payloads": [
+      {
+        "path": "artifacts/day22-saturation-diagnostic/PRESENTATION_HANDOFF.md",
+        "sha256": "c5e695893922e492273ed434c6c72ad0aa77d387451eed88a4912875a411ea98"
+      },
+      {
+        "path": "artifacts/day22-saturation-diagnostic/motor_saturation_detail.png",
+        "sha256": "b9be6317b5fa8441d87c27924d5c673ff955f48cae32003ccf523d290b80bb4c"
+      },
+      {
+        "path": "artifacts/day22-saturation-diagnostic/provenance.json",
+        "sha256": "2b7298c643903291bd7e9a72e8acdbf87c52dcfd73c72ccc2d35245d1babed90"
+      },
+      {
+        "path": "artifacts/day22-saturation-diagnostic/saturation_diagnostic.json",
+        "sha256": "b6c94fdb2535f165912fdf188e49cdfdb8105c25e962dcc6d35bcab249afcfc4"
+      },
+      {
+        "path": "artifacts/day22-saturation-diagnostic/trajectory_error_saturation.png",
+        "sha256": "e71e756fa84aa904dd2188d9fe20d855ec1589935ff0178288605199803fba8f"
+      }
+    ],
+    "data_audit_01": {
+      "analyzer_source_crosscheck": {
+        "analyzer_executed": false,
+        "panel_maximum_over_per_seed_maxima": true,
+        "per_seed_maximum_over_all_metric_rows": true,
+        "rejects_test_rows": true,
+        "requires_complete_alternating_train_validation_order": true
+      },
+      "claim_boundary": "This proves only that no saturation was registered in stored H100 Train/Validation objective rows; it provides no motor trace, reserve, or allocation-distortion evidence.",
+      "day19_checksum_index_sha256": "fe607e7ee7b129e6e9741d2cc62e40625080b408388fcf4d584aca47789b8b17",
+      "panel_motor_saturation_fraction_maximum": 0.0,
+      "per_seed_motor_saturation_fraction_maxima": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rows_per_seed": {
+        "test": 0,
+        "total": 10000,
+        "train": 5000,
+        "validation": 5000
+      },
+      "seed_count": 10,
+      "status": "PASS_DERIVED_DATA_ONLY",
+      "total_test_rows": 0,
+      "total_train_validation_rows": 100000,
+      "verified_payloads": [
+        {
+          "path": "artifacts/day19-h100-analysis/SOURCE_RUN_INDEXES.sha256",
+          "sha256": "55adbbf70a7acf2b1cf21280d6cf325e45db6aec163a294498c7f7d5715e52af"
+        },
+        {
+          "path": "artifacts/day19-h100-analysis/analyze_h100_replication.py",
+          "sha256": "5b78b3b00682142f8fa0b6140e3b0fd3b3d52856c0ffbb28d3efb178bf50db57"
+        },
+        {
+          "path": "artifacts/day19-h100-analysis/h100_replication_analysis.json",
+          "sha256": "8690f1c35309ea61b7d659d5c1f90284bd590f444a1999625f6ce1cb3323ea96"
+        }
+      ]
+    },
+    "protected_day10_day13_read": false,
+    "test_manifest_or_split_opened": false
+  },
+  "output_checksum_rule": "SHA256SUMS covers the four other files, not itself",
+  "output_inventory": [
+    "PRESENTATION_HANDOFF.md",
+    "provenance.json",
+    "unclipped_allocation_diagnostic.json",
+    "unclipped_allocation_diagnostic.png",
+    "SHA256SUMS"
+  ],
+  "package_commit": "recorded externally in worker handoff and independent review",
+  "result_commit_generator_and_tests": "728e8b9f89e4f92c7fa4eefee9808a82904975c2",
+  "schema_version": "crazyflow.unclipped_allocation_provenance.v1",
+  "work_order": "WO-GR-F0-003",
+  "worker": "WO-GR-F0-003-WORKER-01 /root/wo_gr_f0_003_worker",
+  "worktree": "/tmp/crazyflow-gradient-research-wo-gr-f0-003"
+}

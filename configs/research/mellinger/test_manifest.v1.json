@@ -1,0 +1,11 @@
+{
+  "schema_version": "crazyflow.mellinger_split_manifest.v1",
+  "manifest_id": "mellinger-test-v1-20260731-frozen",
+  "split": "test",
+  "episodes": [
+    {"episode_id": "test-000", "seed": 410009, "difficulty": "technical"},
+    {"episode_id": "test-001", "seed": 410021, "difficulty": "technical"},
+    {"episode_id": "test-002", "seed": 410057, "difficulty": "nominal"},
+    {"episode_id": "test-003", "seed": 410093, "difficulty": "nominal"}
+  ]
+}

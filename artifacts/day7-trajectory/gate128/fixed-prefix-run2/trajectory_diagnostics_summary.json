@@ -1,0 +1,2144 @@
+{
+  "config_fingerprint": "0de39663348f6908ad35989addc72e60b3cbd4b0d55d158a9482295d0383a47a",
+  "configured_max_attempts": 16,
+  "construction_only_contract": {
+    "jax_jit_called": false,
+    "simulation_built": false,
+    "test_manifest_opened": false,
+    "test_split_built_or_evaluated": false,
+    "training_run": false,
+    "validation_run": false
+  },
+  "diagnostic_max_attempts": 16,
+  "git_branch": "research/differentiable-mellinger",
+  "git_head": "1080aadf65a6df56528efcaa5da34f4dfc812e7d",
+  "higher_attempt_limit_estimate_only": false,
+  "horizons": [
+    {
+      "accepted_diversity": {
+        "acceleration_vector_max_m_s2": {
+          "maximum": 1.129547119140625,
+          "mean": 0.5545187781681307,
+          "median": 0.5104957520961761,
+          "minimum": 0.11932078748941422
+        },
+        "acceleration_vector_rms_m_s2": {
+          "maximum": 0.47722098231315613,
+          "mean": 0.24446220230311155,
+          "median": 0.2401040866971016,
+          "minimum": 0.06576917320489883
+        },
+        "jerk_vector_max_m_s3": {
+          "maximum": 6.643004417419434,
+          "mean": 3.576684568542987,
+          "median": 3.4381829500198364,
+          "minimum": 0.636690080165863
+        },
+        "jerk_vector_rms_m_s3": {
+          "maximum": 2.5959579944610596,
+          "mean": 1.5152335432358086,
+          "median": 1.4677170515060425,
+          "minimum": 0.23884475231170654
+        },
+        "position_displacement_vector_max_m": {
+          "maximum": 0.05084812206170811,
+          "mean": 0.023690862627002138,
+          "median": 0.02185884165231168,
+          "minimum": 0.006253453669858195
+        },
+        "position_displacement_vector_rms_m": {
+          "maximum": 0.0186437600715565,
+          "mean": 0.00863952139161378,
+          "median": 0.008243627371044582,
+          "minimum": 0.0023954797963245573
+        },
+        "position_span_x_m": {
+          "maximum": 0.051925163716077805,
+          "mean": 0.017470358618083992,
+          "median": 0.015470921527594328,
+          "minimum": 0.002292752033099532
+        },
+        "position_span_y_m": {
+          "maximum": 0.04189297556877136,
+          "mean": 0.013482646148986532,
+          "median": 0.010406939312815666,
+          "minimum": 0.0016234763897955418
+        },
+        "position_span_z_m": {
+          "maximum": 0.02337050437927246,
+          "mean": 0.008115541189908981,
+          "median": 0.007224708795547485,
+          "minimum": 0.0005078315734863281
+        },
+        "spectral_centroid_x_hz": {
+          "maximum": 5.00467732363209,
+          "mean": 2.838529491867895,
+          "median": 2.978818414101677,
+          "minimum": 1.0812717749107024
+        },
+        "spectral_centroid_y_hz": {
+          "maximum": 6.417805485418567,
+          "mean": 2.7883965827989865,
+          "median": 2.811248881047824,
+          "minimum": 1.1063684855766396
+        },
+        "spectral_centroid_z_hz": {
+          "maximum": 5.260528673499562,
+          "mean": 2.8272975867089123,
+          "median": 2.8214074240466784,
+          "minimum": 1.0413169781405565
+        },
+        "speed_vector_max_m_s": {
+          "maximum": 0.24355556070804596,
+          "mean": 0.11385967113892548,
+          "median": 0.11344311758875847,
+          "minimum": 0.026442334055900574
+        },
+        "speed_vector_rms_m_s": {
+          "maximum": 0.08740457892417908,
+          "mean": 0.046155458912835456,
+          "median": 0.044124871492385864,
+          "minimum": 0.013938038609921932
+        }
+      },
+      "attempted_candidate_count": 128,
+      "attempts_to_success": {
+        "maximum": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0
+      },
+      "construction_wall_seconds": 1.932777051,
+      "duration_seconds": 1.0,
+      "failure_count": 0,
+      "horizon_control_intervals": 100,
+      "maximum_constraint_violations": {},
+      "rejection_reason_counts": {},
+      "seed_count": 128,
+      "success_count": 128,
+      "success_rate_within_attempt_limit": 1.0
+    },
+    {
+      "accepted_diversity": {
+        "acceleration_vector_max_m_s2": {
+          "maximum": 3.2493741512298584,
+          "mean": 1.8913179030641913,
+          "median": 1.85324227809906,
+          "minimum": 0.7738762497901917
+        },
+        "acceleration_vector_rms_m_s2": {
+          "maximum": 1.4455245733261108,
+          "mean": 0.8619026800151914,
+          "median": 0.8602861166000366,
+          "minimum": 0.32155293226242065
+        },
+        "jerk_vector_max_m_s3": {
+          "maximum": 19.326162338256836,
+          "mean": 10.113254150375724,
+          "median": 10.023392677307129,
+          "minimum": 3.7639615535736084
+        },
+        "jerk_vector_rms_m_s3": {
+          "maximum": 7.965263366699219,
+          "mean": 4.695388621650636,
+          "median": 4.7131898403167725,
+          "minimum": 1.4125475883483887
+        },
+        "position_displacement_vector_max_m": {
+          "maximum": 0.21446679240174452,
+          "mean": 0.10856669962218679,
+          "median": 0.10468140396315409,
+          "minimum": 0.04033466427188239
+        },
+        "position_displacement_vector_rms_m": {
+          "maximum": 0.09913274620964672,
+          "mean": 0.04938866471733587,
+          "median": 0.04851689972247504,
+          "minimum": 0.020153341663996762
+        },
+        "position_span_x_m": {
+          "maximum": 0.23544885218143463,
+          "mean": 0.1049178247776581,
+          "median": 0.09585801884531975,
+          "minimum": 0.013423167169094086
+        },
+        "position_span_y_m": {
+          "maximum": 0.21762919425964355,
+          "mean": 0.08761362091900082,
+          "median": 0.07961242273449898,
+          "minimum": 0.013727505691349506
+        },
+        "position_span_z_m": {
+          "maximum": 0.13357490301132202,
+          "mean": 0.048635232262313366,
+          "median": 0.049776941537857056,
+          "minimum": 0.007909059524536133
+        },
+        "spectral_centroid_x_hz": {
+          "maximum": 2.5273466626444705,
+          "mean": 1.117291451642639,
+          "median": 1.0412310561246794,
+          "minimum": 0.538598832140154
+        },
+        "spectral_centroid_y_hz": {
+          "maximum": 3.139094055596158,
+          "mean": 1.2695557384193772,
+          "median": 1.173478462000686,
+          "minimum": 0.5352231344300917
+        },
+        "spectral_centroid_z_hz": {
+          "maximum": 2.4437693988058746,
+          "mean": 1.1338436170635184,
+          "median": 1.0106944340377373,
+          "minimum": 0.5495122160248831
+        },
+        "speed_vector_max_m_s": {
+          "maximum": 0.8207998871803284,
+          "mean": 0.3910475216107443,
+          "median": 0.36565542221069336,
+          "minimum": 0.17565783858299255
+        },
+        "speed_vector_rms_m_s": {
+          "maximum": 0.3162061870098114,
+          "mean": 0.17751268681604415,
+          "median": 0.1700664758682251,
+          "minimum": 0.06217533349990845
+        }
+      },
+      "attempted_candidate_count": 128,
+      "attempts_to_success": {
+        "maximum": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0
+      },
+      "construction_wall_seconds": 0.68765665,
+      "duration_seconds": 2.0,
+      "failure_count": 0,
+      "horizon_control_intervals": 200,
+      "maximum_constraint_violations": {},
+      "rejection_reason_counts": {},
+      "seed_count": 128,
+      "success_count": 128,
+      "success_rate_within_attempt_limit": 1.0
+    },
+    {
+      "accepted_diversity": {
+        "acceleration_vector_max_m_s2": {
+          "maximum": 3.5821354389190674,
+          "mean": 1.9845848167315125,
+          "median": 1.941168189048767,
+          "minimum": 0.7738762497901917
+        },
+        "acceleration_vector_rms_m_s2": {
+          "maximum": 1.4595274925231934,
+          "mean": 0.8650973744224757,
+          "median": 0.8657824993133545,
+          "minimum": 0.3248133361339569
+        },
+        "jerk_vector_max_m_s3": {
+          "maximum": 19.326162338256836,
+          "mean": 10.642006253823638,
+          "median": 10.566850185394287,
+          "minimum": 3.7639615535736084
+        },
+        "jerk_vector_rms_m_s3": {
+          "maximum": 7.81008243560791,
+          "mean": 4.742534053511918,
+          "median": 4.864720582962036,
+          "minimum": 1.5822402238845825
+        },
+        "position_displacement_vector_max_m": {
+          "maximum": 0.22374823974826064,
+          "mean": 0.11807925749397226,
+          "median": 0.1125853736574316,
+          "minimum": 0.05348534038177816
+        },
+        "position_displacement_vector_rms_m": {
+          "maximum": 0.08484930709573182,
+          "mean": 0.049667178099407724,
+          "median": 0.04833018740513709,
+          "minimum": 0.020847894235861416
+        },
+        "position_span_x_m": {
+          "maximum": 0.3408370614051819,
+          "mean": 0.13629076440702192,
+          "median": 0.12729540467262268,
+          "minimum": 0.020075760781764984
+        },
+        "position_span_y_m": {
+          "maximum": 0.24374020099639893,
+          "mean": 0.11088585323886946,
+          "median": 0.10762035101652145,
+          "minimum": 0.023319186642766
+        },
+        "position_span_z_m": {
+          "maximum": 0.15194815397262573,
+          "mean": 0.06304160784929991,
+          "median": 0.05764463543891907,
+          "minimum": 0.00849980115890503
+        },
+        "spectral_centroid_x_hz": {
+          "maximum": 0.832605022499221,
+          "mean": 0.5581887048147431,
+          "median": 0.5636568544183429,
+          "minimum": 0.3019232855003251
+        },
+        "spectral_centroid_y_hz": {
+          "maximum": 0.858191877529279,
+          "mean": 0.5631091103554232,
+          "median": 0.5588378744412879,
+          "minimum": 0.31163735202715237
+        },
+        "spectral_centroid_z_hz": {
+          "maximum": 0.8085760636519663,
+          "mean": 0.54836648925551,
+          "median": 0.5501014344445804,
+          "minimum": 0.3160452278118687
+        },
+        "speed_vector_max_m_s": {
+          "maximum": 0.8207998871803284,
+          "mean": 0.4152263749856502,
+          "median": 0.39578117430210114,
+          "minimum": 0.1756795048713684
+        },
+        "speed_vector_rms_m_s": {
+          "maximum": 0.3081378936767578,
+          "mean": 0.17967814358416945,
+          "median": 0.17459261417388916,
+          "minimum": 0.07376904785633087
+        }
+      },
+      "attempted_candidate_count": 128,
+      "attempts_to_success": {
+        "maximum": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0
+      },
+      "construction_wall_seconds": 0.736662173,
+      "duration_seconds": 4.0,
+      "failure_count": 0,
+      "horizon_control_intervals": 400,
+      "maximum_constraint_violations": {},
+      "rejection_reason_counts": {},
+      "seed_count": 128,
+      "success_count": 128,
+      "success_rate_within_attempt_limit": 1.0
+    }
+  ],
+  "paired_distribution_consistency": {
+    "all_required_checks_passed": true,
+    "different_seed_h400_positions_distinct_from_first_count": 127,
+    "different_seed_results_requirement_passed": true,
+    "per_seed": [
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 0,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 1,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 2,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 3,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 4,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 5,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 6,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 7,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 8,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 9,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 10,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 11,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 12,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 13,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 14,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 15,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 16,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 17,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 18,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 19,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 20,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 21,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 22,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 23,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 24,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 25,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 26,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 27,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 28,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 29,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 30,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 31,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 32,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 33,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 34,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 35,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 36,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 37,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 38,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 39,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 40,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 41,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 42,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 43,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 44,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 45,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 46,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 47,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 48,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 49,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 50,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 51,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 52,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 53,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 54,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 55,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 56,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 57,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 58,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 59,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 60,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 61,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 62,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 63,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 64,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 65,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 66,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 67,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 68,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 69,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 70,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 71,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 72,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 73,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 74,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 75,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 76,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 77,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 78,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 79,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 80,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 81,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 82,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 83,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 84,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 85,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 86,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 87,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 88,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 89,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 90,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 91,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 92,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 93,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 94,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 95,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 96,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 97,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 98,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 99,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 100,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 101,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 102,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 103,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 104,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 105,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 106,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 107,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 108,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 109,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 110,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 111,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 112,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 113,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 114,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 115,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 116,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 117,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 118,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 119,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 120,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 121,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 122,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 123,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 124,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 125,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 126,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      },
+      {
+        "accepted_attempt_indices": {
+          "100": 0,
+          "200": 0,
+          "400": 0
+        },
+        "all_returned_arrays_finite": true,
+        "episode_index": 127,
+        "h100_exact_prefix_of_h400": true,
+        "h200_exact_prefix_of_h400": true,
+        "h400_attempt_matches_legacy_v1": true,
+        "h400_exact_legacy_v1": true,
+        "same_attempt_across_horizons": true
+      }
+    ],
+    "required_horizons": [
+      100,
+      200,
+      400
+    ],
+    "seed_count": 128
+  },
+  "raw_file_sha256": "6aae502495674263492edb1abbc9f34aa3b4c8f57ed507bc45f2fb5708fb4219",
+  "schema_version": "crazyflow.trajectory_construction_diagnostics_summary.v1",
+  "scientific_payload_sha256": "4118a23a1f562fc27fbe99cefc6dfd8c6a02966f973929d68ce57d32217c8069",
+  "seed_suite_id": "train-trajectory-root-20260731-episodes-0-127-world-0",
+  "seed_suite_sha256": "ff0b8b3534af1e2e5db5aa566e64f0e51c03bcd46fc988a8c33e15ed3852ce5f",
+  "source_dirty": false,
+  "source_fingerprint": "8ff8317b01de2aafda276bd13af3f2ee920a9610b764344c05d0fc620ae87320",
+  "source_status_short": [],
+  "total_construction_wall_seconds": 3.357095874
+}

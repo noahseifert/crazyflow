@@ -1,0 +1,67 @@
+{
+  "completed_updates": 2,
+  "configured_updates": 2,
+  "final_physical_gains": {
+    "kd_xy": 0.19976706802845,
+    "kd_z": 0.5005095601081848,
+    "kp_xy": 0.4003765285015106,
+    "kp_z": 1.2510789632797241
+  },
+  "final_raw_gains": [
+    -0.9791043400764465,
+    -0.2724381685256958,
+    -1.38823664188385,
+    -0.5576145648956299
+  ],
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 0.0005476958467625082,
+      "validation_loss": 0.0005446682334877551
+    },
+    {
+      "step": 2,
+      "train_loss": 0.0006267180433496833,
+      "validation_loss": 0.0005445563001558185
+    }
+  ],
+  "resume_checkpoint": null,
+  "schema_version": "crazyflow.mellinger_research_run_summary.v1",
+  "scientific_claim": "technical train/validation infrastructure evidence only",
+  "selected": {
+    "criterion": "minimum validation loss; earliest exact tie",
+    "selected_raw_gains": [
+      -0.9791043400764465,
+      -0.2724381685256958,
+      -1.38823664188385,
+      -0.5576145648956299
+    ],
+    "selected_step": 2,
+    "selected_validation_loss": 0.0005445563001558185,
+    "test_used_for_selection": false
+  },
+  "selected_physical_gains": {
+    "kd_xy": 0.19976706802845,
+    "kd_z": 0.5005095601081848,
+    "kp_xy": 0.4003765285015106,
+    "kp_z": 1.2510789632797241
+  },
+  "status": "success",
+  "test_manifest_opened": false,
+  "test_metrics_present": false,
+  "timing": {
+    "train_compile_seconds": 7.656153591,
+    "train_first_execution_seconds": 0.01311054,
+    "validation_compile_seconds": 0.715137599,
+    "validation_first_execution_seconds": 0.002030809,
+    "validation_steady_seconds": [
+      0.000804602,
+      0.000552751,
+      0.000540348
+    ]
+  },
+  "warnings": [
+    "The frozen test manifest was not opened and no test episode was built or evaluated.",
+    "Simulation evidence is not hardware or firmware validation."
+  ]
+}

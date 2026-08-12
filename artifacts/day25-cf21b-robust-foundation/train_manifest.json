@@ -1,0 +1,574 @@
+{
+  "acceptance_by_class": {
+    "dynamic": {
+      "acceptance_rate": 0.4,
+      "accepted_parent_count": 2,
+      "episode_ids": [
+        "train-dynamic-01-8101201",
+        "train-dynamic-02-8101202"
+      ],
+      "executed_attempt_count": 5
+    },
+    "near_limit": {
+      "acceptance_rate": 0.08333333333333333,
+      "accepted_parent_count": 2,
+      "episode_ids": [
+        "train-near_limit-01-8101301",
+        "train-near_limit-02-8101302"
+      ],
+      "executed_attempt_count": 24
+    },
+    "nominal": {
+      "acceptance_rate": 0.6666666666666666,
+      "accepted_parent_count": 2,
+      "episode_ids": [
+        "train-nominal-01-8101101",
+        "train-nominal-02-8101102"
+      ],
+      "executed_attempt_count": 3
+    },
+    "soft": {
+      "acceptance_rate": 1.0,
+      "accepted_parent_count": 2,
+      "episode_ids": [
+        "train-soft-01-8101001",
+        "train-soft-02-8101002"
+      ],
+      "executed_attempt_count": 2
+    }
+  },
+  "episodes": [
+    {
+      "accepted_attempt_index": 0,
+      "episode_id": "train-soft-01-8101001",
+      "motion_class": "soft",
+      "ordinal": 0,
+      "pair_id": "pair-train-soft-01",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "8dc765d5ba41374fdff54607f01a3dabf441d07165e29958f892f7c3fbf8df9b",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "78011914b68a64a3bb41399b2cb527b93501fe11452d6f41ea2c645324ba8034",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "8ce4abe983198e3780d0bfefab56fc691b8374f7e49b3803b5eed641454d61a9",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "98a643ca2c6c00cefe2f08c66c79c44bc853e71477c249241dc1c98462315941",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "92e88103d481f17de3b151555851b9febd7d9fdbbadae27ee3a4a16a485ee25e",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "11d2dca65f4c8604bfd891e9d1fe9099e512a0a3e925a1f88f4693a89dd01dc7",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 400,
+      "score_stop_interval_exclusive": 600,
+      "seed": 8101001,
+      "warmup_s": 4.0
+    },
+    {
+      "accepted_attempt_index": 0,
+      "episode_id": "train-soft-02-8101002",
+      "motion_class": "soft",
+      "ordinal": 1,
+      "pair_id": "pair-train-soft-02",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "4b48b66cc1a8bd93a66686210f674054e407c3fd6b47146ecc473856385d56cc",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "43c8f1fffbdbc6d27a053f3b619724c71490ffda330a44f6dbbb0095e683adec",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "8c0a7a11646e613a1306a20d0e9f7a9125982b227d7851b8b7ec033577ca149b",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "f27c00d38af9ec7938b11c1c5b45785df0f8d319be132eb03e300de07d0defa8",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "45c9b5e021c05427e6be0434635c78b625f47cdd5deb9a87431d4e1d7c43bb5e",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "d0e2366ed168643f9e299fdc358fcb28d4a92985bd6ed1e3530838d166e6e256",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 200,
+      "score_stop_interval_exclusive": 400,
+      "seed": 8101002,
+      "warmup_s": 2.0
+    },
+    {
+      "accepted_attempt_index": 1,
+      "episode_id": "train-nominal-01-8101101",
+      "motion_class": "nominal",
+      "ordinal": 0,
+      "pair_id": "pair-train-nominal-01",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "9b788dad22a8f199563e602bcb80be61f38dd47be30a22becabc9a170ec122ba",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "e56a1811bdca3d7cf46112dc0eebf2eb14541983e098382d03f3ed6d7963bda7",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "9f72d076947828c7ac53b7e140c1f4b5f4f74d861ddf6f70cc5dce48d0e62968",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "60377c32abe8421ff5687ebb893b827c66ad6f2e6d14c0a0d4f664901798aafb",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "bb677f69ef352f5dadf89fba7814455d1c9525efc470edc8d1613b3e16c007fd",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "0c3f1bb648748a594d297e533f7b5cd695e06f6cfcd9d914b5b522fb04b6f43b",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 200,
+      "score_stop_interval_exclusive": 400,
+      "seed": 8101101,
+      "warmup_s": 2.0
+    },
+    {
+      "accepted_attempt_index": 0,
+      "episode_id": "train-nominal-02-8101102",
+      "motion_class": "nominal",
+      "ordinal": 1,
+      "pair_id": "pair-train-nominal-02",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "68c545c607cd4425f7bf884ddc4fa57362a289e19ea70e28b775f93c0cba31ef",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "f45337079c67bea7207023d9b4378a60935753cd5e9d5b69528e7388f6e9a7d1",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "146a1b791b30c3b49af6c9e3d8ce40e38113d5b7b78a6c02490bb5494162bacf",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "af9f2bb73723194f3511143c9317320ff938b2893224150f9ced3b9790a2aa3d",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "e0c05246b36dd7c31269a938c8a2443bff359f3fad93c909ca4e3fa8719a7689",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "6e07e611f1714eb8fbd090e8cf7412a9a198da0bb5c47102c3f6ec0dbc759b3e",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 300,
+      "score_stop_interval_exclusive": 500,
+      "seed": 8101102,
+      "warmup_s": 3.0
+    },
+    {
+      "accepted_attempt_index": 2,
+      "episode_id": "train-dynamic-01-8101201",
+      "motion_class": "dynamic",
+      "ordinal": 0,
+      "pair_id": "pair-train-dynamic-01",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "8ba4de7cb603a36c0eac6c3ce65a38a74e7ab4bc94d7376953ed5f71c693be6c",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "18f1d5463b4843e4389c2565bb47a34ef98575dc736983f8a56ebdd21d1f655a",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "853505d132c473a98540a4ba9130802accc7e227c55d409be7b920d7aa6dc83a",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "733560d762d7db672c3c572119679b14e5301ac8044a528df34e1e5c9f8c8780",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "9a89a4a065e5567de24740a1b6f5510e29ab8623638e26c40e88d7f9567e77be",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "cea7f2bc5df329ac61e7f7be06a60246a0c5e86284db39e0d83c8496db4e6d86",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 300,
+      "score_stop_interval_exclusive": 500,
+      "seed": 8101201,
+      "warmup_s": 3.0
+    },
+    {
+      "accepted_attempt_index": 1,
+      "episode_id": "train-dynamic-02-8101202",
+      "motion_class": "dynamic",
+      "ordinal": 1,
+      "pair_id": "pair-train-dynamic-02",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "89e047c57371e254dcfa26a9f133c60f91bcea2954504237ab5dbcb602545d77",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "e5a17e7f510a1e423e8d7a0445d788759fd55e73184713f9cf7fd542cd9952e8",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "c998e76e17fc2410aa3e0b6f1c5ca215be6abd22b49ffddc761a30965dbb864d",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "5daae666e1af3fde27e7f65e74e03545520c598fa0d7bc04a8685b29637b8d64",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "b32b52f513cc78ec012529821f2ebd2f8de6e5cabd44ca0501d55ad852a1b8f9",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "0b938af52823ed444fbf013ce34f9f234370b93886fe51d444c7f878f1c01df7",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 400,
+      "score_stop_interval_exclusive": 600,
+      "seed": 8101202,
+      "warmup_s": 4.0
+    },
+    {
+      "accepted_attempt_index": 15,
+      "episode_id": "train-near_limit-01-8101301",
+      "motion_class": "near_limit",
+      "ordinal": 0,
+      "pair_id": "pair-train-near_limit-01",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "1b3242c2e776e9e0fa2d2f73d79cd9249d79beb4c540f23045f2a7825a592f83",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "c687d77e515053cd3c19bbff3d922333e60d4be1fce94c9fdc7aca916f23798a",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "6d0671496da318784696c51897e21140d42605609af7d82f14de37a06e5a922e",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "7ff18526924269faa2a232436da5e35e525ffa61f0e554f7f1dec48bd91f47de",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "5c4f3c9361e24ad2677cbea4998d26a9ae831189616322ca453288f1789ebe5e",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "84cde02d2ad452e74e7eb1447138ba45874653b693ae7cd50b6ab8bfc891ea24",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 400,
+      "score_stop_interval_exclusive": 600,
+      "seed": 8101301,
+      "warmup_s": 4.0
+    },
+    {
+      "accepted_attempt_index": 7,
+      "episode_id": "train-near_limit-02-8101302",
+      "motion_class": "near_limit",
+      "ordinal": 1,
+      "pair_id": "pair-train-near_limit-02",
+      "parent_array_digests": {
+        "acceleration": {
+          "dtype": "float32",
+          "sha256": "c7a20e034ce1dea0e4138d42fa82e4f439b27fa3a7e07e7fd5175e8a28ccbe30",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "jerk": {
+          "dtype": "float32",
+          "sha256": "e6a7d5d3cc2274cee908a6d4a00a5234788402d7654ccb024fdf49bc9e5f56ca",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "position": {
+          "dtype": "float32",
+          "sha256": "bfd26b48f30d95f3e333cfff046fe86023cf7ce2e9fa99ad23069ffaf7f17a1f",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "time": {
+          "dtype": "float32",
+          "sha256": "1f4ff937864256f21684b43e418a84e8724db5346415b1a1894ce44b046ba3ca",
+          "shape": [
+            801
+          ]
+        },
+        "velocity": {
+          "dtype": "float32",
+          "sha256": "e5f8e70fe840617b68111dab5425b61e4222bf5310b1c0f2c834f235456c7467",
+          "shape": [
+            801,
+            3
+          ]
+        },
+        "yaw": {
+          "dtype": "float32",
+          "sha256": "9ddc29480e9734d0502e6d23dfbdeff641022b452ad6a93a5c6acf498dd0c682",
+          "shape": [
+            801
+          ]
+        },
+        "yaw_rate": {
+          "dtype": "float32",
+          "sha256": "1abbdb05b00e2c1618f708fbc936852da6aa4a8b5251d87e147e4dbf7eb13e64",
+          "shape": [
+            801
+          ]
+        }
+      },
+      "score_start_interval": 200,
+      "score_stop_interval_exclusive": 400,
+      "seed": 8101302,
+      "warmup_s": 2.0
+    }
+  ],
+  "manifest_id": "day25-train-cf21b-robust-foundation",
+  "schema_version": "crazyflow.cf21b_robust_foundation.v1",
+  "split": "train",
+  "test_manifest": null
+}

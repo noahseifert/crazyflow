@@ -1,0 +1,1561 @@
+{
+  "cells": [
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h20__figure8__audited_mismatch",
+      "control_effort": 0.0021055308170616627,
+      "control_smoothness": 6.092051989980973e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 2.085060422929441e-12,
+      "loss_effort": 2.1055307115602773e-06,
+      "loss_position": 0.0006717538926750422,
+      "loss_smoothness": 6.092052018402683e-08,
+      "loss_terminal": 0.0003913654072675854,
+      "loss_total": 0.0022911166306585073,
+      "loss_velocity": 0.001225830870680511,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.01563980057835579,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.0064795538783073425,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.11071724444627762,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -8.678575977683067e-05,
+        "loss_relative_change": -0.03787924133390229
+      },
+      "cell_id": "best_train__h20__figure8__audited_mismatch",
+      "control_effort": 0.0022418794687837362,
+      "control_smoothness": 7.245445158332586e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 2.0780970260564358e-12,
+      "loss_effort": 2.2418794287659694e-06,
+      "loss_position": 0.0006517720757983625,
+      "loss_smoothness": 7.245445488024416e-08,
+      "loss_terminal": 0.00037734289071522653,
+      "loss_total": 0.0022043308708816767,
+      "loss_velocity": 0.0011729015968739986,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.015357059426605701,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.006382456980645657,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.10830058157444,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h20__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.0008663967601023614,
+      "control_smoothness": 3.989755714428611e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 1.940160922545009e-12,
+      "loss_effort": 8.663967605571088e-07,
+      "loss_position": 0.0004990813904441893,
+      "loss_smoothness": 3.989755725797295e-08,
+      "loss_terminal": 0.00030284092645160854,
+      "loss_total": 0.0017850230215117335,
+      "loss_velocity": 0.0009821944404393435,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.013757746666669846,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.005585032515227795,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.09910572320222855,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -4.206190351396799e-05,
+        "loss_relative_change": -0.023563787697452678
+      },
+      "cell_id": "best_train__h20__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.0010420564794912934,
+      "control_smoothness": 4.708289634436369e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 1.938622439662252e-12,
+      "loss_effort": 1.0420565104141133e-06,
+      "loss_position": 0.0004911131109111011,
+      "loss_smoothness": 4.708289935706489e-08,
+      "loss_terminal": 0.0002964760351460427,
+      "loss_total": 0.0017429611179977655,
+      "loss_velocity": 0.0009542828192934394,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.01361240353435278,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.005540268030017614,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.09768739342689514,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h20__circle__audited_mismatch",
+      "control_effort": 0.0015601998893544078,
+      "control_smoothness": 3.042402386199683e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 2.084624139975233e-12,
+      "loss_effort": 1.560199962113984e-06,
+      "loss_position": 0.00035006602411158383,
+      "loss_smoothness": 3.042402596520333e-08,
+      "loss_terminal": 0.00019407326180953532,
+      "loss_total": 0.0011237593134865165,
+      "loss_velocity": 0.0005780293722636998,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.011013437062501907,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.0046775126829743385,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.0760282427072525,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -6.228976417332888e-05,
+        "loss_relative_change": -0.055429809057663725
+      },
+      "cell_id": "best_train__h20__circle__audited_mismatch",
+      "control_effort": 0.0015302067622542381,
+      "control_smoothness": 3.6811165045946836e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 2.0775421313845577e-12,
+      "loss_effort": 1.5302068732125917e-06,
+      "loss_position": 0.00033442737185396254,
+      "loss_smoothness": 3.6811165671224444e-08,
+      "loss_terminal": 0.0001836891024140641,
+      "loss_total": 0.0010614695493131876,
+      "loss_velocity": 0.0005417860811576247,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.010714741423726082,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.004571838770061731,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.07360611855983734,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h20__circle__matched_controller_to_dynamics",
+      "control_effort": 0.00028737919637933373,
+      "control_smoothness": 1.2545295248855837e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 1.9390511332012528e-12,
+      "loss_effort": 2.8737920843013853e-07,
+      "loss_position": 0.00018151920812670141,
+      "loss_smoothness": 1.2545295469124085e-08,
+      "loss_terminal": 0.00010910965647781268,
+      "loss_total": 0.0006417837576009333,
+      "loss_velocity": 0.00035085491253994405,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.008257937617599964,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.0033682265784591436,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.059233006089925766,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -1.71233550645411e-05,
+        "loss_relative_change": -0.026680879442244395
+      },
+      "cell_id": "best_train__h20__circle__matched_controller_to_dynamics",
+      "control_effort": 0.0003233096795156598,
+      "control_smoothness": 1.4806723811489064e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 20,
+      "loss_altitude": 1.9375063619458954e-12,
+      "loss_effort": 3.2330970611837984e-07,
+      "loss_position": 0.00017811768339015543,
+      "loss_smoothness": 1.480672473519462e-08,
+      "loss_terminal": 0.00010647841554600745,
+      "loss_total": 0.0006246604025363922,
+      "loss_velocity": 0.00033972624805755913,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.008157757110893726,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.0033365185372531414,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.05828603729605675,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h100__figure8__audited_mismatch",
+      "control_effort": 0.003011187305673957,
+      "control_smoothness": 4.66471174149774e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 4.96302434913054e-12,
+      "loss_effort": 3.011187573065399e-06,
+      "loss_position": 0.052922315895557404,
+      "loss_smoothness": 4.664711994450954e-08,
+      "loss_terminal": 0.011227074079215527,
+      "loss_total": 0.07124651968479156,
+      "loss_velocity": 0.007094074506312609,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.09199011325836182,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.05751212686300278,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.2663470208644867,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.020613685250282288,
+        "loss_relative_change": -0.2893290134238308
+      },
+      "cell_id": "best_train__h100__figure8__audited_mismatch",
+      "control_effort": 0.0037498718593269587,
+      "control_smoothness": 6.893096724525094e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 4.2142370322573175e-12,
+      "loss_effort": 3.7498721212614328e-06,
+      "loss_position": 0.039082154631614685,
+      "loss_smoothness": 6.893097292959283e-08,
+      "loss_terminal": 0.005680857226252556,
+      "loss_total": 0.05063283443450928,
+      "loss_velocity": 0.005865999963134527,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.07588812708854675,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.04942301660776138,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.24219825863838196,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h100__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.0029566751327365637,
+      "control_smoothness": 5.085130032966845e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 2.6338291356925447e-12,
+      "loss_effort": 2.9566754164989106e-06,
+      "loss_position": 0.043278034776449203,
+      "loss_smoothness": 5.085130183601905e-08,
+      "loss_terminal": 0.008718857541680336,
+      "loss_total": 0.058683570474386215,
+      "loss_velocity": 0.00668366951867938,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.08728770166635513,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.052008435130119324,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.258527934551239,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.015787068754434586,
+        "loss_relative_change": -0.26902024922504014
+      },
+      "cell_id": "best_train__h100__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.0036780801601707935,
+      "control_smoothness": 7.197298691608012e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 2.5226962446084356e-12,
+      "loss_effort": 3.6780804748559603e-06,
+      "loss_position": 0.03301870450377464,
+      "loss_smoothness": 7.197299112249311e-08,
+      "loss_terminal": 0.004100312013179064,
+      "loss_total": 0.04289650171995163,
+      "loss_velocity": 0.005773737095296383,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.0740693137049675,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.04542762413620949,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.24028602242469788,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h100__circle__audited_mismatch",
+      "control_effort": 0.0009390871273353696,
+      "control_smoothness": 1.2368215720925946e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 4.634336751158097e-12,
+      "loss_effort": 9.390871582581894e-07,
+      "loss_position": 0.02157389372587204,
+      "loss_smoothness": 1.2368216673053212e-08,
+      "loss_terminal": 0.003326609032228589,
+      "loss_total": 0.02699178084731102,
+      "loss_velocity": 0.002090326277539134,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.048079244792461395,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.03672013431787491,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.14457958936691284,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.008526111021637917,
+        "loss_relative_change": -0.3158780470940029
+      },
+      "cell_id": "best_train__h100__circle__audited_mismatch",
+      "control_effort": 0.0010680027771741152,
+      "control_smoothness": 1.677245927567128e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 3.95092682528575e-12,
+      "loss_effort": 1.0680029163268046e-06,
+      "loss_position": 0.015135531313717365,
+      "loss_smoothness": 1.677246075360017e-08,
+      "loss_terminal": 0.0017606664914637804,
+      "loss_total": 0.018465669825673103,
+      "loss_velocity": 0.0015683865640312433,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.041558489203453064,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.030756637454032898,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.12523522973060608,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h100__circle__matched_controller_to_dynamics",
+      "control_effort": 0.00043933073175139725,
+      "control_smoothness": 8.39228778204415e-06,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 2.4476659848254867e-12,
+      "loss_effort": 4.393307904138055e-07,
+      "loss_position": 0.012223483994603157,
+      "loss_smoothness": 8.39228864180086e-09,
+      "loss_terminal": 0.0018601177725940943,
+      "loss_total": 0.015884850174188614,
+      "loss_velocity": 0.001800799393095076,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.037057939916849136,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.0276399664580822,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.13419385254383087,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.005041842348873615,
+        "loss_relative_change": -0.31739942735287074
+      },
+      "cell_id": "best_train__h100__circle__matched_controller_to_dynamics",
+      "control_effort": 0.000585079425945878,
+      "control_smoothness": 1.1690841347444803e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 100,
+      "loss_altitude": 2.3536957972913886e-12,
+      "loss_effort": 5.85079476422834e-07,
+      "loss_position": 0.008682310581207275,
+      "loss_smoothness": 1.1690842960376813e-08,
+      "loss_terminal": 0.0007442744099535048,
+      "loss_total": 0.010843007825314999,
+      "loss_velocity": 0.0014158247504383326,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.03303699195384979,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.023294730111956596,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.11898843199014664,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h200__figure8__audited_mismatch",
+      "control_effort": 0.001943783601745963,
+      "control_smoothness": 2.459581446601078e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 5.968104916515005e-12,
+      "loss_effort": 1.94378367268655e-06,
+      "loss_position": 0.06094987690448761,
+      "loss_smoothness": 2.45958169386995e-08,
+      "loss_terminal": 0.004213295411318541,
+      "loss_total": 0.0731038972735405,
+      "loss_velocity": 0.007938755676150322,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.09199011325836182,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.061720073223114014,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.2817579507827759,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.029334794729948044,
+        "loss_relative_change": -0.40127538782485117
+      },
+      "cell_id": "best_train__h200__figure8__audited_mismatch",
+      "control_effort": 0.0021755641791969538,
+      "control_smoothness": 3.5213917726650834e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 4.898339980158317e-12,
+      "loss_effort": 2.1755643047072226e-06,
+      "loss_position": 0.0363314263522625,
+      "loss_smoothness": 3.521391889194092e-08,
+      "loss_terminal": 0.002533246763050556,
+      "loss_total": 0.04376910254359245,
+      "loss_velocity": 0.004902222193777561,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.07588812708854675,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.04765200987458229,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.2214096188545227,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h200__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.0019787109922617674,
+      "control_smoothness": 2.699939977901522e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 2.7981245792618736e-12,
+      "loss_effort": 1.978711225092411e-06,
+      "loss_position": 0.04617726802825928,
+      "loss_smoothness": 2.69994018253783e-08,
+      "loss_terminal": 0.004276304971426725,
+      "loss_total": 0.05819285288453102,
+      "loss_velocity": 0.007737277541309595,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.08728770166635513,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.05372224003076553,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.27815961837768555,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.02389872819185257,
+        "loss_relative_change": -0.41068150137394954
+      },
+      "cell_id": "best_train__h200__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.002170848660171032,
+      "control_smoothness": 3.684925468405709e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 2.633148690409093e-12,
+      "loss_effort": 2.1708488020522054e-06,
+      "loss_position": 0.027084235101938248,
+      "loss_smoothness": 3.684925786728854e-08,
+      "loss_terminal": 0.002319558523595333,
+      "loss_total": 0.03429412469267845,
+      "loss_velocity": 0.004888119176030159,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.0740693137049675,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.04114321991801262,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.2210908979177475,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h200__circle__audited_mismatch",
+      "control_effort": 0.0004776574205607176,
+      "control_smoothness": 6.1916434788145125e-06,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 5.487885319788166e-12,
+      "loss_effort": 4.776574655807053e-07,
+      "loss_position": 0.02115282043814659,
+      "loss_smoothness": 6.1916440863285516e-09,
+      "loss_terminal": 0.0017471363535150886,
+      "loss_total": 0.024092918261885643,
+      "loss_velocity": 0.0011924783466383815,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.048079244792461395,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.03636002168059349,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.10920065641403198,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.00829431414604187,
+        "loss_relative_change": -0.3442635738802657
+      },
+      "cell_id": "best_train__h200__circle__audited_mismatch",
+      "control_effort": 0.0005408453289419413,
+      "control_smoothness": 8.392906238441356e-06,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 4.563408678714964e-12,
+      "loss_effort": 5.408454057942436e-07,
+      "loss_position": 0.013782796449959278,
+      "loss_smoothness": 8.392906813980971e-09,
+      "loss_terminal": 0.0011822027154266834,
+      "loss_total": 0.015798604115843773,
+      "loss_velocity": 0.0008330550626851618,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.041558489203453064,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.02935003861784935,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.09127184748649597,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h200__circle__matched_controller_to_dynamics",
+      "control_effort": 0.00022600205556955189,
+      "control_smoothness": 4.196940608380828e-06,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 2.5565888382012014e-12,
+      "loss_effort": 2.260020721678302e-07,
+      "loss_position": 0.00884644128382206,
+      "loss_smoothness": 4.196941016942901e-09,
+      "loss_terminal": 0.0002679651079233736,
+      "loss_total": 0.010177765041589737,
+      "loss_velocity": 0.0010631278855726123,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.037057939916849136,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.023513881489634514,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.10310809314250946,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.003908253740519285,
+        "loss_relative_change": -0.3839992104896172
+      },
+      "cell_id": "best_train__h200__circle__matched_controller_to_dynamics",
+      "control_effort": 0.00029922896646894515,
+      "control_smoothness": 5.860374585608952e-06,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 200,
+      "loss_altitude": 2.438069060875514e-12,
+      "loss_effort": 2.992289864778286e-07,
+      "loss_position": 0.005359055940061808,
+      "loss_smoothness": 5.8603752961516875e-09,
+      "loss_terminal": 0.0001499869249528274,
+      "loss_total": 0.006269511301070452,
+      "loss_velocity": 0.0007601630641147494,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.03303699195384979,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.01830139383673668,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.08718732744455338,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h400__figure8__audited_mismatch",
+      "control_effort": 0.001372968778014183,
+      "control_smoothness": 1.3116637092025485e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 6.1254898722773454e-12,
+      "loss_effort": 1.3729689953834168e-06,
+      "loss_position": 0.06807063519954681,
+      "loss_smoothness": 1.3116637553878263e-08,
+      "loss_terminal": 0.004453030414879322,
+      "loss_total": 0.07911745458841324,
+      "loss_velocity": 0.006592404097318649,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.09199011325836182,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.06522587686777115,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.2567567825317383,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.03755855932831764,
+        "loss_relative_change": -0.4747190051007796
+      },
+      "cell_id": "best_train__h400__figure8__audited_mismatch",
+      "control_effort": 0.0013581125531345606,
+      "control_smoothness": 1.81666728167329e-05,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 5.027963288772863e-12,
+      "loss_effort": 1.3581126268036314e-06,
+      "loss_position": 0.03594902902841568,
+      "loss_smoothness": 1.8166671722497085e-08,
+      "loss_terminal": 0.0020719540771096945,
+      "loss_total": 0.041558895260095596,
+      "loss_velocity": 0.0035365340299904346,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.07588812708854675,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.047400571405887604,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.18805675208568573,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h400__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.0013958674389868975,
+      "control_smoothness": 1.4336973436002154e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 2.766540468934764e-12,
+      "loss_effort": 1.3958675708636292e-06,
+      "loss_position": 0.05230113863945007,
+      "loss_smoothness": 1.4336973386264162e-08,
+      "loss_terminal": 0.0015749639132991433,
+      "loss_total": 0.060278937220573425,
+      "loss_velocity": 0.006401423830538988,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.08728770166635513,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.057173606008291245,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.2530103325843811,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.030194565653800964,
+        "loss_relative_change": -0.5009140347533441
+      },
+      "cell_id": "best_train__h400__figure8__matched_controller_to_dynamics",
+      "control_effort": 0.0013609627494588494,
+      "control_smoothness": 1.900353527162224e-05,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 2.5951987954464517e-12,
+      "loss_effort": 1.3609629831989878e-06,
+      "loss_position": 0.026006894186139107,
+      "loss_smoothness": 1.9003536522177455e-08,
+      "loss_terminal": 0.0005710108671337366,
+      "loss_total": 0.03008437156677246,
+      "loss_velocity": 0.003505086526274681,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.0740693137049675,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.0403166338801384,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "train",
+      "trajectory": "figure8",
+      "velocity_rmse_m_s": 0.1872187703847885,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h400__circle__audited_mismatch",
+      "control_effort": 0.0002453461929690093,
+      "control_smoothness": 3.088417088292772e-06,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 5.717264335569627e-12,
+      "loss_effort": 2.453462002449669e-07,
+      "loss_position": 0.018712112680077553,
+      "loss_smoothness": 3.088417077634631e-09,
+      "loss_terminal": 0.0015393320936709642,
+      "loss_total": 0.02089282125234604,
+      "loss_velocity": 0.0006411260110326111,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.048079244792461395,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.034198056906461716,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.08007033914327621,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.007027594372630119,
+        "loss_relative_change": -0.33636406915801265
+      },
+      "cell_id": "best_train__h400__circle__audited_mismatch",
+      "control_effort": 0.0002764048404060304,
+      "control_smoothness": 4.1862285797833465e-06,
+      "controller_mass_kg": 0.028999999165534973,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 4.766262905187002e-12,
+      "loss_effort": 2.7640484745461436e-07,
+      "loss_position": 0.012377951294183731,
+      "loss_smoothness": 4.186228697022898e-09,
+      "loss_terminal": 0.001046885852701962,
+      "loss_total": 0.01386522687971592,
+      "loss_velocity": 0.00044010949204675853,
+      "mass_condition": "audited_mismatch",
+      "max_position_error_m": 0.041558489203453064,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.02781406044960022,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.06634074449539185,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": 0.0,
+        "loss_relative_change": 0.0
+      },
+      "cell_id": "baseline__h400__circle__matched_controller_to_dynamics",
+      "control_effort": 0.00011906545114470646,
+      "control_smoothness": 2.093526518365252e-06,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 2.571496618072877e-12,
+      "loss_effort": 1.1906546149020869e-07,
+      "loss_position": 0.005746039096266031,
+      "loss_smoothness": 2.0935266853427947e-09,
+      "loss_terminal": 0.00028623020625673234,
+      "loss_total": 0.006589412223547697,
+      "loss_velocity": 0.0005570219946093857,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.037057939916849136,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "baseline",
+      "physical_gains": {
+        "kd_xy": 0.20000000298023224,
+        "kd_z": 0.5,
+        "kp_xy": 0.4000000059604645,
+        "kp_z": 1.25
+      },
+      "position_rmse_m": 0.018950657919049263,
+      "raw_gains": {
+        "kd_xy": -1.3862943649291992,
+        "kd_z": -0.5596157312393188,
+        "kp_xy": -0.9808291792869568,
+        "kp_z": -0.2744370102882385
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.07463390380144119,
+      "zero_thrust_gate_fraction": 0.0
+    },
+    {
+      "best_train_vs_baseline": {
+        "loss_difference": -0.0025696801021695137,
+        "loss_relative_change": -0.38997106494363687
+      },
+      "cell_id": "best_train__h400__circle__matched_controller_to_dynamics",
+      "control_effort": 0.00015541265020146966,
+      "control_smoothness": 2.9231021017039893e-06,
+      "controller_mass_kg": 0.03189999982714653,
+      "dynamics_mass_kg": 0.03189999982714653,
+      "floor_clip_fraction": 0.0,
+      "horizon": 400,
+      "loss_altitude": 2.450300379264192e-12,
+      "loss_effort": 1.5541266407126386e-07,
+      "loss_position": 0.003448438597843051,
+      "loss_smoothness": 2.923101982688081e-09,
+      "loss_terminal": 0.00017761117487680167,
+      "loss_total": 0.004019732121378183,
+      "loss_velocity": 0.0003935238637495786,
+      "mass_condition": "matched_controller_to_dynamics",
+      "max_position_error_m": 0.03303699195384979,
+      "motor_saturation_fraction": 0.0,
+      "nonfinite_state_fraction": 0.0,
+      "parameter_set": "best_train",
+      "physical_gains": {
+        "kd_xy": 0.26378148794174194,
+        "kd_z": 0.6184355020523071,
+        "kp_xy": 0.31563901901245117,
+        "kp_z": 1.5052711963653564
+      },
+      "position_rmse_m": 0.014680852182209492,
+      "raw_gains": {
+        "kd_xy": -0.919587254524231,
+        "kd_z": -0.11490653455257416,
+        "kp_xy": -1.411259651184082,
+        "kp_z": 0.19198988378047943
+      },
+      "split": "validation",
+      "trajectory": "circle",
+      "velocity_rmse_m_s": 0.06273147463798523,
+      "zero_thrust_gate_fraction": 0.0
+    }
+  ],
+  "configuration": {
+    "control_frequency_hz": 100,
+    "drones_per_world": 1,
+    "finite_difference_epsilon_raw": 0.01,
+    "horizon_control_intervals": 200,
+    "learning_rate": 0.01,
+    "optimization_steps": 50,
+    "profile_repeats": 3,
+    "robustness_horizons": [
+      20,
+      100,
+      200,
+      400
+    ],
+    "seed": 20260724,
+    "simulation_frequency_hz": 500,
+    "worlds": 2
+  },
+  "forward_cell_evaluations": 32,
+  "full_sprint_matrix_requested": true,
+  "mass_conditions": {
+    "audited_mismatch": {
+      "controller_mass_kg": 0.029,
+      "dynamics_mass_kg": 0.0319,
+      "experiment_local_controller_replacement": false
+    },
+    "matched_controller_to_dynamics": {
+      "controller_mass_kg": 0.0319,
+      "dynamics_mass_kg": 0.0319,
+      "experiment_local_controller_replacement": true
+    }
+  },
+  "noise_or_disturbance_model": null,
+  "parameter_sets": [
+    "baseline",
+    "best_train"
+  ],
+  "provenance": {
+    "base_head": "32cb8ffae8ec3b522c589dffc8cc6d9b97d8f1ed",
+    "branch": "research/differentiable-mellinger",
+    "head": "32cb8ffae8ec3b522c589dffc8cc6d9b97d8f1ed",
+    "historical_day2_execution": {
+      "head": "9eac04ea28997e76b9bc8c6e97ca53ef93398d55",
+      "preserved_unchanged": true,
+      "source_dirty": true,
+      "source_state_sha256": "a1d7f1dce6ed3b1aa9cbb7cc53abb4a3bcada379129dfbde1787c1a5d1564229"
+    },
+    "preflight_worktree": "clean",
+    "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+    "source_dirty": true,
+    "source_state_scope": [
+      "crazyflow",
+      "examples",
+      "tests",
+      "pyproject.toml",
+      "pixi.lock"
+    ],
+    "source_state_sha256": "8559648a3c52ca262f8eb5b4160540cc8e138c42c85d748f13daefe996d268f7",
+    "source_status_short": [
+      " M crazyflow/control/mellinger/__init__.py",
+      "?? crazyflow/control/mellinger/optimization.py",
+      "?? examples/jax/mellinger_gain_optimization.py",
+      "?? tests/unit/test_mellinger_gain_optimization.py"
+    ]
+  },
+  "requested_horizons": [
+    20,
+    100,
+    200,
+    400
+  ],
+  "robustness_matrix_complete": true,
+  "schema_version": "crazyflow.mellinger_robustness.v1",
+  "seed": 20260724,
+  "seed_robustness_claim": false,
+  "summaries": {
+    "baseline": {
+      "h200_audited_mismatch": {
+        "applicable": true,
+        "trajectories": {
+          "circle": {
+            "difference_from_baseline": 0.0,
+            "loss": 0.024092918261885643,
+            "relative_change_from_baseline": 0.0
+          },
+          "figure8": {
+            "difference_from_baseline": 0.0,
+            "loss": 0.0731038972735405,
+            "relative_change_from_baseline": 0.0
+          }
+        }
+      },
+      "mass_condition_mean_change_matched_minus_mismatch": -0.010828259131812956,
+      "mass_condition_mean_relative_change": -0.2898547661654263,
+      "maximum_loss": 0.07911745458841324,
+      "mean_loss": 0.03194340391564765,
+      "worst_cell": {
+        "best_train_vs_baseline": {
+          "loss_difference": 0.0,
+          "loss_relative_change": 0.0
+        },
+        "cell_id": "baseline__h400__figure8__audited_mismatch",
+        "control_effort": 0.001372968778014183,
+        "control_smoothness": 1.3116637092025485e-05,
+        "controller_mass_kg": 0.028999999165534973,
+        "dynamics_mass_kg": 0.03189999982714653,
+        "floor_clip_fraction": 0.0,
+        "horizon": 400,
+        "loss_altitude": 6.1254898722773454e-12,
+        "loss_effort": 1.3729689953834168e-06,
+        "loss_position": 0.06807063519954681,
+        "loss_smoothness": 1.3116637553878263e-08,
+        "loss_terminal": 0.004453030414879322,
+        "loss_total": 0.07911745458841324,
+        "loss_velocity": 0.006592404097318649,
+        "mass_condition": "audited_mismatch",
+        "max_position_error_m": 0.09199011325836182,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "parameter_set": "baseline",
+        "physical_gains": {
+          "kd_xy": 0.20000000298023224,
+          "kd_z": 0.5,
+          "kp_xy": 0.4000000059604645,
+          "kp_z": 1.25
+        },
+        "position_rmse_m": 0.06522587686777115,
+        "raw_gains": {
+          "kd_xy": -1.3862943649291992,
+          "kd_z": -0.5596157312393188,
+          "kp_xy": -0.9808291792869568,
+          "kp_z": -0.2744370102882385
+        },
+        "split": "train",
+        "trajectory": "figure8",
+        "velocity_rmse_m_s": 0.2567567825317383,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    },
+    "best_train": {
+      "h200_audited_mismatch": {
+        "applicable": true,
+        "trajectories": {
+          "circle": {
+            "difference_from_baseline": -0.00829431414604187,
+            "loss": 0.015798604115843773,
+            "relative_change_from_baseline": -0.3442635738802657
+          },
+          "figure8": {
+            "difference_from_baseline": -0.029334794729948044,
+            "loss": 0.04376910254359245,
+            "relative_change_from_baseline": -0.40127538782485117
+          }
+        }
+      },
+      "mass_condition_mean_change_matched_minus_mismatch": -0.007072657841490582,
+      "mass_condition_mean_relative_change": -0.3019984543931564,
+      "maximum_loss": 0.05063283443450928,
+      "mean_loss": 0.019883187764207833,
+      "worst_cell": {
+        "best_train_vs_baseline": {
+          "loss_difference": -0.020613685250282288,
+          "loss_relative_change": -0.2893290134238308
+        },
+        "cell_id": "best_train__h100__figure8__audited_mismatch",
+        "control_effort": 0.0037498718593269587,
+        "control_smoothness": 6.893096724525094e-05,
+        "controller_mass_kg": 0.028999999165534973,
+        "dynamics_mass_kg": 0.03189999982714653,
+        "floor_clip_fraction": 0.0,
+        "horizon": 100,
+        "loss_altitude": 4.2142370322573175e-12,
+        "loss_effort": 3.7498721212614328e-06,
+        "loss_position": 0.039082154631614685,
+        "loss_smoothness": 6.893097292959283e-08,
+        "loss_terminal": 0.005680857226252556,
+        "loss_total": 0.05063283443450928,
+        "loss_velocity": 0.005865999963134527,
+        "mass_condition": "audited_mismatch",
+        "max_position_error_m": 0.07588812708854675,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "parameter_set": "best_train",
+        "physical_gains": {
+          "kd_xy": 0.26378148794174194,
+          "kd_z": 0.6184355020523071,
+          "kp_xy": 0.31563901901245117,
+          "kp_z": 1.5052711963653564
+        },
+        "position_rmse_m": 0.04942301660776138,
+        "raw_gains": {
+          "kd_xy": -0.919587254524231,
+          "kd_z": -0.11490653455257416,
+          "kp_xy": -1.411259651184082,
+          "kp_z": 0.19198988378047943
+        },
+        "split": "train",
+        "trajectory": "figure8",
+        "velocity_rmse_m_s": 0.24219825863838196,
+        "zero_thrust_gate_fraction": 0.0
+      }
+    }
+  },
+  "trajectories": [
+    {
+      "id": "figure8",
+      "split": "train"
+    },
+    {
+      "id": "circle",
+      "split": "validation"
+    }
+  ]
+}

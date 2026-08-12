@@ -1,0 +1,102 @@
+{
+  "config_fingerprint": "9843e84ad0ba6d378b65142c119f1afface28e5d70f5b73a8d54a8a9ca41caed",
+  "episode_index": 1,
+  "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 0.0005378891946747899,
+      "validation_loss": 0.0005391469458118081
+    }
+  ],
+  "optimizer_state": {
+    "leaves": [
+      {
+        "data": 1,
+        "dtype": "int32",
+        "shape": []
+      },
+      {
+        "data": [
+          -4.9684114600268e-09,
+          -7.88641671078949e-07,
+          5.579344275474796e-08,
+          -1.0567223398538772e-05
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      },
+      {
+        "data": [
+          2.4685114682646883e-18,
+          6.219556933275555e-14,
+          3.1129082851416177e-16,
+          1.1166621446956349e-11
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      }
+    ],
+    "tree_repr": "PyTreeDef((CustomNode(namedtuple[ScaleByAdamState], [*, *, *]), CustomNode(namedtuple[EmptyState], [])))"
+  },
+  "provenance": {
+    "command": "examples/jax/mellinger_domain_randomized_optimization.py --config configs/research/mellinger/smoke.json --output-dir artifacts/day5-audit/local-smoke",
+    "config_fingerprint": "9843e84ad0ba6d378b65142c119f1afface28e5d70f5b73a8d54a8a9ca41caed",
+    "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/smoke.json",
+    "environment": {
+      "jax_backend": "cpu",
+      "jax_devices": [
+        "cpu:0"
+      ],
+      "packages": {
+        "flax": "0.12.8",
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8",
+        "pytest": "9.1.1"
+      },
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "python": "3.12.13"
+    },
+    "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+    "git": {
+      "branch": "research/differentiable-mellinger",
+      "dirty": false,
+      "head": "c4492b187d336d75757c560fecced53c7ec47b7a",
+      "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+      "status_short": []
+    },
+    "schema_version": "crazyflow.mellinger_research_provenance.v1",
+    "started_at_utc": "2026-07-31T17:44:03.660881+00:00",
+    "test_manifest_id_recorded_but_not_evaluated": "mellinger-test-v1-20260731-frozen",
+    "validation_manifest_id": "mellinger-validation-v1-20260731"
+  },
+  "raw_gains": [
+    -0.9799967408180237,
+    -0.2734382748603821,
+    -1.3872767686843872,
+    -0.5586158037185669
+  ],
+  "root_seed": 20260731,
+  "schema_version": "crazyflow.mellinger_research_checkpoint.v1",
+  "selection": {
+    "criterion": "minimum validation loss; earliest exact tie",
+    "selected_raw_gains": [
+      -0.9799967408180237,
+      -0.2734382748603821,
+      -1.3872767686843872,
+      -0.5586158037185669
+    ],
+    "selected_step": 1,
+    "selected_validation_loss": 0.0005391469458118081,
+    "test_used_for_selection": false
+  },
+  "step": 1,
+  "test_manifest_id": "mellinger-test-v1-20260731-frozen",
+  "validation_manifest_id": "mellinger-validation-v1-20260731"
+}

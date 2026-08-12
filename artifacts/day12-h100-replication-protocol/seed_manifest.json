@@ -1,0 +1,90 @@
+{
+  "generation": {
+    "accepted_range": [
+      1,
+      2147483647
+    ],
+    "algorithm": "SHA-256",
+    "derivation": "SHA256(namespace + '|seed-index=NN|retry=K'); take the first four digest bytes as an unsigned big-endian integer and clear the high bit with 0x7fffffff; increment K only for zero, collision, or the excluded pilot seed",
+    "encoding": "UTF-8",
+    "independence_scope": "Distinct predeclared root seeds create disjoint deterministic Train streams under the runner's split/episode/world/component fold-in contract. The fixed Validation manifest intentionally remains common across seeds.",
+    "namespace": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f"
+  },
+  "pilot_seed_excluded": 20260731,
+  "protocol_origin_head": "a269046fb0e70cb5ecc8b4c1783b87aecd866b7f",
+  "schema_version": "crazyflow.h100_replication_seed_manifest.v1",
+  "seed_count": 10,
+  "seeds": [
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=01|retry=0",
+      "derivation_sha256": "555c5c28c10b938fc5cb1dea42f68de3d60b3b3fd3a4bbf34ff4be8830818744",
+      "index": 1,
+      "retry_counter": 0,
+      "root_seed": 1432116264
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=02|retry=0",
+      "derivation_sha256": "15db49ee799ddad283790f750dea22c09596bc68dfc77915dd81763444fbc51a",
+      "index": 2,
+      "retry_counter": 0,
+      "root_seed": 366692846
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=03|retry=0",
+      "derivation_sha256": "0e0882a1a1db823bb20e5669bbfda0d0a05d8a53618a82d14d2cf9582c5991a1",
+      "index": 3,
+      "retry_counter": 0,
+      "root_seed": 235438753
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=04|retry=0",
+      "derivation_sha256": "d19f7d19a2288e99e31204799f77b314452f7fbd1243f415a64698f4b4c563b2",
+      "index": 4,
+      "retry_counter": 0,
+      "root_seed": 1369406745
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=05|retry=0",
+      "derivation_sha256": "4075cff633a9de564b7495dcffd4420328c99c9858a9f218b0a755da63ed1bf5",
+      "index": 5,
+      "retry_counter": 0,
+      "root_seed": 1081462774
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=06|retry=0",
+      "derivation_sha256": "4c12eed2b97736a34053f98fb89923934e223406e503fe323fa626cd05a6b2a8",
+      "index": 6,
+      "retry_counter": 0,
+      "root_seed": 1276309202
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=07|retry=0",
+      "derivation_sha256": "3adc3ab4519cc81884147138623f91722e61472ce5998b593e32d7462c61db72",
+      "index": 7,
+      "retry_counter": 0,
+      "root_seed": 987511476
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=08|retry=0",
+      "derivation_sha256": "7eb2e603a02479bdf1eef052723b5bbf5908e6999365bd6c2c10a45fd87f1649",
+      "index": 8,
+      "retry_counter": 0,
+      "root_seed": 2125653507
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=09|retry=0",
+      "derivation_sha256": "81e4407e2f3e2a035650d0f2cb12453de25d6c9f9755670185e7904da039137e",
+      "index": 9,
+      "retry_counter": 0,
+      "root_seed": 31735934
+    },
+    {
+      "derivation_input": "crazyflow-gradient-research|h100-confirmatory-replication|v1|a269046fb0e70cb5ecc8b4c1783b87aecd866b7f|seed-index=10|retry=0",
+      "derivation_sha256": "3ad3480901eba2ef156590f5d28b4ee1d66197ab7244c2bc2296bc0041af2e73",
+      "index": 10,
+      "retry_counter": 0,
+      "root_seed": 986925065
+    }
+  ],
+  "status": "FROZEN_NOT_EXECUTED"
+}

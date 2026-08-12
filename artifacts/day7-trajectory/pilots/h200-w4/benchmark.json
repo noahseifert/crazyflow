@@ -1,0 +1,100 @@
+{
+  "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_scaling_benchmark.py --config configs/research/mellinger/sprint7_pilot.json --worlds 4 --horizon 200 --steady-repeats 5 --output-dir artifacts/day7-trajectory/pilots/h200-w4",
+  "compile_seconds": 6.979188503,
+  "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/sprint7_pilot.json",
+  "domain_randomization": {
+    "delay_enabled": false,
+    "mass_enabled": true,
+    "mass_half_width_kg": 0.0002,
+    "sensor_noise_enabled": false,
+    "ukf_enabled": false,
+    "wrench_enabled": false
+  },
+  "drones_per_world": 1,
+  "effective_config_fingerprint": "54612b4551b723058deb99e1836d8a00e8f3393d183c40ba4ee27b553bd713ea",
+  "environment": {
+    "jax_backend": "cpu",
+    "jax_compilation_cache_dir": null,
+    "jax_devices": [
+      "cpu:0"
+    ],
+    "jax_enable_x64": false,
+    "packages": {
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8"
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "episode_ids": [
+    "train-000000-world-000",
+    "train-000000-world-001",
+    "train-000000-world-002",
+    "train-000000-world-003"
+  ],
+  "episode_index": 0,
+  "failure_phase": null,
+  "first_execution_seconds": 0.276325517,
+  "gain_stage": 1,
+  "git_branch": "research/differentiable-mellinger",
+  "git_head": "1080aadf65a6df56528efcaa5da34f4dfc812e7d",
+  "gradient_l2_norm": 0.011608077213168144,
+  "horizon_control_intervals": 200,
+  "internal_total_seconds": 13.303211614,
+  "loss": 0.02186703123152256,
+  "mean_metrics": {
+    "control_effort": 0.0010302462615072727,
+    "control_smoothness": 5.621498075925047e-06,
+    "episode_failure": 0.0,
+    "episode_success": 1.0,
+    "floor_clip_fraction": 0.0,
+    "loss_altitude": 1.1073097300196011e-11,
+    "loss_effort": 1.0302463806510787e-06,
+    "loss_position": 0.017525911331176758,
+    "loss_smoothness": 5.621498821994919e-09,
+    "loss_terminal": 0.0032594932708889246,
+    "loss_total": 0.02186703123152256,
+    "loss_velocity": 0.0010805900674313307,
+    "max_position_error_m": 0.053546641021966934,
+    "motor_saturation_fraction": 0.0,
+    "nonfinite_state_fraction": 0.0,
+    "p95_position_error_m": 0.05188969522714615,
+    "position_rmse_m": 0.032913461327552795,
+    "terminal_position_error_m": 0.04348607733845711,
+    "terminal_velocity_error_m_s": 0.24603483080863953,
+    "velocity_rmse_m_s": 0.10275803506374359,
+    "zero_thrust_gate_fraction": 0.0
+  },
+  "process_max_rss_kib": 1038684,
+  "process_max_rss_unit": "KiB on Linux",
+  "root_seed": 20260731,
+  "schema_version": "crazyflow.mellinger_scaling_benchmark.v3",
+  "scope": "technical CPU train value-and-gradient scaling pilot; not an optimizer, validation, scientific-performance, hardware, or realism claim",
+  "source_dirty": false,
+  "source_fingerprint": "8ff8317b01de2aafda276bd13af3f2ee920a9610b764344c05d0fc620ae87320",
+  "source_status_short": [],
+  "status": "success",
+  "steady_execution_seconds": [
+    0.257456197,
+    0.250785298,
+    0.255247431,
+    0.25591707,
+    0.251324349
+  ],
+  "steady_median_seconds": 0.255247431,
+  "technical_gate": {
+    "all_episodes_successful": true,
+    "all_outputs_finite": true,
+    "floor_clip_fraction_zero": true,
+    "motor_saturation_fraction_below_half": true,
+    "nonfinite_state_fraction_zero": true,
+    "passed": true,
+    "zero_thrust_gate_fraction_zero": true
+  },
+  "test_manifest_opened": false,
+  "test_split_built_or_evaluated": false,
+  "trajectory_distribution_version": "fixed_support_prefix_v2",
+  "worlds": 4
+}

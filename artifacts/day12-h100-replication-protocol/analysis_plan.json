@@ -1,0 +1,126 @@
+{
+  "active_persistence_amendment": "2026-08-01-local-ssd-persistence-v1",
+  "analysis_population": {
+    "exclude_after_viewing_scientific_result": false,
+    "imputation": "none",
+    "pilot_seed_excluded": 20260731,
+    "planned_seed_count": 10,
+    "replacement_seeds": 0,
+    "valid_panel_requires_all_predeclared_seeds": true
+  },
+  "derived_primary_support": {
+    "aggregation": "same mean, ddof=1 SD, 95% t interval, median, Q1/Q3, all values",
+    "relative_validation_improvement_per_seed": "1 - selected_validation_loss / validation_loss_at_step_1"
+  },
+  "go_no_go_horizon_transition": {
+    "decision_scope": "permission to prepare a later unchanged H200/H400 protocol only",
+    "go_requires_all": [
+      "10 of 10 predeclared seeds have one valid included run and no replacement seed",
+      "all completion, checksum, finite, technical, fingerprint, resource, and Test gates pass",
+      "all ten relative_validation_improvement values are greater than zero",
+      "at least 8 of 10 relative_validation_improvement values are at least 0.50",
+      "lower bound of the frozen 95% t interval for mean relative improvement is at least 0.50",
+      "95% t-interval half-width for mean selected_validation_loss divided by its mean is at most 0.25",
+      "for every seed, validation_loss_at_step_5000 is at most 1.10 times selected_validation_loss",
+      "every selected gain's normalized nearest-bound distance is at least 0.01",
+      "all raw runs remain unchanged in the repository artifact area and every local SHA-256 index and required pre-seed reverification passes",
+      "no unplanned scientific, statistical, runtime, or execution-protocol change occurred"
+    ],
+    "no_go": "Any failed GO condition is NO-GO for H200/H400. Preserve evidence and diagnose; do not tune, replace seeds, add runs, or open Test under this protocol."
+  },
+  "persistence_scope_only": true,
+  "primary_endpoint": {
+    "across_seed_point_estimate": "arithmetic mean over the ten manifest-ordered seeds",
+    "direction": "lower is better",
+    "name": "selected_validation_loss",
+    "per_seed_source": "run_summary.selected.selected_validation_loss",
+    "robust_descriptive_companion": {
+      "all_ten_individual_values_in_manifest_order": true,
+      "median": true,
+      "q1_q3": "numpy.quantile probabilities 0.25 and 0.75 with method='linear'"
+    },
+    "uncertainty": {
+      "confidence_interval": "two-sided 95% Student-t interval for the mean",
+      "critical_value_t_0.975_df_9": 2.2621571627409915,
+      "degrees_of_freedom": 9,
+      "formula": "mean +/- critical_value * sample_sd / sqrt(10)",
+      "sample_standard_deviation": "ddof=1"
+    }
+  },
+  "runner_emitted_metric_names": [
+    "loss",
+    "gradient_l2_norm (Train only)",
+    "loss_total",
+    "loss_position",
+    "loss_velocity",
+    "loss_effort",
+    "loss_smoothness",
+    "loss_terminal",
+    "loss_altitude",
+    "position_rmse_m",
+    "velocity_rmse_m_s",
+    "control_effort",
+    "control_smoothness",
+    "max_position_error_m",
+    "p95_position_error_m",
+    "terminal_position_error_m",
+    "terminal_velocity_error_m_s",
+    "motor_saturation_fraction",
+    "floor_clip_fraction",
+    "zero_thrust_gate_fraction",
+    "nonfinite_state_fraction",
+    "episode_success",
+    "episode_failure"
+  ],
+  "schema_version": "crazyflow.h100_replication_analysis_plan.v1",
+  "secondary_endpoints": [
+    "selected_step",
+    "validation_loss_at_step_5000",
+    "train_loss_at_selected_step",
+    "train_loss_at_step_5000",
+    "gradient_l2_norm_at_selected_step",
+    "gradient_l2_norm_at_step_5000",
+    "Validation-minus-Train loss gap at selected step and step 5000",
+    "selected and final physical kp_xy, kp_z, kd_xy, kd_z",
+    "selected and final normalized distance of each gain to its nearest bound",
+    "runner-emitted loss components at selected step and step 5000",
+    "runner-emitted tracking and technical metrics at selected step and step 5000",
+    "per-run maxima of motor_saturation_fraction, floor_clip_fraction, zero_thrust_gate_fraction, nonfinite_state_fraction, and max_position_error_m",
+    "external walltime, Peak-RSS, swap, artifact bytes, and checkpoint-write time"
+  ],
+  "secondary_inference_policy": "Descriptive only: all individual values, mean, ddof=1 SD, 95% t interval, median, and linear-method Q1/Q3 where numeric. No secondary p-values and no multiplicity claim.",
+  "selection_rule": {
+    "candidate_steps": "every completed post-update step 1 through 5000",
+    "checkpoint_note": "Checkpoint files occur every 100 updates, but each stores selected_step and selected_raw_gains even when that selected step lies between checkpoint files.",
+    "implementation": "update only when validation_loss < best_validation",
+    "operation": "global minimum within each seed",
+    "quantity": "fixed Validation loss",
+    "step_zero_is_not_a_candidate": true,
+    "test_used": false,
+    "tie_breaking": "an exact equality does not update, therefore the earliest exact tie wins"
+  },
+  "status": "FROZEN_BEFORE_ANY_CONFIRMATORY_RUN",
+  "technical_failure_policy": {
+    "exogenous_retry": "At most one full restart from update 0 with the same seed and byte-identical config is allowed only for a documented exogenous interruption or storage/host failure that is not caused by the runner's scientific or technical gates.",
+    "failed_attempt_preservation": "Retain and checksum every failed attempt; classify it before any retry and before panel aggregation. Never delete, move, rename, compress, modify, or overwrite it during the confirmatory series.",
+    "no_resume": true,
+    "no_retry_for": [
+      "nonfinite value",
+      "failed Train or Validation technical gate",
+      "trajectory construction failure",
+      "7200-second timeout without documented exogenous host interruption",
+      "Peak-RSS at or above 12 GiB",
+      "any swap",
+      "config/source/runtime/gain/Validation fingerprint mismatch after launch",
+      "Test access or Test metric"
+    ],
+    "preflight_block": "Branch, source/runtime/config/manifest fingerprint, capacity, sequentiality, or local-storage capacity/integrity failure before launch blocks launch and does not count as an attempt.",
+    "second_failure_or_nonretryable_failure": "Mark the seed invalid, perform no replacement, stop remaining launches, and set the panel decision to NO-GO.",
+    "successful_retry_inclusion": "If the sole allowed exogenous retry passes, include that successful run for the same predeclared seed and retain the failed attempt as audit evidence."
+  },
+  "test_policy": {
+    "final_use": "exactly once only after H100 replication, later horizons, and all decisions freeze",
+    "locked": true,
+    "open_count_during_replication": 0
+  }
+}

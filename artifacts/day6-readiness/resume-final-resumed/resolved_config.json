@@ -1,0 +1,72 @@
+{
+  "config": {
+    "domain_randomization": {
+      "delay_enabled": false,
+      "delay_max_control_steps": 0,
+      "force_std_n": 0.0,
+      "mass_enabled": true,
+      "mass_half_width_kg": 0.0002,
+      "torque_std_nm": 0.0,
+      "wrench_correlation_time_s": 0.1,
+      "wrench_enabled": false
+    },
+    "optimizer": {
+      "gain_stage": 1,
+      "learning_rate": 0.001,
+      "steps": 2
+    },
+    "root_seed": 20260731,
+    "run_id": "sprint6-local-technical-resume-equivalence",
+    "schema_version": "crazyflow.mellinger_research_config.v1",
+    "test_manifest": "configs/research/mellinger/test_manifest.v1.json",
+    "train": {
+      "control_freq_hz": 100,
+      "drone": "cf2x_L250",
+      "horizon": 20,
+      "n_drones": 1,
+      "n_worlds": 1,
+      "sim_freq_hz": 500
+    },
+    "trajectory": {
+      "amplitude_m": [
+        0.0003,
+        0.0003,
+        0.0002
+      ],
+      "center_m": [
+        0.0,
+        0.0,
+        0.75
+      ],
+      "harmonics": 3,
+      "max_acceleration_m_s2": 10.0,
+      "max_attempts": 16,
+      "max_jerk_m_s3": 1000.0,
+      "max_speed_m_s": 1.5,
+      "max_tilt_rad": 1.0,
+      "max_yaw_rate_rad_s": 1.0,
+      "min_specific_force_m_s2": 2.0,
+      "workspace_max_m": [
+        0.6,
+        0.6,
+        1.2
+      ],
+      "workspace_min_m": [
+        -0.6,
+        -0.6,
+        0.35
+      ]
+    },
+    "validation": {
+      "control_freq_hz": 100,
+      "drone": "cf2x_L250",
+      "horizon": 20,
+      "n_drones": 1,
+      "n_worlds": 1,
+      "sim_freq_hz": 500
+    },
+    "validation_manifest": "configs/research/mellinger/validation_manifest.v1.json"
+  },
+  "config_fingerprint": "69cb19645493c7905f89ce0e914add62e06bd5faf07d632e12d4de7e9240aa87",
+  "source": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/sprint6_resume.json"
+}

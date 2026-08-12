@@ -1,0 +1,330 @@
+{
+  "cross_split_leakage_count": 0,
+  "optimizer_initialization_count": 0,
+  "optimizer_update_count": 0,
+  "parent_count": 12,
+  "parents": [
+    {
+      "attempt": 0,
+      "attempt_identity": "validation-soft-hold-8401001/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "df68589f89e9f871c4baf61fe0147aac40b6c8c9e08de881b593c8e6b03d2e81",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "6c9b6486475dbf2a34e85cccbcac191ae0304c9898cffe3b4396ec83b02f0b76",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-soft-hold-8401001",
+      "motion_class": "soft",
+      "pair_id": "pair-soft-hold",
+      "parent_digest": "1aee4c16a594f87cd9a21afff83913bad3d6fcfa3b3e4b73499783f81ce18ee0",
+      "profile": "hold",
+      "seed": 8401001
+    },
+    {
+      "attempt": 1,
+      "attempt_identity": "validation-soft-climb-8401002/attempt-1",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "1b9b3377b7c1b03d9dd4a1aaa262f93ce439c3945dcd9c624690ddc2d20d7c25",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "dd6a1d0ef356bd72dd5db716a38ce9841e399c15ebbf241e5109d65ec0bc2238",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-soft-climb-8401002",
+      "motion_class": "soft",
+      "pair_id": "pair-soft-climb",
+      "parent_digest": "061aa32a05bdfaefca27f0f2871ded08c05a28a052bf19f1c4caafe94b732c62",
+      "profile": "climb",
+      "seed": 8401002
+    },
+    {
+      "attempt": 0,
+      "attempt_identity": "validation-soft-descent-8401003/attempt-0",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "5004cdf833b88978d3dcbf6da1c686a343106a8e8cbbc3b11eaf95d70777b21c",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "a9545accd30ec5a108499bf595947d0eb56c9100c9dc549f8acbd0cdd97d85e5",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-soft-descent-8401003",
+      "motion_class": "soft",
+      "pair_id": "pair-soft-descent",
+      "parent_digest": "11646f629794433cf50edfaabf5fa9ed5acc5dc06109f46767032db4b51a7f58",
+      "profile": "descent",
+      "seed": 8401003
+    },
+    {
+      "attempt": 2,
+      "attempt_identity": "validation-nominal-hold-8401101/attempt-2",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "2d37e807bcee31048949e7c31cc84174be02c5b2cc98ac9a70ec96529ec98ed8",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "87186059fc7e152a040e0c12f71b83e6a6b7d0ce5821a849de2a97f441fb204e",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-nominal-hold-8401101",
+      "motion_class": "nominal",
+      "pair_id": "pair-nominal-hold",
+      "parent_digest": "2170f06c1605ad08f7827ca099f0bc92006b82fdd6766f8ecab54dffce988298",
+      "profile": "hold",
+      "seed": 8401101
+    },
+    {
+      "attempt": 1,
+      "attempt_identity": "validation-nominal-climb-8401102/attempt-1",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "71ee394c35f7ece7087604f5a9ebf5bbf55ce85ca0d23d4bef65c67637f82c1b",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "6ef33e9dfd3f39dd571bc18e214b4bbf9de0b8cad603e57c264765d94246f1cc",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-nominal-climb-8401102",
+      "motion_class": "nominal",
+      "pair_id": "pair-nominal-climb",
+      "parent_digest": "c64b70cb8507659b8946dbc33641c30f7feb753a697fede80f120a6a66304a4d",
+      "profile": "climb",
+      "seed": 8401102
+    },
+    {
+      "attempt": 1,
+      "attempt_identity": "validation-nominal-descent-8401103/attempt-1",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "839c2efd96c32b8f59739df35840c6ebb2403e671279195220bc26fcb8055c3a",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "3e20e4533856a2c71d15c6151fa85a08f7dafdc58a449b3c3fb913fab6655c81",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-nominal-descent-8401103",
+      "motion_class": "nominal",
+      "pair_id": "pair-nominal-descent",
+      "parent_digest": "21ce6a6ae9a09a6d30a2880cb8c2812197686b902e92d99f79c320845ab91eb6",
+      "profile": "descent",
+      "seed": 8401103
+    },
+    {
+      "attempt": 5,
+      "attempt_identity": "validation-dynamic-hold-8401201/attempt-5",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "10e4eb07bbdd1f59394bb1dda1890c73575578a82313d1f768320ddcf428a81e",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "71c7a5897ba52704bb832f9a8a43fc1c5e60147aaf8681eace76d8679b818c9e",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-dynamic-hold-8401201",
+      "motion_class": "dynamic",
+      "pair_id": "pair-dynamic-hold",
+      "parent_digest": "73f5861e976714733bdf1ff929cf6f25a4db64655373886be869de4ab97c8d2c",
+      "profile": "hold",
+      "seed": 8401201
+    },
+    {
+      "attempt": 4,
+      "attempt_identity": "validation-dynamic-climb-8401202/attempt-4",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "6548978ce56f18e4c165b0973ceb555ed1becab168c0395c8b695917bb3b2675",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "27c15dfe21cfa058e11a7be527cad613190758507e5b3ae5727ee43d9b4593fa",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-dynamic-climb-8401202",
+      "motion_class": "dynamic",
+      "pair_id": "pair-dynamic-climb",
+      "parent_digest": "76e232e96529e60b3282882825d388273fd57c5a77b7754b8a9ded2402517d14",
+      "profile": "climb",
+      "seed": 8401202
+    },
+    {
+      "attempt": 1,
+      "attempt_identity": "validation-dynamic-descent-8401203/attempt-1",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "9b25f330b40d6abcfd5674302c25774e51afa36ecf1ab71a62a340b30831ba0b",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "00ccbda3bac16f02199bdac264764d32e06b8363f27f51516b5e7e8573a8d3d0",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-dynamic-descent-8401203",
+      "motion_class": "dynamic",
+      "pair_id": "pair-dynamic-descent",
+      "parent_digest": "fca3776627fd04dbb81a7198a808f448278a41125ea90d0c22a742aca059ed3f",
+      "profile": "descent",
+      "seed": 8401203
+    },
+    {
+      "attempt": 22,
+      "attempt_identity": "validation-near_limit-hold-8401301/attempt-22",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "b0efe930439635de4aff1bc62c03f1cdb2cdb1c46d7e65e3139425f76434b9d1",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "14d6dfcbd917d1ef85a7b04dcae26ba446f730c63cc3015b4a35e54a3d9d9023",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-near_limit-hold-8401301",
+      "motion_class": "near_limit",
+      "pair_id": "pair-near_limit-hold",
+      "parent_digest": "c9c77328416667e9c3e87bbd05d84fbf1b9969844fbcd1f33d9e0453adc0aaf8",
+      "profile": "hold",
+      "seed": 8401301
+    },
+    {
+      "attempt": 4,
+      "attempt_identity": "validation-near_limit-climb-8401302/attempt-4",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "2d533f116d8e0fc81724333ac75bf47ad78761c98ae2057b45d637e68c1240d3",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "46973ef9f6b07f8d3860d3ff31263be5e71db9d5f6fc32454dbb23750a9c8171",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-near_limit-climb-8401302",
+      "motion_class": "near_limit",
+      "pair_id": "pair-near_limit-climb",
+      "parent_digest": "a134a82238eb2c14ddfc87dc8a79581b8760b00a3e80f88a90be9ea613af2058",
+      "profile": "climb",
+      "seed": 8401302
+    },
+    {
+      "attempt": 17,
+      "attempt_identity": "validation-near_limit-descent-8401303/attempt-17",
+      "component_key_digests": {
+        "position": {
+          "dtype": "uint32",
+          "sha256": "9621c4fba7487e88d1619b4c0755c825b04e5cd8a7066a84b3ff72d352ee09a4",
+          "shape": [
+            2
+          ]
+        },
+        "yaw": {
+          "dtype": "uint32",
+          "sha256": "8a73efd23d1d1f42c2a1c6b9d8deab8ceb88d61a984b4c82b901c2435afe6d8c",
+          "shape": [
+            2
+          ]
+        }
+      },
+      "episode_id": "validation-near_limit-descent-8401303",
+      "motion_class": "near_limit",
+      "pair_id": "pair-near_limit-descent",
+      "parent_digest": "02e9bf82b5a61a9d8f3a20c4c4f73e7cf93e3f3431d134b5a087e4beb753537e",
+      "profile": "descent",
+      "seed": 8401303
+    }
+  ],
+  "schema_version": "crazyflow.g3_identifiability_freeze_v2.v4",
+  "split": "validation",
+  "split_disjointness_coordinates": [
+    "episode_id",
+    "seed",
+    "attempt_identity",
+    "component_key_digest",
+    "parent_digest"
+  ],
+  "test_manifest": null
+}

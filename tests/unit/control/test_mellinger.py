@@ -185,6 +185,27 @@ def test_attitude2force_torque_batch_consistency(drone: str):
 
 @pytest.mark.unit
 @pytest.mark.parametrize("drone", available_drones)
+def test_attitude2force_torque_mixed_zero_thrust_batch_consistency(drone: str) -> None:
+    """A zero-thrust world must stay zero beside an active world."""
+    controller = parametrize(attitude2force_torque, drone)
+    quat = np.broadcast_to(np.array([0.0, 0.0, 0.0, 1.0]), (2, 1, 4))
+    ang_vel = np.zeros((2, 1, 3))
+    cmd = np.zeros((2, 1, 4))
+    cmd[0, 0] = np.array([0.1, -0.1, 0.05, 0.0])
+    cmd[1, 0, 3] = 0.5
+
+    force_batch, torque_batch, _ = controller(quat, ang_vel, cmd)
+    force_zero, torque_zero, _ = controller(quat[0, 0], ang_vel[0, 0], cmd[0, 0])
+    force_active, torque_active, _ = controller(quat[1, 0], ang_vel[1, 0], cmd[1, 0])
+
+    assert np.allclose(force_batch[0, 0], force_zero, atol=1e-6)
+    assert np.allclose(torque_batch[0, 0], torque_zero, atol=1e-6)
+    assert np.allclose(force_batch[1, 0], force_active, atol=1e-6)
+    assert np.allclose(torque_batch[1, 0], torque_active, atol=1e-6)
+
+
+@pytest.mark.unit
+@pytest.mark.parametrize("drone", available_drones)
 def test_force_torque2rotor_vel_batch_consistency(drone: str):
     controller = parametrize(force_torque2rotor_vel, drone)
     batch = (3, 2)
@@ -195,6 +216,22 @@ def test_force_torque2rotor_vel_batch_consistency(drone: str):
         for j in range(batch[1]):
             rpm_s = controller(force[i, j], torque[i, j])
             assert np.allclose(rpm_batch[i, j], rpm_s, atol=1e-5)
+
+
+@pytest.mark.unit
+@pytest.mark.parametrize("drone", available_drones)
+def test_force_torque2rotor_vel_mixed_zero_force_batch_consistency(drone: str) -> None:
+    """A zero-force world must not inherit minimum thrust from another world."""
+    controller = parametrize(force_torque2rotor_vel, drone)
+    force = np.array([[[0.0]], [[0.2]]])
+    torque = np.zeros((2, 1, 3))
+
+    rpm_batch = controller(force, torque)
+    rpm_zero = controller(force[0, 0], torque[0, 0])
+    rpm_active = controller(force[1, 0], torque[1, 0])
+
+    assert np.allclose(rpm_batch[0, 0], rpm_zero, atol=1e-6)
+    assert np.allclose(rpm_batch[1, 0], rpm_active, atol=1e-6)
 
 
 # Symmetric force check

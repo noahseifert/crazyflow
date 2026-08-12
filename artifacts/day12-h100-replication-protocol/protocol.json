@@ -1,0 +1,62 @@
+{
+  "active_amendment": {
+    "base_protocol_commit": "73868cfd84d25bec0c6612b31ee34f4e67acb307",
+    "effective_at_utc": "2026-08-01T12:51:18Z",
+    "id": "2026-08-01-local-ssd-persistence-v1",
+    "scope": "persistence and single-drive fault tolerance only"
+  },
+  "exploratory_pilot": {
+    "included_in_confirmatory_seed_count_or_aggregation": false,
+    "role": "planning evidence only",
+    "root_seed": 20260731,
+    "run": "artifacts/day10-sparse-long-pilot/runs/20260801T081232Z-1345032536fd"
+  },
+  "frozen_design": {
+    "checkpoint_interval": 100,
+    "execution": "strictly sequential, one fresh CPU process at a time",
+    "fixed_validation_worlds": 4,
+    "gain_names": [
+      "kp_xy",
+      "kp_z",
+      "kd_xy",
+      "kd_z"
+    ],
+    "gain_stage": 1,
+    "horizon": 100,
+    "new_root_seeds": [
+      1432116264,
+      366692846,
+      235438753,
+      1369406745,
+      1081462774,
+      1276309202,
+      987511476,
+      2125653507,
+      31735934,
+      986925065
+    ],
+    "seed_count": 10,
+    "test_locked": true,
+    "train_worlds": 4,
+    "updates_per_seed": 5000
+  },
+  "protocol_origin_head": "a269046fb0e70cb5ecc8b4c1783b87aecd866b7f",
+  "references": {
+    "analysis_plan": "analysis_plan.json",
+    "persistence_amendment": "amendments/2026-08-01-local-ssd-persistence-v1.json",
+    "persistence_amendment_human_readable": "amendments/2026-08-01-local-ssd-persistence-v1.md",
+    "requirements": "requirements.json",
+    "run_inventory": "run_inventory.json",
+    "runbook_template": "sprint13_runbook_template.sh",
+    "seed_manifest": "seed_manifest.json"
+  },
+  "release": {
+    "later_execution_requires_new_preflight_and_explicit_authorization": true,
+    "sprint12_research_runs_authorized": 0,
+    "sprint12a_research_runs_authorized": 0,
+    "sprint13_automatic_seed_loop_authorized": false
+  },
+  "schema_version": "crazyflow.h100_replication_protocol.v1",
+  "status": "FROZEN_PROTOCOL_ONLY_NO_RUN_AUTHORIZATION",
+  "title": "Ten-seed H100 replication protocol"
+}

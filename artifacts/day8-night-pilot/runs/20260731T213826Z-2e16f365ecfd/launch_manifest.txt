@@ -1,0 +1,11 @@
+schema_version=crazyflow.sprint8_launch_manifest.v1
+started_at_utc=2026-07-31T21:38:26+00:00
+repository_root=/home/noah3/bachelorarbeit/crazyflow-gradient-research
+branch=research/differentiable-mellinger
+git_head=2e16f365ecfd60357d846c159549fe910a4fd220
+config_path=/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/pilot_config.json
+config_sha256=43a2a75be839ff0ec75c462d3d502f1b5f8330747c5e9b94f71d57ed9f02bd07
+config_fingerprint=6d0465b5776fe1f09b0f5b1ab8777d02b9b3bd01386d8f00cc6209fb97d2efaa
+wall_budget_seconds=21600
+resume_checkpoint=none
+command=/usr/bin/time -v -o /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/runs/20260731T213826Z-2e16f365ecfd/time.txt timeout --signal=TERM --kill-after=30s 21600s .venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/pilot_config.json --output-dir /home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/runs/20260731T213826Z-2e16f365ecfd/runner-output 

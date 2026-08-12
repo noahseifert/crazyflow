@@ -1,0 +1,566 @@
+{
+  "consistency": {
+    "comparisons": [
+      {
+        "gradient_absolute_error_vs_4": [
+          4.889443516731262e-09,
+          3.725290298461914e-08,
+          7.450580596923828e-09,
+          1.6065314412117004e-08
+        ],
+        "gradient_allowed_error": [
+          3.297232353816071e-08,
+          1.5237044408422662e-06,
+          5.969627068225236e-07,
+          4.981311718665893e-08
+        ],
+        "loss_absolute_error_vs_4": 2.9802322387695312e-08,
+        "loss_allowed_error": 2.5428657863812987e-06,
+        "passed": true,
+        "world_count": 16
+      },
+      {
+        "gradient_absolute_error_vs_4": [
+          2.0954757928848267e-09,
+          2.2351741790771484e-08,
+          0.0,
+          1.257285475730896e-08
+        ],
+        "gradient_allowed_error": [
+          3.297232353816071e-08,
+          1.5237044408422662e-06,
+          5.969627068225236e-07,
+          4.981311718665893e-08
+        ],
+        "loss_absolute_error_vs_4": 2.9802322387695312e-08,
+        "loss_allowed_error": 2.5428657863812987e-06,
+        "passed": true,
+        "world_count": 32
+      }
+    ],
+    "factor_times_float32_eps": 1.52587890625e-05,
+    "rtol": 0.0,
+    "status": "PASS_REPLICATED_BLOCK_CONSISTENCY"
+  },
+  "elapsed_seconds": 55.605874002001656,
+  "generator_commit": "69a19cee5b4470972b3ce0cb25eb6a838ab7b8d3",
+  "method": {
+    "child_timeout_seconds": 300,
+    "fresh_cpu_process_per_world_count": true,
+    "overall_timeout_seconds": 900,
+    "raw_measurements_reused_for_package_reproduction": true,
+    "representative_path": "6-s rollout, per-world 2-s interior score, unchanged Loss v1, Stage-1 default raw-gain value_and_grad, repository mismatch",
+    "steady_repeats": 3,
+    "world_counts": [
+      4,
+      16,
+      32
+    ]
+  },
+  "raw_measurement_sha256": "282dc6e652a560152efac0f7dce62dd9d9bbc845fc4c05f5dda4fc48d2e564e5",
+  "recommendation": {
+    "rule": "smallest allowed count with >=90% of best allowed steady worlds/s; allowed requires zero child swap activity and Max-RSS <=70% MemTotal",
+    "scope": "next CPU batch-size recommendation only; no global default or GPU claim",
+    "world_count": 32
+  },
+  "results": [
+    {
+      "environment": {
+        "backend": "cpu",
+        "device": "cpu:0",
+        "jax_version": "0.10.1",
+        "jax_x64": false,
+        "numpy_version": "2.5.1",
+        "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+        "python_version": "3.12.13"
+      },
+      "gradient": [
+        0.0021608741953969,
+        -0.09985749423503876,
+        -0.03912254795432091,
+        0.0032645524479448795
+      ],
+      "input_contract": {
+        "block_episode_ids": [
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201"
+        ],
+        "block_repetitions": 1,
+        "input_digests": {
+          "commands": {
+            "dtype": "float32",
+            "sha256": "e1f46e9db0282d1aa3e50ca2748de888746e335a50917c0f946bf4cb08c79c79",
+            "shape": [
+              600,
+              4,
+              1,
+              13
+            ]
+          },
+          "four_world_command_block": {
+            "dtype": "float32",
+            "sha256": "e1f46e9db0282d1aa3e50ca2748de888746e335a50917c0f946bf4cb08c79c79",
+            "shape": [
+              600,
+              4,
+              1,
+              13
+            ]
+          },
+          "four_world_reference_block": {
+            "dtype": "float32",
+            "sha256": "b69525405232efe2176c2bbe83f96002b4a16d2d7d3d3d0c1628b47373e3b2c9",
+            "shape": [
+              600,
+              4,
+              1,
+              3
+            ]
+          },
+          "initial_states": {
+            "dtype": "float32",
+            "sha256": "e7c08d28ae6999972c586c21faf0eb20371d8462bef6d2c2ed92746669734905",
+            "shape": [
+              4,
+              1,
+              3
+            ]
+          },
+          "raw_default_stage1_gains": {
+            "dtype": "float32",
+            "sha256": "456ac607bad7ab14115be46c25e3ed871718e15979638aff18d2521430a4f086",
+            "shape": [
+              4
+            ]
+          },
+          "reference_position": {
+            "dtype": "float32",
+            "sha256": "b69525405232efe2176c2bbe83f96002b4a16d2d7d3d3d0c1628b47373e3b2c9",
+            "shape": [
+              600,
+              4,
+              1,
+              3
+            ]
+          },
+          "reference_velocity": {
+            "dtype": "float32",
+            "sha256": "309e3a0d28d17d8ba51f9c3b10e025d0c62db49dd2daa6abd3200fd94f0d706d",
+            "shape": [
+              600,
+              4,
+              1,
+              3
+            ]
+          },
+          "score_starts": {
+            "dtype": "int32",
+            "sha256": "b1cb56daae81e0d92462e787b206c96e5c2f62095308943d47b69278fccb4033",
+            "shape": [
+              4
+            ]
+          }
+        },
+        "mass_variant": "repository_mismatch",
+        "near_limit_included": false,
+        "replication_array_equal": true,
+        "world_count": 4,
+        "world_episode_ids": [
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201"
+        ]
+      },
+      "loss": 0.1666492521762848,
+      "memory": {
+        "after": {
+          "mem_available_bytes": 13698072576,
+          "mem_total_bytes": 16061718528,
+          "swap_free_bytes": 4294967296,
+          "swap_total_bytes": 4294967296,
+          "vm_hwm_bytes": 1217765376,
+          "vm_peak_bytes": 9144791040,
+          "vm_swap_bytes": 0
+        },
+        "before": {
+          "mem_available_bytes": 14605348864,
+          "mem_total_bytes": 16061718528,
+          "swap_free_bytes": 4294967296,
+          "swap_total_bytes": 4294967296,
+          "vm_hwm_bytes": 300183552,
+          "vm_peak_bytes": 6134939648,
+          "vm_swap_bytes": 0
+        },
+        "ru_maxrss_bytes": 1216450560,
+        "swap_activity_detected": false
+      },
+      "process_id": 100,
+      "timing": {
+        "compile_ns": 3489196014,
+        "first_synchronized_execution_ns": 812371716,
+        "lowering_ns": 3193392050,
+        "lowering_plus_compile_ns": 6682588064,
+        "steady_median_ns": 748852923,
+        "steady_scored_episode_seconds_per_s": 10.68300564008081,
+        "steady_synchronized_execution_ns": [
+          748852923,
+          750517985,
+          746626856
+        ],
+        "steady_worlds_per_s": 5.341502820040405,
+        "timer": "time.perf_counter_ns",
+        "unmeasured_warmup_count": 1
+      },
+      "world_count": 4
+    },
+    {
+      "environment": {
+        "backend": "cpu",
+        "device": "cpu:0",
+        "jax_version": "0.10.1",
+        "jax_x64": false,
+        "numpy_version": "2.5.1",
+        "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+        "python_version": "3.12.13"
+      },
+      "gradient": [
+        0.0021608693059533834,
+        -0.09985745698213577,
+        -0.03912254050374031,
+        0.0032645363826304674
+      ],
+      "input_contract": {
+        "block_episode_ids": [
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201"
+        ],
+        "block_repetitions": 4,
+        "input_digests": {
+          "commands": {
+            "dtype": "float32",
+            "sha256": "47399271374fc99e9eb77009cf100c752b81045579309568c905bc82811dc000",
+            "shape": [
+              600,
+              16,
+              1,
+              13
+            ]
+          },
+          "four_world_command_block": {
+            "dtype": "float32",
+            "sha256": "e1f46e9db0282d1aa3e50ca2748de888746e335a50917c0f946bf4cb08c79c79",
+            "shape": [
+              600,
+              4,
+              1,
+              13
+            ]
+          },
+          "four_world_reference_block": {
+            "dtype": "float32",
+            "sha256": "b69525405232efe2176c2bbe83f96002b4a16d2d7d3d3d0c1628b47373e3b2c9",
+            "shape": [
+              600,
+              4,
+              1,
+              3
+            ]
+          },
+          "initial_states": {
+            "dtype": "float32",
+            "sha256": "be8d3c9f249d6e85f1a0b400b2055138da0b2ff9793be7a85eb3fc0f5fc37cea",
+            "shape": [
+              16,
+              1,
+              3
+            ]
+          },
+          "raw_default_stage1_gains": {
+            "dtype": "float32",
+            "sha256": "456ac607bad7ab14115be46c25e3ed871718e15979638aff18d2521430a4f086",
+            "shape": [
+              4
+            ]
+          },
+          "reference_position": {
+            "dtype": "float32",
+            "sha256": "3fc59889abbbce2e0bb609c40b4f8a8b137139bfda43f37ad6db5bb0a2be8d86",
+            "shape": [
+              600,
+              16,
+              1,
+              3
+            ]
+          },
+          "reference_velocity": {
+            "dtype": "float32",
+            "sha256": "d6778d3e8932766192bb14b56f5f59c967202570b311835a5ebfd7e9865902ad",
+            "shape": [
+              600,
+              16,
+              1,
+              3
+            ]
+          },
+          "score_starts": {
+            "dtype": "int32",
+            "sha256": "b50109c827c27d5c53597e01a8be12e39f95c43cc1f25aec7de58328aa63281b",
+            "shape": [
+              16
+            ]
+          }
+        },
+        "mass_variant": "repository_mismatch",
+        "near_limit_included": false,
+        "replication_array_equal": true,
+        "world_count": 16,
+        "world_episode_ids": [
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201"
+        ]
+      },
+      "loss": 0.1666492223739624,
+      "memory": {
+        "after": {
+          "mem_available_bytes": 13631971328,
+          "mem_total_bytes": 16061718528,
+          "swap_free_bytes": 4294967296,
+          "swap_total_bytes": 4294967296,
+          "vm_hwm_bytes": 1274138624,
+          "vm_peak_bytes": 9200844800,
+          "vm_swap_bytes": 0
+        },
+        "before": {
+          "mem_available_bytes": 14582726656,
+          "mem_total_bytes": 16061718528,
+          "swap_free_bytes": 4294967296,
+          "swap_total_bytes": 4294967296,
+          "vm_hwm_bytes": 300236800,
+          "vm_peak_bytes": 6075555840,
+          "vm_swap_bytes": 0
+        },
+        "ru_maxrss_bytes": 1274138624,
+        "swap_activity_detected": false
+      },
+      "process_id": 240,
+      "timing": {
+        "compile_ns": 3672480289,
+        "first_synchronized_execution_ns": 922251176,
+        "lowering_ns": 3305271143,
+        "lowering_plus_compile_ns": 6977751432,
+        "steady_median_ns": 900487969,
+        "steady_scored_episode_seconds_per_s": 35.53628821441811,
+        "steady_synchronized_execution_ns": [
+          898852372,
+          901081790,
+          900487969
+        ],
+        "steady_worlds_per_s": 17.768144107209054,
+        "timer": "time.perf_counter_ns",
+        "unmeasured_warmup_count": 1
+      },
+      "world_count": 16
+    },
+    {
+      "environment": {
+        "backend": "cpu",
+        "device": "cpu:0",
+        "jax_version": "0.10.1",
+        "jax_x64": false,
+        "numpy_version": "2.5.1",
+        "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+        "python_version": "3.12.13"
+      },
+      "gradient": [
+        0.0021608720999211073,
+        -0.09985747188329697,
+        -0.03912254795432091,
+        0.0032645398750901222
+      ],
+      "input_contract": {
+        "block_episode_ids": [
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201"
+        ],
+        "block_repetitions": 8,
+        "input_digests": {
+          "commands": {
+            "dtype": "float32",
+            "sha256": "260d54810ffab9068be79b9363ff01d5134006c59159b166e95452c6a00008b7",
+            "shape": [
+              600,
+              32,
+              1,
+              13
+            ]
+          },
+          "four_world_command_block": {
+            "dtype": "float32",
+            "sha256": "e1f46e9db0282d1aa3e50ca2748de888746e335a50917c0f946bf4cb08c79c79",
+            "shape": [
+              600,
+              4,
+              1,
+              13
+            ]
+          },
+          "four_world_reference_block": {
+            "dtype": "float32",
+            "sha256": "b69525405232efe2176c2bbe83f96002b4a16d2d7d3d3d0c1628b47373e3b2c9",
+            "shape": [
+              600,
+              4,
+              1,
+              3
+            ]
+          },
+          "initial_states": {
+            "dtype": "float32",
+            "sha256": "5b8c8723f5e246872119aa55f7838d31408ca2826e8d47fdeb460249ccc5281a",
+            "shape": [
+              32,
+              1,
+              3
+            ]
+          },
+          "raw_default_stage1_gains": {
+            "dtype": "float32",
+            "sha256": "456ac607bad7ab14115be46c25e3ed871718e15979638aff18d2521430a4f086",
+            "shape": [
+              4
+            ]
+          },
+          "reference_position": {
+            "dtype": "float32",
+            "sha256": "cfa61eaebe9bec3f13369b79a04e3542347b2e2556ca181572bbdf4af8b87fe3",
+            "shape": [
+              600,
+              32,
+              1,
+              3
+            ]
+          },
+          "reference_velocity": {
+            "dtype": "float32",
+            "sha256": "0b8e5e05c62cd9cd92947344f5b27263f904ba55e949daaf7d4dca222a874c80",
+            "shape": [
+              600,
+              32,
+              1,
+              3
+            ]
+          },
+          "score_starts": {
+            "dtype": "int32",
+            "sha256": "1780d74213b6c0c68eca1d82c2f550410f79133de7e049a75a09eec5269d8775",
+            "shape": [
+              32
+            ]
+          }
+        },
+        "mass_variant": "repository_mismatch",
+        "near_limit_included": false,
+        "replication_array_equal": true,
+        "world_count": 32,
+        "world_episode_ids": [
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201",
+          "train-soft-01-8101001",
+          "train-nominal-01-8101101",
+          "train-nominal-02-8101102",
+          "train-dynamic-01-8101201"
+        ]
+      },
+      "loss": 0.1666492223739624,
+      "memory": {
+        "after": {
+          "mem_available_bytes": 13516873728,
+          "mem_total_bytes": 16061718528,
+          "swap_free_bytes": 4294967296,
+          "swap_total_bytes": 4294967296,
+          "vm_hwm_bytes": 1356906496,
+          "vm_peak_bytes": 9283772416,
+          "vm_swap_bytes": 0
+        },
+        "before": {
+          "mem_available_bytes": 14513627136,
+          "mem_total_bytes": 16061718528,
+          "swap_free_bytes": 4294967296,
+          "swap_total_bytes": 4294967296,
+          "vm_hwm_bytes": 300224512,
+          "vm_peak_bytes": 6076616704,
+          "vm_swap_bytes": 0
+        },
+        "ru_maxrss_bytes": 1356906496,
+        "swap_activity_detected": false
+      },
+      "process_id": 380,
+      "timing": {
+        "compile_ns": 3658886151,
+        "first_synchronized_execution_ns": 1096963572,
+        "lowering_ns": 3167322032,
+        "lowering_plus_compile_ns": 6826208183,
+        "steady_median_ns": 1071313824,
+        "steady_scored_episode_seconds_per_s": 59.739731315181835,
+        "steady_synchronized_execution_ns": [
+          1065451772,
+          1071313824,
+          1084789508
+        ],
+        "steady_worlds_per_s": 29.869865657590918,
+        "timer": "time.perf_counter_ns",
+        "unmeasured_warmup_count": 1
+      },
+      "world_count": 32
+    }
+  ],
+  "schema_version": "crazyflow.cf21b_robust_benchmark.v1",
+  "status": "PASS_4_16_32_BENCHMARK"
+}

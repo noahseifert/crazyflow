@@ -1,0 +1,57 @@
+{
+  "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config configs/research/mellinger/sprint6_resume.json --max-updates-this-process 1 --output-dir artifacts/day6-readiness/resume-paused",
+  "config_fingerprint": "69cb19645493c7905f89ce0e914add62e06bd5faf07d632e12d4de7e9240aa87",
+  "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/sprint6_resume.json",
+  "ended_at_utc": "2026-07-31T18:54:35.291614+00:00",
+  "environment": {
+    "jax_backend": "cpu",
+    "jax_devices": [
+      "cpu:0"
+    ],
+    "packages": {
+      "flax": "0.12.8",
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8",
+      "pytest": "9.1.1"
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "frozen_test_manifest_reference_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+  "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "git": {
+    "branch": "research/differentiable-mellinger",
+    "dirty": false,
+    "head": "efc3da4d3ae70e4de74c4ee3bdceaf9fa4f628ab",
+    "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+    "source_fingerprint": "379b418c28e213dc2d4df7d9350ab75234be37e39884ac30f90ba3af521213b9",
+    "source_fingerprint_scope": [
+      "crazyflow",
+      "examples"
+    ],
+    "status_short": []
+  },
+  "resume_lineage": null,
+  "root_seed": 20260731,
+  "runtime_compatibility": {
+    "jax_backend": "cpu",
+    "jax_enable_x64": false,
+    "machine": "x86_64",
+    "packages": {
+      "jax": "0.10.1",
+      "jaxlib": "0.10.1",
+      "numpy": "2.5.1",
+      "optax": "0.2.8"
+    },
+    "python": "3.12.13"
+  },
+  "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+  "schema_version": "crazyflow.mellinger_research_provenance.v1",
+  "seed_coordinate_contract": "split -> episode -> world -> component",
+  "started_at_utc": "2026-07-31T18:54:21.671834+00:00",
+  "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+  "validation_manifest_id": "mellinger-validation-v1-20260731",
+  "wall_seconds_internal": 13.619783048
+}

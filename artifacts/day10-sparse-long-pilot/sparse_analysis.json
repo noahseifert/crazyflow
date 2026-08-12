@@ -1,0 +1,161 @@
+{
+  "decision": "GO",
+  "fingerprints": {
+    "implementation_git_branch": "research/differentiable-mellinger",
+    "implementation_git_head": "a58b78861cd15e904f7883668a689f297524f4a1",
+    "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+    "smoke_config_fingerprint": "27b0b8ebb9989077b560d5eb5fa7ace57e910ea81c1fa984d5c02c40f2fc13c5",
+    "source_dirty": false,
+    "source_fingerprint": "6b3fed4a445b82b2a1354115edc982a15e0d93cd4aff91fc8f51475e60f01c5e"
+  },
+  "gates": {
+    "artifact_projection_at_most_2_gib": true,
+    "exact_resume": true,
+    "integrity": true,
+    "peak_rss_below_12_gib": true,
+    "resume_exit_zero": true,
+    "runtime_projection_below_7200_seconds": true,
+    "scientific_semantics_unchanged": true,
+    "smoke_exit_zero": true,
+    "swap_zero": true
+  },
+  "inputs": {
+    "pilot_config_sha256": "6c6c166a19d4f9fb306597cdd111ff9fd78d7b176068635a7cd21045480864f1",
+    "resume_artifact_sha256": {
+      "checkpoint-step-000210.json": "afef8956d998959aa200240e7b4ca30aeff61e002ecff56563dbf4f429d7cbe0",
+      "metrics.jsonl": "f4043a69c1953b9457b814eb97fc1446cd07cca1b99b4fd775d106aa0780e86a",
+      "provenance.json": "78d069c2e52447fd73ff2e62e4444dc3f304efd9c8459da8f70a48bdfa04a8ed",
+      "resolved_config.json": "1fa0731beeb898da92e12c79ab2576bae4c7f64ac1bef430968d852dabbcc502",
+      "resume_equivalence.json": "7dd29d5050bd18459c9c8dfa124fceb56cf13a82ac5c3bbe3aa908e356366a0f",
+      "run_summary.json": "2209fe6d9ef2441046edbe8aecb115334f9138a214217c7f824cbb45c995be47"
+    },
+    "resume_directory": "artifacts/day10-sparse-long-pilot/smoke-resumed-200-to-210",
+    "resume_file_bytes": 1270436,
+    "resume_file_count": 6,
+    "smoke_artifact_sha256": {
+      "checkpoint-step-000100.json": "942c3f0844dbf5d28c47936c2a56a6521e5fc0c12327d4878561b57460e4e9bf",
+      "checkpoint-step-000200.json": "3b7713f520fa6c94f22165a95b636d85934055b5b2890fe25dcceca60108aca5",
+      "checkpoint-step-000210.json": "2dfbb9a5e7932f6d5ab63b4e5f2d01aa7a15303a5e8d52a9b29870f2ed877774",
+      "metrics.jsonl": "f4043a69c1953b9457b814eb97fc1446cd07cca1b99b4fd775d106aa0780e86a",
+      "provenance.json": "eb0ba262516e6bde36376fc2819ad08dc385078e8f89aaa44ad4a09242d45319",
+      "resolved_config.json": "1fa0731beeb898da92e12c79ab2576bae4c7f64ac1bef430968d852dabbcc502",
+      "run_summary.json": "f3013400d2924c7b892a1489aa4704eb4cb48099edd1ab3d4b64655b5f34cb09"
+    },
+    "smoke_config_sha256": "352e17287a88661e0b32cc60bffc2f9b05118d4d9eaf6c4bd6a6709768d7e304",
+    "smoke_directory": "artifacts/day10-sparse-long-pilot/smoke-210",
+    "smoke_file_bytes": 2291379,
+    "smoke_file_count": 7,
+    "sprint9_config_sha256": "265e5ee3a0669d464eb07fe26e7ec147ef4c26ee0d6ba2a095e309e8362aad1e"
+  },
+  "integrity": {
+    "all_technical_gates_passed": true,
+    "all_values_finite": true,
+    "checkpoint_payload_hashes_valid": true,
+    "checkpoint_sizes_bytes": [
+      335925,
+      667310,
+      700428
+    ],
+    "checkpoint_steps": [
+      100,
+      200,
+      210
+    ],
+    "metric_rows": 420,
+    "metric_splits_complete_without_duplicates": true,
+    "metric_steps_complete_without_duplicates": true,
+    "summary_success_210_of_210": true,
+    "test_manifest_opened": false,
+    "test_metrics_present": false
+  },
+  "measurements": {
+    "checkpoint_writes": [
+      {
+        "bytes": 335925,
+        "seconds": 0.036024238,
+        "step": 100
+      },
+      {
+        "bytes": 667310,
+        "seconds": 0.069061382,
+        "step": 200
+      },
+      {
+        "bytes": 700428,
+        "seconds": 0.063584925,
+        "step": 210
+      }
+    ],
+    "steady_update_count": 205,
+    "steady_update_seconds": {
+      "maximum": 0.428558212,
+      "mean": 0.1722472066,
+      "median": 0.170630664,
+      "minimum": 0.156742924,
+      "p95": 0.17929519419999998,
+      "p99": 0.1898798258
+    },
+    "train_compile_seconds": 7.997607284,
+    "train_first_execution_seconds": 0.173588162,
+    "validation_compile_seconds": 0.798102518,
+    "validation_first_execution_seconds": 0.004546502
+  },
+  "projection_5000_updates_50_checkpoints": {
+    "artifact_limit_bytes": 2147483648,
+    "checkpoint_size_linear_fit": {
+      "intercept": 4552.004504504724,
+      "r_squared": 0.9999999976703731,
+      "slope": 3313.739189189188
+    },
+    "conservative_total_artifact_bytes": 875333570,
+    "conservative_wall_seconds": 2289.545259811676,
+    "expected_total_artifact_bytes": 437666785,
+    "expected_total_files_after_completion": 61,
+    "hard_wall_limit_seconds": 7200,
+    "method": "Use the maximum measured non-checkpoint steady update for all 5000 updates; add twice the maximum measured checkpoint seconds/byte times linearly projected checkpoint bytes; add twice the first-two-update startup and 30 seconds fixed. Storage doubles the empirical linear payload projection and includes a 1 MiB launcher allowance.",
+    "peak_rss_limit_kib": 12582912,
+    "predicted_checkpoint_bytes_total": 422729347,
+    "predicted_checkpoint_seconds_at_measured_max_rate": 45.33304338883785,
+    "predicted_final_checkpoint_bytes": 16573248
+  },
+  "resources": {
+    "resume": {
+      "exit_status": 0,
+      "path": "artifacts/day10-sparse-long-pilot/timing/sparse-resume-200-to-210.time.txt",
+      "peak_rss_kib": 1217916,
+      "sha256": "50d55608bca4d9f10a59fc06530104ed66e0aeae211cacf00df35f74091a1f34",
+      "swaps": 0,
+      "wall_seconds": 20.44
+    },
+    "smoke": {
+      "exit_status": 0,
+      "path": "artifacts/day10-sparse-long-pilot/timing/sparse-smoke-210.time.txt",
+      "peak_rss_kib": 1309284,
+      "sha256": "842a79712f17b5908abac41b5c9592605041ec1eff7a8d4a4c61c9cbc4a89866",
+      "swaps": 0,
+      "wall_seconds": 55.99
+    }
+  },
+  "resume": {
+    "all_exact_fields_match": true,
+    "checkpoint_steps": [
+      210
+    ],
+    "equivalence_status": "pass",
+    "equivalent_exact_rtol_0_atol_0": true,
+    "metric_rows": 420,
+    "metrics_complete_without_duplicates": true,
+    "parent_step": 200,
+    "status": "success",
+    "test_manifest_opened_or_test_episode_built": false
+  },
+  "schema_version": "crazyflow.sprint10_sparse_analysis.v1",
+  "scientific_claim": "technical and exploratory single-seed simulation evidence only",
+  "scientific_semantics": {
+    "checkpoint_interval": 100,
+    "pilot_differs_from_sprint9_only_by_run_id_and_checkpoint_interval": true,
+    "pilot_updates": 5000,
+    "smoke_updates": 210,
+    "test_split_opened": false
+  }
+}

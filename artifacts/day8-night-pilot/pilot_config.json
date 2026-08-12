@@ -1,0 +1,55 @@
+{
+  "schema_version": "crazyflow.mellinger_research_config.v1",
+  "run_id": "sprint8-h100-w4-fifty-update-night-pilot",
+  "root_seed": 20260731,
+  "train": {
+    "n_worlds": 4,
+    "n_drones": 1,
+    "horizon": 100,
+    "sim_freq_hz": 500,
+    "control_freq_hz": 100,
+    "drone": "cf2x_L250"
+  },
+  "validation": {
+    "n_worlds": 4,
+    "n_drones": 1,
+    "horizon": 100,
+    "sim_freq_hz": 500,
+    "control_freq_hz": 100,
+    "drone": "cf2x_L250"
+  },
+  "trajectory": {
+    "harmonics": 3,
+    "center_m": [0.0, 0.0, 0.75],
+    "amplitude_m": [0.18, 0.14, 0.08],
+    "workspace_min_m": [-0.6, -0.6, 0.35],
+    "workspace_max_m": [0.6, 0.6, 1.2],
+    "max_speed_m_s": 1.5,
+    "max_acceleration_m_s2": 5.0,
+    "max_jerk_m_s3": 35.0,
+    "max_yaw_rate_rad_s": 1.0,
+    "max_tilt_rad": 0.7,
+    "min_specific_force_m_s2": 2.0,
+    "max_attempts": 16,
+    "distribution_version": "fixed_support_prefix_v2",
+    "support_duration_s": 4.0,
+    "minimum_duration_s": 1.0
+  },
+  "domain_randomization": {
+    "mass_enabled": true,
+    "mass_half_width_kg": 0.0002,
+    "delay_enabled": false,
+    "delay_max_control_steps": 0,
+    "wrench_enabled": false,
+    "force_std_n": 0.0,
+    "torque_std_nm": 0.0,
+    "wrench_correlation_time_s": 0.1
+  },
+  "optimizer": {
+    "steps": 50,
+    "learning_rate": 0.001,
+    "gain_stage": 1
+  },
+  "validation_manifest": "configs/research/mellinger/validation_manifest.v1.json",
+  "test_manifest": "configs/research/mellinger/test_manifest.v1.json"
+}

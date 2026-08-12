@@ -1,0 +1,65 @@
+{
+  "schema_version": "crazyflow.sprint10_sparse_verification_summary.v1",
+  "date": "2026-08-01",
+  "initial_head": "156128505b85012385f480e0503c8eaddd188d09",
+  "implementation_commit": "a58b78861cd15e904f7883668a689f297524f4a1",
+  "implementation_tests": {
+    "pip_check": "PASS: No broken requirements found",
+    "ruff_check": "PASS: All checks passed",
+    "ruff_format_check": "PASS: 113 files already formatted",
+    "focused_pytest": "PASS: 26 passed, 5 skipped, 22 deselected in 52.18s",
+    "sparse_schedule_parameterization": "PASS: 4 passed in 24.88s",
+    "covered": [
+      "legacy interval-one semantics and legacy config fingerprint",
+      "positive-integer config validation",
+      "divisible, nondivisible and greater-than-total interval schedules",
+      "single final checkpoint without duplicate write",
+      "durable append-only complete per-update metrics",
+      "atomic checksummed checkpoint roundtrip and overwrite refusal",
+      "config, gain-registry, source and runtime mismatch rejection",
+      "nonfinite and checksum-corruption rejection",
+      "exact new-process resume with optimizer, gains and metrics equality",
+      "complete provenance and unopened Test reference"
+    ]
+  },
+  "real_sparse_smoke": {
+    "status": "PASS",
+    "updates": 210,
+    "external_wall_seconds": 55.99,
+    "internal_wall_seconds": 53.772237384,
+    "peak_rss_kib": 1309284,
+    "swaps": 0,
+    "checkpoint_steps": [100, 200, 210],
+    "metrics_rows": 420,
+    "all_values_finite": true,
+    "all_technical_gates_passed": true,
+    "test_manifest_opened": false
+  },
+  "real_resume": {
+    "status": "PASS",
+    "parent_step": 200,
+    "completed_step": 210,
+    "external_wall_seconds": 20.44,
+    "peak_rss_kib": 1217916,
+    "swaps": 0,
+    "exact_rtol_0_atol_0": true,
+    "complete_metrics_without_missing_or_duplicate_updates": true,
+    "test_manifest_opened_or_test_episode_built": false
+  },
+  "analysis_reproduced_byte_identically": true,
+  "launcher": {
+    "bash_syntax": "PASS",
+    "dry_run": "PASS: exit 0 with exact GO, 5000, interval 100, config and source fingerprints",
+    "dirty_worktree_refusal": "PASS: expected exit 1 before run-root creation",
+    "hard_timeout_seconds": 7200,
+    "full_stdout_stderr_logging": true,
+    "unique_run_root_and_process_group": true,
+    "automatic_resume": false
+  },
+  "tmux": {
+    "path": "/usr/bin/tmux",
+    "version": "tmux 3.6"
+  },
+  "decision": "GO",
+  "long_pilot_started_at_record_creation": false
+}

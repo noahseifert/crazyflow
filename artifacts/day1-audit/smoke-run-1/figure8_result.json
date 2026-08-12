@@ -1,0 +1,92 @@
+{
+  "all_validations_passed": true,
+  "cached_forward_backward_seconds": 0.012708012000075541,
+  "commit": "1aa648b15e9e9ed9bada8aaa7408cdff22d417fd",
+  "compile_and_first_run_seconds": 8.065272677999019,
+  "control_frequency_hz": 100,
+  "directional_derivative_checks": [
+    {
+      "autodiff": -3.962873051932547e-06,
+      "direction": 0,
+      "finite_difference": -3.818422555923462e-06,
+      "relative_error": 0.01853998377919197
+    },
+    {
+      "autodiff": 1.1276551958872005e-05,
+      "direction": 1,
+      "finite_difference": 1.1245720088481903e-05,
+      "relative_error": 0.0013683426659554243
+    },
+    {
+      "autodiff": -1.0060586646432057e-05,
+      "direction": 2,
+      "finite_difference": -1.0035000741481781e-05,
+      "relative_error": 0.0012725767446681857
+    }
+  ],
+  "duration_s": 0.2,
+  "gradient": {
+    "kd_xy": -7.964330143295228e-05,
+    "kd_z": -9.854762902250513e-05,
+    "kp_xy": -3.962873051932547e-06,
+    "kp_z": -7.611652108607814e-06
+  },
+  "gradient_norm": 0.0001269973727175966,
+  "horizon": 20,
+  "jit_eager_loss_abs_difference": 4.656612873077393e-10,
+  "loss": 0.0022911166306585073,
+  "max_directional_relative_error": 0.01853998377919197,
+  "metrics": {
+    "control_effort": 0.002105528488755226,
+    "control_smoothness": 6.0920556279597804e-05,
+    "floor_clip_fraction": 0.0,
+    "loss_altitude": 2.0850606397698757e-12,
+    "loss_effort": 2.1055286651971983e-06,
+    "loss_position": 0.0006717538926750422,
+    "loss_smoothness": 6.092055571116362e-08,
+    "loss_terminal": 0.0003913654072675854,
+    "loss_total": 0.0022911166306585073,
+    "loss_velocity": 0.001225830870680511,
+    "max_position_error_m": 0.01563980057835579,
+    "motor_saturation_fraction": 0.0,
+    "nonfinite_state_fraction": 0.0,
+    "position_rmse_m": 0.0064795538783073425,
+    "velocity_rmse_m_s": 0.11071724444627762,
+    "zero_thrust_gate_fraction": 0.0
+  },
+  "optimization_variables": {
+    "kd_xy": -1.3862943649291992,
+    "kd_z": -0.5596157312393188,
+    "kp_xy": -0.9808291792869568,
+    "kp_z": -0.2744370102882385
+  },
+  "physical_gains": {
+    "kd_N_s_per_m": [
+      0.20000000298023224,
+      0.20000000298023224,
+      0.5
+    ],
+    "kp_N_per_m": [
+      0.4000000059604645,
+      0.4000000059604645,
+      1.25
+    ]
+  },
+  "seed": 20260724,
+  "sim_frequency_hz": 500,
+  "source_state_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "trajectory": "figure8",
+  "trial_loss": 0.002289854222908616,
+  "validations": {
+    "deterministic_replay": true,
+    "directional_derivatives": true,
+    "finite_loss_and_gradient": true,
+    "jit_eager_match": true,
+    "negative_gradient_step_decreases_loss": true,
+    "nontrivial_gradient": true
+  },
+  "versions": {
+    "jax": "0.10.1",
+    "numpy": "2.5.1"
+  }
+}

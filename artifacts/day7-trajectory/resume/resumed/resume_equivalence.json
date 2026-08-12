@@ -1,0 +1,52 @@
+{
+  "actual_checkpoint": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day7-trajectory/resume/resumed/checkpoint-step-000002.json",
+  "actual_physical_gains": {
+    "kd_xy": 0.20022673904895782,
+    "kd_z": 0.5005095601081848,
+    "kp_xy": 0.3995758295059204,
+    "kp_z": 1.2510802745819092
+  },
+  "comparison_policy": {
+    "atol": 0.0,
+    "justification": "Identical source, runtime, backend, dtype, config, seed coordinates, and pure JAX update order require exact serialized equality; timing, command, paths, and UTC provenance are intentionally excluded.",
+    "rtol": 0.0
+  },
+  "equivalent": true,
+  "field_matches": {
+    "config_fingerprint": true,
+    "episode_index": true,
+    "frozen_test_manifest_reference": true,
+    "gain_registry_fingerprint": true,
+    "history": true,
+    "metrics_records": true,
+    "optimizer_state": true,
+    "raw_gains": true,
+    "root_seed": true,
+    "runtime_fingerprint": true,
+    "schema_version": true,
+    "selected_raw_gains": true,
+    "selection": true,
+    "source_fingerprint": true,
+    "step": true,
+    "validation_manifest_fingerprint": true,
+    "validation_manifest_id": true
+  },
+  "optimizer_leaf_max_abs_differences": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "raw_gain_max_abs_difference": 0.0,
+  "reference_checkpoint": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day7-trajectory/resume/uninterrupted/checkpoint-step-000002.json",
+  "reference_physical_gains": {
+    "kd_xy": 0.20022673904895782,
+    "kd_z": 0.5005095601081848,
+    "kp_xy": 0.3995758295059204,
+    "kp_z": 1.2510802745819092
+  },
+  "schema_version": "crazyflow.mellinger_resume_equivalence.v1",
+  "selected_raw_gain_max_abs_difference": 0.0,
+  "status": "pass",
+  "test_manifest_opened_or_test_episode_built": false,
+  "transformed_gain_max_abs_difference": 0.0
+}

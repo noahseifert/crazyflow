@@ -1,0 +1,303 @@
+{
+  "additional_parameter_groups": {
+    "attitude_and_rate_gains": {
+      "members": {
+        "kR": [
+          70000.0,
+          70000.0,
+          60000.0
+        ],
+        "kd_omega": [
+          200.0,
+          200.0,
+          0.0
+        ],
+        "ki_m": [
+          0.0,
+          0.0,
+          500.0
+        ],
+        "kw": [
+          20000.0,
+          20000.0,
+          12000.0
+        ]
+      },
+      "reason": "source units are legacy PWM-domain and no separate semantics gate is frozen",
+      "source_path_symbol": "crazyflow/control/mellinger/params.toml::cf21B_500.attitude2force_torque; crazyflow/control/mellinger/control.py::attitude2force_torque",
+      "status": "LATER_GROUP",
+      "unit_contract": "legacy PWM-domain semantics; physical units unresolved"
+    },
+    "ki_xy": {
+      "declared_defaults": [
+        0.05,
+        0.05
+      ],
+      "members": [
+        "ki[0]",
+        "ki[1]"
+      ],
+      "pre_gate": {
+        "maximum_integral_rms_fraction": 0.01607212796807289,
+        "signal_threshold_met": false,
+        "threshold": 0.05,
+        "two_classes_profiles_per_split_not_separately_quantified": true
+      },
+      "reason": "requires a separately frozen two-class/two-profile gate before sensitivity",
+      "source_path_symbol": "crazyflow/control/mellinger/params.toml::cf21B_500.state2attitude.ki; crazyflow/control/mellinger/control.py::state2attitude",
+      "status": "LATER_GROUP",
+      "unit_contract": "current code contract N/(m s)"
+    },
+    "tied_vs_split_xy": {
+      "declared_defaults": [
+        0.4,
+        0.4,
+        0.2,
+        0.2
+      ],
+      "members": [
+        "kp[0]",
+        "kp[1]",
+        "kd[0]",
+        "kd[1]"
+      ],
+      "pre_gate": {
+        "axis_separated_energy_not_in_current_feature_inventory": true,
+        "combined_xy_tracking_energy": 0.0804516164935194,
+        "required_axis_energy_ratio": [
+          0.8,
+          1.25
+        ]
+      },
+      "reason": "current mandatory coordinate intentionally preserves tied x/y",
+      "source_path_symbol": "crazyflow/control/mellinger/params.toml::cf21B_500.state2attitude; crazyflow/control/mellinger/control.py::state2attitude",
+      "status": "LATER_GROUP",
+      "unit_contract": [
+        "N/m",
+        "N/m",
+        "N s/m",
+        "N s/m"
+      ]
+    },
+    "yaw_gains": {
+      "members": {
+        "kR[2]": 60000.0,
+        "kd_omega[2]": 0.0,
+        "ki_m[2]": 500.0,
+        "kw[2]": 12000.0
+      },
+      "reason": "absolute yaw is excited and consumed, but yaw-rate feedforward and transfer semantics are not established",
+      "source_path_symbol": "crazyflow/control/mellinger/params.toml::cf21B_500.attitude2force_torque; crazyflow/control/mellinger/control.py::state2attitude/attitude2force_torque",
+      "status": "LATER_GROUP",
+      "unit_contract": "legacy PWM-domain semantics; physical units unresolved"
+    }
+  },
+  "authorized_source_inventory": [
+    "crazyflow/control/mellinger/params.toml",
+    "crazyflow/control/core.py::load_params",
+    "crazyflow/control/mellinger/control.py::MellingerStateData.create",
+    "crazyflow/control/mellinger/control.py::state2attitude",
+    "crazyflow/control/mellinger/control.py::attitude2force_torque",
+    "crazyflow/control/mellinger/control.py::force_torque_pwms2pwms",
+    "crazyflow/control/mellinger/control.py::force_torque2rotor_vel",
+    "crazyflow/control/transform.py::force2pwm",
+    "crazyflow/control/transform.py::pwm2force",
+    "crazyflow/control/transform.py::motor_force2rotor_vel",
+    "crazyflow/control/mellinger/research/runner.py::run_training_validation.train_step"
+  ],
+  "canonical_defaults_modified": false,
+  "conversion_chain": [
+    {
+      "bounds": "position integral clip at int_err_max",
+      "input_output_units": "SI state/setpoint to target vector nominally N",
+      "measured_behavior": "requested collective boundary, tracking error, and integral state are stored",
+      "source_code_inference": "mass*(setpoint_acc-gravity_vec)+kp*pos_err+kd*vel_err+ki*int_pos_err",
+      "source_path_symbol": "crazyflow/control/mellinger/control.py::state2attitude.target_thrust",
+      "stage": "target_thrust",
+      "unresolved_provenance": "no physical parameter-estimation or firmware equivalence"
+    },
+    {
+      "bounds": "none at the multiplication",
+      "input_output_units": "nominal N times unresolved legacy factor to PWM-domain value",
+      "measured_behavior": "continuous and rounded-integer responses are stored separately",
+      "source_code_inference": "body-z dot product followed by mass_thrust*current_thrust",
+      "source_path_symbol": "crazyflow/control/mellinger/control.py::state2attitude.current_thrust",
+      "stage": "body_z_then_mass_thrust",
+      "unresolved_provenance": "mass_thrust physical unit, calibration origin, quantization, and firmware transfer remain unresolved"
+    },
+    {
+      "bounds": "no clip inside pwm2force",
+      "input_output_units": "PWM-domain value to N under supplied platform scales",
+      "measured_behavior": "downstream collective and wrench arrays are stored",
+      "source_code_inference": "linear pwm/pwm_max*thrust_max scaling",
+      "source_path_symbol": "crazyflow/control/transform.py::pwm2force",
+      "stage": "pwm2force",
+      "unresolved_provenance": "legacy factor calibration is not derived by this source"
+    },
+    {
+      "bounds": "torque_pwm_max and pwm_min/pwm_max",
+      "input_output_units": "N plus legacy torque-PWM terms to SI wrench",
+      "measured_behavior": "requested/realized wrench, PWM masks, reserve, and distortion",
+      "source_code_inference": "SO(3) feedback, linear force2pwm, legacy mixer, torque/motor PWM clips, then linear pwm2force",
+      "source_path_symbol": "crazyflow/control/mellinger/control.py::attitude2force_torque and force_torque_pwms2pwms",
+      "stage": "attitude_mixer_force2pwm_clips",
+      "unresolved_provenance": "no firmware numerical-equivalence or calibration claim"
+    },
+    {
+      "bounds": "thrust_min/thrust_max",
+      "input_output_units": "SI wrench to motor force N to rotor-velocity convention",
+      "measured_behavior": "Stage-B clips, realized wrench, motor commands, and reserve",
+      "source_code_inference": "X allocation, thrust_min/thrust_max clip, inverse quadratic motor model",
+      "source_path_symbol": "crazyflow/control/mellinger/control.py::force_torque2rotor_vel; crazyflow/control/transform.py::motor_force2rotor_vel",
+      "stage": "stage_b_motor_force_to_rotor_velocity",
+      "unresolved_provenance": "motor-model calibration and hardware transfer unresolved"
+    },
+    {
+      "bounds": "floor clip remains an external hard technical gate",
+      "input_output_units": "rotor velocity to SI rigid-body state",
+      "measured_behavior": "complete Float32 CPU state rollout and technical gates",
+      "source_code_inference": "quadratic rpm2thrust feeds rigid-body dynamics",
+      "source_path_symbol": "Dynamics.first_principles with Euler integration",
+      "stage": "first_principles_dynamics",
+      "unresolved_provenance": "no physical validation, Sim2Real, or flight evidence"
+    }
+  ],
+  "optimizer_initialization_count": 0,
+  "optimizer_update_count": 0,
+  "parameters": {
+    "kd_xy": {
+      "continuous_relaxation": "positive log coordinate, experiment-local",
+      "default": 0.2,
+      "discrete_integer_response": "not applicable",
+      "feedforward_feedback_role": "position/velocity/integral feedback gain",
+      "firmware_or_calibration_transfer": "not established",
+      "hover_initialization": "physical dynamics mass and force-torque rpm2thrust only; controller leaf remains an effective parameter",
+      "leaf_or_indices": [
+        0,
+        1
+      ],
+      "load_merge_initialization_path": "params.toml -> load_params(state2attitude) -> MellingerStateData.create -> experiment-local immutable SimData replacement",
+      "measured_behavior": "continuous local simulation sensitivity stored in report",
+      "runtime_loaded_default": 0.20000000298023224,
+      "source_code_inference": "state2attitude and unchanged downstream allocation chain",
+      "source_path": "crazyflow/control/mellinger/params.toml",
+      "symbol": "kd",
+      "unit": "N s/m",
+      "unresolved_provenance": "no firmware/hardware transfer established"
+    },
+    "kd_z": {
+      "continuous_relaxation": "positive log coordinate, experiment-local",
+      "default": 0.5,
+      "discrete_integer_response": "not applicable",
+      "feedforward_feedback_role": "position/velocity/integral feedback gain",
+      "firmware_or_calibration_transfer": "not established",
+      "hover_initialization": "physical dynamics mass and force-torque rpm2thrust only; controller leaf remains an effective parameter",
+      "leaf_or_indices": [
+        2
+      ],
+      "load_merge_initialization_path": "params.toml -> load_params(state2attitude) -> MellingerStateData.create -> experiment-local immutable SimData replacement",
+      "measured_behavior": "continuous local simulation sensitivity stored in report",
+      "runtime_loaded_default": 0.5,
+      "source_code_inference": "state2attitude and unchanged downstream allocation chain",
+      "source_path": "crazyflow/control/mellinger/params.toml",
+      "symbol": "kd",
+      "unit": "N s/m",
+      "unresolved_provenance": "no firmware/hardware transfer established"
+    },
+    "ki_z": {
+      "continuous_relaxation": "positive log coordinate, experiment-local",
+      "default": 0.05,
+      "discrete_integer_response": "not applicable",
+      "feedforward_feedback_role": "position/velocity/integral feedback gain",
+      "firmware_or_calibration_transfer": "not established",
+      "hover_initialization": "physical dynamics mass and force-torque rpm2thrust only; controller leaf remains an effective parameter",
+      "leaf_or_indices": [
+        2
+      ],
+      "load_merge_initialization_path": "params.toml -> load_params(state2attitude) -> MellingerStateData.create -> experiment-local immutable SimData replacement",
+      "measured_behavior": "continuous local simulation sensitivity stored in report",
+      "runtime_loaded_default": 0.05000000074505806,
+      "source_code_inference": "state2attitude and unchanged downstream allocation chain",
+      "source_path": "crazyflow/control/mellinger/params.toml",
+      "symbol": "ki",
+      "unit": "N/(m s)",
+      "unresolved_provenance": "no firmware/hardware transfer established"
+    },
+    "kp_xy": {
+      "continuous_relaxation": "positive log coordinate, experiment-local",
+      "default": 0.4,
+      "discrete_integer_response": "not applicable",
+      "feedforward_feedback_role": "position/velocity/integral feedback gain",
+      "firmware_or_calibration_transfer": "not established",
+      "hover_initialization": "physical dynamics mass and force-torque rpm2thrust only; controller leaf remains an effective parameter",
+      "leaf_or_indices": [
+        0,
+        1
+      ],
+      "load_merge_initialization_path": "params.toml -> load_params(state2attitude) -> MellingerStateData.create -> experiment-local immutable SimData replacement",
+      "measured_behavior": "continuous local simulation sensitivity stored in report",
+      "runtime_loaded_default": 0.4000000059604645,
+      "source_code_inference": "state2attitude and unchanged downstream allocation chain",
+      "source_path": "crazyflow/control/mellinger/params.toml",
+      "symbol": "kp",
+      "unit": "N/m",
+      "unresolved_provenance": "no firmware/hardware transfer established"
+    },
+    "kp_z": {
+      "continuous_relaxation": "positive log coordinate, experiment-local",
+      "default": 1.25,
+      "discrete_integer_response": "not applicable",
+      "feedforward_feedback_role": "position/velocity/integral feedback gain",
+      "firmware_or_calibration_transfer": "not established",
+      "hover_initialization": "physical dynamics mass and force-torque rpm2thrust only; controller leaf remains an effective parameter",
+      "leaf_or_indices": [
+        2
+      ],
+      "load_merge_initialization_path": "params.toml -> load_params(state2attitude) -> MellingerStateData.create -> experiment-local immutable SimData replacement",
+      "measured_behavior": "continuous local simulation sensitivity stored in report",
+      "runtime_loaded_default": 1.25,
+      "source_code_inference": "state2attitude and unchanged downstream allocation chain",
+      "source_path": "crazyflow/control/mellinger/params.toml",
+      "symbol": "kp",
+      "unit": "N/m",
+      "unresolved_provenance": "no firmware/hardware transfer established"
+    },
+    "mass": {
+      "continuous_relaxation": "positive log coordinate, experiment-local",
+      "default": 0.0393,
+      "discrete_integer_response": "not applicable",
+      "feedforward_feedback_role": "target-thrust feedforward multiplier",
+      "firmware_or_calibration_transfer": "not established",
+      "hover_initialization": "physical dynamics mass and force-torque rpm2thrust only; controller leaf remains an effective parameter",
+      "leaf_or_indices": "scalar leaf",
+      "load_merge_initialization_path": "params.toml -> load_params(state2attitude) -> MellingerStateData.create -> experiment-local immutable SimData replacement",
+      "measured_behavior": "continuous local simulation sensitivity stored in report",
+      "runtime_loaded_default": 0.03929999843239784,
+      "source_code_inference": "state2attitude and unchanged downstream allocation chain",
+      "source_path": "crazyflow/control/mellinger/params.toml",
+      "symbol": "mass",
+      "unit": "kg",
+      "unresolved_provenance": "physical estimation/transfer not established"
+    },
+    "mass_thrust": {
+      "continuous_relaxation": "Float32 132000*exp(theta), experiment-local",
+      "default": 132000,
+      "discrete_integer_response": "separate DISCRETE_INTEGER_RESPONSE; no AD validation",
+      "feedforward_feedback_role": "legacy target-thrust-to-PWM scaling before linear pwm2force",
+      "firmware_or_calibration_transfer": "not established",
+      "hover_initialization": "physical dynamics mass and force-torque rpm2thrust only; controller leaf remains an effective parameter",
+      "leaf_or_indices": "scalar leaf",
+      "load_merge_initialization_path": "params.toml -> load_params(state2attitude) -> MellingerStateData.create -> experiment-local immutable SimData replacement",
+      "measured_behavior": "continuous local simulation sensitivity stored in report",
+      "runtime_loaded_default": 132000,
+      "source_code_inference": "state2attitude and unchanged downstream allocation chain",
+      "source_path": "crazyflow/control/mellinger/params.toml",
+      "symbol": "mass_thrust",
+      "unit": "unresolved",
+      "unresolved_provenance": "physical unit and firmware/calibration transfer unresolved"
+    }
+  },
+  "schema_version": "crazyflow.g3_identifiability_freeze_v2.v4",
+  "shared_controller_modified": false,
+  "status": "PASS_PARAMETER_SEMANTICS_AUDIT"
+}

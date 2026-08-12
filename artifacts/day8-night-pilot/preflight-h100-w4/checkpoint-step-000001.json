@@ -1,0 +1,228 @@
+{
+  "config_fingerprint": "273203c2d4256df35d902b3e2dbe9336352a5cb4464de4c58aec48f986e1798c",
+  "episode_index": 1,
+  "frozen_test_manifest_reference": "configs/research/mellinger/test_manifest.v1.json",
+  "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 0.010203863494098186,
+      "validation_loss": 0.010010135360062122
+    }
+  ],
+  "metrics_records": [
+    {
+      "episode_ids": [
+        "train-000000-world-000",
+        "train-000000-world-001",
+        "train-000000-world-002",
+        "train-000000-world-003"
+      ],
+      "gradient_l2_norm": 0.006251446437090635,
+      "loss": 0.010203863494098186,
+      "metrics": {
+        "control_effort": 0.0005875753122381866,
+        "control_smoothness": 5.156614406587323e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.8074374342510495e-12,
+        "loss_effort": 5.875754141015932e-07,
+        "loss_position": 0.008341583423316479,
+        "loss_smoothness": 5.156615134893627e-09,
+        "loss_terminal": 0.0016003522323444486,
+        "loss_total": 0.010203863494098186,
+        "loss_velocity": 0.00026133586652576923,
+        "max_position_error_m": 0.03146926313638687,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.030509138479828835,
+        "position_rmse_m": 0.02281656302511692,
+        "terminal_position_error_m": 0.03146926313638687,
+        "terminal_velocity_error_m_s": 0.0742143988609314,
+        "velocity_rmse_m_s": 0.05093427747488022,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "train",
+      "step": 1,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    },
+    {
+      "episode_ids": [
+        "validation-000",
+        "validation-001",
+        "validation-002",
+        "validation-003"
+      ],
+      "loss": 0.010010135360062122,
+      "manifest_id": "mellinger-validation-v1-20260731",
+      "metrics": {
+        "control_effort": 0.0005683752242475748,
+        "control_smoothness": 5.148239779373398e-06,
+        "episode_failure": 0.0,
+        "episode_success": 1.0,
+        "floor_clip_fraction": 0.0,
+        "loss_altitude": 4.640991150411944e-12,
+        "loss_effort": 5.683752419827215e-07,
+        "loss_position": 0.008296073414385319,
+        "loss_smoothness": 5.148240500574275e-09,
+        "loss_terminal": 0.0014974618097767234,
+        "loss_total": 0.010010135360062122,
+        "loss_velocity": 0.0002160266158170998,
+        "max_position_error_m": 0.03051268495619297,
+        "motor_saturation_fraction": 0.0,
+        "nonfinite_state_fraction": 0.0,
+        "p95_position_error_m": 0.02986404486000538,
+        "position_rmse_m": 0.022763775661587715,
+        "terminal_position_error_m": 0.03051268495619297,
+        "terminal_velocity_error_m_s": 0.032756201922893524,
+        "velocity_rmse_m_s": 0.04641858488321304,
+        "zero_thrust_gate_fraction": 0.0
+      },
+      "split": "validation",
+      "step": 1,
+      "technical_gate": {
+        "all_episodes_successful": true,
+        "floor_clip_fraction_zero": true,
+        "motor_saturation_fraction_below_half": true,
+        "nonfinite_state_fraction_zero": true,
+        "passed": true,
+        "zero_thrust_gate_fraction_zero": true
+      }
+    }
+  ],
+  "optimizer_state": {
+    "leaves": [
+      {
+        "data": 1,
+        "dtype": "int32",
+        "shape": []
+      },
+      {
+        "data": [
+          2.497451987437671e-07,
+          -0.0004705205501522869,
+          -1.3810545169690158e-05,
+          -0.00041137015796266496
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      },
+      {
+        "data": [
+          6.237266444026864e-15,
+          2.2138960886763925e-08,
+          1.9073116350187824e-11,
+          1.692254159024742e-08
+        ],
+        "dtype": "float32",
+        "shape": [
+          4
+        ]
+      }
+    ],
+    "tree_repr": "PyTreeDef((CustomNode(namedtuple[ScaleByAdamState], [*, *, *]), CustomNode(namedtuple[EmptyState], [])))"
+  },
+  "payload_sha256": "7d7232b6fa02b593fc4580c008e06dfdd616585b9a732626bc02547915539d02",
+  "provenance": {
+    "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_domain_randomized_optimization.py --config artifacts/day8-night-pilot/preflight_config.json --output-dir artifacts/day8-night-pilot/preflight-h100-w4",
+    "config_fingerprint": "273203c2d4256df35d902b3e2dbe9336352a5cb4464de4c58aec48f986e1798c",
+    "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/artifacts/day8-night-pilot/preflight_config.json",
+    "environment": {
+      "jax_backend": "cpu",
+      "jax_devices": [
+        "cpu:0"
+      ],
+      "packages": {
+        "flax": "0.12.8",
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8",
+        "pytest": "9.1.1"
+      },
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "python": "3.12.13"
+    },
+    "frozen_test_manifest_reference_not_opened": "configs/research/mellinger/test_manifest.v1.json",
+    "gain_registry_fingerprint": "2e8dbc409dc994f8376d132757ad8c3b0a8744805865c71340e405579c5f3d99",
+    "git": {
+      "branch": "research/differentiable-mellinger",
+      "dirty": false,
+      "head": "1990b2292b849fa735b3b9926e31c5df3f14d609",
+      "repository": "/home/noah3/bachelorarbeit/crazyflow-gradient-research",
+      "source_fingerprint": "8ff8317b01de2aafda276bd13af3f2ee920a9610b764344c05d0fc620ae87320",
+      "source_fingerprint_scope": [
+        "crazyflow",
+        "examples"
+      ],
+      "status_short": []
+    },
+    "resume_lineage": null,
+    "root_seed": 20260731,
+    "runtime_compatibility": {
+      "jax_backend": "cpu",
+      "jax_enable_x64": false,
+      "machine": "x86_64",
+      "packages": {
+        "jax": "0.10.1",
+        "jaxlib": "0.10.1",
+        "numpy": "2.5.1",
+        "optax": "0.2.8"
+      },
+      "python": "3.12.13"
+    },
+    "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+    "schema_version": "crazyflow.mellinger_research_provenance.v1",
+    "seed_coordinate_contract": "split -> episode -> world -> component",
+    "started_at_utc": "2026-07-31T21:19:18.980204+00:00",
+    "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+    "validation_manifest_id": "mellinger-validation-v1-20260731"
+  },
+  "raw_gains": {
+    "data": [
+      -0.9818251729011536,
+      -0.2734370231628418,
+      -1.3852944374084473,
+      -0.5586157441139221
+    ],
+    "dtype": "float32",
+    "shape": [
+      4
+    ]
+  },
+  "root_seed": 20260731,
+  "runtime_fingerprint": "e3c408d547653ebbb87107ca3c31b844c12acc43448378a5a48266306ee3d2a4",
+  "schema_version": "crazyflow.mellinger_research_checkpoint.v2",
+  "selected_raw_gains": {
+    "data": [
+      -0.9818251729011536,
+      -0.2734370231628418,
+      -1.3852944374084473,
+      -0.5586157441139221
+    ],
+    "dtype": "float32",
+    "shape": [
+      4
+    ]
+  },
+  "selection": {
+    "criterion": "minimum validation loss; earliest exact tie",
+    "selected_step": 1,
+    "selected_validation_loss": 0.010010135360062122,
+    "test_used_for_selection": false
+  },
+  "source_fingerprint": "8ff8317b01de2aafda276bd13af3f2ee920a9610b764344c05d0fc620ae87320",
+  "step": 1,
+  "validation_manifest_fingerprint": "11e53e460bc93a64835af03bd5a6d22a2e4fb3f7c9d187324d23e7a3deac0c20",
+  "validation_manifest_id": "mellinger-validation-v1-20260731"
+}

@@ -1,0 +1,44 @@
+{
+  "command": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/.venv/bin/python examples/jax/mellinger_scaling_benchmark.py --config configs/research/mellinger/workstation.json --worlds 1 --horizon 100 --steady-repeats 5 --output-dir artifacts/day7-trajectory/phase-a/reproduce-h100-w1",
+  "config_path": "/home/noah3/bachelorarbeit/crazyflow-gradient-research/configs/research/mellinger/workstation.json",
+  "domain_randomization": {
+    "delay_enabled": false,
+    "mass_enabled": true,
+    "mass_half_width_kg": 0.0002,
+    "sensor_noise_enabled": false,
+    "ukf_enabled": false,
+    "wrench_enabled": false
+  },
+  "effective_config_fingerprint": "5df490a00fb11c2495e9926fc5eca2a23325aee99fad6cd6cba580233bba56ba",
+  "environment": {
+    "jax_backend": "cpu",
+    "jax_devices": [
+      "cpu:0"
+    ],
+    "jax_enable_x64": false,
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.12.13"
+  },
+  "episode_index": 0,
+  "error_message": "no valid trajectory found in 16 deterministic attempts",
+  "error_type": "ValueError",
+  "failure_phase": "deterministic_episode_construction_before_jit",
+  "gain_stage": 1,
+  "git_head": "3286b5dc03ed110fe7166f5f12e5f4f31ecf8e68",
+  "horizon_control_intervals": 100,
+  "internal_wall_seconds_to_failure": 2.860586289,
+  "process_max_rss_kib": 591036,
+  "process_max_rss_unit": "KiB on Linux",
+  "root_seed": 20260731,
+  "schema_version": "crazyflow.mellinger_scaling_benchmark.v2",
+  "source_dirty": false,
+  "source_fingerprint": "aae2c6b0b2d4962eb801ddb22947be57af149fc20c1a8d5f08a3dcc9ac14d6da",
+  "source_status_short": [],
+  "status": "failed",
+  "technical_gate": {
+    "passed": false
+  },
+  "test_manifest_opened": false,
+  "test_split_built_or_evaluated": false,
+  "worlds": 1
+}
