@@ -870,10 +870,12 @@ def stack_evaluation_inputs(
     return EvaluationInputs(specs, candidates, commands, reference)
 
 
-def build_simulation(n_worlds: int, *, rng_seed: int = 2501) -> Sim:
-    """Build the frozen CPU/Float32 cf21B_500 simulation."""
+def build_simulation(n_worlds: int, *, rng_seed: int = 2501, device: str = "cpu") -> Sim:
+    """Build the frozen Float32 cf21B_500 simulation on one explicit backend."""
     if jax.config.jax_enable_x64:
         raise RobustContractError("the frozen contract requires JAX x64 to be disabled")
+    if device not in {"cpu", "gpu"}:
+        raise RobustContractError("simulation backend is not cpu or gpu")
     sim = Sim(
         n_worlds=n_worlds,
         n_drones=1,
@@ -885,13 +887,13 @@ def build_simulation(n_worlds: int, *, rng_seed: int = 2501) -> Sim:
         state_freq=CONTROL_FREQUENCY_HZ,
         attitude_freq=SIMULATION_FREQUENCY_HZ,
         force_torque_freq=SIMULATION_FREQUENCY_HZ,
-        device="cpu",
+        device=device,
         rng_key=rng_seed,
     )
     if tuple(sim.step_pipeline) != EXPECTED_PIPELINE:
         raise RobustContractError("production six-stage step pipeline identity changed")
-    if sim.device.platform != "cpu":
-        raise RobustContractError("simulation backend is not CPU")
+    if sim.device.platform != device:
+        raise RobustContractError("simulation backend does not match the explicit device")
     return sim
 
 

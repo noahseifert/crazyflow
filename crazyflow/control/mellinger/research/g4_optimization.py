@@ -9,6 +9,8 @@ candidate or make a hardware, firmware, or flight claim.
 
 from __future__ import annotations
 
+import base64
+import gzip
 import hashlib
 import importlib.metadata
 import json
@@ -66,6 +68,7 @@ BACKEND_SOURCE_ORIGIN_SCHEMA_VERSION = "crazyflow.mellinger_g4_backend_source_or
 BACKEND_PARITY_SCHEMA_VERSION = "crazyflow.mellinger_g4_backend_parity_evidence.v1"
 BACKEND_THROUGHPUT_SCHEMA_VERSION = "crazyflow.mellinger_g4_backend_throughput_evidence.v1"
 BACKEND_RESUME_SCHEMA_VERSION = "crazyflow.mellinger_g4_backend_resume_segment.v1"
+BACKEND_NEUTRAL_PARENT_SCHEMA_VERSION = "crazyflow.mellinger_g4_backend_neutral_parents.v1"
 SOURCE_BASE_COMMIT = "c57312201d7ac56d3c6556738e07e4270e0729e5"
 EXPECTED_REPOSITORY_ROOT = Path(
     "/home/noah3/bachelorarbeit/worktrees/crazyflow-gradient-research-wo-gr-g4-004"
@@ -75,6 +78,9 @@ EXPECTED_INTERPRETER = Path(
 )
 CONFIG_RELATIVE_PATH = "configs/research/mellinger/g4_joint_v1.json"
 BACKEND_INPUT_MANIFEST_RELATIVE_PATH = "configs/research/mellinger/g4_backend_evidence_v1.json"
+BACKEND_NEUTRAL_PARENT_RELATIVE_PATH = (
+    "artifacts/day26-g3-identifiability-freeze-v2/backend_neutral_parents_v1.json.gz"
+)
 DAY26_DIRECTORY = "artifacts/day26-g3-identifiability-freeze-v2"
 DAY26_SCHEMA_VERSION = g3.SCHEMA_VERSION
 DEVELOPMENT_SEED = 9_104_001
@@ -856,7 +862,7 @@ def construct_train_parent(spec: G4ParentSpec) -> g3.ReferenceCandidate:
 
 
 @lru_cache(maxsize=1)
-def materialize_train_population() -> tuple[tuple[G4ParentSpec, g3.ReferenceCandidate], ...]:
+def _reconstruct_train_population_cpu() -> tuple[tuple[G4ParentSpec, g3.ReferenceCandidate], ...]:
     """Materialize and freeze all 288 parents before the first optimizer update."""
     items = tuple((spec, construct_train_parent(spec)) for spec in train_parent_specs())
     parent_digests = [candidate.parent_digest for _, candidate in items]
@@ -884,18 +890,329 @@ def _day26_constructed() -> tuple[tuple[g3.EpisodeSpec, g3.ReferenceCandidate], 
     return tuple((spec, g3.construct_episode(spec)) for spec in g3.episode_specs())
 
 
+def _compact_json_bytes(value: Any) -> bytes:
+    return json.dumps(
+        value, sort_keys=True, separators=(",", ":"), ensure_ascii=True, allow_nan=False
+    ).encode()
+
+
+def load_backend_neutral_parent_payload(repository_root: Path) -> dict[str, Any]:
+    """Validate and return the canonical compressed public Parent-v1 host payload."""
+    root = repository_root.resolve(strict=True)
+    manifest = _load_json_object(root / BACKEND_INPUT_MANIFEST_RELATIVE_PATH, "backend manifest")
+    pin = manifest.get("backend_neutral_parents")
+    _require_exact_keys(
+        pin,
+        {"bytes", "mode", "path", "payload_sha256", "schema_version", "sha256"},
+        "backend-neutral parent pin",
+    )
+    if (
+        pin["mode"] != "100644"
+        or pin["path"] != BACKEND_NEUTRAL_PARENT_RELATIVE_PATH
+        or pin["schema_version"] != BACKEND_NEUTRAL_PARENT_SCHEMA_VERSION
+        or type(pin["bytes"]) is not int
+        or pin["bytes"] <= 0
+    ):
+        raise G4ContractError("backend-neutral parent pin changed")
+    path = root / BACKEND_NEUTRAL_PARENT_RELATIVE_PATH
+    info = path.lstat()
+    if (
+        path.is_symlink()
+        or not stat.S_ISREG(info.st_mode)
+        or stat.S_IMODE(info.st_mode) != 0o644
+        or info.st_size != pin["bytes"]
+        or sha256_file(path) != pin["sha256"]
+    ):
+        raise G4ContractError("backend-neutral parent artifact identity changed")
+    try:
+        raw = gzip.decompress(path.read_bytes())
+        payload = json.loads(raw)
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError) as error:
+        raise G4ContractError("backend-neutral parent artifact is invalid") from error
+    if not isinstance(payload, dict) or raw != _compact_json_bytes(payload):
+        raise G4ContractError("backend-neutral parent payload is not canonical")
+    _require_exact_keys(
+        payload,
+        {
+            "day26_parent_count",
+            "ordered_identity_parent_digest_sha256",
+            "parents",
+            "payload_sha256",
+            "provenance",
+            "schema_version",
+            "train_parent_count",
+        },
+        "backend-neutral parent payload",
+    )
+    unsigned = dict(payload)
+    claimed = unsigned.pop("payload_sha256")
+    if (
+        payload["schema_version"] != BACKEND_NEUTRAL_PARENT_SCHEMA_VERSION
+        or payload["train_parent_count"] != 288
+        or payload["day26_parent_count"] != 24
+        or claimed != pin["payload_sha256"]
+        or claimed != sha256_bytes(_compact_json_bytes(unsigned))
+    ):
+        raise G4ContractError("backend-neutral parent payload pin changed")
+    parents = payload["parents"]
+    if (
+        not isinstance(parents, list)
+        or len(parents) != 312
+        or [item.get("group") for item in parents[:288]] != ["train"] * 288
+        or [item.get("group") for item in parents[288:]] != ["day26"] * 24
+    ):
+        raise G4ContractError("backend-neutral parent inventory changed")
+    identities = [item.get("identity") for item in parents]
+    if len(set(identities)) != 312 or any(not isinstance(item, str) for item in identities):
+        raise G4ContractError("backend-neutral parent identity changed")
+    ordered = [
+        [item["identity"], item.get("candidate", {}).get("parent_digest")] for item in parents
+    ]
+    if (
+        sha256_bytes(_compact_json_bytes(ordered))
+        != payload["ordered_identity_parent_digest_sha256"]
+    ):
+        raise G4ContractError("backend-neutral ordered parent digest changed")
+    provenance = payload["provenance"]
+    _require_exact_keys(
+        provenance,
+        {
+            "base_commit",
+            "base_tree",
+            "cpu_reconstruction_source_blobs",
+            "generation_argv",
+            "gzip_argv",
+            "jax_enable_x64",
+            "jax_platforms",
+        },
+        "backend-neutral parent provenance",
+    )
+    expected_sources = {
+        "crazyflow/control/mellinger/research/g3_freeze_v2.py": (
+            "5d68c88568d37160fdee8cf2d15f614e01178b95"
+        ),
+        "crazyflow/control/mellinger/research/g4_optimization.py": (
+            "a791908696f7c777cf19ef341558939999a2a873"
+        ),
+        "crazyflow/control/mellinger/research/robust_evaluation.py": (
+            "76ca41d48fb8ee9cab20aa9e039b82cc35104be7"
+        ),
+    }
+    if (
+        provenance["base_commit"] != "b3663206e6faaa7395d3abdbd718d1d446061c44"
+        or provenance["base_tree"] != "2095d408b62fee0423bfabb2cea7c172d986673e"
+        or provenance["cpu_reconstruction_source_blobs"] != expected_sources
+        or provenance["jax_platforms"] != "cpu"
+        or provenance["jax_enable_x64"] is not False
+        or provenance["gzip_argv"]
+        != ["env", "-u", "GZIP", "LC_ALL=C", "TZ=UTC", "gzip", "-n", "-9", "-c"]
+    ):
+        raise G4ContractError("backend-neutral parent provenance changed")
+    return payload
+
+
+def _decode_backend_parent_array(record: dict[str, Any], label: str) -> np.ndarray:
+    _require_exact_keys(record, {"data_base64", "dtype", "sha256", "shape"}, label)
+    if record["dtype"] != "<f4" or not isinstance(record["shape"], list):
+        raise G4ContractError(f"{label} dtype or shape changed")
+    try:
+        raw = base64.b64decode(record["data_base64"], validate=True)
+    except (ValueError, TypeError) as error:
+        raise G4ContractError(f"{label} base64 changed") from error
+    if base64.b64encode(raw).decode("ascii") != record["data_base64"]:
+        raise G4ContractError(f"{label} base64 is noncanonical")
+    if sha256_bytes(raw) != record["sha256"]:
+        raise G4ContractError(f"{label} hostbyte checksum changed")
+    shape = tuple(record["shape"])
+    if any(type(value) is not int or value < 0 for value in shape):
+        raise G4ContractError(f"{label} shape changed")
+    result = np.frombuffer(raw, dtype=np.dtype("<f4")).copy()
+    if result.size != math.prod(shape):
+        raise G4ContractError(f"{label} hostbyte size changed")
+    return np.ascontiguousarray(result.reshape(shape))
+
+
+def _backend_parent_spec(record: dict[str, Any]) -> G4ParentSpec | g3.EpisodeSpec:
+    value = record["spec"]
+    if record["group"] == "train":
+        return G4ParentSpec(
+            batch_index=value["batch_index"],
+            stratum_index=value["stratum_index"],
+            slot_index=value["slot_index"],
+            motion_class=g3.MotionClass(value["motion_class"]),
+            profile=g3.Profile(value["profile"]),
+            episode_id=value["episode_id"],
+            pair_id=value["pair_id"],
+            warmup_s=value["warmup_s"],
+            score_start=value["score_start"],
+            score_stop=value["score_stop"],
+        )
+    return g3.EpisodeSpec(
+        split=g3.Split(value["split"]),
+        motion_class=g3.MotionClass(value["motion_class"]),
+        profile=g3.Profile(value["profile"]),
+        seed=value["seed"],
+        episode_id=value["episode_id"],
+        pair_id=value["pair_id"],
+        warmup_s=value["warmup_s"],
+        score_start=value["score_start"],
+        score_stop=value["score_stop"],
+    )
+
+
+def _materialize_backend_parent(
+    record: dict[str, Any], backend: str
+) -> tuple[G4ParentSpec | g3.EpisodeSpec, g3.ReferenceCandidate]:
+    _require_exact_keys(record, {"candidate", "group", "identity", "spec"}, "parent record")
+    candidate = record["candidate"]
+    _require_exact_keys(
+        candidate,
+        {
+            "array_digests",
+            "arrays",
+            "attempt",
+            "attempts",
+            "component_contracts",
+            "parent_digest",
+            "parent_statistics",
+            "score_statistics",
+        },
+        "parent candidate",
+    )
+    array_names = ("time", "position", "velocity", "acceleration", "yaw", "yaw_rate", "jerk")
+    if set(candidate["arrays"]) != set(array_names):
+        raise G4ContractError("backend-neutral parent leaf inventory changed")
+    host = {
+        name: _decode_backend_parent_array(candidate["arrays"][name], f"parent {name}")
+        for name in array_names
+    }
+    expected_digests = {name: robust.array_digest(value) for name, value in host.items()}
+    if expected_digests != candidate["array_digests"]:
+        raise G4ContractError("backend-neutral parent array digest changed")
+    if sha256_bytes(canonical_json_bytes(expected_digests)) != candidate["parent_digest"]:
+        raise G4ContractError("backend-neutral full-parent digest changed")
+    if backend not in {"cpu", "gpu"}:
+        raise G4ContractError("unknown backend-neutral parent target")
+    devices = jax.devices(backend)
+    if len(devices) != 1 or devices[0].platform != backend:
+        raise G4ContractError("backend-neutral parent device inventory changed")
+    arrays = {name: jax.device_put(value, devices[0]) for name, value in host.items()}
+    trajectory = Trajectory(
+        time=arrays["time"],
+        pos=arrays["position"],
+        vel=arrays["velocity"],
+        acc=arrays["acceleration"],
+        yaw=arrays["yaw"],
+        yaw_rate=arrays["yaw_rate"],
+    )
+    return _backend_parent_spec(record), g3.ReferenceCandidate(
+        trajectory=trajectory,
+        jerk=arrays["jerk"],
+        attempt=candidate["attempt"],
+        attempts=tuple(candidate["attempts"]),
+        score_statistics=candidate["score_statistics"],
+        parent_statistics=candidate["parent_statistics"],
+        array_digests=candidate["array_digests"],
+        component_contracts=tuple(candidate["component_contracts"]),
+        parent_digest=candidate["parent_digest"],
+    )
+
+
+def load_backend_neutral_parent_items(
+    repository_root: Path, *, backend: str = "cpu"
+) -> tuple[tuple[G4ParentSpec | g3.EpisodeSpec, g3.ReferenceCandidate], ...]:
+    """Materialize validated canonical Hostbytes only after selecting the backend device."""
+    payload = load_backend_neutral_parent_payload(repository_root)
+    return tuple(_materialize_backend_parent(record, backend) for record in payload["parents"])
+
+
+@lru_cache(maxsize=2)
+def _cached_backend_parent_items(
+    repository_root: str, backend: str
+) -> tuple[tuple[G4ParentSpec | g3.EpisodeSpec, g3.ReferenceCandidate], ...]:
+    return load_backend_neutral_parent_items(Path(repository_root), backend=backend)
+
+
+def _reconstruct_backend_neutral_parent_records_cpu() -> tuple[
+    tuple[G4ParentSpec | g3.EpisodeSpec, g3.ReferenceCandidate], ...
+]:
+    return (*_reconstruct_train_population_cpu(), *_day26_constructed())
+
+
+def verify_backend_neutral_parent_inverse(repository_root: Path) -> dict[str, Any]:
+    """Prove all 312 Parent-v1 records equal the unchanged direct CPU reconstruction."""
+    loaded = load_backend_neutral_parent_items(repository_root, backend="cpu")
+    direct = _reconstruct_backend_neutral_parent_records_cpu()
+    if len(loaded) != len(direct) != 312:
+        raise G4ContractError("backend-neutral inverse parent count changed")
+    leaf_count = 0
+    for (loaded_spec, loaded_parent), (direct_spec, direct_parent) in zip(
+        loaded, direct, strict=True
+    ):
+        if loaded_spec != direct_spec or loaded_parent.parent_digest != direct_parent.parent_digest:
+            raise G4ContractError("backend-neutral inverse identity or parent digest changed")
+        loaded_arrays = (
+            loaded_parent.trajectory.time,
+            loaded_parent.trajectory.pos,
+            loaded_parent.trajectory.vel,
+            loaded_parent.trajectory.acc,
+            loaded_parent.trajectory.yaw,
+            loaded_parent.trajectory.yaw_rate,
+            loaded_parent.jerk,
+        )
+        direct_arrays = (
+            direct_parent.trajectory.time,
+            direct_parent.trajectory.pos,
+            direct_parent.trajectory.vel,
+            direct_parent.trajectory.acc,
+            direct_parent.trajectory.yaw,
+            direct_parent.trajectory.yaw_rate,
+            direct_parent.jerk,
+        )
+        for left, right in zip(loaded_arrays, direct_arrays, strict=True):
+            left_host = np.ascontiguousarray(np.asarray(left))
+            right_host = np.ascontiguousarray(np.asarray(right))
+            if (
+                left_host.dtype != right_host.dtype
+                or left_host.shape != right_host.shape
+                or left_host.tobytes(order="C") != right_host.tobytes(order="C")
+                or robust.array_digest(left_host) != robust.array_digest(right_host)
+            ):
+                raise G4ContractError("backend-neutral inverse host leaf changed")
+            leaf_count += 1
+    return {
+        "status": "PASS_BACKEND_NEUTRAL_PARENT_INVERSE",
+        "parent_count": len(loaded),
+        "leaf_count": leaf_count,
+        "parent_digest_count": len({candidate.parent_digest for _spec, candidate in loaded}),
+    }
+
+
+def materialize_train_population(
+    backend: str = "cpu",
+) -> tuple[tuple[G4ParentSpec, g3.ReferenceCandidate], ...]:
+    """Load the exact 288 public Train Parent-v1 Hostbyte records."""
+    items = _cached_backend_parent_items(str(EXPECTED_REPOSITORY_ROOT), backend)[:288]
+    if any(not isinstance(spec, G4ParentSpec) for spec, _candidate in items):
+        raise G4ContractError("backend-neutral Train parent type changed")
+    return items  # type: ignore[return-value]
+
+
 def fixed_day26_items(
-    repository_root: Path, identities: Sequence[str]
+    repository_root: Path, identities: Sequence[str], *, backend: str = "cpu"
 ) -> tuple[tuple[g3.EpisodeSpec, g3.ReferenceCandidate], ...]:
-    """Return pinned public parents after manifest-to-reconstruction identity checks."""
+    """Return pinned public Day-26 Parent-v1 records in the requested identity order."""
     manifest = _day26_manifest_records(repository_root)
-    constructed = {spec.episode_id: (spec, candidate) for spec, candidate in _day26_constructed()}
+    constructed = {
+        f"{spec.episode_id}/attempt-{candidate.attempt}": (spec, candidate)
+        for spec, candidate in _cached_backend_parent_items(str(repository_root), backend)[288:]
+    }
     result = []
     for identity in identities:
         episode_id, attempt_text = identity.rsplit("/attempt-", 1)
-        if identity not in manifest or episode_id not in constructed:
+        if identity not in manifest or identity not in constructed:
             raise G4ContractError(f"fixed parent identity missing: {identity}")
-        spec, candidate = constructed[episode_id]
+        spec, candidate = constructed[identity]
         record = manifest[identity]
         if (
             candidate.attempt != int(attempt_text)
@@ -1068,10 +1385,14 @@ def _scored_loss_and_aux(
 
 
 @lru_cache(maxsize=None)
-def _evaluation_runtime(world_count: int, names: tuple[str, ...]) -> EvaluationRuntime:
+def _evaluation_runtime(
+    world_count: int, names: tuple[str, ...], backend: str = "cpu"
+) -> EvaluationRuntime:
     if world_count < 1 or any(name not in PARAMETER_SPECS for name in names):
         raise G4ContractError("invalid evaluation runtime shape or leaves")
-    sim = robust.build_simulation(world_count, rng_seed=DEVELOPMENT_SEED + world_count)
+    sim = robust.build_simulation(
+        world_count, rng_seed=DEVELOPMENT_SEED + world_count, device=backend
+    )
     step_fn = sim.build_step_fn()
 
     def objective(
@@ -1090,10 +1411,10 @@ def _evaluation_runtime(world_count: int, names: tuple[str, ...]) -> EvaluationR
 
 
 def _prepare_items(
-    items: Sequence[tuple[Any, g3.ReferenceCandidate]], names: tuple[str, ...]
+    items: Sequence[tuple[Any, g3.ReferenceCandidate]], names: tuple[str, ...], backend: str = "cpu"
 ) -> tuple[EvaluationRuntime, Any, Array, Trajectory, Array, tuple[str, ...]]:
     inputs = g3.stack_evaluation_inputs(items)
-    runtime = _evaluation_runtime(len(items), names)
+    runtime = _evaluation_runtime(len(items), names, backend)
     initial_data = robust.initialize_inputs(runtime.sim.data, inputs)
     score_starts = jnp.asarray([spec.score_start for spec, _ in items], dtype=jnp.int32)
     parent_ids = tuple(spec.episode_id for spec, _ in items)
@@ -1104,11 +1425,13 @@ def evaluate_items(
     theta: Any,
     items: Sequence[tuple[Any, g3.ReferenceCandidate]],
     names: Sequence[str] = PARAMETER_NAMES,
+    *,
+    backend: str = "cpu",
 ) -> dict[str, Any]:
     """Run one finite value-and-gradient evaluation for a fixed parent group."""
     names_tuple = tuple(names)
     runtime, data, commands, reference, score_starts, parent_ids = _prepare_items(
-        items, names_tuple
+        items, names_tuple, backend
     )
     started = time.perf_counter()
     (loss_aux, gradient) = runtime.evaluate(
@@ -1144,12 +1467,18 @@ def _tree_digest(value: Any) -> str:
 
 
 def default_parity(
-    repository_root: Path, identities: Sequence[str], *, include_backend_evidence: bool = False
+    repository_root: Path,
+    identities: Sequence[str],
+    *,
+    include_backend_evidence: bool = False,
+    backend: str = "cpu",
 ) -> dict[str, Any]:
     """Require exact theta-zero controller/carry/loss/metric parity."""
-    items = fixed_day26_items(repository_root, identities)
+    items = fixed_day26_items(repository_root, identities, backend=backend)
     inputs = g3.stack_evaluation_inputs(items)
-    sim = robust.build_simulation(len(items), rng_seed=DEVELOPMENT_SEED + len(items))
+    sim = robust.build_simulation(
+        len(items), rng_seed=DEVELOPMENT_SEED + len(items), device=backend
+    )
     canonical = robust.initialize_inputs(sim.data, inputs)
     theta_zero = apply_theta(canonical, jnp.zeros((2,), dtype=jnp.float32))
     g3._parameter_default_parity(canonical, "kp_xy")
@@ -1447,9 +1776,11 @@ def run_m3() -> dict[str, Any]:
     }
 
 
-def _batch_items(batch_index: int) -> tuple[tuple[G4ParentSpec, g3.ReferenceCandidate], ...]:
+def _batch_items(
+    batch_index: int, *, backend: str = "cpu"
+) -> tuple[tuple[G4ParentSpec, g3.ReferenceCandidate], ...]:
     items = tuple(
-        item for item in materialize_train_population() if item[0].batch_index == batch_index
+        item for item in materialize_train_population(backend) if item[0].batch_index == batch_index
     )
     if len(items) != EFFECTIVE_BATCH_SIZE:
         raise G4ContractError(f"batch {batch_index} parent count changed")
@@ -1457,17 +1788,19 @@ def _batch_items(batch_index: int) -> tuple[tuple[G4ParentSpec, g3.ReferenceCand
 
 
 def one_effective_batch(
-    state: OptimizationState, names: Sequence[str]
+    state: OptimizationState, names: Sequence[str], *, backend: str = "cpu"
 ) -> tuple[OptimizationState, dict[str, Any]]:
     """Aggregate all eight microbatches, then perform exactly one optimizer update."""
     names_tuple = tuple(names)
     batch_index = state.adam.count % 9
-    items = _batch_items(batch_index)
+    items = _batch_items(batch_index, backend=backend)
     evaluations = []
     for index in range(MICROBATCH_COUNT):
         first = index * MICROBATCH_SIZE
         evaluations.append(
-            evaluate_items(state.theta, items[first : first + MICROBATCH_SIZE], names_tuple)
+            evaluate_items(
+                state.theta, items[first : first + MICROBATCH_SIZE], names_tuple, backend=backend
+            )
         )
     aggregate = _aggregate_evaluations(evaluations)
     if aggregate["microbatch_parent_counts"] != [4] * 8:
@@ -4171,6 +4504,7 @@ def load_backend_input_manifest(path: Path, repository_root: Path) -> dict[str, 
         payload,
         {
             "schema_version",
+            "backend_neutral_parents",
             "claim_boundary",
             "interface_parent",
             "immutable_product",
@@ -4216,6 +4550,7 @@ def load_backend_input_manifest(path: Path, repository_root: Path) -> dict[str, 
             raise G4ContractError("backend immutable product missing")
         if sha256_file(product_path) != item["sha256"]:
             raise G4ContractError("backend immutable product pin changed")
+    load_backend_neutral_parent_payload(root)
     return payload
 
 
@@ -4695,10 +5030,13 @@ def write_backend_source_origin_record(
 def run_backend_parity(**kwargs: Any) -> dict[str, Any]:
     """Execute one backend-local parity sample through the established science path."""
     repository_root = Path(kwargs["repository_root"])
-    items = fixed_day26_items(repository_root, VALIDATION_IDENTITIES[:4])
-    evaluation = evaluate_items(np.zeros(2, dtype=np.float32), _batch_items(0))
+    backend = kwargs["backend"]
+    items = fixed_day26_items(repository_root, VALIDATION_IDENTITIES[:4], backend=backend)
+    evaluation = evaluate_items(
+        np.zeros(2, dtype=np.float32), _batch_items(0, backend=backend), backend=backend
+    )
     parity = default_parity(
-        repository_root, VALIDATION_IDENTITIES[:4], include_backend_evidence=True
+        repository_root, VALIDATION_IDENTITIES[:4], include_backend_evidence=True, backend=backend
     )
     parity_evidence = parity.get("_backend_evidence", parity)
     canonical_final = parity_evidence["canonical_final"]
@@ -4813,7 +5151,7 @@ def run_backend_throughput(**kwargs: Any) -> dict[str, Any]:
     """Execute exactly one blocked effective-32 update for throughput evidence."""
     state = initial_optimization_state(2)
     started = time.perf_counter()
-    updated, record = one_effective_batch(state, PARAMETER_NAMES)
+    updated, record = one_effective_batch(state, PARAMETER_NAMES, backend=kwargs["backend"])
     jax.block_until_ready(updated.theta)
     elapsed = time.perf_counter() - started
     device_memory = observe_backend_device_memory(kwargs["backend"])

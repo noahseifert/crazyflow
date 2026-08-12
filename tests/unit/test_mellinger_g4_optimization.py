@@ -1907,3 +1907,99 @@ def test_backend_contract_leaves_m7_m8_resource_and_protection_surfaces_unchange
         "contents_opened_or_hashed": False,
         "children_listed": False,
     }
+
+
+def test_backend_neutral_parent_v1_validates_all_public_records_and_manifest_pin() -> None:
+    payload = g4.load_backend_neutral_parent_payload(REPOSITORY_ROOT)
+    manifest = g4.load_backend_input_manifest(
+        REPOSITORY_ROOT / g4.BACKEND_INPUT_MANIFEST_RELATIVE_PATH, REPOSITORY_ROOT
+    )
+
+    assert payload["schema_version"] == "crazyflow.mellinger_g4_backend_neutral_parents.v1"
+    assert payload["train_parent_count"] == 288
+    assert payload["day26_parent_count"] == 24
+    assert len(payload["parents"]) == 312
+    assert len({item["identity"] for item in payload["parents"]}) == 312
+    assert manifest["backend_neutral_parents"] == {
+        "mode": "100644",
+        "path": g4.BACKEND_NEUTRAL_PARENT_RELATIVE_PATH,
+        "schema_version": g4.BACKEND_NEUTRAL_PARENT_SCHEMA_VERSION,
+        "sha256": g4.sha256_file(REPOSITORY_ROOT / g4.BACKEND_NEUTRAL_PARENT_RELATIVE_PATH),
+        "bytes": (REPOSITORY_ROOT / g4.BACKEND_NEUTRAL_PARENT_RELATIVE_PATH).stat().st_size,
+        "payload_sha256": payload["payload_sha256"],
+    }
+
+
+def test_backend_neutral_parent_v1_inverse_matches_all_312_cpu_parents() -> None:
+    result = g4.verify_backend_neutral_parent_inverse(REPOSITORY_ROOT)
+
+    assert result["status"] == "PASS_BACKEND_NEUTRAL_PARENT_INVERSE"
+    assert result["parent_count"] == 312
+    assert result["leaf_count"] == 312 * 7
+    assert result["parent_digest_count"] == 312
+
+
+def test_backend_neutral_parent_v1_materializes_same_hostbytes_without_cpu_reconstruction(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    observed: list[tuple[str, bytes]] = []
+
+    class FakeDevice:
+        def __init__(self, platform: str) -> None:
+            self.platform = platform
+
+    devices = {name: FakeDevice(name) for name in ("cpu", "gpu")}
+
+    def fake_materialize(raw: np.ndarray, device: FakeDevice) -> np.ndarray:
+        observed.append((device.platform, raw.tobytes(order="C")))
+        return raw.copy()
+
+    monkeypatch.setattr(g4.jax, "devices", lambda name: [devices[name]])
+    monkeypatch.setattr(g4.jax, "device_put", fake_materialize)
+    monkeypatch.setattr(
+        g4,
+        "_reconstruct_backend_neutral_parent_records_cpu",
+        lambda: pytest.fail("CPU reconstruction entered the artifact materialization path"),
+    )
+
+    cpu = g4.load_backend_neutral_parent_items(REPOSITORY_ROOT, backend="cpu")
+    cpu_observed = list(observed)
+    observed.clear()
+    gpu = g4.load_backend_neutral_parent_items(REPOSITORY_ROOT, backend="gpu")
+
+    assert [spec.episode_id for spec, _candidate in cpu] == [
+        spec.episode_id for spec, _candidate in gpu
+    ]
+    assert [candidate.parent_digest for _spec, candidate in cpu] == [
+        candidate.parent_digest for _spec, candidate in gpu
+    ]
+    assert cpu_observed == [("cpu", raw) for _platform, raw in observed]
+    assert observed == [("gpu", raw) for _platform, raw in cpu_observed]
+
+
+def test_build_simulation_preserves_cpu_default_and_requires_explicit_observed_device(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    calls: list[dict[str, Any]] = []
+
+    class FakeSim:
+        step_pipeline = robust.EXPECTED_PIPELINE
+
+        def __init__(self, **kwargs: Any) -> None:
+            calls.append(kwargs)
+            self.device = type("Device", (), {"platform": kwargs["device"]})()
+
+    monkeypatch.setattr(robust, "Sim", FakeSim)
+
+    assert robust.build_simulation(4).device.platform == "cpu"
+    assert robust.build_simulation(4, device="gpu").device.platform == "gpu"
+    assert [call["device"] for call in calls] == ["cpu", "gpu"]
+
+    class WrongSim(FakeSim):
+        def __init__(self, **kwargs: Any) -> None:
+            super().__init__(**kwargs)
+            self.device = type("Device", (), {"platform": "cpu"})()
+
+    monkeypatch.setattr(robust, "Sim", WrongSim)
+    with pytest.raises(robust.RobustContractError, match="backend"):
+        robust.build_simulation(4, device="gpu")

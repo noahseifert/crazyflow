@@ -1287,3 +1287,123 @@ def test_public_backend_checkpoint_modes_emit_resume_v1_payload(
         continuous_record["operational_payload_sha256"]
         != resumed_record["operational_payload_sha256"]
     )
+
+
+def test_public_backend_parity_propagates_gpu_to_parents_and_simulation(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    observed: list[tuple[str, str]] = []
+    parent_ids = [f"parent-{index:02d}" for index in range(32)]
+    evaluation = {
+        "parent_ids": parent_ids,
+        "loss": 1.0,
+        "gradient": np.asarray([0.1, -0.2], dtype=np.float32),
+        "aux": {f"loss_{name}": np.zeros(32, dtype=np.float32) for name in g4.LOSS_TERM_NAMES},
+    }
+    monkeypatch.setattr(
+        g4,
+        "fixed_day26_items",
+        lambda _root, _ids, *, backend: observed.append(("parents", backend)) or (),
+    )
+    monkeypatch.setattr(
+        g4, "_batch_items", lambda _index, *, backend: observed.append(("batch", backend)) or ()
+    )
+    monkeypatch.setattr(
+        g4,
+        "evaluate_items",
+        lambda _theta, _items, *, backend: observed.append(("evaluation", backend)) or evaluation,
+    )
+    monkeypatch.setattr(
+        g4,
+        "default_parity",
+        lambda _root, identities, *, include_backend_evidence, backend: (
+            observed.append(("simulation", backend))
+            or {
+                "parent_ids": list(identities),
+                "loss": 1.0,
+                "_backend_evidence": {
+                    "canonical_final": {"state": np.zeros(1, dtype=np.float32)},
+                    "left_loss": np.float32(1.0),
+                    "left_aux": {
+                        **{
+                            f"loss_{name}": np.zeros(4, dtype=np.float32)
+                            for name in g4.LOSS_TERM_NAMES
+                        },
+                        **{
+                            f"metric_{name}": np.zeros(4, dtype=np.float32)
+                            for name in (
+                                "position_rmse_m",
+                                "velocity_rmse_m_s",
+                                "max_position_error_m",
+                                "control_effort",
+                                "control_smoothness",
+                                "motor_saturation_fraction",
+                                "zero_thrust_gate_fraction",
+                                "floor_clip_fraction",
+                                "nonfinite_state_fraction",
+                            )
+                        },
+                    },
+                },
+            }
+        ),
+    )
+
+    result = g4.run_backend_parity(
+        backend="gpu",
+        repository_root=REPOSITORY_ROOT,
+        provenance={"input_manifest_sha256": "a" * 64, "runtime_contract_sha256": "b" * 64},
+        runtime={"profile": "remote_pixi_gpu"},
+        resource={"before": {}, "after": {}},
+    )
+
+    assert result["backend"] == "gpu"
+    assert observed == [
+        ("parents", "gpu"),
+        ("batch", "gpu"),
+        ("evaluation", "gpu"),
+        ("simulation", "gpu"),
+    ]
+
+
+def test_public_backend_throughput_propagates_gpu_to_one_effective_batch(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    observed: list[str] = []
+    state = g4.initial_optimization_state(2)
+    updated = replace(state, adam=replace(state.adam, count=1))
+    record = {
+        "parent_ids": [f"parent-{index:02d}" for index in range(32)],
+        "microbatch_parent_counts": [4] * 8,
+        "microbatch_weights": [0.125] * 8,
+        "loss": 1.0,
+        "gradient": [0.1, -0.2],
+        "gradient_norm": float(np.hypot(0.1, 0.2)),
+    }
+    monkeypatch.setattr(
+        g4,
+        "one_effective_batch",
+        lambda _state, _names, *, backend: observed.append(backend) or (updated, record),
+    )
+    monkeypatch.setattr(g4.jax, "block_until_ready", lambda value: value)
+    monkeypatch.setattr(
+        g4,
+        "observe_backend_device_memory",
+        lambda backend: (
+            {"bytes_in_use": 1, "peak_bytes_in_use": 2, "bytes_limit": 3}
+            if backend == "gpu"
+            else pytest.fail("backend changed")
+        ),
+    )
+
+    result = g4.run_backend_throughput(
+        backend="gpu",
+        phase="steady",
+        sample_index=1,
+        provenance={"input_manifest_sha256": "a" * 64, "runtime_contract_sha256": "b" * 64},
+        runtime={"profile": "remote_pixi_gpu"},
+        resource={"before": {}, "after": {}},
+    )
+
+    assert observed == ["gpu"]
+    assert result["backend"] == "gpu"

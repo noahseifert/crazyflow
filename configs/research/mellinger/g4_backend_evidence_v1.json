@@ -1,4 +1,12 @@
 {
+  "backend_neutral_parents": {
+    "bytes": 15307378,
+    "mode": "100644",
+    "path": "artifacts/day26-g3-identifiability-freeze-v2/backend_neutral_parents_v1.json.gz",
+    "payload_sha256": "40a83b453bd869125f9a5b7e1260d82d65e14fdfd09f8934b1afa4b8a92b3fe9",
+    "schema_version": "crazyflow.mellinger_g4_backend_neutral_parents.v1",
+    "sha256": "4f65e8b89490119d5dcbc96beea06fee61a5eedc3f93238875cbc982f3914be1"
+  },
   "claim_boundary": "public simulation evidence only; no test-split, convergence, speedup, superiority, robustness, firmware, hardware, or flight claim",
   "immutable_product": [
     {
